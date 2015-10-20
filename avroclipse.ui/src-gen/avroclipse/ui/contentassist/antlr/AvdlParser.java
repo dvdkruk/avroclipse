@@ -71,14 +71,14 @@ public class AvdlParser extends AbstractContentAssistParser {
 					put(grammarAccess.getEnumTypeAccess().getGroup(), "rule__EnumType__Group__0");
 					put(grammarAccess.getEnumTypeAccess().getGroup_4(), "rule__EnumType__Group_4__0");
 					put(grammarAccess.getAnnotationAccess().getGroup(), "rule__Annotation__Group__0");
-					put(grammarAccess.getAnnotationAccess().getGroup_2(), "rule__Annotation__Group_2__0");
+					put(grammarAccess.getAnnotationAccess().getGroup_1(), "rule__Annotation__Group_1__0");
 					put(grammarAccess.getValuesAccess().getGroup(), "rule__Values__Group__0");
 					put(grammarAccess.getValuesAccess().getGroup_1_1(), "rule__Values__Group_1_1__0");
 					put(grammarAccess.getValuesAccess().getGroup_1_1_1(), "rule__Values__Group_1_1_1__0");
 					put(grammarAccess.getArrayAccess().getGroup(), "rule__Array__Group__0");
 					put(grammarAccess.getEscapableIdAccess().getGroup_1(), "rule__EscapableId__Group_1__0");
 					put(grammarAccess.getANAccess().getGroup(), "rule__AN__Group__0");
-					put(grammarAccess.getANAccess().getGroup_1(), "rule__AN__Group_1__0");
+					put(grammarAccess.getANAccess().getGroup_2(), "rule__AN__Group_2__0");
 					put(grammarAccess.getNegativeIntAccess().getGroup(), "rule__NegativeInt__Group__0");
 					put(grammarAccess.getAvdlFileAccess().getImportsAssignment_0(), "rule__AvdlFile__ImportsAssignment_0");
 					put(grammarAccess.getAvdlFileAccess().getProtocolsAssignment_1(), "rule__AvdlFile__ProtocolsAssignment_1");
@@ -122,8 +122,8 @@ public class AvdlParser extends AbstractContentAssistParser {
 					put(grammarAccess.getEnumTypeAccess().getNameAssignment_1(), "rule__EnumType__NameAssignment_1");
 					put(grammarAccess.getEnumTypeAccess().getLiteralsAssignment_3(), "rule__EnumType__LiteralsAssignment_3");
 					put(grammarAccess.getEnumTypeAccess().getLiteralsAssignment_4_1(), "rule__EnumType__LiteralsAssignment_4_1");
-					put(grammarAccess.getAnnotationAccess().getNameAssignment_1(), "rule__Annotation__NameAssignment_1");
-					put(grammarAccess.getAnnotationAccess().getValuesAssignment_2_1(), "rule__Annotation__ValuesAssignment_2_1");
+					put(grammarAccess.getAnnotationAccess().getNameAssignment_0(), "rule__Annotation__NameAssignment_0");
+					put(grammarAccess.getAnnotationAccess().getValuesAssignment_1_1(), "rule__Annotation__ValuesAssignment_1_1");
 					put(grammarAccess.getValuesAccess().getValueAssignment_1_0(), "rule__Values__ValueAssignment_1_0");
 					put(grammarAccess.getValuesAccess().getValueAssignment_1_1_0(), "rule__Values__ValueAssignment_1_1_0");
 					put(grammarAccess.getValuesAccess().getValueAssignment_1_1_1_1(), "rule__Values__ValueAssignment_1_1_1_1");

@@ -1661,53 +1661,49 @@ ruleAnnotation returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='@' 
-    {
-    	newLeafNode(otherlv_0, grammarAccess.getAnnotationAccess().getCommercialAtKeyword_0());
-    }
-(
+((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getAnnotationAccess().getNameANParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getAnnotationAccess().getNameANParserRuleCall_0_0()); 
 	    }
-		lv_name_1_0=ruleAN		{
+		lv_name_0_0=ruleAN		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getAnnotationRule());
 	        }
        		set(
        			$current, 
        			"name",
-        		lv_name_1_0, 
+        		lv_name_0_0, 
         		"AN");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)(	otherlv_2='(' 
+)(	otherlv_1='(' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getAnnotationAccess().getLeftParenthesisKeyword_2_0());
+    	newLeafNode(otherlv_1, grammarAccess.getAnnotationAccess().getLeftParenthesisKeyword_1_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getAnnotationAccess().getValuesValuesParserRuleCall_2_1_0()); 
+	        newCompositeNode(grammarAccess.getAnnotationAccess().getValuesValuesParserRuleCall_1_1_0()); 
 	    }
-		lv_values_3_0=ruleValues		{
+		lv_values_2_0=ruleValues		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getAnnotationRule());
 	        }
        		set(
        			$current, 
        			"values",
-        		lv_values_3_0, 
+        		lv_values_2_0, 
         		"Values");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_4=')' 
+)	otherlv_3=')' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getAnnotationAccess().getRightParenthesisKeyword_2_2());
+    	newLeafNode(otherlv_3, grammarAccess.getAnnotationAccess().getRightParenthesisKeyword_1_2());
     }
 )?)
 ;
@@ -2207,25 +2203,31 @@ ruleAN returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(    this_ID_0=RULE_ID    {
-		$current.merge(this_ID_0);
+(
+	kw='@' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getANAccess().getCommercialAtKeyword_0()); 
+    }
+    this_ID_1=RULE_ID    {
+		$current.merge(this_ID_1);
     }
 
     { 
-    newLeafNode(this_ID_0, grammarAccess.getANAccess().getIDTerminalRuleCall_0()); 
+    newLeafNode(this_ID_1, grammarAccess.getANAccess().getIDTerminalRuleCall_1()); 
     }
 (
 	kw='-' 
     {
         $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getANAccess().getHyphenMinusKeyword_1_0()); 
+        newLeafNode(kw, grammarAccess.getANAccess().getHyphenMinusKeyword_2_0()); 
     }
-    this_ID_2=RULE_ID    {
-		$current.merge(this_ID_2);
+    this_ID_3=RULE_ID    {
+		$current.merge(this_ID_3);
     }
 
     { 
-    newLeafNode(this_ID_2, grammarAccess.getANAccess().getIDTerminalRuleCall_1_1()); 
+    newLeafNode(this_ID_3, grammarAccess.getANAccess().getIDTerminalRuleCall_2_1()); 
     }
 )*)
     ;

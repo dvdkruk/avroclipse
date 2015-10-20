@@ -674,10 +674,10 @@ public class InternalAvdlLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:40:7: ( '@' )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:40:9: '@'
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:40:7: ( '[' )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:40:9: '['
             {
-            match('@'); 
+            match('['); 
 
             }
 
@@ -694,10 +694,10 @@ public class InternalAvdlLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:41:7: ( '[' )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:41:9: '['
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:41:7: ( ']' )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:41:9: ']'
             {
-            match('['); 
+            match(']'); 
 
             }
 
@@ -714,10 +714,10 @@ public class InternalAvdlLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:42:7: ( ']' )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:42:9: ']'
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:42:7: ( '`' )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:42:9: '`'
             {
-            match(']'); 
+            match('`'); 
 
             }
 
@@ -734,10 +734,10 @@ public class InternalAvdlLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:43:7: ( '`' )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:43:9: '`'
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:43:7: ( '@' )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:43:9: '@'
             {
-            match('`'); 
+            match('@'); 
 
             }
 
@@ -1607,7 +1607,7 @@ public class InternalAvdlLexer extends Lexer {
     static final String DFA12_specialS =
         "\1\1\41\uffff\1\2\1\0\u0080\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\46\2\45\2\46\1\45\22\46\1\45\1\46\1\42\4\46\1\43\1\23\1\24\2\46\1\25\1\35\1\46\1\44\12\41\1\46\1\20\1\27\1\26\1\30\1\46\1\31\32\40\1\32\1\46\1\33\1\37\1\40\1\34\1\13\1\6\1\40\1\5\1\11\1\4\2\40\1\2\2\40\1\3\1\12\1\1\1\16\1\15\1\40\1\10\1\7\1\17\1\14\1\36\4\40\1\21\1\46\1\22\uff82\46",
+            "\11\46\2\45\2\46\1\45\22\46\1\45\1\46\1\42\4\46\1\43\1\23\1\24\2\46\1\25\1\35\1\46\1\44\12\41\1\46\1\20\1\27\1\26\1\30\1\46\1\34\32\40\1\31\1\46\1\32\1\37\1\40\1\33\1\13\1\6\1\40\1\5\1\11\1\4\2\40\1\2\2\40\1\3\1\12\1\1\1\16\1\15\1\40\1\10\1\7\1\17\1\14\1\36\4\40\1\21\1\46\1\22\uff82\46",
             "\1\47",
             "\1\53\10\uffff\1\52\1\51",
             "\1\54",
@@ -1871,13 +1871,13 @@ public class InternalAvdlLexer extends Lexer {
 
                         else if ( (LA12_0=='>') ) {s = 24;}
 
-                        else if ( (LA12_0=='@') ) {s = 25;}
+                        else if ( (LA12_0=='[') ) {s = 25;}
 
-                        else if ( (LA12_0=='[') ) {s = 26;}
+                        else if ( (LA12_0==']') ) {s = 26;}
 
-                        else if ( (LA12_0==']') ) {s = 27;}
+                        else if ( (LA12_0=='`') ) {s = 27;}
 
-                        else if ( (LA12_0=='`') ) {s = 28;}
+                        else if ( (LA12_0=='@') ) {s = 28;}
 
                         else if ( (LA12_0=='-') ) {s = 29;}
 

@@ -84,7 +84,7 @@ EnumType:
 	'}';
 
 Annotation:
-	'@' name=AN ('(' values=Values ')')?;
+	name=AN ('(' values=Values ')')?;
 
 Values:
 	{Values}
@@ -113,7 +113,7 @@ ReservedKeyWords:
 	'record' | 'fixed' | 'enum' | 'map' | 'array' | 'union' | 'error' | 'protocol' | 'oneway' | 'import' | 'throws';
 
 AN:
-	ID ('-' ID)*;
+	'@' ID ('-' ID)*;
 	
 NegativeInt returns ecore::EInt:
 	'-' INT;

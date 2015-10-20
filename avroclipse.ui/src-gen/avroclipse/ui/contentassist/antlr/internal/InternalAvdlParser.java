@@ -23,7 +23,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalAvdlParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'null'", "'int'", "'long'", "'float'", "'double'", "'bytes'", "'string'", "'record'", "'fixed'", "'enum'", "'map'", "'array'", "'union'", "'error'", "'protocol'", "'oneway'", "'import'", "'throws'", "'idl'", "'schema'", "';'", "'{'", "'}'", "'('", "')'", "','", "'='", "'<'", "'>'", "'@'", "'['", "']'", "'`'", "'-'", "'void'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'null'", "'int'", "'long'", "'float'", "'double'", "'bytes'", "'string'", "'record'", "'fixed'", "'enum'", "'map'", "'array'", "'union'", "'error'", "'protocol'", "'oneway'", "'import'", "'throws'", "'idl'", "'schema'", "';'", "'{'", "'}'", "'('", "')'", "','", "'='", "'<'", "'>'", "'['", "']'", "'`'", "'@'", "'-'", "'void'"
     };
     public static final int T__19=19;
     public static final int T__15=15;
@@ -162,7 +162,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==25||LA1_0==27||LA1_0==40) ) {
+                if ( (LA1_0==25||LA1_0==27||LA1_0==43) ) {
                     alt1=1;
                 }
 
@@ -3079,7 +3079,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
             if ( (LA2_0==27) ) {
                 alt2=1;
             }
-            else if ( (LA2_0==25||LA2_0==40) ) {
+            else if ( (LA2_0==25||LA2_0==43) ) {
                 alt2=2;
             }
             else {
@@ -3176,10 +3176,10 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
             int alt3=2;
             int LA3_0 = input.LA(1);
 
-            if ( ((LA3_0>=18 && LA3_0<=20)||LA3_0==24||LA3_0==40) ) {
+            if ( ((LA3_0>=18 && LA3_0<=20)||LA3_0==24||LA3_0==43) ) {
                 alt3=1;
             }
-            else if ( (LA3_0==RULE_ID||(LA3_0>=11 && LA3_0<=17)||LA3_0==43||LA3_0==45) ) {
+            else if ( (LA3_0==RULE_ID||(LA3_0>=11 && LA3_0<=17)||LA3_0==42||LA3_0==45) ) {
                 alt3=2;
             }
             else {
@@ -3267,7 +3267,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
             if ( (LA4_0==45) ) {
                 alt4=1;
             }
-            else if ( (LA4_0==RULE_ID||(LA4_0>=11 && LA4_0<=17)||LA4_0==43) ) {
+            else if ( (LA4_0==RULE_ID||(LA4_0>=11 && LA4_0<=17)||LA4_0==42) ) {
                 alt4=2;
             }
             else {
@@ -3507,7 +3507,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
             case 15:
             case 16:
             case 17:
-            case 43:
+            case 42:
                 {
                 alt6=1;
                 }
@@ -3659,7 +3659,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
             if ( ((LA7_0>=11 && LA7_0<=17)) ) {
                 alt7=1;
             }
-            else if ( (LA7_0==RULE_ID||LA7_0==43) ) {
+            else if ( (LA7_0==RULE_ID||LA7_0==42) ) {
                 alt7=2;
             }
             else {
@@ -3948,7 +3948,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
             int alt9=2;
             int LA9_0 = input.LA(1);
 
-            if ( (LA9_0==41) ) {
+            if ( (LA9_0==40) ) {
                 int LA9_1 = input.LA(2);
 
                 if ( (synpred18_InternalAvdl()) ) {
@@ -4066,7 +4066,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
                 alt10=1;
                 }
                 break;
-            case 41:
+            case 40:
                 {
                 alt10=2;
                 }
@@ -4304,7 +4304,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
             if ( (LA12_0==RULE_ID) ) {
                 alt12=1;
             }
-            else if ( (LA12_0==43) ) {
+            else if ( (LA12_0==42) ) {
                 alt12=2;
             }
             else {
@@ -5197,7 +5197,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
                 int alt15=2;
                 int LA15_0 = input.LA(1);
 
-                if ( (LA15_0==40) ) {
+                if ( (LA15_0==43) ) {
                     alt15=1;
                 }
 
@@ -5551,7 +5551,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
                 int alt16=2;
                 int LA16_0 = input.LA(1);
 
-                if ( (LA16_0==RULE_ID||(LA16_0>=11 && LA16_0<=20)||LA16_0==24||LA16_0==40||LA16_0==43||LA16_0==45) ) {
+                if ( (LA16_0==RULE_ID||(LA16_0>=11 && LA16_0<=20)||LA16_0==24||(LA16_0>=42 && LA16_0<=43)||LA16_0==45) ) {
                     alt16=1;
                 }
 
@@ -5989,7 +5989,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
                 int alt17=2;
                 int LA17_0 = input.LA(1);
 
-                if ( (LA17_0==RULE_ID||(LA17_0>=11 && LA17_0<=17)||LA17_0==43) ) {
+                if ( (LA17_0==RULE_ID||(LA17_0>=11 && LA17_0<=17)||LA17_0==42) ) {
                     alt17=1;
                 }
 
@@ -7402,7 +7402,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
                 int alt22=2;
                 int LA22_0 = input.LA(1);
 
-                if ( (LA22_0==40) ) {
+                if ( (LA22_0==43) ) {
                     alt22=1;
                 }
 
@@ -7840,7 +7840,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
                 int alt23=2;
                 int LA23_0 = input.LA(1);
 
-                if ( (LA23_0==RULE_ID||(LA23_0>=11 && LA23_0<=17)||(LA23_0>=21 && LA23_0<=23)||LA23_0==40||LA23_0==43) ) {
+                if ( (LA23_0==RULE_ID||(LA23_0>=11 && LA23_0<=17)||(LA23_0>=21 && LA23_0<=23)||(LA23_0>=42 && LA23_0<=43)) ) {
                     alt23=1;
                 }
 
@@ -8268,7 +8268,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
                 int alt24=2;
                 int LA24_0 = input.LA(1);
 
-                if ( (LA24_0==RULE_ID||(LA24_0>=11 && LA24_0<=17)||(LA24_0>=21 && LA24_0<=23)||LA24_0==40||LA24_0==43) ) {
+                if ( (LA24_0==RULE_ID||(LA24_0>=11 && LA24_0<=17)||(LA24_0>=21 && LA24_0<=23)||(LA24_0>=42 && LA24_0<=43)) ) {
                     alt24=1;
                 }
 
@@ -8449,7 +8449,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
                 int alt25=2;
                 int LA25_0 = input.LA(1);
 
-                if ( (LA25_0==40) ) {
+                if ( (LA25_0==43) ) {
                     alt25=1;
                 }
 
@@ -8645,7 +8645,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
                 int alt26=2;
                 int LA26_0 = input.LA(1);
 
-                if ( (LA26_0==40) ) {
+                if ( (LA26_0==43) ) {
                     alt26=1;
                 }
 
@@ -9925,7 +9925,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
             int alt29=2;
             int LA29_0 = input.LA(1);
 
-            if ( (LA29_0==40) ) {
+            if ( (LA29_0==43) ) {
                 alt29=1;
             }
             switch (alt29) {
@@ -10346,7 +10346,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
             int alt30=2;
             int LA30_0 = input.LA(1);
 
-            if ( (LA30_0==40) ) {
+            if ( (LA30_0==43) ) {
                 alt30=1;
             }
             switch (alt30) {
@@ -11759,24 +11759,34 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Annotation__Group__0__Impl"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4031:1: rule__Annotation__Group__0__Impl : ( '@' ) ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4031:1: rule__Annotation__Group__0__Impl : ( ( rule__Annotation__NameAssignment_0 ) ) ;
     public final void rule__Annotation__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4035:1: ( ( '@' ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4036:1: ( '@' )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4035:1: ( ( ( rule__Annotation__NameAssignment_0 ) ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4036:1: ( ( rule__Annotation__NameAssignment_0 ) )
             {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4036:1: ( '@' )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4037:1: '@'
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4036:1: ( ( rule__Annotation__NameAssignment_0 ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4037:1: ( rule__Annotation__NameAssignment_0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getAnnotationAccess().getCommercialAtKeyword_0()); 
+               before(grammarAccess.getAnnotationAccess().getNameAssignment_0()); 
             }
-            match(input,40,FOLLOW_40_in_rule__Annotation__Group__0__Impl8240); if (state.failed) return ;
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4038:1: ( rule__Annotation__NameAssignment_0 )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4038:2: rule__Annotation__NameAssignment_0
+            {
+            pushFollow(FOLLOW_rule__Annotation__NameAssignment_0_in_rule__Annotation__Group__0__Impl8239);
+            rule__Annotation__NameAssignment_0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getAnnotationAccess().getCommercialAtKeyword_0()); 
+               after(grammarAccess.getAnnotationAccess().getNameAssignment_0()); 
             }
 
             }
@@ -11800,22 +11810,17 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Annotation__Group__1"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4050:1: rule__Annotation__Group__1 : rule__Annotation__Group__1__Impl rule__Annotation__Group__2 ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4048:1: rule__Annotation__Group__1 : rule__Annotation__Group__1__Impl ;
     public final void rule__Annotation__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4054:1: ( rule__Annotation__Group__1__Impl rule__Annotation__Group__2 )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4055:2: rule__Annotation__Group__1__Impl rule__Annotation__Group__2
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4052:1: ( rule__Annotation__Group__1__Impl )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4053:2: rule__Annotation__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Annotation__Group__1__Impl_in_rule__Annotation__Group__18271);
+            pushFollow(FOLLOW_rule__Annotation__Group__1__Impl_in_rule__Annotation__Group__18269);
             rule__Annotation__Group__1__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Annotation__Group__2_in_rule__Annotation__Group__18274);
-            rule__Annotation__Group__2();
 
             state._fsp--;
             if (state.failed) return ;
@@ -11838,34 +11843,45 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Annotation__Group__1__Impl"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4062:1: rule__Annotation__Group__1__Impl : ( ( rule__Annotation__NameAssignment_1 ) ) ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4059:1: rule__Annotation__Group__1__Impl : ( ( rule__Annotation__Group_1__0 )? ) ;
     public final void rule__Annotation__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4066:1: ( ( ( rule__Annotation__NameAssignment_1 ) ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4067:1: ( ( rule__Annotation__NameAssignment_1 ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4063:1: ( ( ( rule__Annotation__Group_1__0 )? ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4064:1: ( ( rule__Annotation__Group_1__0 )? )
             {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4067:1: ( ( rule__Annotation__NameAssignment_1 ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4068:1: ( rule__Annotation__NameAssignment_1 )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4064:1: ( ( rule__Annotation__Group_1__0 )? )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4065:1: ( rule__Annotation__Group_1__0 )?
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getAnnotationAccess().getNameAssignment_1()); 
+               before(grammarAccess.getAnnotationAccess().getGroup_1()); 
             }
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4069:1: ( rule__Annotation__NameAssignment_1 )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4069:2: rule__Annotation__NameAssignment_1
-            {
-            pushFollow(FOLLOW_rule__Annotation__NameAssignment_1_in_rule__Annotation__Group__1__Impl8301);
-            rule__Annotation__NameAssignment_1();
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4066:1: ( rule__Annotation__Group_1__0 )?
+            int alt32=2;
+            int LA32_0 = input.LA(1);
 
-            state._fsp--;
-            if (state.failed) return ;
+            if ( (LA32_0==34) ) {
+                alt32=1;
+            }
+            switch (alt32) {
+                case 1 :
+                    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4066:2: rule__Annotation__Group_1__0
+                    {
+                    pushFollow(FOLLOW_rule__Annotation__Group_1__0_in_rule__Annotation__Group__1__Impl8296);
+                    rule__Annotation__Group_1__0();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+                    break;
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getAnnotationAccess().getNameAssignment_1()); 
+               after(grammarAccess.getAnnotationAccess().getGroup_1()); 
             }
 
             }
@@ -11888,18 +11904,23 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Annotation__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Annotation__Group__2"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4079:1: rule__Annotation__Group__2 : rule__Annotation__Group__2__Impl ;
-    public final void rule__Annotation__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__Annotation__Group_1__0"
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4080:1: rule__Annotation__Group_1__0 : rule__Annotation__Group_1__0__Impl rule__Annotation__Group_1__1 ;
+    public final void rule__Annotation__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4083:1: ( rule__Annotation__Group__2__Impl )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4084:2: rule__Annotation__Group__2__Impl
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4084:1: ( rule__Annotation__Group_1__0__Impl rule__Annotation__Group_1__1 )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4085:2: rule__Annotation__Group_1__0__Impl rule__Annotation__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Annotation__Group__2__Impl_in_rule__Annotation__Group__28331);
-            rule__Annotation__Group__2__Impl();
+            pushFollow(FOLLOW_rule__Annotation__Group_1__0__Impl_in_rule__Annotation__Group_1__08331);
+            rule__Annotation__Group_1__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__Annotation__Group_1__1_in_rule__Annotation__Group_1__08334);
+            rule__Annotation__Group_1__1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -11918,49 +11939,28 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Annotation__Group__2"
+    // $ANTLR end "rule__Annotation__Group_1__0"
 
 
-    // $ANTLR start "rule__Annotation__Group__2__Impl"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4090:1: rule__Annotation__Group__2__Impl : ( ( rule__Annotation__Group_2__0 )? ) ;
-    public final void rule__Annotation__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Annotation__Group_1__0__Impl"
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4092:1: rule__Annotation__Group_1__0__Impl : ( '(' ) ;
+    public final void rule__Annotation__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4094:1: ( ( ( rule__Annotation__Group_2__0 )? ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4095:1: ( ( rule__Annotation__Group_2__0 )? )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4096:1: ( ( '(' ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4097:1: ( '(' )
             {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4095:1: ( ( rule__Annotation__Group_2__0 )? )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4096:1: ( rule__Annotation__Group_2__0 )?
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4097:1: ( '(' )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4098:1: '('
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getAnnotationAccess().getGroup_2()); 
+               before(grammarAccess.getAnnotationAccess().getLeftParenthesisKeyword_1_0()); 
             }
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4097:1: ( rule__Annotation__Group_2__0 )?
-            int alt32=2;
-            int LA32_0 = input.LA(1);
-
-            if ( (LA32_0==34) ) {
-                alt32=1;
-            }
-            switch (alt32) {
-                case 1 :
-                    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4097:2: rule__Annotation__Group_2__0
-                    {
-                    pushFollow(FOLLOW_rule__Annotation__Group_2__0_in_rule__Annotation__Group__2__Impl8358);
-                    rule__Annotation__Group_2__0();
-
-                    state._fsp--;
-                    if (state.failed) return ;
-
-                    }
-                    break;
-
-            }
-
+            match(input,34,FOLLOW_34_in_rule__Annotation__Group_1__0__Impl8362); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getAnnotationAccess().getGroup_2()); 
+               after(grammarAccess.getAnnotationAccess().getLeftParenthesisKeyword_1_0()); 
             }
 
             }
@@ -11980,26 +11980,26 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Annotation__Group__2__Impl"
+    // $ANTLR end "rule__Annotation__Group_1__0__Impl"
 
 
-    // $ANTLR start "rule__Annotation__Group_2__0"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4113:1: rule__Annotation__Group_2__0 : rule__Annotation__Group_2__0__Impl rule__Annotation__Group_2__1 ;
-    public final void rule__Annotation__Group_2__0() throws RecognitionException {
+    // $ANTLR start "rule__Annotation__Group_1__1"
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4111:1: rule__Annotation__Group_1__1 : rule__Annotation__Group_1__1__Impl rule__Annotation__Group_1__2 ;
+    public final void rule__Annotation__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4117:1: ( rule__Annotation__Group_2__0__Impl rule__Annotation__Group_2__1 )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4118:2: rule__Annotation__Group_2__0__Impl rule__Annotation__Group_2__1
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4115:1: ( rule__Annotation__Group_1__1__Impl rule__Annotation__Group_1__2 )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4116:2: rule__Annotation__Group_1__1__Impl rule__Annotation__Group_1__2
             {
-            pushFollow(FOLLOW_rule__Annotation__Group_2__0__Impl_in_rule__Annotation__Group_2__08395);
-            rule__Annotation__Group_2__0__Impl();
+            pushFollow(FOLLOW_rule__Annotation__Group_1__1__Impl_in_rule__Annotation__Group_1__18393);
+            rule__Annotation__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Annotation__Group_2__1_in_rule__Annotation__Group_2__08398);
-            rule__Annotation__Group_2__1();
+            pushFollow(FOLLOW_rule__Annotation__Group_1__2_in_rule__Annotation__Group_1__18396);
+            rule__Annotation__Group_1__2();
 
             state._fsp--;
             if (state.failed) return ;
@@ -12018,28 +12018,38 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Annotation__Group_2__0"
+    // $ANTLR end "rule__Annotation__Group_1__1"
 
 
-    // $ANTLR start "rule__Annotation__Group_2__0__Impl"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4125:1: rule__Annotation__Group_2__0__Impl : ( '(' ) ;
-    public final void rule__Annotation__Group_2__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Annotation__Group_1__1__Impl"
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4123:1: rule__Annotation__Group_1__1__Impl : ( ( rule__Annotation__ValuesAssignment_1_1 ) ) ;
+    public final void rule__Annotation__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4129:1: ( ( '(' ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4130:1: ( '(' )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4127:1: ( ( ( rule__Annotation__ValuesAssignment_1_1 ) ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4128:1: ( ( rule__Annotation__ValuesAssignment_1_1 ) )
             {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4130:1: ( '(' )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4131:1: '('
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4128:1: ( ( rule__Annotation__ValuesAssignment_1_1 ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4129:1: ( rule__Annotation__ValuesAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getAnnotationAccess().getLeftParenthesisKeyword_2_0()); 
+               before(grammarAccess.getAnnotationAccess().getValuesAssignment_1_1()); 
             }
-            match(input,34,FOLLOW_34_in_rule__Annotation__Group_2__0__Impl8426); if (state.failed) return ;
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4130:1: ( rule__Annotation__ValuesAssignment_1_1 )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4130:2: rule__Annotation__ValuesAssignment_1_1
+            {
+            pushFollow(FOLLOW_rule__Annotation__ValuesAssignment_1_1_in_rule__Annotation__Group_1__1__Impl8423);
+            rule__Annotation__ValuesAssignment_1_1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getAnnotationAccess().getLeftParenthesisKeyword_2_0()); 
+               after(grammarAccess.getAnnotationAccess().getValuesAssignment_1_1()); 
             }
 
             }
@@ -12059,110 +12069,21 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Annotation__Group_2__0__Impl"
+    // $ANTLR end "rule__Annotation__Group_1__1__Impl"
 
 
-    // $ANTLR start "rule__Annotation__Group_2__1"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4144:1: rule__Annotation__Group_2__1 : rule__Annotation__Group_2__1__Impl rule__Annotation__Group_2__2 ;
-    public final void rule__Annotation__Group_2__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4148:1: ( rule__Annotation__Group_2__1__Impl rule__Annotation__Group_2__2 )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4149:2: rule__Annotation__Group_2__1__Impl rule__Annotation__Group_2__2
-            {
-            pushFollow(FOLLOW_rule__Annotation__Group_2__1__Impl_in_rule__Annotation__Group_2__18457);
-            rule__Annotation__Group_2__1__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Annotation__Group_2__2_in_rule__Annotation__Group_2__18460);
-            rule__Annotation__Group_2__2();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Annotation__Group_2__1"
-
-
-    // $ANTLR start "rule__Annotation__Group_2__1__Impl"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4156:1: rule__Annotation__Group_2__1__Impl : ( ( rule__Annotation__ValuesAssignment_2_1 ) ) ;
-    public final void rule__Annotation__Group_2__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Annotation__Group_1__2"
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4140:1: rule__Annotation__Group_1__2 : rule__Annotation__Group_1__2__Impl ;
+    public final void rule__Annotation__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4160:1: ( ( ( rule__Annotation__ValuesAssignment_2_1 ) ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4161:1: ( ( rule__Annotation__ValuesAssignment_2_1 ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4144:1: ( rule__Annotation__Group_1__2__Impl )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4145:2: rule__Annotation__Group_1__2__Impl
             {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4161:1: ( ( rule__Annotation__ValuesAssignment_2_1 ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4162:1: ( rule__Annotation__ValuesAssignment_2_1 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAnnotationAccess().getValuesAssignment_2_1()); 
-            }
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4163:1: ( rule__Annotation__ValuesAssignment_2_1 )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4163:2: rule__Annotation__ValuesAssignment_2_1
-            {
-            pushFollow(FOLLOW_rule__Annotation__ValuesAssignment_2_1_in_rule__Annotation__Group_2__1__Impl8487);
-            rule__Annotation__ValuesAssignment_2_1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getAnnotationAccess().getValuesAssignment_2_1()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Annotation__Group_2__1__Impl"
-
-
-    // $ANTLR start "rule__Annotation__Group_2__2"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4173:1: rule__Annotation__Group_2__2 : rule__Annotation__Group_2__2__Impl ;
-    public final void rule__Annotation__Group_2__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4177:1: ( rule__Annotation__Group_2__2__Impl )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4178:2: rule__Annotation__Group_2__2__Impl
-            {
-            pushFollow(FOLLOW_rule__Annotation__Group_2__2__Impl_in_rule__Annotation__Group_2__28517);
-            rule__Annotation__Group_2__2__Impl();
+            pushFollow(FOLLOW_rule__Annotation__Group_1__2__Impl_in_rule__Annotation__Group_1__28453);
+            rule__Annotation__Group_1__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
@@ -12181,28 +12102,28 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Annotation__Group_2__2"
+    // $ANTLR end "rule__Annotation__Group_1__2"
 
 
-    // $ANTLR start "rule__Annotation__Group_2__2__Impl"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4184:1: rule__Annotation__Group_2__2__Impl : ( ')' ) ;
-    public final void rule__Annotation__Group_2__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Annotation__Group_1__2__Impl"
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4151:1: rule__Annotation__Group_1__2__Impl : ( ')' ) ;
+    public final void rule__Annotation__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4188:1: ( ( ')' ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4189:1: ( ')' )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4155:1: ( ( ')' ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4156:1: ( ')' )
             {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4189:1: ( ')' )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4190:1: ')'
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4156:1: ( ')' )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4157:1: ')'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getAnnotationAccess().getRightParenthesisKeyword_2_2()); 
+               before(grammarAccess.getAnnotationAccess().getRightParenthesisKeyword_1_2()); 
             }
-            match(input,35,FOLLOW_35_in_rule__Annotation__Group_2__2__Impl8545); if (state.failed) return ;
+            match(input,35,FOLLOW_35_in_rule__Annotation__Group_1__2__Impl8481); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getAnnotationAccess().getRightParenthesisKeyword_2_2()); 
+               after(grammarAccess.getAnnotationAccess().getRightParenthesisKeyword_1_2()); 
             }
 
             }
@@ -12222,25 +12143,25 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Annotation__Group_2__2__Impl"
+    // $ANTLR end "rule__Annotation__Group_1__2__Impl"
 
 
     // $ANTLR start "rule__Values__Group__0"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4209:1: rule__Values__Group__0 : rule__Values__Group__0__Impl rule__Values__Group__1 ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4176:1: rule__Values__Group__0 : rule__Values__Group__0__Impl rule__Values__Group__1 ;
     public final void rule__Values__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4213:1: ( rule__Values__Group__0__Impl rule__Values__Group__1 )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4214:2: rule__Values__Group__0__Impl rule__Values__Group__1
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4180:1: ( rule__Values__Group__0__Impl rule__Values__Group__1 )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4181:2: rule__Values__Group__0__Impl rule__Values__Group__1
             {
-            pushFollow(FOLLOW_rule__Values__Group__0__Impl_in_rule__Values__Group__08582);
+            pushFollow(FOLLOW_rule__Values__Group__0__Impl_in_rule__Values__Group__08518);
             rule__Values__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Values__Group__1_in_rule__Values__Group__08585);
+            pushFollow(FOLLOW_rule__Values__Group__1_in_rule__Values__Group__08521);
             rule__Values__Group__1();
 
             state._fsp--;
@@ -12264,23 +12185,23 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Values__Group__0__Impl"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4221:1: rule__Values__Group__0__Impl : ( () ) ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4188:1: rule__Values__Group__0__Impl : ( () ) ;
     public final void rule__Values__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4225:1: ( ( () ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4226:1: ( () )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4192:1: ( ( () ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4193:1: ( () )
             {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4226:1: ( () )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4227:1: ()
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4193:1: ( () )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4194:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getValuesAccess().getValuesAction_0()); 
             }
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4228:1: ()
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4230:1: 
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4195:1: ()
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4197:1: 
             {
             }
 
@@ -12305,16 +12226,16 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Values__Group__1"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4240:1: rule__Values__Group__1 : rule__Values__Group__1__Impl ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4207:1: rule__Values__Group__1 : rule__Values__Group__1__Impl ;
     public final void rule__Values__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4244:1: ( rule__Values__Group__1__Impl )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4245:2: rule__Values__Group__1__Impl
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4211:1: ( rule__Values__Group__1__Impl )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4212:2: rule__Values__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Values__Group__1__Impl_in_rule__Values__Group__18643);
+            pushFollow(FOLLOW_rule__Values__Group__1__Impl_in_rule__Values__Group__18579);
             rule__Values__Group__1__Impl();
 
             state._fsp--;
@@ -12338,37 +12259,37 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Values__Group__1__Impl"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4251:1: rule__Values__Group__1__Impl : ( ( rule__Values__Alternatives_1 )* ) ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4218:1: rule__Values__Group__1__Impl : ( ( rule__Values__Alternatives_1 )* ) ;
     public final void rule__Values__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4255:1: ( ( ( rule__Values__Alternatives_1 )* ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4256:1: ( ( rule__Values__Alternatives_1 )* )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4222:1: ( ( ( rule__Values__Alternatives_1 )* ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4223:1: ( ( rule__Values__Alternatives_1 )* )
             {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4256:1: ( ( rule__Values__Alternatives_1 )* )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4257:1: ( rule__Values__Alternatives_1 )*
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4223:1: ( ( rule__Values__Alternatives_1 )* )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4224:1: ( rule__Values__Alternatives_1 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getValuesAccess().getAlternatives_1()); 
             }
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4258:1: ( rule__Values__Alternatives_1 )*
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4225:1: ( rule__Values__Alternatives_1 )*
             loop33:
             do {
                 int alt33=2;
                 int LA33_0 = input.LA(1);
 
-                if ( (LA33_0==RULE_INT||LA33_0==RULE_STRING||LA33_0==11||LA33_0==41||LA33_0==44) ) {
+                if ( (LA33_0==RULE_INT||LA33_0==RULE_STRING||LA33_0==11||LA33_0==40||LA33_0==44) ) {
                     alt33=1;
                 }
 
 
                 switch (alt33) {
             	case 1 :
-            	    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4258:2: rule__Values__Alternatives_1
+            	    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4225:2: rule__Values__Alternatives_1
             	    {
-            	    pushFollow(FOLLOW_rule__Values__Alternatives_1_in_rule__Values__Group__1__Impl8670);
+            	    pushFollow(FOLLOW_rule__Values__Alternatives_1_in_rule__Values__Group__1__Impl8606);
             	    rule__Values__Alternatives_1();
 
             	    state._fsp--;
@@ -12407,21 +12328,21 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Values__Group_1_1__0"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4272:1: rule__Values__Group_1_1__0 : rule__Values__Group_1_1__0__Impl rule__Values__Group_1_1__1 ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4239:1: rule__Values__Group_1_1__0 : rule__Values__Group_1_1__0__Impl rule__Values__Group_1_1__1 ;
     public final void rule__Values__Group_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4276:1: ( rule__Values__Group_1_1__0__Impl rule__Values__Group_1_1__1 )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4277:2: rule__Values__Group_1_1__0__Impl rule__Values__Group_1_1__1
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4243:1: ( rule__Values__Group_1_1__0__Impl rule__Values__Group_1_1__1 )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4244:2: rule__Values__Group_1_1__0__Impl rule__Values__Group_1_1__1
             {
-            pushFollow(FOLLOW_rule__Values__Group_1_1__0__Impl_in_rule__Values__Group_1_1__08705);
+            pushFollow(FOLLOW_rule__Values__Group_1_1__0__Impl_in_rule__Values__Group_1_1__08641);
             rule__Values__Group_1_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Values__Group_1_1__1_in_rule__Values__Group_1_1__08708);
+            pushFollow(FOLLOW_rule__Values__Group_1_1__1_in_rule__Values__Group_1_1__08644);
             rule__Values__Group_1_1__1();
 
             state._fsp--;
@@ -12445,25 +12366,25 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Values__Group_1_1__0__Impl"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4284:1: rule__Values__Group_1_1__0__Impl : ( ( rule__Values__ValueAssignment_1_1_0 ) ) ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4251:1: rule__Values__Group_1_1__0__Impl : ( ( rule__Values__ValueAssignment_1_1_0 ) ) ;
     public final void rule__Values__Group_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4288:1: ( ( ( rule__Values__ValueAssignment_1_1_0 ) ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4289:1: ( ( rule__Values__ValueAssignment_1_1_0 ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4255:1: ( ( ( rule__Values__ValueAssignment_1_1_0 ) ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4256:1: ( ( rule__Values__ValueAssignment_1_1_0 ) )
             {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4289:1: ( ( rule__Values__ValueAssignment_1_1_0 ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4290:1: ( rule__Values__ValueAssignment_1_1_0 )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4256:1: ( ( rule__Values__ValueAssignment_1_1_0 ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4257:1: ( rule__Values__ValueAssignment_1_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getValuesAccess().getValueAssignment_1_1_0()); 
             }
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4291:1: ( rule__Values__ValueAssignment_1_1_0 )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4291:2: rule__Values__ValueAssignment_1_1_0
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4258:1: ( rule__Values__ValueAssignment_1_1_0 )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4258:2: rule__Values__ValueAssignment_1_1_0
             {
-            pushFollow(FOLLOW_rule__Values__ValueAssignment_1_1_0_in_rule__Values__Group_1_1__0__Impl8735);
+            pushFollow(FOLLOW_rule__Values__ValueAssignment_1_1_0_in_rule__Values__Group_1_1__0__Impl8671);
             rule__Values__ValueAssignment_1_1_0();
 
             state._fsp--;
@@ -12496,16 +12417,16 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Values__Group_1_1__1"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4301:1: rule__Values__Group_1_1__1 : rule__Values__Group_1_1__1__Impl ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4268:1: rule__Values__Group_1_1__1 : rule__Values__Group_1_1__1__Impl ;
     public final void rule__Values__Group_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4305:1: ( rule__Values__Group_1_1__1__Impl )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4306:2: rule__Values__Group_1_1__1__Impl
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4272:1: ( rule__Values__Group_1_1__1__Impl )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4273:2: rule__Values__Group_1_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Values__Group_1_1__1__Impl_in_rule__Values__Group_1_1__18765);
+            pushFollow(FOLLOW_rule__Values__Group_1_1__1__Impl_in_rule__Values__Group_1_1__18701);
             rule__Values__Group_1_1__1__Impl();
 
             state._fsp--;
@@ -12529,22 +12450,22 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Values__Group_1_1__1__Impl"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4312:1: rule__Values__Group_1_1__1__Impl : ( ( rule__Values__Group_1_1_1__0 )* ) ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4279:1: rule__Values__Group_1_1__1__Impl : ( ( rule__Values__Group_1_1_1__0 )* ) ;
     public final void rule__Values__Group_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4316:1: ( ( ( rule__Values__Group_1_1_1__0 )* ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4317:1: ( ( rule__Values__Group_1_1_1__0 )* )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4283:1: ( ( ( rule__Values__Group_1_1_1__0 )* ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4284:1: ( ( rule__Values__Group_1_1_1__0 )* )
             {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4317:1: ( ( rule__Values__Group_1_1_1__0 )* )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4318:1: ( rule__Values__Group_1_1_1__0 )*
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4284:1: ( ( rule__Values__Group_1_1_1__0 )* )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4285:1: ( rule__Values__Group_1_1_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getValuesAccess().getGroup_1_1_1()); 
             }
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4319:1: ( rule__Values__Group_1_1_1__0 )*
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4286:1: ( rule__Values__Group_1_1_1__0 )*
             loop34:
             do {
                 int alt34=2;
@@ -12557,9 +12478,9 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
                 switch (alt34) {
             	case 1 :
-            	    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4319:2: rule__Values__Group_1_1_1__0
+            	    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4286:2: rule__Values__Group_1_1_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__Values__Group_1_1_1__0_in_rule__Values__Group_1_1__1__Impl8792);
+            	    pushFollow(FOLLOW_rule__Values__Group_1_1_1__0_in_rule__Values__Group_1_1__1__Impl8728);
             	    rule__Values__Group_1_1_1__0();
 
             	    state._fsp--;
@@ -12598,21 +12519,21 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Values__Group_1_1_1__0"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4333:1: rule__Values__Group_1_1_1__0 : rule__Values__Group_1_1_1__0__Impl rule__Values__Group_1_1_1__1 ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4300:1: rule__Values__Group_1_1_1__0 : rule__Values__Group_1_1_1__0__Impl rule__Values__Group_1_1_1__1 ;
     public final void rule__Values__Group_1_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4337:1: ( rule__Values__Group_1_1_1__0__Impl rule__Values__Group_1_1_1__1 )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4338:2: rule__Values__Group_1_1_1__0__Impl rule__Values__Group_1_1_1__1
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4304:1: ( rule__Values__Group_1_1_1__0__Impl rule__Values__Group_1_1_1__1 )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4305:2: rule__Values__Group_1_1_1__0__Impl rule__Values__Group_1_1_1__1
             {
-            pushFollow(FOLLOW_rule__Values__Group_1_1_1__0__Impl_in_rule__Values__Group_1_1_1__08827);
+            pushFollow(FOLLOW_rule__Values__Group_1_1_1__0__Impl_in_rule__Values__Group_1_1_1__08763);
             rule__Values__Group_1_1_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Values__Group_1_1_1__1_in_rule__Values__Group_1_1_1__08830);
+            pushFollow(FOLLOW_rule__Values__Group_1_1_1__1_in_rule__Values__Group_1_1_1__08766);
             rule__Values__Group_1_1_1__1();
 
             state._fsp--;
@@ -12636,22 +12557,22 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Values__Group_1_1_1__0__Impl"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4345:1: rule__Values__Group_1_1_1__0__Impl : ( ',' ) ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4312:1: rule__Values__Group_1_1_1__0__Impl : ( ',' ) ;
     public final void rule__Values__Group_1_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4349:1: ( ( ',' ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4350:1: ( ',' )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4316:1: ( ( ',' ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4317:1: ( ',' )
             {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4350:1: ( ',' )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4351:1: ','
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4317:1: ( ',' )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4318:1: ','
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getValuesAccess().getCommaKeyword_1_1_1_0()); 
             }
-            match(input,36,FOLLOW_36_in_rule__Values__Group_1_1_1__0__Impl8858); if (state.failed) return ;
+            match(input,36,FOLLOW_36_in_rule__Values__Group_1_1_1__0__Impl8794); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getValuesAccess().getCommaKeyword_1_1_1_0()); 
             }
@@ -12677,16 +12598,16 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Values__Group_1_1_1__1"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4364:1: rule__Values__Group_1_1_1__1 : rule__Values__Group_1_1_1__1__Impl ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4331:1: rule__Values__Group_1_1_1__1 : rule__Values__Group_1_1_1__1__Impl ;
     public final void rule__Values__Group_1_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4368:1: ( rule__Values__Group_1_1_1__1__Impl )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4369:2: rule__Values__Group_1_1_1__1__Impl
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4335:1: ( rule__Values__Group_1_1_1__1__Impl )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4336:2: rule__Values__Group_1_1_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Values__Group_1_1_1__1__Impl_in_rule__Values__Group_1_1_1__18889);
+            pushFollow(FOLLOW_rule__Values__Group_1_1_1__1__Impl_in_rule__Values__Group_1_1_1__18825);
             rule__Values__Group_1_1_1__1__Impl();
 
             state._fsp--;
@@ -12710,25 +12631,25 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Values__Group_1_1_1__1__Impl"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4375:1: rule__Values__Group_1_1_1__1__Impl : ( ( rule__Values__ValueAssignment_1_1_1_1 ) ) ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4342:1: rule__Values__Group_1_1_1__1__Impl : ( ( rule__Values__ValueAssignment_1_1_1_1 ) ) ;
     public final void rule__Values__Group_1_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4379:1: ( ( ( rule__Values__ValueAssignment_1_1_1_1 ) ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4380:1: ( ( rule__Values__ValueAssignment_1_1_1_1 ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4346:1: ( ( ( rule__Values__ValueAssignment_1_1_1_1 ) ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4347:1: ( ( rule__Values__ValueAssignment_1_1_1_1 ) )
             {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4380:1: ( ( rule__Values__ValueAssignment_1_1_1_1 ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4381:1: ( rule__Values__ValueAssignment_1_1_1_1 )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4347:1: ( ( rule__Values__ValueAssignment_1_1_1_1 ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4348:1: ( rule__Values__ValueAssignment_1_1_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getValuesAccess().getValueAssignment_1_1_1_1()); 
             }
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4382:1: ( rule__Values__ValueAssignment_1_1_1_1 )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4382:2: rule__Values__ValueAssignment_1_1_1_1
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4349:1: ( rule__Values__ValueAssignment_1_1_1_1 )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4349:2: rule__Values__ValueAssignment_1_1_1_1
             {
-            pushFollow(FOLLOW_rule__Values__ValueAssignment_1_1_1_1_in_rule__Values__Group_1_1_1__1__Impl8916);
+            pushFollow(FOLLOW_rule__Values__ValueAssignment_1_1_1_1_in_rule__Values__Group_1_1_1__1__Impl8852);
             rule__Values__ValueAssignment_1_1_1_1();
 
             state._fsp--;
@@ -12761,21 +12682,21 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__0"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4396:1: rule__Array__Group__0 : rule__Array__Group__0__Impl rule__Array__Group__1 ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4363:1: rule__Array__Group__0 : rule__Array__Group__0__Impl rule__Array__Group__1 ;
     public final void rule__Array__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4400:1: ( rule__Array__Group__0__Impl rule__Array__Group__1 )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4401:2: rule__Array__Group__0__Impl rule__Array__Group__1
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4367:1: ( rule__Array__Group__0__Impl rule__Array__Group__1 )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4368:2: rule__Array__Group__0__Impl rule__Array__Group__1
             {
-            pushFollow(FOLLOW_rule__Array__Group__0__Impl_in_rule__Array__Group__08950);
+            pushFollow(FOLLOW_rule__Array__Group__0__Impl_in_rule__Array__Group__08886);
             rule__Array__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Array__Group__1_in_rule__Array__Group__08953);
+            pushFollow(FOLLOW_rule__Array__Group__1_in_rule__Array__Group__08889);
             rule__Array__Group__1();
 
             state._fsp--;
@@ -12799,25 +12720,25 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__0__Impl"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4408:1: rule__Array__Group__0__Impl : ( ( '[' ) ) ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4375:1: rule__Array__Group__0__Impl : ( ( '[' ) ) ;
     public final void rule__Array__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4412:1: ( ( ( '[' ) ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4413:1: ( ( '[' ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4379:1: ( ( ( '[' ) ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4380:1: ( ( '[' ) )
             {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4413:1: ( ( '[' ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4414:1: ( '[' )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4380:1: ( ( '[' ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4381:1: ( '[' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArrayAccess().getLeftSquareBracketKeyword_0()); 
             }
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4415:1: ( '[' )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4416:2: '['
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4382:1: ( '[' )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4383:2: '['
             {
-            match(input,41,FOLLOW_41_in_rule__Array__Group__0__Impl8982); if (state.failed) return ;
+            match(input,40,FOLLOW_40_in_rule__Array__Group__0__Impl8918); if (state.failed) return ;
 
             }
 
@@ -12846,21 +12767,21 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__1"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4427:1: rule__Array__Group__1 : rule__Array__Group__1__Impl rule__Array__Group__2 ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4394:1: rule__Array__Group__1 : rule__Array__Group__1__Impl rule__Array__Group__2 ;
     public final void rule__Array__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4431:1: ( rule__Array__Group__1__Impl rule__Array__Group__2 )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4432:2: rule__Array__Group__1__Impl rule__Array__Group__2
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4398:1: ( rule__Array__Group__1__Impl rule__Array__Group__2 )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4399:2: rule__Array__Group__1__Impl rule__Array__Group__2
             {
-            pushFollow(FOLLOW_rule__Array__Group__1__Impl_in_rule__Array__Group__19014);
+            pushFollow(FOLLOW_rule__Array__Group__1__Impl_in_rule__Array__Group__18950);
             rule__Array__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Array__Group__2_in_rule__Array__Group__19017);
+            pushFollow(FOLLOW_rule__Array__Group__2_in_rule__Array__Group__18953);
             rule__Array__Group__2();
 
             state._fsp--;
@@ -12884,25 +12805,25 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__1__Impl"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4439:1: rule__Array__Group__1__Impl : ( ( rule__Array__ValuesAssignment_1 ) ) ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4406:1: rule__Array__Group__1__Impl : ( ( rule__Array__ValuesAssignment_1 ) ) ;
     public final void rule__Array__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4443:1: ( ( ( rule__Array__ValuesAssignment_1 ) ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4444:1: ( ( rule__Array__ValuesAssignment_1 ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4410:1: ( ( ( rule__Array__ValuesAssignment_1 ) ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4411:1: ( ( rule__Array__ValuesAssignment_1 ) )
             {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4444:1: ( ( rule__Array__ValuesAssignment_1 ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4445:1: ( rule__Array__ValuesAssignment_1 )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4411:1: ( ( rule__Array__ValuesAssignment_1 ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4412:1: ( rule__Array__ValuesAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArrayAccess().getValuesAssignment_1()); 
             }
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4446:1: ( rule__Array__ValuesAssignment_1 )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4446:2: rule__Array__ValuesAssignment_1
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4413:1: ( rule__Array__ValuesAssignment_1 )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4413:2: rule__Array__ValuesAssignment_1
             {
-            pushFollow(FOLLOW_rule__Array__ValuesAssignment_1_in_rule__Array__Group__1__Impl9044);
+            pushFollow(FOLLOW_rule__Array__ValuesAssignment_1_in_rule__Array__Group__1__Impl8980);
             rule__Array__ValuesAssignment_1();
 
             state._fsp--;
@@ -12935,16 +12856,16 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__2"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4456:1: rule__Array__Group__2 : rule__Array__Group__2__Impl ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4423:1: rule__Array__Group__2 : rule__Array__Group__2__Impl ;
     public final void rule__Array__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4460:1: ( rule__Array__Group__2__Impl )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4461:2: rule__Array__Group__2__Impl
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4427:1: ( rule__Array__Group__2__Impl )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4428:2: rule__Array__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Array__Group__2__Impl_in_rule__Array__Group__29074);
+            pushFollow(FOLLOW_rule__Array__Group__2__Impl_in_rule__Array__Group__29010);
             rule__Array__Group__2__Impl();
 
             state._fsp--;
@@ -12968,22 +12889,22 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__2__Impl"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4467:1: rule__Array__Group__2__Impl : ( ']' ) ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4434:1: rule__Array__Group__2__Impl : ( ']' ) ;
     public final void rule__Array__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4471:1: ( ( ']' ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4472:1: ( ']' )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4438:1: ( ( ']' ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4439:1: ( ']' )
             {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4472:1: ( ']' )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4473:1: ']'
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4439:1: ( ']' )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4440:1: ']'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArrayAccess().getRightSquareBracketKeyword_2()); 
             }
-            match(input,42,FOLLOW_42_in_rule__Array__Group__2__Impl9102); if (state.failed) return ;
+            match(input,41,FOLLOW_41_in_rule__Array__Group__2__Impl9038); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getArrayAccess().getRightSquareBracketKeyword_2()); 
             }
@@ -13009,21 +12930,21 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EscapableId__Group_1__0"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4492:1: rule__EscapableId__Group_1__0 : rule__EscapableId__Group_1__0__Impl rule__EscapableId__Group_1__1 ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4459:1: rule__EscapableId__Group_1__0 : rule__EscapableId__Group_1__0__Impl rule__EscapableId__Group_1__1 ;
     public final void rule__EscapableId__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4496:1: ( rule__EscapableId__Group_1__0__Impl rule__EscapableId__Group_1__1 )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4497:2: rule__EscapableId__Group_1__0__Impl rule__EscapableId__Group_1__1
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4463:1: ( rule__EscapableId__Group_1__0__Impl rule__EscapableId__Group_1__1 )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4464:2: rule__EscapableId__Group_1__0__Impl rule__EscapableId__Group_1__1
             {
-            pushFollow(FOLLOW_rule__EscapableId__Group_1__0__Impl_in_rule__EscapableId__Group_1__09139);
+            pushFollow(FOLLOW_rule__EscapableId__Group_1__0__Impl_in_rule__EscapableId__Group_1__09075);
             rule__EscapableId__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__EscapableId__Group_1__1_in_rule__EscapableId__Group_1__09142);
+            pushFollow(FOLLOW_rule__EscapableId__Group_1__1_in_rule__EscapableId__Group_1__09078);
             rule__EscapableId__Group_1__1();
 
             state._fsp--;
@@ -13047,22 +12968,22 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EscapableId__Group_1__0__Impl"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4504:1: rule__EscapableId__Group_1__0__Impl : ( '`' ) ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4471:1: rule__EscapableId__Group_1__0__Impl : ( '`' ) ;
     public final void rule__EscapableId__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4508:1: ( ( '`' ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4509:1: ( '`' )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4475:1: ( ( '`' ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4476:1: ( '`' )
             {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4509:1: ( '`' )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4510:1: '`'
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4476:1: ( '`' )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4477:1: '`'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEscapableIdAccess().getGraveAccentKeyword_1_0()); 
             }
-            match(input,43,FOLLOW_43_in_rule__EscapableId__Group_1__0__Impl9170); if (state.failed) return ;
+            match(input,42,FOLLOW_42_in_rule__EscapableId__Group_1__0__Impl9106); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getEscapableIdAccess().getGraveAccentKeyword_1_0()); 
             }
@@ -13088,21 +13009,21 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EscapableId__Group_1__1"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4523:1: rule__EscapableId__Group_1__1 : rule__EscapableId__Group_1__1__Impl rule__EscapableId__Group_1__2 ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4490:1: rule__EscapableId__Group_1__1 : rule__EscapableId__Group_1__1__Impl rule__EscapableId__Group_1__2 ;
     public final void rule__EscapableId__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4527:1: ( rule__EscapableId__Group_1__1__Impl rule__EscapableId__Group_1__2 )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4528:2: rule__EscapableId__Group_1__1__Impl rule__EscapableId__Group_1__2
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4494:1: ( rule__EscapableId__Group_1__1__Impl rule__EscapableId__Group_1__2 )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4495:2: rule__EscapableId__Group_1__1__Impl rule__EscapableId__Group_1__2
             {
-            pushFollow(FOLLOW_rule__EscapableId__Group_1__1__Impl_in_rule__EscapableId__Group_1__19201);
+            pushFollow(FOLLOW_rule__EscapableId__Group_1__1__Impl_in_rule__EscapableId__Group_1__19137);
             rule__EscapableId__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__EscapableId__Group_1__2_in_rule__EscapableId__Group_1__19204);
+            pushFollow(FOLLOW_rule__EscapableId__Group_1__2_in_rule__EscapableId__Group_1__19140);
             rule__EscapableId__Group_1__2();
 
             state._fsp--;
@@ -13126,22 +13047,22 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EscapableId__Group_1__1__Impl"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4535:1: rule__EscapableId__Group_1__1__Impl : ( ruleReservedKeyWords ) ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4502:1: rule__EscapableId__Group_1__1__Impl : ( ruleReservedKeyWords ) ;
     public final void rule__EscapableId__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4539:1: ( ( ruleReservedKeyWords ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4540:1: ( ruleReservedKeyWords )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4506:1: ( ( ruleReservedKeyWords ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4507:1: ( ruleReservedKeyWords )
             {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4540:1: ( ruleReservedKeyWords )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4541:1: ruleReservedKeyWords
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4507:1: ( ruleReservedKeyWords )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4508:1: ruleReservedKeyWords
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEscapableIdAccess().getReservedKeyWordsParserRuleCall_1_1()); 
             }
-            pushFollow(FOLLOW_ruleReservedKeyWords_in_rule__EscapableId__Group_1__1__Impl9231);
+            pushFollow(FOLLOW_ruleReservedKeyWords_in_rule__EscapableId__Group_1__1__Impl9167);
             ruleReservedKeyWords();
 
             state._fsp--;
@@ -13171,16 +13092,16 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EscapableId__Group_1__2"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4552:1: rule__EscapableId__Group_1__2 : rule__EscapableId__Group_1__2__Impl ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4519:1: rule__EscapableId__Group_1__2 : rule__EscapableId__Group_1__2__Impl ;
     public final void rule__EscapableId__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4556:1: ( rule__EscapableId__Group_1__2__Impl )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4557:2: rule__EscapableId__Group_1__2__Impl
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4523:1: ( rule__EscapableId__Group_1__2__Impl )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4524:2: rule__EscapableId__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__EscapableId__Group_1__2__Impl_in_rule__EscapableId__Group_1__29260);
+            pushFollow(FOLLOW_rule__EscapableId__Group_1__2__Impl_in_rule__EscapableId__Group_1__29196);
             rule__EscapableId__Group_1__2__Impl();
 
             state._fsp--;
@@ -13204,22 +13125,22 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EscapableId__Group_1__2__Impl"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4563:1: rule__EscapableId__Group_1__2__Impl : ( '`' ) ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4530:1: rule__EscapableId__Group_1__2__Impl : ( '`' ) ;
     public final void rule__EscapableId__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4567:1: ( ( '`' ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4568:1: ( '`' )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4534:1: ( ( '`' ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4535:1: ( '`' )
             {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4568:1: ( '`' )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4569:1: '`'
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4535:1: ( '`' )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4536:1: '`'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEscapableIdAccess().getGraveAccentKeyword_1_2()); 
             }
-            match(input,43,FOLLOW_43_in_rule__EscapableId__Group_1__2__Impl9288); if (state.failed) return ;
+            match(input,42,FOLLOW_42_in_rule__EscapableId__Group_1__2__Impl9224); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getEscapableIdAccess().getGraveAccentKeyword_1_2()); 
             }
@@ -13245,21 +13166,21 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AN__Group__0"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4588:1: rule__AN__Group__0 : rule__AN__Group__0__Impl rule__AN__Group__1 ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4555:1: rule__AN__Group__0 : rule__AN__Group__0__Impl rule__AN__Group__1 ;
     public final void rule__AN__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4592:1: ( rule__AN__Group__0__Impl rule__AN__Group__1 )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4593:2: rule__AN__Group__0__Impl rule__AN__Group__1
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4559:1: ( rule__AN__Group__0__Impl rule__AN__Group__1 )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4560:2: rule__AN__Group__0__Impl rule__AN__Group__1
             {
-            pushFollow(FOLLOW_rule__AN__Group__0__Impl_in_rule__AN__Group__09325);
+            pushFollow(FOLLOW_rule__AN__Group__0__Impl_in_rule__AN__Group__09261);
             rule__AN__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__AN__Group__1_in_rule__AN__Group__09328);
+            pushFollow(FOLLOW_rule__AN__Group__1_in_rule__AN__Group__09264);
             rule__AN__Group__1();
 
             state._fsp--;
@@ -13283,24 +13204,24 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AN__Group__0__Impl"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4600:1: rule__AN__Group__0__Impl : ( RULE_ID ) ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4567:1: rule__AN__Group__0__Impl : ( '@' ) ;
     public final void rule__AN__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4604:1: ( ( RULE_ID ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4605:1: ( RULE_ID )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4571:1: ( ( '@' ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4572:1: ( '@' )
             {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4605:1: ( RULE_ID )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4606:1: RULE_ID
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4572:1: ( '@' )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4573:1: '@'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getANAccess().getIDTerminalRuleCall_0()); 
+               before(grammarAccess.getANAccess().getCommercialAtKeyword_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__AN__Group__0__Impl9355); if (state.failed) return ;
+            match(input,43,FOLLOW_43_in_rule__AN__Group__0__Impl9292); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getANAccess().getIDTerminalRuleCall_0()); 
+               after(grammarAccess.getANAccess().getCommercialAtKeyword_0()); 
             }
 
             }
@@ -13324,17 +13245,22 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AN__Group__1"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4617:1: rule__AN__Group__1 : rule__AN__Group__1__Impl ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4586:1: rule__AN__Group__1 : rule__AN__Group__1__Impl rule__AN__Group__2 ;
     public final void rule__AN__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4621:1: ( rule__AN__Group__1__Impl )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4622:2: rule__AN__Group__1__Impl
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4590:1: ( rule__AN__Group__1__Impl rule__AN__Group__2 )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4591:2: rule__AN__Group__1__Impl rule__AN__Group__2
             {
-            pushFollow(FOLLOW_rule__AN__Group__1__Impl_in_rule__AN__Group__19384);
+            pushFollow(FOLLOW_rule__AN__Group__1__Impl_in_rule__AN__Group__19323);
             rule__AN__Group__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__AN__Group__2_in_rule__AN__Group__19326);
+            rule__AN__Group__2();
 
             state._fsp--;
             if (state.failed) return ;
@@ -13357,52 +13283,24 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AN__Group__1__Impl"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4628:1: rule__AN__Group__1__Impl : ( ( rule__AN__Group_1__0 )* ) ;
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4598:1: rule__AN__Group__1__Impl : ( RULE_ID ) ;
     public final void rule__AN__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4632:1: ( ( ( rule__AN__Group_1__0 )* ) )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4633:1: ( ( rule__AN__Group_1__0 )* )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4602:1: ( ( RULE_ID ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4603:1: ( RULE_ID )
             {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4633:1: ( ( rule__AN__Group_1__0 )* )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4634:1: ( rule__AN__Group_1__0 )*
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4603:1: ( RULE_ID )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4604:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getANAccess().getGroup_1()); 
+               before(grammarAccess.getANAccess().getIDTerminalRuleCall_1()); 
             }
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4635:1: ( rule__AN__Group_1__0 )*
-            loop35:
-            do {
-                int alt35=2;
-                int LA35_0 = input.LA(1);
-
-                if ( (LA35_0==44) ) {
-                    alt35=1;
-                }
-
-
-                switch (alt35) {
-            	case 1 :
-            	    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4635:2: rule__AN__Group_1__0
-            	    {
-            	    pushFollow(FOLLOW_rule__AN__Group_1__0_in_rule__AN__Group__1__Impl9411);
-            	    rule__AN__Group_1__0();
-
-            	    state._fsp--;
-            	    if (state.failed) return ;
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop35;
-                }
-            } while (true);
-
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__AN__Group__1__Impl9353); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getANAccess().getGroup_1()); 
+               after(grammarAccess.getANAccess().getIDTerminalRuleCall_1()); 
             }
 
             }
@@ -13425,23 +13323,18 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__AN__Group__1__Impl"
 
 
-    // $ANTLR start "rule__AN__Group_1__0"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4649:1: rule__AN__Group_1__0 : rule__AN__Group_1__0__Impl rule__AN__Group_1__1 ;
-    public final void rule__AN__Group_1__0() throws RecognitionException {
+    // $ANTLR start "rule__AN__Group__2"
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4615:1: rule__AN__Group__2 : rule__AN__Group__2__Impl ;
+    public final void rule__AN__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4653:1: ( rule__AN__Group_1__0__Impl rule__AN__Group_1__1 )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4654:2: rule__AN__Group_1__0__Impl rule__AN__Group_1__1
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4619:1: ( rule__AN__Group__2__Impl )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4620:2: rule__AN__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__AN__Group_1__0__Impl_in_rule__AN__Group_1__09446);
-            rule__AN__Group_1__0__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__AN__Group_1__1_in_rule__AN__Group_1__09449);
-            rule__AN__Group_1__1();
+            pushFollow(FOLLOW_rule__AN__Group__2__Impl_in_rule__AN__Group__29382);
+            rule__AN__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
@@ -13460,12 +13353,119 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__AN__Group_1__0"
+    // $ANTLR end "rule__AN__Group__2"
 
 
-    // $ANTLR start "rule__AN__Group_1__0__Impl"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4661:1: rule__AN__Group_1__0__Impl : ( '-' ) ;
-    public final void rule__AN__Group_1__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__AN__Group__2__Impl"
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4626:1: rule__AN__Group__2__Impl : ( ( rule__AN__Group_2__0 )* ) ;
+    public final void rule__AN__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4630:1: ( ( ( rule__AN__Group_2__0 )* ) )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4631:1: ( ( rule__AN__Group_2__0 )* )
+            {
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4631:1: ( ( rule__AN__Group_2__0 )* )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4632:1: ( rule__AN__Group_2__0 )*
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getANAccess().getGroup_2()); 
+            }
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4633:1: ( rule__AN__Group_2__0 )*
+            loop35:
+            do {
+                int alt35=2;
+                int LA35_0 = input.LA(1);
+
+                if ( (LA35_0==44) ) {
+                    alt35=1;
+                }
+
+
+                switch (alt35) {
+            	case 1 :
+            	    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4633:2: rule__AN__Group_2__0
+            	    {
+            	    pushFollow(FOLLOW_rule__AN__Group_2__0_in_rule__AN__Group__2__Impl9409);
+            	    rule__AN__Group_2__0();
+
+            	    state._fsp--;
+            	    if (state.failed) return ;
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop35;
+                }
+            } while (true);
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getANAccess().getGroup_2()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AN__Group__2__Impl"
+
+
+    // $ANTLR start "rule__AN__Group_2__0"
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4649:1: rule__AN__Group_2__0 : rule__AN__Group_2__0__Impl rule__AN__Group_2__1 ;
+    public final void rule__AN__Group_2__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4653:1: ( rule__AN__Group_2__0__Impl rule__AN__Group_2__1 )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4654:2: rule__AN__Group_2__0__Impl rule__AN__Group_2__1
+            {
+            pushFollow(FOLLOW_rule__AN__Group_2__0__Impl_in_rule__AN__Group_2__09446);
+            rule__AN__Group_2__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__AN__Group_2__1_in_rule__AN__Group_2__09449);
+            rule__AN__Group_2__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AN__Group_2__0"
+
+
+    // $ANTLR start "rule__AN__Group_2__0__Impl"
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4661:1: rule__AN__Group_2__0__Impl : ( '-' ) ;
+    public final void rule__AN__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -13477,11 +13477,11 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
             // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4667:1: '-'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getANAccess().getHyphenMinusKeyword_1_0()); 
+               before(grammarAccess.getANAccess().getHyphenMinusKeyword_2_0()); 
             }
-            match(input,44,FOLLOW_44_in_rule__AN__Group_1__0__Impl9477); if (state.failed) return ;
+            match(input,44,FOLLOW_44_in_rule__AN__Group_2__0__Impl9477); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getANAccess().getHyphenMinusKeyword_1_0()); 
+               after(grammarAccess.getANAccess().getHyphenMinusKeyword_2_0()); 
             }
 
             }
@@ -13501,21 +13501,21 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__AN__Group_1__0__Impl"
+    // $ANTLR end "rule__AN__Group_2__0__Impl"
 
 
-    // $ANTLR start "rule__AN__Group_1__1"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4680:1: rule__AN__Group_1__1 : rule__AN__Group_1__1__Impl ;
-    public final void rule__AN__Group_1__1() throws RecognitionException {
+    // $ANTLR start "rule__AN__Group_2__1"
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4680:1: rule__AN__Group_2__1 : rule__AN__Group_2__1__Impl ;
+    public final void rule__AN__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4684:1: ( rule__AN__Group_1__1__Impl )
-            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4685:2: rule__AN__Group_1__1__Impl
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4684:1: ( rule__AN__Group_2__1__Impl )
+            // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4685:2: rule__AN__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__AN__Group_1__1__Impl_in_rule__AN__Group_1__19508);
-            rule__AN__Group_1__1__Impl();
+            pushFollow(FOLLOW_rule__AN__Group_2__1__Impl_in_rule__AN__Group_2__19508);
+            rule__AN__Group_2__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
@@ -13534,12 +13534,12 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__AN__Group_1__1"
+    // $ANTLR end "rule__AN__Group_2__1"
 
 
-    // $ANTLR start "rule__AN__Group_1__1__Impl"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4691:1: rule__AN__Group_1__1__Impl : ( RULE_ID ) ;
-    public final void rule__AN__Group_1__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__AN__Group_2__1__Impl"
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4691:1: rule__AN__Group_2__1__Impl : ( RULE_ID ) ;
+    public final void rule__AN__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -13551,11 +13551,11 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
             // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:4697:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getANAccess().getIDTerminalRuleCall_1_1()); 
+               before(grammarAccess.getANAccess().getIDTerminalRuleCall_2_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__AN__Group_1__1__Impl9535); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__AN__Group_2__1__Impl9535); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getANAccess().getIDTerminalRuleCall_1_1()); 
+               after(grammarAccess.getANAccess().getIDTerminalRuleCall_2_1()); 
             }
 
             }
@@ -13575,7 +13575,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__AN__Group_1__1__Impl"
+    // $ANTLR end "rule__AN__Group_2__1__Impl"
 
 
     // $ANTLR start "rule__NegativeInt__Group__0"
@@ -15651,9 +15651,9 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__EnumType__LiteralsAssignment_4_1"
 
 
-    // $ANTLR start "rule__Annotation__NameAssignment_1"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:5431:1: rule__Annotation__NameAssignment_1 : ( ruleAN ) ;
-    public final void rule__Annotation__NameAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Annotation__NameAssignment_0"
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:5431:1: rule__Annotation__NameAssignment_0 : ( ruleAN ) ;
+    public final void rule__Annotation__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -15665,15 +15665,15 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
             // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:5437:1: ruleAN
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getAnnotationAccess().getNameANParserRuleCall_1_0()); 
+               before(grammarAccess.getAnnotationAccess().getNameANParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleAN_in_rule__Annotation__NameAssignment_111041);
+            pushFollow(FOLLOW_ruleAN_in_rule__Annotation__NameAssignment_011041);
             ruleAN();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getAnnotationAccess().getNameANParserRuleCall_1_0()); 
+               after(grammarAccess.getAnnotationAccess().getNameANParserRuleCall_0_0()); 
             }
 
             }
@@ -15693,12 +15693,12 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Annotation__NameAssignment_1"
+    // $ANTLR end "rule__Annotation__NameAssignment_0"
 
 
-    // $ANTLR start "rule__Annotation__ValuesAssignment_2_1"
-    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:5446:1: rule__Annotation__ValuesAssignment_2_1 : ( ruleValues ) ;
-    public final void rule__Annotation__ValuesAssignment_2_1() throws RecognitionException {
+    // $ANTLR start "rule__Annotation__ValuesAssignment_1_1"
+    // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:5446:1: rule__Annotation__ValuesAssignment_1_1 : ( ruleValues ) ;
+    public final void rule__Annotation__ValuesAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -15710,15 +15710,15 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
             // ../avroclipse.ui/src-gen/avroclipse/ui/contentassist/antlr/internal/InternalAvdl.g:5452:1: ruleValues
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getAnnotationAccess().getValuesValuesParserRuleCall_2_1_0()); 
+               before(grammarAccess.getAnnotationAccess().getValuesValuesParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleValues_in_rule__Annotation__ValuesAssignment_2_111072);
+            pushFollow(FOLLOW_ruleValues_in_rule__Annotation__ValuesAssignment_1_111072);
             ruleValues();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getAnnotationAccess().getValuesValuesParserRuleCall_2_1_0()); 
+               after(grammarAccess.getAnnotationAccess().getValuesValuesParserRuleCall_1_1_0()); 
             }
 
             }
@@ -15738,7 +15738,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Annotation__ValuesAssignment_2_1"
+    // $ANTLR end "rule__Annotation__ValuesAssignment_1_1"
 
 
     // $ANTLR start "rule__Values__ValueAssignment_1_0"
@@ -16117,7 +16117,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
 
     public static final BitSet FOLLOW_ruleAvdlFile_in_entryRuleAvdlFile67 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleAvdlFile74 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AvdlFile__Alternatives_in_ruleAvdlFile100 = new BitSet(new long[]{0x000001000A000002L});
+    public static final BitSet FOLLOW_rule__AvdlFile__Alternatives_in_ruleAvdlFile100 = new BitSet(new long[]{0x000008000A000002L});
     public static final BitSet FOLLOW_ruleImport_in_entryRuleImport128 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleImport135 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Import__Group__0_in_ruleImport161 = new BitSet(new long[]{0x0000000000000002L});
@@ -16276,35 +16276,35 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__Import__ImportUriAssignment_2_in_rule__Import__Group__2__Impl3370 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Import__Group__3__Impl_in_rule__Import__Group__33400 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_31_in_rule__Import__Group__3__Impl3428 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Protocol__Group__0__Impl_in_rule__Protocol__Group__03467 = new BitSet(new long[]{0x000001000A000000L});
+    public static final BitSet FOLLOW_rule__Protocol__Group__0__Impl_in_rule__Protocol__Group__03467 = new BitSet(new long[]{0x000008000A000000L});
     public static final BitSet FOLLOW_rule__Protocol__Group__1_in_rule__Protocol__Group__03470 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Protocol__AnnotationsAssignment_0_in_rule__Protocol__Group__0__Impl3497 = new BitSet(new long[]{0x0000010000000002L});
-    public static final BitSet FOLLOW_rule__Protocol__Group__1__Impl_in_rule__Protocol__Group__13528 = new BitSet(new long[]{0x0000080000000020L});
+    public static final BitSet FOLLOW_rule__Protocol__AnnotationsAssignment_0_in_rule__Protocol__Group__0__Impl3497 = new BitSet(new long[]{0x0000080000000002L});
+    public static final BitSet FOLLOW_rule__Protocol__Group__1__Impl_in_rule__Protocol__Group__13528 = new BitSet(new long[]{0x0000040000000020L});
     public static final BitSet FOLLOW_rule__Protocol__Group__2_in_rule__Protocol__Group__13531 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_25_in_rule__Protocol__Group__1__Impl3559 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Protocol__Group__2__Impl_in_rule__Protocol__Group__23590 = new BitSet(new long[]{0x0000000100000000L});
     public static final BitSet FOLLOW_rule__Protocol__Group__3_in_rule__Protocol__Group__23593 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Protocol__NameAssignment_2_in_rule__Protocol__Group__2__Impl3620 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Protocol__Group__3__Impl_in_rule__Protocol__Group__33650 = new BitSet(new long[]{0x00002902011FF820L});
+    public static final BitSet FOLLOW_rule__Protocol__Group__3__Impl_in_rule__Protocol__Group__33650 = new BitSet(new long[]{0x00002C02011FF820L});
     public static final BitSet FOLLOW_rule__Protocol__Group__4_in_rule__Protocol__Group__33653 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_32_in_rule__Protocol__Group__3__Impl3681 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Protocol__Group__4__Impl_in_rule__Protocol__Group__43712 = new BitSet(new long[]{0x00002902011FF820L});
+    public static final BitSet FOLLOW_rule__Protocol__Group__4__Impl_in_rule__Protocol__Group__43712 = new BitSet(new long[]{0x00002C02011FF820L});
     public static final BitSet FOLLOW_rule__Protocol__Group__5_in_rule__Protocol__Group__43715 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Protocol__ElementsAssignment_4_in_rule__Protocol__Group__4__Impl3742 = new BitSet(new long[]{0x00002900011FF822L});
+    public static final BitSet FOLLOW_rule__Protocol__ElementsAssignment_4_in_rule__Protocol__Group__4__Impl3742 = new BitSet(new long[]{0x00002C00011FF822L});
     public static final BitSet FOLLOW_rule__Protocol__Group__5__Impl_in_rule__Protocol__Group__53773 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_33_in_rule__Protocol__Group__5__Impl3801 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RPCMessage__Group__0__Impl_in_rule__RPCMessage__Group__03844 = new BitSet(new long[]{0x0000080000000020L});
+    public static final BitSet FOLLOW_rule__RPCMessage__Group__0__Impl_in_rule__RPCMessage__Group__03844 = new BitSet(new long[]{0x0000040000000020L});
     public static final BitSet FOLLOW_rule__RPCMessage__Group__1_in_rule__RPCMessage__Group__03847 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__RPCMessage__ReturnTypeAssignment_0_in_rule__RPCMessage__Group__0__Impl3874 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__RPCMessage__Group__1__Impl_in_rule__RPCMessage__Group__13904 = new BitSet(new long[]{0x0000000400000000L});
     public static final BitSet FOLLOW_rule__RPCMessage__Group__2_in_rule__RPCMessage__Group__13907 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__RPCMessage__NameAssignment_1_in_rule__RPCMessage__Group__1__Impl3934 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RPCMessage__Group__2__Impl_in_rule__RPCMessage__Group__23964 = new BitSet(new long[]{0x00002908011FF820L});
+    public static final BitSet FOLLOW_rule__RPCMessage__Group__2__Impl_in_rule__RPCMessage__Group__23964 = new BitSet(new long[]{0x00002C08011FF820L});
     public static final BitSet FOLLOW_rule__RPCMessage__Group__3_in_rule__RPCMessage__Group__23967 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_34_in_rule__RPCMessage__Group__2__Impl3995 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RPCMessage__Group__3__Impl_in_rule__RPCMessage__Group__34026 = new BitSet(new long[]{0x00002908011FF820L});
+    public static final BitSet FOLLOW_rule__RPCMessage__Group__3__Impl_in_rule__RPCMessage__Group__34026 = new BitSet(new long[]{0x00002C08011FF820L});
     public static final BitSet FOLLOW_rule__RPCMessage__Group__4_in_rule__RPCMessage__Group__34029 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RPCMessage__Group_3__0_in_rule__RPCMessage__Group__3__Impl4056 = new BitSet(new long[]{0x00002900011FF822L});
+    public static final BitSet FOLLOW_rule__RPCMessage__Group_3__0_in_rule__RPCMessage__Group__3__Impl4056 = new BitSet(new long[]{0x00002C00011FF822L});
     public static final BitSet FOLLOW_rule__RPCMessage__Group__4__Impl_in_rule__RPCMessage__Group__44087 = new BitSet(new long[]{0x0000000094000000L});
     public static final BitSet FOLLOW_rule__RPCMessage__Group__5_in_rule__RPCMessage__Group__44090 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_35_in_rule__RPCMessage__Group__4__Impl4118 = new BitSet(new long[]{0x0000000000000002L});
@@ -16321,17 +16321,17 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__RPCMessage__ArgumentsAssignment_3_0_in_rule__RPCMessage__Group_3__0__Impl4376 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__RPCMessage__Group_3__1__Impl_in_rule__RPCMessage__Group_3__14406 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__RPCMessage__Group_3_1__0_in_rule__RPCMessage__Group_3__1__Impl4433 = new BitSet(new long[]{0x0000001000000002L});
-    public static final BitSet FOLLOW_rule__RPCMessage__Group_3_1__0__Impl_in_rule__RPCMessage__Group_3_1__04468 = new BitSet(new long[]{0x00002900011FF820L});
+    public static final BitSet FOLLOW_rule__RPCMessage__Group_3_1__0__Impl_in_rule__RPCMessage__Group_3_1__04468 = new BitSet(new long[]{0x00002C00011FF820L});
     public static final BitSet FOLLOW_rule__RPCMessage__Group_3_1__1_in_rule__RPCMessage__Group_3_1__04471 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_36_in_rule__RPCMessage__Group_3_1__0__Impl4499 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__RPCMessage__Group_3_1__1__Impl_in_rule__RPCMessage__Group_3_1__14530 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__RPCMessage__ArgumentsAssignment_3_1_1_in_rule__RPCMessage__Group_3_1__1__Impl4557 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RPCMessage__Group_5__0__Impl_in_rule__RPCMessage__Group_5__04591 = new BitSet(new long[]{0x0000080000000020L});
+    public static final BitSet FOLLOW_rule__RPCMessage__Group_5__0__Impl_in_rule__RPCMessage__Group_5__04591 = new BitSet(new long[]{0x0000040000000020L});
     public static final BitSet FOLLOW_rule__RPCMessage__Group_5__1_in_rule__RPCMessage__Group_5__04594 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_28_in_rule__RPCMessage__Group_5__0__Impl4622 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__RPCMessage__Group_5__1__Impl_in_rule__RPCMessage__Group_5__14653 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__RPCMessage__ErrorAssignment_5_1_in_rule__RPCMessage__Group_5__1__Impl4680 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Argument__Group__0__Impl_in_rule__Argument__Group__04714 = new BitSet(new long[]{0x0000080000000020L});
+    public static final BitSet FOLLOW_rule__Argument__Group__0__Impl_in_rule__Argument__Group__04714 = new BitSet(new long[]{0x0000040000000020L});
     public static final BitSet FOLLOW_rule__Argument__Group__1_in_rule__Argument__Group__04717 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Argument__TypeAssignment_0_in_rule__Argument__Group__0__Impl4744 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Argument__Group__1__Impl_in_rule__Argument__Group__14774 = new BitSet(new long[]{0x0000002000000000L});
@@ -16339,53 +16339,53 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__Argument__NameAssignment_1_in_rule__Argument__Group__1__Impl4804 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Argument__Group__2__Impl_in_rule__Argument__Group__24834 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Argument__Group_2__0_in_rule__Argument__Group__2__Impl4861 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Argument__Group_2__0__Impl_in_rule__Argument__Group_2__04898 = new BitSet(new long[]{0x0000120000000850L});
+    public static final BitSet FOLLOW_rule__Argument__Group_2__0__Impl_in_rule__Argument__Group_2__04898 = new BitSet(new long[]{0x0000110000000850L});
     public static final BitSet FOLLOW_rule__Argument__Group_2__1_in_rule__Argument__Group_2__04901 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_37_in_rule__Argument__Group_2__0__Impl4929 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Argument__Group_2__1__Impl_in_rule__Argument__Group_2__14960 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Argument__DefaultAssignment_2_1_in_rule__Argument__Group_2__1__Impl4987 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TypeDef__Group__0__Impl_in_rule__TypeDef__Group__05021 = new BitSet(new long[]{0x00000100011C0000L});
+    public static final BitSet FOLLOW_rule__TypeDef__Group__0__Impl_in_rule__TypeDef__Group__05021 = new BitSet(new long[]{0x00000800011C0000L});
     public static final BitSet FOLLOW_rule__TypeDef__Group__1_in_rule__TypeDef__Group__05024 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TypeDef__AnnotationsAssignment_0_in_rule__TypeDef__Group__0__Impl5051 = new BitSet(new long[]{0x0000010000000002L});
+    public static final BitSet FOLLOW_rule__TypeDef__AnnotationsAssignment_0_in_rule__TypeDef__Group__0__Impl5051 = new BitSet(new long[]{0x0000080000000002L});
     public static final BitSet FOLLOW_rule__TypeDef__Group__1__Impl_in_rule__TypeDef__Group__15082 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__TypeDef__TypeAssignment_1_in_rule__TypeDef__Group__1__Impl5109 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ErrorType__Group__0__Impl_in_rule__ErrorType__Group__05143 = new BitSet(new long[]{0x0000080000000020L});
+    public static final BitSet FOLLOW_rule__ErrorType__Group__0__Impl_in_rule__ErrorType__Group__05143 = new BitSet(new long[]{0x0000040000000020L});
     public static final BitSet FOLLOW_rule__ErrorType__Group__1_in_rule__ErrorType__Group__05146 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_24_in_rule__ErrorType__Group__0__Impl5174 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ErrorType__Group__1__Impl_in_rule__ErrorType__Group__15205 = new BitSet(new long[]{0x0000000100000000L});
     public static final BitSet FOLLOW_rule__ErrorType__Group__2_in_rule__ErrorType__Group__15208 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ErrorType__NameAssignment_1_in_rule__ErrorType__Group__1__Impl5235 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ErrorType__Group__2__Impl_in_rule__ErrorType__Group__25265 = new BitSet(new long[]{0x0000290201FFF820L});
+    public static final BitSet FOLLOW_rule__ErrorType__Group__2__Impl_in_rule__ErrorType__Group__25265 = new BitSet(new long[]{0x00002C0201FFF820L});
     public static final BitSet FOLLOW_rule__ErrorType__Group__3_in_rule__ErrorType__Group__25268 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_32_in_rule__ErrorType__Group__2__Impl5296 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ErrorType__Group__3__Impl_in_rule__ErrorType__Group__35327 = new BitSet(new long[]{0x0000290201FFF820L});
+    public static final BitSet FOLLOW_rule__ErrorType__Group__3__Impl_in_rule__ErrorType__Group__35327 = new BitSet(new long[]{0x00002C0201FFF820L});
     public static final BitSet FOLLOW_rule__ErrorType__Group__4_in_rule__ErrorType__Group__35330 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ErrorType__FieldsAssignment_3_in_rule__ErrorType__Group__3__Impl5357 = new BitSet(new long[]{0x0000290001FFF822L});
+    public static final BitSet FOLLOW_rule__ErrorType__FieldsAssignment_3_in_rule__ErrorType__Group__3__Impl5357 = new BitSet(new long[]{0x00002C0001FFF822L});
     public static final BitSet FOLLOW_rule__ErrorType__Group__4__Impl_in_rule__ErrorType__Group__45388 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_33_in_rule__ErrorType__Group__4__Impl5416 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RecordType__Group__0__Impl_in_rule__RecordType__Group__05457 = new BitSet(new long[]{0x0000080000000020L});
+    public static final BitSet FOLLOW_rule__RecordType__Group__0__Impl_in_rule__RecordType__Group__05457 = new BitSet(new long[]{0x0000040000000020L});
     public static final BitSet FOLLOW_rule__RecordType__Group__1_in_rule__RecordType__Group__05460 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_18_in_rule__RecordType__Group__0__Impl5488 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__RecordType__Group__1__Impl_in_rule__RecordType__Group__15519 = new BitSet(new long[]{0x0000000100000000L});
     public static final BitSet FOLLOW_rule__RecordType__Group__2_in_rule__RecordType__Group__15522 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__RecordType__NameAssignment_1_in_rule__RecordType__Group__1__Impl5549 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RecordType__Group__2__Impl_in_rule__RecordType__Group__25579 = new BitSet(new long[]{0x0000290201FFF820L});
+    public static final BitSet FOLLOW_rule__RecordType__Group__2__Impl_in_rule__RecordType__Group__25579 = new BitSet(new long[]{0x00002C0201FFF820L});
     public static final BitSet FOLLOW_rule__RecordType__Group__3_in_rule__RecordType__Group__25582 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_32_in_rule__RecordType__Group__2__Impl5610 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RecordType__Group__3__Impl_in_rule__RecordType__Group__35641 = new BitSet(new long[]{0x0000290201FFF820L});
+    public static final BitSet FOLLOW_rule__RecordType__Group__3__Impl_in_rule__RecordType__Group__35641 = new BitSet(new long[]{0x00002C0201FFF820L});
     public static final BitSet FOLLOW_rule__RecordType__Group__4_in_rule__RecordType__Group__35644 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RecordType__FieldsAssignment_3_in_rule__RecordType__Group__3__Impl5671 = new BitSet(new long[]{0x0000290001FFF822L});
+    public static final BitSet FOLLOW_rule__RecordType__FieldsAssignment_3_in_rule__RecordType__Group__3__Impl5671 = new BitSet(new long[]{0x00002C0001FFF822L});
     public static final BitSet FOLLOW_rule__RecordType__Group__4__Impl_in_rule__RecordType__Group__45702 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_33_in_rule__RecordType__Group__4__Impl5730 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Field__Group__0__Impl_in_rule__Field__Group__05771 = new BitSet(new long[]{0x0000290001FFF820L});
+    public static final BitSet FOLLOW_rule__Field__Group__0__Impl_in_rule__Field__Group__05771 = new BitSet(new long[]{0x00002C0001FFF820L});
     public static final BitSet FOLLOW_rule__Field__Group__1_in_rule__Field__Group__05774 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Field__AnnotationsAssignment_0_in_rule__Field__Group__0__Impl5801 = new BitSet(new long[]{0x0000010000000002L});
-    public static final BitSet FOLLOW_rule__Field__Group__1__Impl_in_rule__Field__Group__15832 = new BitSet(new long[]{0x0000090000000020L});
+    public static final BitSet FOLLOW_rule__Field__AnnotationsAssignment_0_in_rule__Field__Group__0__Impl5801 = new BitSet(new long[]{0x0000080000000002L});
+    public static final BitSet FOLLOW_rule__Field__Group__1__Impl_in_rule__Field__Group__15832 = new BitSet(new long[]{0x00000C0000000020L});
     public static final BitSet FOLLOW_rule__Field__Group__2_in_rule__Field__Group__15835 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Field__TypeAssignment_1_in_rule__Field__Group__1__Impl5862 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Field__Group__2__Impl_in_rule__Field__Group__25892 = new BitSet(new long[]{0x0000090000000020L});
+    public static final BitSet FOLLOW_rule__Field__Group__2__Impl_in_rule__Field__Group__25892 = new BitSet(new long[]{0x00000C0000000020L});
     public static final BitSet FOLLOW_rule__Field__Group__3_in_rule__Field__Group__25895 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Field__NameAnnotationsAssignment_2_in_rule__Field__Group__2__Impl5922 = new BitSet(new long[]{0x0000010000000002L});
+    public static final BitSet FOLLOW_rule__Field__NameAnnotationsAssignment_2_in_rule__Field__Group__2__Impl5922 = new BitSet(new long[]{0x0000080000000002L});
     public static final BitSet FOLLOW_rule__Field__Group__3__Impl_in_rule__Field__Group__35953 = new BitSet(new long[]{0x0000002080000000L});
     public static final BitSet FOLLOW_rule__Field__Group__4_in_rule__Field__Group__35956 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Field__NameAssignment_3_in_rule__Field__Group__3__Impl5983 = new BitSet(new long[]{0x0000000000000002L});
@@ -16394,7 +16394,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__Field__Group_4__0_in_rule__Field__Group__4__Impl6043 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Field__Group__5__Impl_in_rule__Field__Group__56074 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_31_in_rule__Field__Group__5__Impl6102 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Field__Group_4__0__Impl_in_rule__Field__Group_4__06145 = new BitSet(new long[]{0x0000120000000850L});
+    public static final BitSet FOLLOW_rule__Field__Group_4__0__Impl_in_rule__Field__Group_4__06145 = new BitSet(new long[]{0x0000110000000850L});
     public static final BitSet FOLLOW_rule__Field__Group_4__1_in_rule__Field__Group_4__06148 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_37_in_rule__Field__Group_4__0__Impl6176 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Field__Group_4__1__Impl_in_rule__Field__Group_4__16207 = new BitSet(new long[]{0x0000000000000002L});
@@ -16402,7 +16402,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__UnionFieldType__Group__0__Impl_in_rule__UnionFieldType__Group__06268 = new BitSet(new long[]{0x0000000100000000L});
     public static final BitSet FOLLOW_rule__UnionFieldType__Group__1_in_rule__UnionFieldType__Group__06271 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_23_in_rule__UnionFieldType__Group__0__Impl6299 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnionFieldType__Group__1__Impl_in_rule__UnionFieldType__Group__16330 = new BitSet(new long[]{0x00002900011FF820L});
+    public static final BitSet FOLLOW_rule__UnionFieldType__Group__1__Impl_in_rule__UnionFieldType__Group__16330 = new BitSet(new long[]{0x00002C00011FF820L});
     public static final BitSet FOLLOW_rule__UnionFieldType__Group__2_in_rule__UnionFieldType__Group__16333 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_32_in_rule__UnionFieldType__Group__1__Impl6361 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__UnionFieldType__Group__2__Impl_in_rule__UnionFieldType__Group__26392 = new BitSet(new long[]{0x0000001200000000L});
@@ -16413,7 +16413,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__UnionFieldType__Group_3__0_in_rule__UnionFieldType__Group__3__Impl6482 = new BitSet(new long[]{0x0000001000000002L});
     public static final BitSet FOLLOW_rule__UnionFieldType__Group__4__Impl_in_rule__UnionFieldType__Group__46513 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_33_in_rule__UnionFieldType__Group__4__Impl6541 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnionFieldType__Group_3__0__Impl_in_rule__UnionFieldType__Group_3__06582 = new BitSet(new long[]{0x00002900011FF820L});
+    public static final BitSet FOLLOW_rule__UnionFieldType__Group_3__0__Impl_in_rule__UnionFieldType__Group_3__06582 = new BitSet(new long[]{0x00002C00011FF820L});
     public static final BitSet FOLLOW_rule__UnionFieldType__Group_3__1_in_rule__UnionFieldType__Group_3__06585 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_36_in_rule__UnionFieldType__Group_3__0__Impl6613 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__UnionFieldType__Group_3__1__Impl_in_rule__UnionFieldType__Group_3__16644 = new BitSet(new long[]{0x0000000000000002L});
@@ -16421,10 +16421,10 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__ArrayFieldType__Group__0__Impl_in_rule__ArrayFieldType__Group__06705 = new BitSet(new long[]{0x0000004000000000L});
     public static final BitSet FOLLOW_rule__ArrayFieldType__Group__1_in_rule__ArrayFieldType__Group__06708 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_22_in_rule__ArrayFieldType__Group__0__Impl6736 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ArrayFieldType__Group__1__Impl_in_rule__ArrayFieldType__Group__16767 = new BitSet(new long[]{0x00002900011FF820L});
+    public static final BitSet FOLLOW_rule__ArrayFieldType__Group__1__Impl_in_rule__ArrayFieldType__Group__16767 = new BitSet(new long[]{0x00002C00011FF820L});
     public static final BitSet FOLLOW_rule__ArrayFieldType__Group__2_in_rule__ArrayFieldType__Group__16770 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_38_in_rule__ArrayFieldType__Group__1__Impl6798 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ArrayFieldType__Group__2__Impl_in_rule__ArrayFieldType__Group__26829 = new BitSet(new long[]{0x00002900011FF820L});
+    public static final BitSet FOLLOW_rule__ArrayFieldType__Group__2__Impl_in_rule__ArrayFieldType__Group__26829 = new BitSet(new long[]{0x00002C00011FF820L});
     public static final BitSet FOLLOW_rule__ArrayFieldType__Group__3_in_rule__ArrayFieldType__Group__26832 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ArrayFieldType__AnnotationAssignment_2_in_rule__ArrayFieldType__Group__2__Impl6859 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ArrayFieldType__Group__3__Impl_in_rule__ArrayFieldType__Group__36890 = new BitSet(new long[]{0x0000008000000000L});
@@ -16435,10 +16435,10 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__MapFieldType__Group__0__Impl_in_rule__MapFieldType__Group__07019 = new BitSet(new long[]{0x0000004000000000L});
     public static final BitSet FOLLOW_rule__MapFieldType__Group__1_in_rule__MapFieldType__Group__07022 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_21_in_rule__MapFieldType__Group__0__Impl7050 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MapFieldType__Group__1__Impl_in_rule__MapFieldType__Group__17081 = new BitSet(new long[]{0x00002900011FF820L});
+    public static final BitSet FOLLOW_rule__MapFieldType__Group__1__Impl_in_rule__MapFieldType__Group__17081 = new BitSet(new long[]{0x00002C00011FF820L});
     public static final BitSet FOLLOW_rule__MapFieldType__Group__2_in_rule__MapFieldType__Group__17084 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_38_in_rule__MapFieldType__Group__1__Impl7112 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MapFieldType__Group__2__Impl_in_rule__MapFieldType__Group__27143 = new BitSet(new long[]{0x00002900011FF820L});
+    public static final BitSet FOLLOW_rule__MapFieldType__Group__2__Impl_in_rule__MapFieldType__Group__27143 = new BitSet(new long[]{0x00002C00011FF820L});
     public static final BitSet FOLLOW_rule__MapFieldType__Group__3_in_rule__MapFieldType__Group__27146 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__MapFieldType__AnnotationAssignment_2_in_rule__MapFieldType__Group__2__Impl7173 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__MapFieldType__Group__3__Impl_in_rule__MapFieldType__Group__37204 = new BitSet(new long[]{0x0000008000000000L});
@@ -16446,7 +16446,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__MapFieldType__TypeAssignment_3_in_rule__MapFieldType__Group__3__Impl7234 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__MapFieldType__Group__4__Impl_in_rule__MapFieldType__Group__47264 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_39_in_rule__MapFieldType__Group__4__Impl7292 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FixedType__Group__0__Impl_in_rule__FixedType__Group__07333 = new BitSet(new long[]{0x0000080000000020L});
+    public static final BitSet FOLLOW_rule__FixedType__Group__0__Impl_in_rule__FixedType__Group__07333 = new BitSet(new long[]{0x0000040000000020L});
     public static final BitSet FOLLOW_rule__FixedType__Group__1_in_rule__FixedType__Group__07336 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_19_in_rule__FixedType__Group__0__Impl7364 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__FixedType__Group__1__Impl_in_rule__FixedType__Group__17395 = new BitSet(new long[]{0x0000000400000000L});
@@ -16463,7 +16463,7 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_35_in_rule__FixedType__Group__4__Impl7608 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__FixedType__Group__5__Impl_in_rule__FixedType__Group__57639 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_31_in_rule__FixedType__Group__5__Impl7667 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EnumType__Group__0__Impl_in_rule__EnumType__Group__07710 = new BitSet(new long[]{0x0000080000000020L});
+    public static final BitSet FOLLOW_rule__EnumType__Group__0__Impl_in_rule__EnumType__Group__07710 = new BitSet(new long[]{0x0000040000000020L});
     public static final BitSet FOLLOW_rule__EnumType__Group__1_in_rule__EnumType__Group__07713 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_20_in_rule__EnumType__Group__0__Impl7741 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__EnumType__Group__1__Impl_in_rule__EnumType__Group__17772 = new BitSet(new long[]{0x0000000100000000L});
@@ -16485,62 +16485,62 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_36_in_rule__EnumType__Group_4__0__Impl8117 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__EnumType__Group_4__1__Impl_in_rule__EnumType__Group_4__18148 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__EnumType__LiteralsAssignment_4_1_in_rule__EnumType__Group_4__1__Impl8175 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group__0__Impl_in_rule__Annotation__Group__08209 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Annotation__Group__0__Impl_in_rule__Annotation__Group__08209 = new BitSet(new long[]{0x0000000400000000L});
     public static final BitSet FOLLOW_rule__Annotation__Group__1_in_rule__Annotation__Group__08212 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__Annotation__Group__0__Impl8240 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group__1__Impl_in_rule__Annotation__Group__18271 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_rule__Annotation__Group__2_in_rule__Annotation__Group__18274 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__NameAssignment_1_in_rule__Annotation__Group__1__Impl8301 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group__2__Impl_in_rule__Annotation__Group__28331 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2__0_in_rule__Annotation__Group__2__Impl8358 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2__0__Impl_in_rule__Annotation__Group_2__08395 = new BitSet(new long[]{0x0000120000000850L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2__1_in_rule__Annotation__Group_2__08398 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__Annotation__Group_2__0__Impl8426 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2__1__Impl_in_rule__Annotation__Group_2__18457 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2__2_in_rule__Annotation__Group_2__18460 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__ValuesAssignment_2_1_in_rule__Annotation__Group_2__1__Impl8487 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Annotation__Group_2__2__Impl_in_rule__Annotation__Group_2__28517 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__Annotation__Group_2__2__Impl8545 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Values__Group__0__Impl_in_rule__Values__Group__08582 = new BitSet(new long[]{0x0000120000000850L});
-    public static final BitSet FOLLOW_rule__Values__Group__1_in_rule__Values__Group__08585 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Values__Group__1__Impl_in_rule__Values__Group__18643 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Values__Alternatives_1_in_rule__Values__Group__1__Impl8670 = new BitSet(new long[]{0x0000120000000852L});
-    public static final BitSet FOLLOW_rule__Values__Group_1_1__0__Impl_in_rule__Values__Group_1_1__08705 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_rule__Values__Group_1_1__1_in_rule__Values__Group_1_1__08708 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Values__ValueAssignment_1_1_0_in_rule__Values__Group_1_1__0__Impl8735 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Values__Group_1_1__1__Impl_in_rule__Values__Group_1_1__18765 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Values__Group_1_1_1__0_in_rule__Values__Group_1_1__1__Impl8792 = new BitSet(new long[]{0x0000001000000002L});
-    public static final BitSet FOLLOW_rule__Values__Group_1_1_1__0__Impl_in_rule__Values__Group_1_1_1__08827 = new BitSet(new long[]{0x0000120000000850L});
-    public static final BitSet FOLLOW_rule__Values__Group_1_1_1__1_in_rule__Values__Group_1_1_1__08830 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__Values__Group_1_1_1__0__Impl8858 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Values__Group_1_1_1__1__Impl_in_rule__Values__Group_1_1_1__18889 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Values__ValueAssignment_1_1_1_1_in_rule__Values__Group_1_1_1__1__Impl8916 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group__0__Impl_in_rule__Array__Group__08950 = new BitSet(new long[]{0x0000120000000850L});
-    public static final BitSet FOLLOW_rule__Array__Group__1_in_rule__Array__Group__08953 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__Array__Group__0__Impl8982 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group__1__Impl_in_rule__Array__Group__19014 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_rule__Array__Group__2_in_rule__Array__Group__19017 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__ValuesAssignment_1_in_rule__Array__Group__1__Impl9044 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group__2__Impl_in_rule__Array__Group__29074 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_rule__Array__Group__2__Impl9102 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EscapableId__Group_1__0__Impl_in_rule__EscapableId__Group_1__09139 = new BitSet(new long[]{0x000000001FFC0000L});
-    public static final BitSet FOLLOW_rule__EscapableId__Group_1__1_in_rule__EscapableId__Group_1__09142 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_rule__EscapableId__Group_1__0__Impl9170 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EscapableId__Group_1__1__Impl_in_rule__EscapableId__Group_1__19201 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_rule__EscapableId__Group_1__2_in_rule__EscapableId__Group_1__19204 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleReservedKeyWords_in_rule__EscapableId__Group_1__1__Impl9231 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EscapableId__Group_1__2__Impl_in_rule__EscapableId__Group_1__29260 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_rule__EscapableId__Group_1__2__Impl9288 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AN__Group__0__Impl_in_rule__AN__Group__09325 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_rule__AN__Group__1_in_rule__AN__Group__09328 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__AN__Group__0__Impl9355 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AN__Group__1__Impl_in_rule__AN__Group__19384 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AN__Group_1__0_in_rule__AN__Group__1__Impl9411 = new BitSet(new long[]{0x0000100000000002L});
-    public static final BitSet FOLLOW_rule__AN__Group_1__0__Impl_in_rule__AN__Group_1__09446 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__AN__Group_1__1_in_rule__AN__Group_1__09449 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_rule__AN__Group_1__0__Impl9477 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AN__Group_1__1__Impl_in_rule__AN__Group_1__19508 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__AN__Group_1__1__Impl9535 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__NameAssignment_0_in_rule__Annotation__Group__0__Impl8239 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group__1__Impl_in_rule__Annotation__Group__18269 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_1__0_in_rule__Annotation__Group__1__Impl8296 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_1__0__Impl_in_rule__Annotation__Group_1__08331 = new BitSet(new long[]{0x0000110000000850L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_1__1_in_rule__Annotation__Group_1__08334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__Annotation__Group_1__0__Impl8362 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_1__1__Impl_in_rule__Annotation__Group_1__18393 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_1__2_in_rule__Annotation__Group_1__18396 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__ValuesAssignment_1_1_in_rule__Annotation__Group_1__1__Impl8423 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Annotation__Group_1__2__Impl_in_rule__Annotation__Group_1__28453 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__Annotation__Group_1__2__Impl8481 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Values__Group__0__Impl_in_rule__Values__Group__08518 = new BitSet(new long[]{0x0000110000000850L});
+    public static final BitSet FOLLOW_rule__Values__Group__1_in_rule__Values__Group__08521 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Values__Group__1__Impl_in_rule__Values__Group__18579 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Values__Alternatives_1_in_rule__Values__Group__1__Impl8606 = new BitSet(new long[]{0x0000110000000852L});
+    public static final BitSet FOLLOW_rule__Values__Group_1_1__0__Impl_in_rule__Values__Group_1_1__08641 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_rule__Values__Group_1_1__1_in_rule__Values__Group_1_1__08644 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Values__ValueAssignment_1_1_0_in_rule__Values__Group_1_1__0__Impl8671 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Values__Group_1_1__1__Impl_in_rule__Values__Group_1_1__18701 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Values__Group_1_1_1__0_in_rule__Values__Group_1_1__1__Impl8728 = new BitSet(new long[]{0x0000001000000002L});
+    public static final BitSet FOLLOW_rule__Values__Group_1_1_1__0__Impl_in_rule__Values__Group_1_1_1__08763 = new BitSet(new long[]{0x0000110000000850L});
+    public static final BitSet FOLLOW_rule__Values__Group_1_1_1__1_in_rule__Values__Group_1_1_1__08766 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__Values__Group_1_1_1__0__Impl8794 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Values__Group_1_1_1__1__Impl_in_rule__Values__Group_1_1_1__18825 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Values__ValueAssignment_1_1_1_1_in_rule__Values__Group_1_1_1__1__Impl8852 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group__0__Impl_in_rule__Array__Group__08886 = new BitSet(new long[]{0x0000110000000850L});
+    public static final BitSet FOLLOW_rule__Array__Group__1_in_rule__Array__Group__08889 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__Array__Group__0__Impl8918 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group__1__Impl_in_rule__Array__Group__18950 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__Array__Group__2_in_rule__Array__Group__18953 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__ValuesAssignment_1_in_rule__Array__Group__1__Impl8980 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group__2__Impl_in_rule__Array__Group__29010 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__Array__Group__2__Impl9038 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EscapableId__Group_1__0__Impl_in_rule__EscapableId__Group_1__09075 = new BitSet(new long[]{0x000000001FFC0000L});
+    public static final BitSet FOLLOW_rule__EscapableId__Group_1__1_in_rule__EscapableId__Group_1__09078 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__EscapableId__Group_1__0__Impl9106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EscapableId__Group_1__1__Impl_in_rule__EscapableId__Group_1__19137 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_rule__EscapableId__Group_1__2_in_rule__EscapableId__Group_1__19140 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleReservedKeyWords_in_rule__EscapableId__Group_1__1__Impl9167 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EscapableId__Group_1__2__Impl_in_rule__EscapableId__Group_1__29196 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__EscapableId__Group_1__2__Impl9224 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AN__Group__0__Impl_in_rule__AN__Group__09261 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__AN__Group__1_in_rule__AN__Group__09264 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_rule__AN__Group__0__Impl9292 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AN__Group__1__Impl_in_rule__AN__Group__19323 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_rule__AN__Group__2_in_rule__AN__Group__19326 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__AN__Group__1__Impl9353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AN__Group__2__Impl_in_rule__AN__Group__29382 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AN__Group_2__0_in_rule__AN__Group__2__Impl9409 = new BitSet(new long[]{0x0000100000000002L});
+    public static final BitSet FOLLOW_rule__AN__Group_2__0__Impl_in_rule__AN__Group_2__09446 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__AN__Group_2__1_in_rule__AN__Group_2__09449 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_rule__AN__Group_2__0__Impl9477 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AN__Group_2__1__Impl_in_rule__AN__Group_2__19508 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__AN__Group_2__1__Impl9535 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__NegativeInt__Group__0__Impl_in_rule__NegativeInt__Group__09568 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_rule__NegativeInt__Group__1_in_rule__NegativeInt__Group__09571 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_44_in_rule__NegativeInt__Group__0__Impl9599 = new BitSet(new long[]{0x0000000000000002L});
@@ -16588,8 +16588,8 @@ public class InternalAvdlParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleEscapableId_in_rule__EnumType__NameAssignment_110948 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__EnumType__LiteralsAssignment_310979 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__EnumType__LiteralsAssignment_4_111010 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAN_in_rule__Annotation__NameAssignment_111041 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValues_in_rule__Annotation__ValuesAssignment_2_111072 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAN_in_rule__Annotation__NameAssignment_011041 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValues_in_rule__Annotation__ValuesAssignment_1_111072 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleArray_in_rule__Values__ValueAssignment_1_011103 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleValue_in_rule__Values__ValueAssignment_1_1_011134 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleValue_in_rule__Values__ValueAssignment_1_1_1_111165 = new BitSet(new long[]{0x0000000000000002L});

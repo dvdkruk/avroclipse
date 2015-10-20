@@ -887,45 +887,41 @@ public class AvdlGrammarAccess extends AbstractGrammarElementFinder {
 	public class AnnotationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Annotation");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cCommercialAtKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameANParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cLeftParenthesisKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cValuesAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cValuesValuesParserRuleCall_2_1_0 = (RuleCall)cValuesAssignment_2_1.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameANParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cLeftParenthesisKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cValuesAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cValuesValuesParserRuleCall_1_1_0 = (RuleCall)cValuesAssignment_1_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
 		
 		//Annotation:
-		//	"@" name=AN ("(" values=Values ")")?;
+		//	name=AN ("(" values=Values ")")?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@" name=AN ("(" values=Values ")")?
+		//name=AN ("(" values=Values ")")?
 		public Group getGroup() { return cGroup; }
 
-		//"@"
-		public Keyword getCommercialAtKeyword_0() { return cCommercialAtKeyword_0; }
-
 		//name=AN
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
 		//AN
-		public RuleCall getNameANParserRuleCall_1_0() { return cNameANParserRuleCall_1_0; }
+		public RuleCall getNameANParserRuleCall_0_0() { return cNameANParserRuleCall_0_0; }
 
 		//("(" values=Values ")")?
-		public Group getGroup_2() { return cGroup_2; }
+		public Group getGroup_1() { return cGroup_1; }
 
 		//"("
-		public Keyword getLeftParenthesisKeyword_2_0() { return cLeftParenthesisKeyword_2_0; }
+		public Keyword getLeftParenthesisKeyword_1_0() { return cLeftParenthesisKeyword_1_0; }
 
 		//values=Values
-		public Assignment getValuesAssignment_2_1() { return cValuesAssignment_2_1; }
+		public Assignment getValuesAssignment_1_1() { return cValuesAssignment_1_1; }
 
 		//Values
-		public RuleCall getValuesValuesParserRuleCall_2_1_0() { return cValuesValuesParserRuleCall_2_1_0; }
+		public RuleCall getValuesValuesParserRuleCall_1_1_0() { return cValuesValuesParserRuleCall_1_1_0; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
+		public Keyword getRightParenthesisKeyword_1_2() { return cRightParenthesisKeyword_1_2; }
 	}
 
 	public class ValuesElements extends AbstractParserRuleElementFinder {
@@ -1187,29 +1183,33 @@ public class AvdlGrammarAccess extends AbstractGrammarElementFinder {
 	public class ANElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "AN");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cHyphenMinusKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		private final Keyword cCommercialAtKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cHyphenMinusKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_2_1 = (RuleCall)cGroup_2.eContents().get(1);
 		
 		//AN:
-		//	ID ("-" ID)*;
+		//	"@" ID ("-" ID)*;
 		@Override public ParserRule getRule() { return rule; }
 
-		//ID ("-" ID)*
+		//"@" ID ("-" ID)*
 		public Group getGroup() { return cGroup; }
 
+		//"@"
+		public Keyword getCommercialAtKeyword_0() { return cCommercialAtKeyword_0; }
+
 		//ID
-		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
 
 		//("-" ID)*
-		public Group getGroup_1() { return cGroup_1; }
+		public Group getGroup_2() { return cGroup_2; }
 
 		//"-"
-		public Keyword getHyphenMinusKeyword_1_0() { return cHyphenMinusKeyword_1_0; }
+		public Keyword getHyphenMinusKeyword_2_0() { return cHyphenMinusKeyword_2_0; }
 
 		//ID
-		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
+		public RuleCall getIDTerminalRuleCall_2_1() { return cIDTerminalRuleCall_2_1; }
 	}
 
 	public class NegativeIntElements extends AbstractParserRuleElementFinder {
@@ -1610,7 +1610,7 @@ public class AvdlGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Annotation:
-	//	"@" name=AN ("(" values=Values ")")?;
+	//	name=AN ("(" values=Values ")")?;
 	public AnnotationElements getAnnotationAccess() {
 		return pAnnotation;
 	}
@@ -1700,7 +1700,7 @@ public class AvdlGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//AN:
-	//	ID ("-" ID)*;
+	//	"@" ID ("-" ID)*;
 	public ANElements getANAccess() {
 		return pAN;
 	}

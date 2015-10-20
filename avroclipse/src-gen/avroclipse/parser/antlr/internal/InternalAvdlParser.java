@@ -23,7 +23,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalAvdlParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INT", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "';'", "'protocol'", "'{'", "'}'", "'('", "','", "')'", "'throws'", "'oneway'", "'='", "'void'", "'error'", "'record'", "'union'", "'array'", "'<'", "'>'", "'map'", "'null'", "'int'", "'long'", "'float'", "'double'", "'bytes'", "'string'", "'fixed'", "'enum'", "'@'", "'['", "']'", "'`'", "'-'", "'idl'", "'schema'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INT", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "';'", "'protocol'", "'{'", "'}'", "'('", "','", "')'", "'throws'", "'oneway'", "'='", "'void'", "'error'", "'record'", "'union'", "'array'", "'<'", "'>'", "'map'", "'null'", "'int'", "'long'", "'float'", "'double'", "'bytes'", "'string'", "'fixed'", "'enum'", "'['", "']'", "'`'", "'@'", "'-'", "'idl'", "'schema'"
     };
     public static final int T__19=19;
     public static final int T__15=15;
@@ -172,7 +172,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                 if ( (LA1_0==11) ) {
                     alt1=1;
                 }
-                else if ( (LA1_0==13||LA1_0==39) ) {
+                else if ( (LA1_0==13||LA1_0==42) ) {
                     alt1=2;
                 }
 
@@ -514,7 +514,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                 int alt2=2;
                 int LA2_0 = input.LA(1);
 
-                if ( (LA2_0==39) ) {
+                if ( (LA2_0==42) ) {
                     alt2=1;
                 }
 
@@ -614,7 +614,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                 int alt3=2;
                 int LA3_0 = input.LA(1);
 
-                if ( (LA3_0==RULE_ID||(LA3_0>=22 && LA3_0<=24)||(LA3_0>=30 && LA3_0<=39)||LA3_0==42) ) {
+                if ( (LA3_0==RULE_ID||(LA3_0>=22 && LA3_0<=24)||(LA3_0>=30 && LA3_0<=38)||(LA3_0>=41 && LA3_0<=42)) ) {
                     alt3=1;
                 }
 
@@ -749,10 +749,10 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( ((LA4_0>=23 && LA4_0<=24)||(LA4_0>=37 && LA4_0<=39)) ) {
+            if ( ((LA4_0>=23 && LA4_0<=24)||(LA4_0>=37 && LA4_0<=38)||LA4_0==42) ) {
                 alt4=1;
             }
-            else if ( (LA4_0==RULE_ID||LA4_0==22||(LA4_0>=30 && LA4_0<=36)||LA4_0==42) ) {
+            else if ( (LA4_0==RULE_ID||LA4_0==22||(LA4_0>=30 && LA4_0<=36)||LA4_0==41) ) {
                 alt4=2;
             }
             else {
@@ -980,7 +980,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                 int alt6=2;
                 int LA6_0 = input.LA(1);
 
-                if ( (LA6_0==RULE_ID||(LA6_0>=30 && LA6_0<=36)||LA6_0==42) ) {
+                if ( (LA6_0==RULE_ID||(LA6_0>=30 && LA6_0<=36)||LA6_0==41) ) {
                     alt6=1;
                 }
 
@@ -1501,7 +1501,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
             if ( (LA10_0==22) ) {
                 alt10=1;
             }
-            else if ( (LA10_0==RULE_ID||(LA10_0>=30 && LA10_0<=36)||LA10_0==42) ) {
+            else if ( (LA10_0==RULE_ID||(LA10_0>=30 && LA10_0<=36)||LA10_0==41) ) {
                 alt10=2;
             }
             else {
@@ -1741,7 +1741,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                 int alt11=2;
                 int LA11_0 = input.LA(1);
 
-                if ( (LA11_0==39) ) {
+                if ( (LA11_0==42) ) {
                     alt11=1;
                 }
 
@@ -2162,7 +2162,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                 int alt13=2;
                 int LA13_0 = input.LA(1);
 
-                if ( (LA13_0==RULE_ID||(LA13_0>=25 && LA13_0<=26)||(LA13_0>=29 && LA13_0<=36)||LA13_0==39||LA13_0==42) ) {
+                if ( (LA13_0==RULE_ID||(LA13_0>=25 && LA13_0<=26)||(LA13_0>=29 && LA13_0<=36)||(LA13_0>=41 && LA13_0<=42)) ) {
                     alt13=1;
                 }
 
@@ -2352,7 +2352,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                 int alt14=2;
                 int LA14_0 = input.LA(1);
 
-                if ( (LA14_0==RULE_ID||(LA14_0>=25 && LA14_0<=26)||(LA14_0>=29 && LA14_0<=36)||LA14_0==39||LA14_0==42) ) {
+                if ( (LA14_0==RULE_ID||(LA14_0>=25 && LA14_0<=26)||(LA14_0>=29 && LA14_0<=36)||(LA14_0>=41 && LA14_0<=42)) ) {
                     alt14=1;
                 }
 
@@ -2500,7 +2500,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                 int alt15=2;
                 int LA15_0 = input.LA(1);
 
-                if ( (LA15_0==39) ) {
+                if ( (LA15_0==42) ) {
                     alt15=1;
                 }
 
@@ -2588,7 +2588,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                 int alt16=2;
                 int LA16_0 = input.LA(1);
 
-                if ( (LA16_0==39) ) {
+                if ( (LA16_0==42) ) {
                     alt16=1;
                 }
 
@@ -2827,7 +2827,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
             case 34:
             case 35:
             case 36:
-            case 42:
+            case 41:
                 {
                 alt18=1;
                 }
@@ -3355,7 +3355,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
             int alt20=2;
             int LA20_0 = input.LA(1);
 
-            if ( (LA20_0==39) ) {
+            if ( (LA20_0==42) ) {
                 alt20=1;
             }
             switch (alt20) {
@@ -3538,7 +3538,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
             int alt21=2;
             int LA21_0 = input.LA(1);
 
-            if ( (LA21_0==39) ) {
+            if ( (LA21_0==42) ) {
                 alt21=1;
             }
             switch (alt21) {
@@ -3706,7 +3706,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
             if ( ((LA22_0>=30 && LA22_0<=36)) ) {
                 alt22=1;
             }
-            else if ( (LA22_0==RULE_ID||LA22_0==42) ) {
+            else if ( (LA22_0==RULE_ID||LA22_0==41) ) {
                 alt22=2;
             }
             else {
@@ -4609,46 +4609,39 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAnnotation"
-    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1660:1: ruleAnnotation returns [EObject current=null] : (otherlv_0= '@' ( (lv_name_1_0= ruleAN ) ) (otherlv_2= '(' ( (lv_values_3_0= ruleValues ) ) otherlv_4= ')' )? ) ;
+    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1660:1: ruleAnnotation returns [EObject current=null] : ( ( (lv_name_0_0= ruleAN ) ) (otherlv_1= '(' ( (lv_values_2_0= ruleValues ) ) otherlv_3= ')' )? ) ;
     public final EObject ruleAnnotation() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_0=null;
-        Token otherlv_2=null;
-        Token otherlv_4=null;
-        AntlrDatatypeRuleToken lv_name_1_0 = null;
+        Token otherlv_1=null;
+        Token otherlv_3=null;
+        AntlrDatatypeRuleToken lv_name_0_0 = null;
 
-        EObject lv_values_3_0 = null;
+        EObject lv_values_2_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1663:28: ( (otherlv_0= '@' ( (lv_name_1_0= ruleAN ) ) (otherlv_2= '(' ( (lv_values_3_0= ruleValues ) ) otherlv_4= ')' )? ) )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1664:1: (otherlv_0= '@' ( (lv_name_1_0= ruleAN ) ) (otherlv_2= '(' ( (lv_values_3_0= ruleValues ) ) otherlv_4= ')' )? )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1663:28: ( ( ( (lv_name_0_0= ruleAN ) ) (otherlv_1= '(' ( (lv_values_2_0= ruleValues ) ) otherlv_3= ')' )? ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1664:1: ( ( (lv_name_0_0= ruleAN ) ) (otherlv_1= '(' ( (lv_values_2_0= ruleValues ) ) otherlv_3= ')' )? )
             {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1664:1: (otherlv_0= '@' ( (lv_name_1_0= ruleAN ) ) (otherlv_2= '(' ( (lv_values_3_0= ruleValues ) ) otherlv_4= ')' )? )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1664:3: otherlv_0= '@' ( (lv_name_1_0= ruleAN ) ) (otherlv_2= '(' ( (lv_values_3_0= ruleValues ) ) otherlv_4= ')' )?
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1664:1: ( ( (lv_name_0_0= ruleAN ) ) (otherlv_1= '(' ( (lv_values_2_0= ruleValues ) ) otherlv_3= ')' )? )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1664:2: ( (lv_name_0_0= ruleAN ) ) (otherlv_1= '(' ( (lv_values_2_0= ruleValues ) ) otherlv_3= ')' )?
             {
-            otherlv_0=(Token)match(input,39,FOLLOW_39_in_ruleAnnotation3676); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-                  	newLeafNode(otherlv_0, grammarAccess.getAnnotationAccess().getCommercialAtKeyword_0());
-                  
-            }
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1668:1: ( (lv_name_1_0= ruleAN ) )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1669:1: (lv_name_1_0= ruleAN )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1664:2: ( (lv_name_0_0= ruleAN ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1665:1: (lv_name_0_0= ruleAN )
             {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1669:1: (lv_name_1_0= ruleAN )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1670:3: lv_name_1_0= ruleAN
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1665:1: (lv_name_0_0= ruleAN )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1666:3: lv_name_0_0= ruleAN
             {
             if ( state.backtracking==0 ) {
                
-              	        newCompositeNode(grammarAccess.getAnnotationAccess().getNameANParserRuleCall_1_0()); 
+              	        newCompositeNode(grammarAccess.getAnnotationAccess().getNameANParserRuleCall_0_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleAN_in_ruleAnnotation3697);
-            lv_name_1_0=ruleAN();
+            pushFollow(FOLLOW_ruleAN_in_ruleAnnotation3685);
+            lv_name_0_0=ruleAN();
 
             state._fsp--;
             if (state.failed) return current;
@@ -4660,7 +4653,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                      		set(
                      			current, 
                      			"name",
-                      		lv_name_1_0, 
+                      		lv_name_0_0, 
                       		"AN");
               	        afterParserOrEnumRuleCall();
               	    
@@ -4671,7 +4664,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1686:2: (otherlv_2= '(' ( (lv_values_3_0= ruleValues ) ) otherlv_4= ')' )?
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1682:2: (otherlv_1= '(' ( (lv_values_2_0= ruleValues ) ) otherlv_3= ')' )?
             int alt25=2;
             int LA25_0 = input.LA(1);
 
@@ -4680,27 +4673,27 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
             }
             switch (alt25) {
                 case 1 :
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1686:4: otherlv_2= '(' ( (lv_values_3_0= ruleValues ) ) otherlv_4= ')'
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1682:4: otherlv_1= '(' ( (lv_values_2_0= ruleValues ) ) otherlv_3= ')'
                     {
-                    otherlv_2=(Token)match(input,16,FOLLOW_16_in_ruleAnnotation3710); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,16,FOLLOW_16_in_ruleAnnotation3698); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                          	newLeafNode(otherlv_2, grammarAccess.getAnnotationAccess().getLeftParenthesisKeyword_2_0());
+                          	newLeafNode(otherlv_1, grammarAccess.getAnnotationAccess().getLeftParenthesisKeyword_1_0());
                           
                     }
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1690:1: ( (lv_values_3_0= ruleValues ) )
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1691:1: (lv_values_3_0= ruleValues )
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1686:1: ( (lv_values_2_0= ruleValues ) )
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1687:1: (lv_values_2_0= ruleValues )
                     {
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1691:1: (lv_values_3_0= ruleValues )
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1692:3: lv_values_3_0= ruleValues
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1687:1: (lv_values_2_0= ruleValues )
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1688:3: lv_values_2_0= ruleValues
                     {
                     if ( state.backtracking==0 ) {
                        
-                      	        newCompositeNode(grammarAccess.getAnnotationAccess().getValuesValuesParserRuleCall_2_1_0()); 
+                      	        newCompositeNode(grammarAccess.getAnnotationAccess().getValuesValuesParserRuleCall_1_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleValues_in_ruleAnnotation3731);
-                    lv_values_3_0=ruleValues();
+                    pushFollow(FOLLOW_ruleValues_in_ruleAnnotation3719);
+                    lv_values_2_0=ruleValues();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -4712,7 +4705,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                              		set(
                              			current, 
                              			"values",
-                              		lv_values_3_0, 
+                              		lv_values_2_0, 
                               		"Values");
                       	        afterParserOrEnumRuleCall();
                       	    
@@ -4723,10 +4716,10 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_4=(Token)match(input,18,FOLLOW_18_in_ruleAnnotation3743); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,18,FOLLOW_18_in_ruleAnnotation3731); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                          	newLeafNode(otherlv_4, grammarAccess.getAnnotationAccess().getRightParenthesisKeyword_2_2());
+                          	newLeafNode(otherlv_3, grammarAccess.getAnnotationAccess().getRightParenthesisKeyword_1_2());
                           
                     }
 
@@ -4758,7 +4751,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleValues"
-    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1720:1: entryRuleValues returns [EObject current=null] : iv_ruleValues= ruleValues EOF ;
+    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1716:1: entryRuleValues returns [EObject current=null] : iv_ruleValues= ruleValues EOF ;
     public final EObject entryRuleValues() throws RecognitionException {
         EObject current = null;
 
@@ -4766,13 +4759,13 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1721:2: (iv_ruleValues= ruleValues EOF )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1722:2: iv_ruleValues= ruleValues EOF
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1717:2: (iv_ruleValues= ruleValues EOF )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1718:2: iv_ruleValues= ruleValues EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getValuesRule()); 
             }
-            pushFollow(FOLLOW_ruleValues_in_entryRuleValues3781);
+            pushFollow(FOLLOW_ruleValues_in_entryRuleValues3769);
             iv_ruleValues=ruleValues();
 
             state._fsp--;
@@ -4780,7 +4773,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleValues; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleValues3791); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleValues3779); if (state.failed) return current;
 
             }
 
@@ -4798,7 +4791,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleValues"
-    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1729:1: ruleValues returns [EObject current=null] : ( () ( ( ( '[' )=> (lv_value_1_0= ruleArray ) ) | ( ( (lv_value_2_0= ruleValue ) ) (otherlv_3= ',' ( (lv_value_4_0= ruleValue ) ) )* ) )* ) ;
+    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1725:1: ruleValues returns [EObject current=null] : ( () ( ( ( '[' )=> (lv_value_1_0= ruleArray ) ) | ( ( (lv_value_2_0= ruleValue ) ) (otherlv_3= ',' ( (lv_value_4_0= ruleValue ) ) )* ) )* ) ;
     public final EObject ruleValues() throws RecognitionException {
         EObject current = null;
 
@@ -4813,14 +4806,14 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1732:28: ( ( () ( ( ( '[' )=> (lv_value_1_0= ruleArray ) ) | ( ( (lv_value_2_0= ruleValue ) ) (otherlv_3= ',' ( (lv_value_4_0= ruleValue ) ) )* ) )* ) )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1733:1: ( () ( ( ( '[' )=> (lv_value_1_0= ruleArray ) ) | ( ( (lv_value_2_0= ruleValue ) ) (otherlv_3= ',' ( (lv_value_4_0= ruleValue ) ) )* ) )* )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1728:28: ( ( () ( ( ( '[' )=> (lv_value_1_0= ruleArray ) ) | ( ( (lv_value_2_0= ruleValue ) ) (otherlv_3= ',' ( (lv_value_4_0= ruleValue ) ) )* ) )* ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1729:1: ( () ( ( ( '[' )=> (lv_value_1_0= ruleArray ) ) | ( ( (lv_value_2_0= ruleValue ) ) (otherlv_3= ',' ( (lv_value_4_0= ruleValue ) ) )* ) )* )
             {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1733:1: ( () ( ( ( '[' )=> (lv_value_1_0= ruleArray ) ) | ( ( (lv_value_2_0= ruleValue ) ) (otherlv_3= ',' ( (lv_value_4_0= ruleValue ) ) )* ) )* )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1733:2: () ( ( ( '[' )=> (lv_value_1_0= ruleArray ) ) | ( ( (lv_value_2_0= ruleValue ) ) (otherlv_3= ',' ( (lv_value_4_0= ruleValue ) ) )* ) )*
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1729:1: ( () ( ( ( '[' )=> (lv_value_1_0= ruleArray ) ) | ( ( (lv_value_2_0= ruleValue ) ) (otherlv_3= ',' ( (lv_value_4_0= ruleValue ) ) )* ) )* )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1729:2: () ( ( ( '[' )=> (lv_value_1_0= ruleArray ) ) | ( ( (lv_value_2_0= ruleValue ) ) (otherlv_3= ',' ( (lv_value_4_0= ruleValue ) ) )* ) )*
             {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1733:2: ()
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1734:5: 
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1729:2: ()
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1730:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -4832,27 +4825,27 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1739:2: ( ( ( '[' )=> (lv_value_1_0= ruleArray ) ) | ( ( (lv_value_2_0= ruleValue ) ) (otherlv_3= ',' ( (lv_value_4_0= ruleValue ) ) )* ) )*
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1735:2: ( ( ( '[' )=> (lv_value_1_0= ruleArray ) ) | ( ( (lv_value_2_0= ruleValue ) ) (otherlv_3= ',' ( (lv_value_4_0= ruleValue ) ) )* ) )*
             loop27:
             do {
                 int alt27=3;
                 alt27 = dfa27.predict(input);
                 switch (alt27) {
             	case 1 :
-            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1739:3: ( ( '[' )=> (lv_value_1_0= ruleArray ) )
+            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1735:3: ( ( '[' )=> (lv_value_1_0= ruleArray ) )
             	    {
-            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1739:3: ( ( '[' )=> (lv_value_1_0= ruleArray ) )
-            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1739:4: ( '[' )=> (lv_value_1_0= ruleArray )
+            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1735:3: ( ( '[' )=> (lv_value_1_0= ruleArray ) )
+            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1735:4: ( '[' )=> (lv_value_1_0= ruleArray )
             	    {
-            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1741:1: (lv_value_1_0= ruleArray )
-            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1742:3: lv_value_1_0= ruleArray
+            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1737:1: (lv_value_1_0= ruleArray )
+            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1738:3: lv_value_1_0= ruleArray
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getValuesAccess().getValueArrayParserRuleCall_1_0_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleArray_in_ruleValues3854);
+            	    pushFollow(FOLLOW_ruleArray_in_ruleValues3842);
             	    lv_value_1_0=ruleArray();
 
             	    state._fsp--;
@@ -4880,23 +4873,23 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1759:6: ( ( (lv_value_2_0= ruleValue ) ) (otherlv_3= ',' ( (lv_value_4_0= ruleValue ) ) )* )
+            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1755:6: ( ( (lv_value_2_0= ruleValue ) ) (otherlv_3= ',' ( (lv_value_4_0= ruleValue ) ) )* )
             	    {
-            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1759:6: ( ( (lv_value_2_0= ruleValue ) ) (otherlv_3= ',' ( (lv_value_4_0= ruleValue ) ) )* )
-            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1759:7: ( (lv_value_2_0= ruleValue ) ) (otherlv_3= ',' ( (lv_value_4_0= ruleValue ) ) )*
+            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1755:6: ( ( (lv_value_2_0= ruleValue ) ) (otherlv_3= ',' ( (lv_value_4_0= ruleValue ) ) )* )
+            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1755:7: ( (lv_value_2_0= ruleValue ) ) (otherlv_3= ',' ( (lv_value_4_0= ruleValue ) ) )*
             	    {
-            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1759:7: ( (lv_value_2_0= ruleValue ) )
-            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1760:1: (lv_value_2_0= ruleValue )
+            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1755:7: ( (lv_value_2_0= ruleValue ) )
+            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1756:1: (lv_value_2_0= ruleValue )
             	    {
-            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1760:1: (lv_value_2_0= ruleValue )
-            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1761:3: lv_value_2_0= ruleValue
+            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1756:1: (lv_value_2_0= ruleValue )
+            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1757:3: lv_value_2_0= ruleValue
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getValuesAccess().getValueValueParserRuleCall_1_1_0_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleValue_in_ruleValues3882);
+            	    pushFollow(FOLLOW_ruleValue_in_ruleValues3870);
             	    lv_value_2_0=ruleValue();
 
             	    state._fsp--;
@@ -4920,7 +4913,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1777:2: (otherlv_3= ',' ( (lv_value_4_0= ruleValue ) ) )*
+            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1773:2: (otherlv_3= ',' ( (lv_value_4_0= ruleValue ) ) )*
             	    loop26:
             	    do {
             	        int alt26=2;
@@ -4933,26 +4926,26 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
             	        switch (alt26) {
             	    	case 1 :
-            	    	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1777:4: otherlv_3= ',' ( (lv_value_4_0= ruleValue ) )
+            	    	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1773:4: otherlv_3= ',' ( (lv_value_4_0= ruleValue ) )
             	    	    {
-            	    	    otherlv_3=(Token)match(input,17,FOLLOW_17_in_ruleValues3895); if (state.failed) return current;
+            	    	    otherlv_3=(Token)match(input,17,FOLLOW_17_in_ruleValues3883); if (state.failed) return current;
             	    	    if ( state.backtracking==0 ) {
 
             	    	          	newLeafNode(otherlv_3, grammarAccess.getValuesAccess().getCommaKeyword_1_1_1_0());
             	    	          
             	    	    }
-            	    	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1781:1: ( (lv_value_4_0= ruleValue ) )
-            	    	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1782:1: (lv_value_4_0= ruleValue )
+            	    	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1777:1: ( (lv_value_4_0= ruleValue ) )
+            	    	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1778:1: (lv_value_4_0= ruleValue )
             	    	    {
-            	    	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1782:1: (lv_value_4_0= ruleValue )
-            	    	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1783:3: lv_value_4_0= ruleValue
+            	    	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1778:1: (lv_value_4_0= ruleValue )
+            	    	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1779:3: lv_value_4_0= ruleValue
             	    	    {
             	    	    if ( state.backtracking==0 ) {
             	    	       
             	    	      	        newCompositeNode(grammarAccess.getValuesAccess().getValueValueParserRuleCall_1_1_1_1_0()); 
             	    	      	    
             	    	    }
-            	    	    pushFollow(FOLLOW_ruleValue_in_ruleValues3916);
+            	    	    pushFollow(FOLLOW_ruleValue_in_ruleValues3904);
             	    	    lv_value_4_0=ruleValue();
 
             	    	    state._fsp--;
@@ -5020,7 +5013,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleArray"
-    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1807:1: entryRuleArray returns [EObject current=null] : iv_ruleArray= ruleArray EOF ;
+    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1803:1: entryRuleArray returns [EObject current=null] : iv_ruleArray= ruleArray EOF ;
     public final EObject entryRuleArray() throws RecognitionException {
         EObject current = null;
 
@@ -5028,13 +5021,13 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1808:2: (iv_ruleArray= ruleArray EOF )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1809:2: iv_ruleArray= ruleArray EOF
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1804:2: (iv_ruleArray= ruleArray EOF )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1805:2: iv_ruleArray= ruleArray EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getArrayRule()); 
             }
-            pushFollow(FOLLOW_ruleArray_in_entryRuleArray3957);
+            pushFollow(FOLLOW_ruleArray_in_entryRuleArray3945);
             iv_ruleArray=ruleArray();
 
             state._fsp--;
@@ -5042,7 +5035,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleArray; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleArray3967); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleArray3955); if (state.failed) return current;
 
             }
 
@@ -5060,7 +5053,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleArray"
-    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1816:1: ruleArray returns [EObject current=null] : ( ( ( '[' )=>otherlv_0= '[' ) ( (lv_values_1_0= ruleValues ) ) otherlv_2= ']' ) ;
+    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1812:1: ruleArray returns [EObject current=null] : ( ( ( '[' )=>otherlv_0= '[' ) ( (lv_values_1_0= ruleValues ) ) otherlv_2= ']' ) ;
     public final EObject ruleArray() throws RecognitionException {
         EObject current = null;
 
@@ -5072,16 +5065,16 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1819:28: ( ( ( ( '[' )=>otherlv_0= '[' ) ( (lv_values_1_0= ruleValues ) ) otherlv_2= ']' ) )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1820:1: ( ( ( '[' )=>otherlv_0= '[' ) ( (lv_values_1_0= ruleValues ) ) otherlv_2= ']' )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1815:28: ( ( ( ( '[' )=>otherlv_0= '[' ) ( (lv_values_1_0= ruleValues ) ) otherlv_2= ']' ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1816:1: ( ( ( '[' )=>otherlv_0= '[' ) ( (lv_values_1_0= ruleValues ) ) otherlv_2= ']' )
             {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1820:1: ( ( ( '[' )=>otherlv_0= '[' ) ( (lv_values_1_0= ruleValues ) ) otherlv_2= ']' )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1820:2: ( ( '[' )=>otherlv_0= '[' ) ( (lv_values_1_0= ruleValues ) ) otherlv_2= ']'
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1816:1: ( ( ( '[' )=>otherlv_0= '[' ) ( (lv_values_1_0= ruleValues ) ) otherlv_2= ']' )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1816:2: ( ( '[' )=>otherlv_0= '[' ) ( (lv_values_1_0= ruleValues ) ) otherlv_2= ']'
             {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1820:2: ( ( '[' )=>otherlv_0= '[' )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1820:3: ( '[' )=>otherlv_0= '['
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1816:2: ( ( '[' )=>otherlv_0= '[' )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1816:3: ( '[' )=>otherlv_0= '['
             {
-            otherlv_0=(Token)match(input,40,FOLLOW_40_in_ruleArray4012); if (state.failed) return current;
+            otherlv_0=(Token)match(input,39,FOLLOW_39_in_ruleArray4000); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getArrayAccess().getLeftSquareBracketKeyword_0());
@@ -5090,18 +5083,18 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1825:2: ( (lv_values_1_0= ruleValues ) )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1826:1: (lv_values_1_0= ruleValues )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1821:2: ( (lv_values_1_0= ruleValues ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1822:1: (lv_values_1_0= ruleValues )
             {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1826:1: (lv_values_1_0= ruleValues )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1827:3: lv_values_1_0= ruleValues
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1822:1: (lv_values_1_0= ruleValues )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1823:3: lv_values_1_0= ruleValues
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getArrayAccess().getValuesValuesParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleValues_in_ruleArray4034);
+            pushFollow(FOLLOW_ruleValues_in_ruleArray4022);
             lv_values_1_0=ruleValues();
 
             state._fsp--;
@@ -5125,7 +5118,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,41,FOLLOW_41_in_ruleArray4046); if (state.failed) return current;
+            otherlv_2=(Token)match(input,40,FOLLOW_40_in_ruleArray4034); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getArrayAccess().getRightSquareBracketKeyword_2());
@@ -5154,7 +5147,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleValue"
-    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1855:1: entryRuleValue returns [EObject current=null] : iv_ruleValue= ruleValue EOF ;
+    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1851:1: entryRuleValue returns [EObject current=null] : iv_ruleValue= ruleValue EOF ;
     public final EObject entryRuleValue() throws RecognitionException {
         EObject current = null;
 
@@ -5162,13 +5155,13 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1856:2: (iv_ruleValue= ruleValue EOF )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1857:2: iv_ruleValue= ruleValue EOF
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1852:2: (iv_ruleValue= ruleValue EOF )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1853:2: iv_ruleValue= ruleValue EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getValueRule()); 
             }
-            pushFollow(FOLLOW_ruleValue_in_entryRuleValue4082);
+            pushFollow(FOLLOW_ruleValue_in_entryRuleValue4070);
             iv_ruleValue=ruleValue();
 
             state._fsp--;
@@ -5176,7 +5169,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleValue; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleValue4092); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleValue4080); if (state.failed) return current;
 
             }
 
@@ -5194,7 +5187,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleValue"
-    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1864:1: ruleValue returns [EObject current=null] : (this_StringValue_0= ruleStringValue | ( ( '[' )=>this_Array_1= ruleArray ) | this_IntValue_2= ruleIntValue | this_Null_3= ruleNull ) ;
+    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1860:1: ruleValue returns [EObject current=null] : (this_StringValue_0= ruleStringValue | ( ( '[' )=>this_Array_1= ruleArray ) | this_IntValue_2= ruleIntValue | this_Null_3= ruleNull ) ;
     public final EObject ruleValue() throws RecognitionException {
         EObject current = null;
 
@@ -5210,17 +5203,17 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1867:28: ( (this_StringValue_0= ruleStringValue | ( ( '[' )=>this_Array_1= ruleArray ) | this_IntValue_2= ruleIntValue | this_Null_3= ruleNull ) )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1868:1: (this_StringValue_0= ruleStringValue | ( ( '[' )=>this_Array_1= ruleArray ) | this_IntValue_2= ruleIntValue | this_Null_3= ruleNull )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1863:28: ( (this_StringValue_0= ruleStringValue | ( ( '[' )=>this_Array_1= ruleArray ) | this_IntValue_2= ruleIntValue | this_Null_3= ruleNull ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1864:1: (this_StringValue_0= ruleStringValue | ( ( '[' )=>this_Array_1= ruleArray ) | this_IntValue_2= ruleIntValue | this_Null_3= ruleNull )
             {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1868:1: (this_StringValue_0= ruleStringValue | ( ( '[' )=>this_Array_1= ruleArray ) | this_IntValue_2= ruleIntValue | this_Null_3= ruleNull )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1864:1: (this_StringValue_0= ruleStringValue | ( ( '[' )=>this_Array_1= ruleArray ) | this_IntValue_2= ruleIntValue | this_Null_3= ruleNull )
             int alt28=4;
             int LA28_0 = input.LA(1);
 
             if ( (LA28_0==RULE_STRING) ) {
                 alt28=1;
             }
-            else if ( (LA28_0==40) && (synpred3_InternalAvdl())) {
+            else if ( (LA28_0==39) && (synpred3_InternalAvdl())) {
                 alt28=2;
             }
             else if ( (LA28_0==RULE_INT||LA28_0==43) ) {
@@ -5238,14 +5231,14 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
             }
             switch (alt28) {
                 case 1 :
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1869:5: this_StringValue_0= ruleStringValue
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1865:5: this_StringValue_0= ruleStringValue
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getValueAccess().getStringValueParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleStringValue_in_ruleValue4139);
+                    pushFollow(FOLLOW_ruleStringValue_in_ruleValue4127);
                     this_StringValue_0=ruleStringValue();
 
                     state._fsp--;
@@ -5260,17 +5253,17 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1878:6: ( ( '[' )=>this_Array_1= ruleArray )
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1874:6: ( ( '[' )=>this_Array_1= ruleArray )
                     {
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1878:6: ( ( '[' )=>this_Array_1= ruleArray )
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1878:7: ( '[' )=>this_Array_1= ruleArray
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1874:6: ( ( '[' )=>this_Array_1= ruleArray )
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1874:7: ( '[' )=>this_Array_1= ruleArray
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getValueAccess().getArrayParserRuleCall_1()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleArray_in_ruleValue4174);
+                    pushFollow(FOLLOW_ruleArray_in_ruleValue4162);
                     this_Array_1=ruleArray();
 
                     state._fsp--;
@@ -5288,14 +5281,14 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1890:5: this_IntValue_2= ruleIntValue
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1886:5: this_IntValue_2= ruleIntValue
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getValueAccess().getIntValueParserRuleCall_2()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleIntValue_in_ruleValue4202);
+                    pushFollow(FOLLOW_ruleIntValue_in_ruleValue4190);
                     this_IntValue_2=ruleIntValue();
 
                     state._fsp--;
@@ -5310,14 +5303,14 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1900:5: this_Null_3= ruleNull
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1896:5: this_Null_3= ruleNull
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getValueAccess().getNullParserRuleCall_3()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleNull_in_ruleValue4229);
+                    pushFollow(FOLLOW_ruleNull_in_ruleValue4217);
                     this_Null_3=ruleNull();
 
                     state._fsp--;
@@ -5354,7 +5347,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNull"
-    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1916:1: entryRuleNull returns [EObject current=null] : iv_ruleNull= ruleNull EOF ;
+    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1912:1: entryRuleNull returns [EObject current=null] : iv_ruleNull= ruleNull EOF ;
     public final EObject entryRuleNull() throws RecognitionException {
         EObject current = null;
 
@@ -5362,13 +5355,13 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1917:2: (iv_ruleNull= ruleNull EOF )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1918:2: iv_ruleNull= ruleNull EOF
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1913:2: (iv_ruleNull= ruleNull EOF )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1914:2: iv_ruleNull= ruleNull EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNullRule()); 
             }
-            pushFollow(FOLLOW_ruleNull_in_entryRuleNull4264);
+            pushFollow(FOLLOW_ruleNull_in_entryRuleNull4252);
             iv_ruleNull=ruleNull();
 
             state._fsp--;
@@ -5376,7 +5369,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleNull; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNull4274); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNull4262); if (state.failed) return current;
 
             }
 
@@ -5394,7 +5387,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNull"
-    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1925:1: ruleNull returns [EObject current=null] : ( (lv_val_0_0= 'null' ) ) ;
+    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1921:1: ruleNull returns [EObject current=null] : ( (lv_val_0_0= 'null' ) ) ;
     public final EObject ruleNull() throws RecognitionException {
         EObject current = null;
 
@@ -5403,16 +5396,16 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1928:28: ( ( (lv_val_0_0= 'null' ) ) )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1929:1: ( (lv_val_0_0= 'null' ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1924:28: ( ( (lv_val_0_0= 'null' ) ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1925:1: ( (lv_val_0_0= 'null' ) )
             {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1929:1: ( (lv_val_0_0= 'null' ) )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1930:1: (lv_val_0_0= 'null' )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1925:1: ( (lv_val_0_0= 'null' ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1926:1: (lv_val_0_0= 'null' )
             {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1930:1: (lv_val_0_0= 'null' )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1931:3: lv_val_0_0= 'null'
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1926:1: (lv_val_0_0= 'null' )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1927:3: lv_val_0_0= 'null'
             {
-            lv_val_0_0=(Token)match(input,30,FOLLOW_30_in_ruleNull4316); if (state.failed) return current;
+            lv_val_0_0=(Token)match(input,30,FOLLOW_30_in_ruleNull4304); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       newLeafNode(lv_val_0_0, grammarAccess.getNullAccess().getValNullKeyword_0());
@@ -5452,7 +5445,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStringValue"
-    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1952:1: entryRuleStringValue returns [EObject current=null] : iv_ruleStringValue= ruleStringValue EOF ;
+    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1948:1: entryRuleStringValue returns [EObject current=null] : iv_ruleStringValue= ruleStringValue EOF ;
     public final EObject entryRuleStringValue() throws RecognitionException {
         EObject current = null;
 
@@ -5460,13 +5453,13 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1953:2: (iv_ruleStringValue= ruleStringValue EOF )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1954:2: iv_ruleStringValue= ruleStringValue EOF
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1949:2: (iv_ruleStringValue= ruleStringValue EOF )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1950:2: iv_ruleStringValue= ruleStringValue EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getStringValueRule()); 
             }
-            pushFollow(FOLLOW_ruleStringValue_in_entryRuleStringValue4364);
+            pushFollow(FOLLOW_ruleStringValue_in_entryRuleStringValue4352);
             iv_ruleStringValue=ruleStringValue();
 
             state._fsp--;
@@ -5474,7 +5467,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleStringValue; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStringValue4374); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStringValue4362); if (state.failed) return current;
 
             }
 
@@ -5492,7 +5485,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStringValue"
-    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1961:1: ruleStringValue returns [EObject current=null] : ( (lv_val_0_0= RULE_STRING ) ) ;
+    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1957:1: ruleStringValue returns [EObject current=null] : ( (lv_val_0_0= RULE_STRING ) ) ;
     public final EObject ruleStringValue() throws RecognitionException {
         EObject current = null;
 
@@ -5501,16 +5494,16 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1964:28: ( ( (lv_val_0_0= RULE_STRING ) ) )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1965:1: ( (lv_val_0_0= RULE_STRING ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1960:28: ( ( (lv_val_0_0= RULE_STRING ) ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1961:1: ( (lv_val_0_0= RULE_STRING ) )
             {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1965:1: ( (lv_val_0_0= RULE_STRING ) )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1966:1: (lv_val_0_0= RULE_STRING )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1961:1: ( (lv_val_0_0= RULE_STRING ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1962:1: (lv_val_0_0= RULE_STRING )
             {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1966:1: (lv_val_0_0= RULE_STRING )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1967:3: lv_val_0_0= RULE_STRING
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1962:1: (lv_val_0_0= RULE_STRING )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1963:3: lv_val_0_0= RULE_STRING
             {
-            lv_val_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleStringValue4415); if (state.failed) return current;
+            lv_val_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleStringValue4403); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_val_0_0, grammarAccess.getStringValueAccess().getValSTRINGTerminalRuleCall_0()); 
@@ -5554,7 +5547,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIntValue"
-    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1991:1: entryRuleIntValue returns [EObject current=null] : iv_ruleIntValue= ruleIntValue EOF ;
+    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1987:1: entryRuleIntValue returns [EObject current=null] : iv_ruleIntValue= ruleIntValue EOF ;
     public final EObject entryRuleIntValue() throws RecognitionException {
         EObject current = null;
 
@@ -5562,13 +5555,13 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1992:2: (iv_ruleIntValue= ruleIntValue EOF )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1993:2: iv_ruleIntValue= ruleIntValue EOF
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1988:2: (iv_ruleIntValue= ruleIntValue EOF )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1989:2: iv_ruleIntValue= ruleIntValue EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getIntValueRule()); 
             }
-            pushFollow(FOLLOW_ruleIntValue_in_entryRuleIntValue4455);
+            pushFollow(FOLLOW_ruleIntValue_in_entryRuleIntValue4443);
             iv_ruleIntValue=ruleIntValue();
 
             state._fsp--;
@@ -5576,7 +5569,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleIntValue; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleIntValue4465); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleIntValue4453); if (state.failed) return current;
 
             }
 
@@ -5594,7 +5587,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIntValue"
-    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2000:1: ruleIntValue returns [EObject current=null] : ( ( (lv_val_0_1= RULE_INT | lv_val_0_2= ruleNegativeInt ) ) ) ;
+    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1996:1: ruleIntValue returns [EObject current=null] : ( ( (lv_val_0_1= RULE_INT | lv_val_0_2= ruleNegativeInt ) ) ) ;
     public final EObject ruleIntValue() throws RecognitionException {
         EObject current = null;
 
@@ -5605,16 +5598,16 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2003:28: ( ( ( (lv_val_0_1= RULE_INT | lv_val_0_2= ruleNegativeInt ) ) ) )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2004:1: ( ( (lv_val_0_1= RULE_INT | lv_val_0_2= ruleNegativeInt ) ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1999:28: ( ( ( (lv_val_0_1= RULE_INT | lv_val_0_2= ruleNegativeInt ) ) ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2000:1: ( ( (lv_val_0_1= RULE_INT | lv_val_0_2= ruleNegativeInt ) ) )
             {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2004:1: ( ( (lv_val_0_1= RULE_INT | lv_val_0_2= ruleNegativeInt ) ) )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2005:1: ( (lv_val_0_1= RULE_INT | lv_val_0_2= ruleNegativeInt ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2000:1: ( ( (lv_val_0_1= RULE_INT | lv_val_0_2= ruleNegativeInt ) ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2001:1: ( (lv_val_0_1= RULE_INT | lv_val_0_2= ruleNegativeInt ) )
             {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2005:1: ( (lv_val_0_1= RULE_INT | lv_val_0_2= ruleNegativeInt ) )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2006:1: (lv_val_0_1= RULE_INT | lv_val_0_2= ruleNegativeInt )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2001:1: ( (lv_val_0_1= RULE_INT | lv_val_0_2= ruleNegativeInt ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2002:1: (lv_val_0_1= RULE_INT | lv_val_0_2= ruleNegativeInt )
             {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2006:1: (lv_val_0_1= RULE_INT | lv_val_0_2= ruleNegativeInt )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2002:1: (lv_val_0_1= RULE_INT | lv_val_0_2= ruleNegativeInt )
             int alt29=2;
             int LA29_0 = input.LA(1);
 
@@ -5633,9 +5626,9 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
             }
             switch (alt29) {
                 case 1 :
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2007:3: lv_val_0_1= RULE_INT
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2003:3: lv_val_0_1= RULE_INT
                     {
-                    lv_val_0_1=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleIntValue4508); if (state.failed) return current;
+                    lv_val_0_1=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleIntValue4496); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			newLeafNode(lv_val_0_1, grammarAccess.getIntValueAccess().getValINTTerminalRuleCall_0_0()); 
@@ -5657,14 +5650,14 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2022:8: lv_val_0_2= ruleNegativeInt
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2018:8: lv_val_0_2= ruleNegativeInt
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getIntValueAccess().getValNegativeIntParserRuleCall_0_1()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleNegativeInt_in_ruleIntValue4532);
+                    pushFollow(FOLLOW_ruleNegativeInt_in_ruleIntValue4520);
                     lv_val_0_2=ruleNegativeInt();
 
                     state._fsp--;
@@ -5714,7 +5707,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEscapableId"
-    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2048:1: entryRuleEscapableId returns [String current=null] : iv_ruleEscapableId= ruleEscapableId EOF ;
+    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2044:1: entryRuleEscapableId returns [String current=null] : iv_ruleEscapableId= ruleEscapableId EOF ;
     public final String entryRuleEscapableId() throws RecognitionException {
         String current = null;
 
@@ -5722,13 +5715,13 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2049:2: (iv_ruleEscapableId= ruleEscapableId EOF )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2050:2: iv_ruleEscapableId= ruleEscapableId EOF
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2045:2: (iv_ruleEscapableId= ruleEscapableId EOF )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2046:2: iv_ruleEscapableId= ruleEscapableId EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getEscapableIdRule()); 
             }
-            pushFollow(FOLLOW_ruleEscapableId_in_entryRuleEscapableId4571);
+            pushFollow(FOLLOW_ruleEscapableId_in_entryRuleEscapableId4559);
             iv_ruleEscapableId=ruleEscapableId();
 
             state._fsp--;
@@ -5736,7 +5729,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleEscapableId.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEscapableId4582); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEscapableId4570); if (state.failed) return current;
 
             }
 
@@ -5754,7 +5747,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEscapableId"
-    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2057:1: ruleEscapableId returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID | (kw= '`' this_ReservedKeyWords_2= ruleReservedKeyWords kw= '`' ) ) ;
+    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2053:1: ruleEscapableId returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID | (kw= '`' this_ReservedKeyWords_2= ruleReservedKeyWords kw= '`' ) ) ;
     public final AntlrDatatypeRuleToken ruleEscapableId() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5766,17 +5759,17 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2060:28: ( (this_ID_0= RULE_ID | (kw= '`' this_ReservedKeyWords_2= ruleReservedKeyWords kw= '`' ) ) )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2061:1: (this_ID_0= RULE_ID | (kw= '`' this_ReservedKeyWords_2= ruleReservedKeyWords kw= '`' ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2056:28: ( (this_ID_0= RULE_ID | (kw= '`' this_ReservedKeyWords_2= ruleReservedKeyWords kw= '`' ) ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2057:1: (this_ID_0= RULE_ID | (kw= '`' this_ReservedKeyWords_2= ruleReservedKeyWords kw= '`' ) )
             {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2061:1: (this_ID_0= RULE_ID | (kw= '`' this_ReservedKeyWords_2= ruleReservedKeyWords kw= '`' ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2057:1: (this_ID_0= RULE_ID | (kw= '`' this_ReservedKeyWords_2= ruleReservedKeyWords kw= '`' ) )
             int alt30=2;
             int LA30_0 = input.LA(1);
 
             if ( (LA30_0==RULE_ID) ) {
                 alt30=1;
             }
-            else if ( (LA30_0==42) ) {
+            else if ( (LA30_0==41) ) {
                 alt30=2;
             }
             else {
@@ -5788,9 +5781,9 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
             }
             switch (alt30) {
                 case 1 :
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2061:6: this_ID_0= RULE_ID
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2057:6: this_ID_0= RULE_ID
                     {
-                    this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEscapableId4622); if (state.failed) return current;
+                    this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEscapableId4610); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       		current.merge(this_ID_0);
@@ -5805,12 +5798,12 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2069:6: (kw= '`' this_ReservedKeyWords_2= ruleReservedKeyWords kw= '`' )
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2065:6: (kw= '`' this_ReservedKeyWords_2= ruleReservedKeyWords kw= '`' )
                     {
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2069:6: (kw= '`' this_ReservedKeyWords_2= ruleReservedKeyWords kw= '`' )
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2070:2: kw= '`' this_ReservedKeyWords_2= ruleReservedKeyWords kw= '`'
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2065:6: (kw= '`' this_ReservedKeyWords_2= ruleReservedKeyWords kw= '`' )
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2066:2: kw= '`' this_ReservedKeyWords_2= ruleReservedKeyWords kw= '`'
                     {
-                    kw=(Token)match(input,42,FOLLOW_42_in_ruleEscapableId4647); if (state.failed) return current;
+                    kw=(Token)match(input,41,FOLLOW_41_in_ruleEscapableId4635); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -5822,7 +5815,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getEscapableIdAccess().getReservedKeyWordsParserRuleCall_1_1()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleReservedKeyWords_in_ruleEscapableId4669);
+                    pushFollow(FOLLOW_ruleReservedKeyWords_in_ruleEscapableId4657);
                     this_ReservedKeyWords_2=ruleReservedKeyWords();
 
                     state._fsp--;
@@ -5837,7 +5830,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                               afterParserOrEnumRuleCall();
                           
                     }
-                    kw=(Token)match(input,42,FOLLOW_42_in_ruleEscapableId4687); if (state.failed) return current;
+                    kw=(Token)match(input,41,FOLLOW_41_in_ruleEscapableId4675); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -5873,7 +5866,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleReservedKeyWords"
-    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2100:1: entryRuleReservedKeyWords returns [String current=null] : iv_ruleReservedKeyWords= ruleReservedKeyWords EOF ;
+    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2096:1: entryRuleReservedKeyWords returns [String current=null] : iv_ruleReservedKeyWords= ruleReservedKeyWords EOF ;
     public final String entryRuleReservedKeyWords() throws RecognitionException {
         String current = null;
 
@@ -5881,13 +5874,13 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2101:2: (iv_ruleReservedKeyWords= ruleReservedKeyWords EOF )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2102:2: iv_ruleReservedKeyWords= ruleReservedKeyWords EOF
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2097:2: (iv_ruleReservedKeyWords= ruleReservedKeyWords EOF )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2098:2: iv_ruleReservedKeyWords= ruleReservedKeyWords EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getReservedKeyWordsRule()); 
             }
-            pushFollow(FOLLOW_ruleReservedKeyWords_in_entryRuleReservedKeyWords4729);
+            pushFollow(FOLLOW_ruleReservedKeyWords_in_entryRuleReservedKeyWords4717);
             iv_ruleReservedKeyWords=ruleReservedKeyWords();
 
             state._fsp--;
@@ -5895,7 +5888,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleReservedKeyWords.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleReservedKeyWords4740); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleReservedKeyWords4728); if (state.failed) return current;
 
             }
 
@@ -5913,7 +5906,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleReservedKeyWords"
-    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2109:1: ruleReservedKeyWords returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'record' | kw= 'fixed' | kw= 'enum' | kw= 'map' | kw= 'array' | kw= 'union' | kw= 'error' | kw= 'protocol' | kw= 'oneway' | kw= 'import' | kw= 'throws' ) ;
+    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2105:1: ruleReservedKeyWords returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'record' | kw= 'fixed' | kw= 'enum' | kw= 'map' | kw= 'array' | kw= 'union' | kw= 'error' | kw= 'protocol' | kw= 'oneway' | kw= 'import' | kw= 'throws' ) ;
     public final AntlrDatatypeRuleToken ruleReservedKeyWords() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5922,10 +5915,10 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2112:28: ( (kw= 'record' | kw= 'fixed' | kw= 'enum' | kw= 'map' | kw= 'array' | kw= 'union' | kw= 'error' | kw= 'protocol' | kw= 'oneway' | kw= 'import' | kw= 'throws' ) )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2113:1: (kw= 'record' | kw= 'fixed' | kw= 'enum' | kw= 'map' | kw= 'array' | kw= 'union' | kw= 'error' | kw= 'protocol' | kw= 'oneway' | kw= 'import' | kw= 'throws' )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2108:28: ( (kw= 'record' | kw= 'fixed' | kw= 'enum' | kw= 'map' | kw= 'array' | kw= 'union' | kw= 'error' | kw= 'protocol' | kw= 'oneway' | kw= 'import' | kw= 'throws' ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2109:1: (kw= 'record' | kw= 'fixed' | kw= 'enum' | kw= 'map' | kw= 'array' | kw= 'union' | kw= 'error' | kw= 'protocol' | kw= 'oneway' | kw= 'import' | kw= 'throws' )
             {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2113:1: (kw= 'record' | kw= 'fixed' | kw= 'enum' | kw= 'map' | kw= 'array' | kw= 'union' | kw= 'error' | kw= 'protocol' | kw= 'oneway' | kw= 'import' | kw= 'throws' )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2109:1: (kw= 'record' | kw= 'fixed' | kw= 'enum' | kw= 'map' | kw= 'array' | kw= 'union' | kw= 'error' | kw= 'protocol' | kw= 'oneway' | kw= 'import' | kw= 'throws' )
             int alt31=11;
             switch ( input.LA(1) ) {
             case 24:
@@ -5993,9 +5986,9 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
             switch (alt31) {
                 case 1 :
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2114:2: kw= 'record'
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2110:2: kw= 'record'
                     {
-                    kw=(Token)match(input,24,FOLLOW_24_in_ruleReservedKeyWords4778); if (state.failed) return current;
+                    kw=(Token)match(input,24,FOLLOW_24_in_ruleReservedKeyWords4766); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -6006,9 +5999,9 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2121:2: kw= 'fixed'
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2117:2: kw= 'fixed'
                     {
-                    kw=(Token)match(input,37,FOLLOW_37_in_ruleReservedKeyWords4797); if (state.failed) return current;
+                    kw=(Token)match(input,37,FOLLOW_37_in_ruleReservedKeyWords4785); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -6019,9 +6012,9 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2128:2: kw= 'enum'
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2124:2: kw= 'enum'
                     {
-                    kw=(Token)match(input,38,FOLLOW_38_in_ruleReservedKeyWords4816); if (state.failed) return current;
+                    kw=(Token)match(input,38,FOLLOW_38_in_ruleReservedKeyWords4804); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -6032,9 +6025,9 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2135:2: kw= 'map'
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2131:2: kw= 'map'
                     {
-                    kw=(Token)match(input,29,FOLLOW_29_in_ruleReservedKeyWords4835); if (state.failed) return current;
+                    kw=(Token)match(input,29,FOLLOW_29_in_ruleReservedKeyWords4823); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -6045,9 +6038,9 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2142:2: kw= 'array'
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2138:2: kw= 'array'
                     {
-                    kw=(Token)match(input,26,FOLLOW_26_in_ruleReservedKeyWords4854); if (state.failed) return current;
+                    kw=(Token)match(input,26,FOLLOW_26_in_ruleReservedKeyWords4842); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -6058,9 +6051,9 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2149:2: kw= 'union'
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2145:2: kw= 'union'
                     {
-                    kw=(Token)match(input,25,FOLLOW_25_in_ruleReservedKeyWords4873); if (state.failed) return current;
+                    kw=(Token)match(input,25,FOLLOW_25_in_ruleReservedKeyWords4861); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -6071,9 +6064,9 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2156:2: kw= 'error'
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2152:2: kw= 'error'
                     {
-                    kw=(Token)match(input,23,FOLLOW_23_in_ruleReservedKeyWords4892); if (state.failed) return current;
+                    kw=(Token)match(input,23,FOLLOW_23_in_ruleReservedKeyWords4880); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -6084,9 +6077,9 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2163:2: kw= 'protocol'
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2159:2: kw= 'protocol'
                     {
-                    kw=(Token)match(input,13,FOLLOW_13_in_ruleReservedKeyWords4911); if (state.failed) return current;
+                    kw=(Token)match(input,13,FOLLOW_13_in_ruleReservedKeyWords4899); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -6097,9 +6090,9 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2170:2: kw= 'oneway'
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2166:2: kw= 'oneway'
                     {
-                    kw=(Token)match(input,20,FOLLOW_20_in_ruleReservedKeyWords4930); if (state.failed) return current;
+                    kw=(Token)match(input,20,FOLLOW_20_in_ruleReservedKeyWords4918); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -6110,9 +6103,9 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2177:2: kw= 'import'
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2173:2: kw= 'import'
                     {
-                    kw=(Token)match(input,11,FOLLOW_11_in_ruleReservedKeyWords4949); if (state.failed) return current;
+                    kw=(Token)match(input,11,FOLLOW_11_in_ruleReservedKeyWords4937); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -6123,9 +6116,9 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2184:2: kw= 'throws'
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2180:2: kw= 'throws'
                     {
-                    kw=(Token)match(input,19,FOLLOW_19_in_ruleReservedKeyWords4968); if (state.failed) return current;
+                    kw=(Token)match(input,19,FOLLOW_19_in_ruleReservedKeyWords4956); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -6158,7 +6151,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAN"
-    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2197:1: entryRuleAN returns [String current=null] : iv_ruleAN= ruleAN EOF ;
+    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2193:1: entryRuleAN returns [String current=null] : iv_ruleAN= ruleAN EOF ;
     public final String entryRuleAN() throws RecognitionException {
         String current = null;
 
@@ -6166,13 +6159,13 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2198:2: (iv_ruleAN= ruleAN EOF )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2199:2: iv_ruleAN= ruleAN EOF
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2194:2: (iv_ruleAN= ruleAN EOF )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2195:2: iv_ruleAN= ruleAN EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getANRule()); 
             }
-            pushFollow(FOLLOW_ruleAN_in_entryRuleAN5009);
+            pushFollow(FOLLOW_ruleAN_in_entryRuleAN4997);
             iv_ruleAN=ruleAN();
 
             state._fsp--;
@@ -6180,7 +6173,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleAN.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAN5020); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAN5008); if (state.failed) return current;
 
             }
 
@@ -6198,35 +6191,42 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAN"
-    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2206:1: ruleAN returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '-' this_ID_2= RULE_ID )* ) ;
+    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2202:1: ruleAN returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '@' this_ID_1= RULE_ID (kw= '-' this_ID_3= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleAN() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
-        Token this_ID_0=null;
         Token kw=null;
-        Token this_ID_2=null;
+        Token this_ID_1=null;
+        Token this_ID_3=null;
 
          enterRule(); 
             
         try {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2209:28: ( (this_ID_0= RULE_ID (kw= '-' this_ID_2= RULE_ID )* ) )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2210:1: (this_ID_0= RULE_ID (kw= '-' this_ID_2= RULE_ID )* )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2205:28: ( (kw= '@' this_ID_1= RULE_ID (kw= '-' this_ID_3= RULE_ID )* ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2206:1: (kw= '@' this_ID_1= RULE_ID (kw= '-' this_ID_3= RULE_ID )* )
             {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2210:1: (this_ID_0= RULE_ID (kw= '-' this_ID_2= RULE_ID )* )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2210:6: this_ID_0= RULE_ID (kw= '-' this_ID_2= RULE_ID )*
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2206:1: (kw= '@' this_ID_1= RULE_ID (kw= '-' this_ID_3= RULE_ID )* )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2207:2: kw= '@' this_ID_1= RULE_ID (kw= '-' this_ID_3= RULE_ID )*
             {
-            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAN5060); if (state.failed) return current;
+            kw=(Token)match(input,42,FOLLOW_42_in_ruleAN5046); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              		current.merge(this_ID_0);
+                      current.merge(kw);
+                      newLeafNode(kw, grammarAccess.getANAccess().getCommercialAtKeyword_0()); 
+                  
+            }
+            this_ID_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAN5061); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              		current.merge(this_ID_1);
                   
             }
             if ( state.backtracking==0 ) {
                
-                  newLeafNode(this_ID_0, grammarAccess.getANAccess().getIDTerminalRuleCall_0()); 
+                  newLeafNode(this_ID_1, grammarAccess.getANAccess().getIDTerminalRuleCall_1()); 
                   
             }
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2217:1: (kw= '-' this_ID_2= RULE_ID )*
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2219:1: (kw= '-' this_ID_3= RULE_ID )*
             loop32:
             do {
                 int alt32=2;
@@ -6239,24 +6239,24 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
                 switch (alt32) {
             	case 1 :
-            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2218:2: kw= '-' this_ID_2= RULE_ID
+            	    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2220:2: kw= '-' this_ID_3= RULE_ID
             	    {
-            	    kw=(Token)match(input,43,FOLLOW_43_in_ruleAN5079); if (state.failed) return current;
+            	    kw=(Token)match(input,43,FOLLOW_43_in_ruleAN5080); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	              current.merge(kw);
-            	              newLeafNode(kw, grammarAccess.getANAccess().getHyphenMinusKeyword_1_0()); 
+            	              newLeafNode(kw, grammarAccess.getANAccess().getHyphenMinusKeyword_2_0()); 
             	          
             	    }
-            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAN5094); if (state.failed) return current;
+            	    this_ID_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAN5095); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	      		current.merge(this_ID_2);
+            	      		current.merge(this_ID_3);
             	          
             	    }
             	    if ( state.backtracking==0 ) {
             	       
-            	          newLeafNode(this_ID_2, grammarAccess.getANAccess().getIDTerminalRuleCall_1_1()); 
+            	          newLeafNode(this_ID_3, grammarAccess.getANAccess().getIDTerminalRuleCall_2_1()); 
             	          
             	    }
 
@@ -6291,7 +6291,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNegativeInt"
-    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2238:1: entryRuleNegativeInt returns [String current=null] : iv_ruleNegativeInt= ruleNegativeInt EOF ;
+    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2240:1: entryRuleNegativeInt returns [String current=null] : iv_ruleNegativeInt= ruleNegativeInt EOF ;
     public final String entryRuleNegativeInt() throws RecognitionException {
         String current = null;
 
@@ -6299,13 +6299,13 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2239:2: (iv_ruleNegativeInt= ruleNegativeInt EOF )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2240:2: iv_ruleNegativeInt= ruleNegativeInt EOF
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2241:2: (iv_ruleNegativeInt= ruleNegativeInt EOF )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2242:2: iv_ruleNegativeInt= ruleNegativeInt EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNegativeIntRule()); 
             }
-            pushFollow(FOLLOW_ruleNegativeInt_in_entryRuleNegativeInt5142);
+            pushFollow(FOLLOW_ruleNegativeInt_in_entryRuleNegativeInt5143);
             iv_ruleNegativeInt=ruleNegativeInt();
 
             state._fsp--;
@@ -6313,7 +6313,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleNegativeInt.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNegativeInt5153); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNegativeInt5154); if (state.failed) return current;
 
             }
 
@@ -6331,7 +6331,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNegativeInt"
-    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2247:1: ruleNegativeInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '-' this_INT_1= RULE_INT ) ;
+    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2249:1: ruleNegativeInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '-' this_INT_1= RULE_INT ) ;
     public final AntlrDatatypeRuleToken ruleNegativeInt() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -6341,20 +6341,20 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2250:28: ( (kw= '-' this_INT_1= RULE_INT ) )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2251:1: (kw= '-' this_INT_1= RULE_INT )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2252:28: ( (kw= '-' this_INT_1= RULE_INT ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2253:1: (kw= '-' this_INT_1= RULE_INT )
             {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2251:1: (kw= '-' this_INT_1= RULE_INT )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2252:2: kw= '-' this_INT_1= RULE_INT
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2253:1: (kw= '-' this_INT_1= RULE_INT )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2254:2: kw= '-' this_INT_1= RULE_INT
             {
-            kw=(Token)match(input,43,FOLLOW_43_in_ruleNegativeInt5191); if (state.failed) return current;
+            kw=(Token)match(input,43,FOLLOW_43_in_ruleNegativeInt5192); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
                       newLeafNode(kw, grammarAccess.getNegativeIntAccess().getHyphenMinusKeyword_0()); 
                   
             }
-            this_INT_1=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleNegativeInt5206); if (state.failed) return current;
+            this_INT_1=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleNegativeInt5207); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		current.merge(this_INT_1);
@@ -6388,7 +6388,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleImportType"
-    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2272:1: ruleImportType returns [Enumerator current=null] : ( (enumLiteral_0= 'idl' ) | (enumLiteral_1= 'protocol' ) | (enumLiteral_2= 'schema' ) ) ;
+    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2274:1: ruleImportType returns [Enumerator current=null] : ( (enumLiteral_0= 'idl' ) | (enumLiteral_1= 'protocol' ) | (enumLiteral_2= 'schema' ) ) ;
     public final Enumerator ruleImportType() throws RecognitionException {
         Enumerator current = null;
 
@@ -6398,10 +6398,10 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2274:28: ( ( (enumLiteral_0= 'idl' ) | (enumLiteral_1= 'protocol' ) | (enumLiteral_2= 'schema' ) ) )
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2275:1: ( (enumLiteral_0= 'idl' ) | (enumLiteral_1= 'protocol' ) | (enumLiteral_2= 'schema' ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2276:28: ( ( (enumLiteral_0= 'idl' ) | (enumLiteral_1= 'protocol' ) | (enumLiteral_2= 'schema' ) ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2277:1: ( (enumLiteral_0= 'idl' ) | (enumLiteral_1= 'protocol' ) | (enumLiteral_2= 'schema' ) )
             {
-            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2275:1: ( (enumLiteral_0= 'idl' ) | (enumLiteral_1= 'protocol' ) | (enumLiteral_2= 'schema' ) )
+            // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2277:1: ( (enumLiteral_0= 'idl' ) | (enumLiteral_1= 'protocol' ) | (enumLiteral_2= 'schema' ) )
             int alt33=3;
             switch ( input.LA(1) ) {
             case 44:
@@ -6429,12 +6429,12 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
             switch (alt33) {
                 case 1 :
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2275:2: (enumLiteral_0= 'idl' )
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2277:2: (enumLiteral_0= 'idl' )
                     {
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2275:2: (enumLiteral_0= 'idl' )
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2275:4: enumLiteral_0= 'idl'
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2277:2: (enumLiteral_0= 'idl' )
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2277:4: enumLiteral_0= 'idl'
                     {
-                    enumLiteral_0=(Token)match(input,44,FOLLOW_44_in_ruleImportType5265); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,44,FOLLOW_44_in_ruleImportType5266); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getImportTypeAccess().getIDLEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -6448,12 +6448,12 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2281:6: (enumLiteral_1= 'protocol' )
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2283:6: (enumLiteral_1= 'protocol' )
                     {
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2281:6: (enumLiteral_1= 'protocol' )
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2281:8: enumLiteral_1= 'protocol'
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2283:6: (enumLiteral_1= 'protocol' )
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2283:8: enumLiteral_1= 'protocol'
                     {
-                    enumLiteral_1=(Token)match(input,13,FOLLOW_13_in_ruleImportType5282); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,13,FOLLOW_13_in_ruleImportType5283); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getImportTypeAccess().getPROTOCOLEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -6467,12 +6467,12 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2287:6: (enumLiteral_2= 'schema' )
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2289:6: (enumLiteral_2= 'schema' )
                     {
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2287:6: (enumLiteral_2= 'schema' )
-                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2287:8: enumLiteral_2= 'schema'
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2289:6: (enumLiteral_2= 'schema' )
+                    // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:2289:8: enumLiteral_2= 'schema'
                     {
-                    enumLiteral_2=(Token)match(input,45,FOLLOW_45_in_ruleImportType5299); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,45,FOLLOW_45_in_ruleImportType5300); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getImportTypeAccess().getSCHEMAEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -6508,10 +6508,10 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred1_InternalAvdl
     public final void synpred1_InternalAvdl_fragment() throws RecognitionException {   
-        // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1739:4: ( '[' )
-        // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1739:6: '['
+        // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1735:4: ( '[' )
+        // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1735:6: '['
         {
-        match(input,40,FOLLOW_40_in_synpred1_InternalAvdl3838); if (state.failed) return ;
+        match(input,39,FOLLOW_39_in_synpred1_InternalAvdl3826); if (state.failed) return ;
 
         }
     }
@@ -6519,10 +6519,10 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred3_InternalAvdl
     public final void synpred3_InternalAvdl_fragment() throws RecognitionException {   
-        // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1878:7: ( '[' )
-        // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1878:9: '['
+        // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1874:7: ( '[' )
+        // ../avroclipse/src-gen/avroclipse/parser/antlr/internal/InternalAvdl.g:1874:9: '['
         {
-        match(input,40,FOLLOW_40_in_synpred3_InternalAvdl4156); if (state.failed) return ;
+        match(input,39,FOLLOW_39_in_synpred3_InternalAvdl4144); if (state.failed) return ;
 
         }
     }
@@ -6574,7 +6574,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
     static final String DFA27_specialS =
         "\4\uffff\1\0\5\uffff}>";
     static final String[] DFA27_transitionS = {
-            "\2\5\14\uffff\1\1\13\uffff\1\5\11\uffff\1\4\1\1\1\uffff\1\5",
+            "\2\5\14\uffff\1\1\13\uffff\1\5\10\uffff\1\4\1\1\2\uffff\1\5",
             "",
             "",
             "",
@@ -6616,7 +6616,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
             this.transition = DFA27_transition;
         }
         public String getDescription() {
-            return "()* loopback of 1739:2: ( ( ( '[' )=> (lv_value_1_0= ruleArray ) ) | ( ( (lv_value_2_0= ruleValue ) ) (otherlv_3= ',' ( (lv_value_4_0= ruleValue ) ) )* ) )*";
+            return "()* loopback of 1735:2: ( ( ( '[' )=> (lv_value_1_0= ruleArray ) ) | ( ( (lv_value_2_0= ruleValue ) ) (otherlv_3= ',' ( (lv_value_4_0= ruleValue ) ) )* ) )*";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -6649,8 +6649,8 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_ruleAvdlFile_in_entryRuleAvdlFile75 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleAvdlFile85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImport_in_ruleAvdlFile131 = new BitSet(new long[]{0x0000008000002802L});
-    public static final BitSet FOLLOW_ruleProtocol_in_ruleAvdlFile158 = new BitSet(new long[]{0x0000008000002802L});
+    public static final BitSet FOLLOW_ruleImport_in_ruleAvdlFile131 = new BitSet(new long[]{0x0000040000002802L});
+    public static final BitSet FOLLOW_ruleProtocol_in_ruleAvdlFile158 = new BitSet(new long[]{0x0000040000002802L});
     public static final BitSet FOLLOW_ruleImport_in_entryRuleImport195 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleImport205 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_11_in_ruleImport242 = new BitSet(new long[]{0x0000300000002000L});
@@ -6659,11 +6659,11 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_12_in_ruleImport297 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleProtocol_in_entryRuleProtocol333 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleProtocol343 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_ruleProtocol389 = new BitSet(new long[]{0x0000008000002000L});
-    public static final BitSet FOLLOW_13_in_ruleProtocol402 = new BitSet(new long[]{0x0000040000000040L});
+    public static final BitSet FOLLOW_ruleAnnotation_in_ruleProtocol389 = new BitSet(new long[]{0x0000040000002000L});
+    public static final BitSet FOLLOW_13_in_ruleProtocol402 = new BitSet(new long[]{0x0000020000000040L});
     public static final BitSet FOLLOW_ruleEscapableId_in_ruleProtocol423 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleProtocol435 = new BitSet(new long[]{0x000004FFC1C08040L});
-    public static final BitSet FOLLOW_ruleElement_in_ruleProtocol456 = new BitSet(new long[]{0x000004FFC1C08040L});
+    public static final BitSet FOLLOW_14_in_ruleProtocol435 = new BitSet(new long[]{0x0000067FC1C08040L});
+    public static final BitSet FOLLOW_ruleElement_in_ruleProtocol456 = new BitSet(new long[]{0x0000067FC1C08040L});
     public static final BitSet FOLLOW_15_in_ruleProtocol469 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleElement_in_entryRuleElement505 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleElement515 = new BitSet(new long[]{0x0000000000000002L});
@@ -6671,22 +6671,22 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleRPCMessage_in_ruleElement589 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleRPCMessage_in_entryRuleRPCMessage624 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleRPCMessage634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleReturnTypeLink_in_ruleRPCMessage680 = new BitSet(new long[]{0x0000040000000040L});
+    public static final BitSet FOLLOW_ruleReturnTypeLink_in_ruleRPCMessage680 = new BitSet(new long[]{0x0000020000000040L});
     public static final BitSet FOLLOW_ruleEscapableId_in_ruleRPCMessage701 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_ruleRPCMessage713 = new BitSet(new long[]{0x000004FFC1C40040L});
-    public static final BitSet FOLLOW_ruleArgument_in_ruleRPCMessage735 = new BitSet(new long[]{0x000004FFC1C60040L});
-    public static final BitSet FOLLOW_17_in_ruleRPCMessage748 = new BitSet(new long[]{0x000004FFC1C00040L});
-    public static final BitSet FOLLOW_ruleArgument_in_ruleRPCMessage769 = new BitSet(new long[]{0x000004FFC1C60040L});
+    public static final BitSet FOLLOW_16_in_ruleRPCMessage713 = new BitSet(new long[]{0x0000067FC1C40040L});
+    public static final BitSet FOLLOW_ruleArgument_in_ruleRPCMessage735 = new BitSet(new long[]{0x0000067FC1C60040L});
+    public static final BitSet FOLLOW_17_in_ruleRPCMessage748 = new BitSet(new long[]{0x0000067FC1C00040L});
+    public static final BitSet FOLLOW_ruleArgument_in_ruleRPCMessage769 = new BitSet(new long[]{0x0000067FC1C60040L});
     public static final BitSet FOLLOW_18_in_ruleRPCMessage785 = new BitSet(new long[]{0x0000000000181000L});
-    public static final BitSet FOLLOW_19_in_ruleRPCMessage798 = new BitSet(new long[]{0x0000040000000040L});
+    public static final BitSet FOLLOW_19_in_ruleRPCMessage798 = new BitSet(new long[]{0x0000020000000040L});
     public static final BitSet FOLLOW_ruleEscapableId_in_ruleRPCMessage821 = new BitSet(new long[]{0x0000000000101000L});
     public static final BitSet FOLLOW_20_in_ruleRPCMessage841 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_12_in_ruleRPCMessage867 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleArgument_in_entryRuleArgument903 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleArgument913 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTypeLink_in_ruleArgument959 = new BitSet(new long[]{0x0000040000000040L});
+    public static final BitSet FOLLOW_ruleTypeLink_in_ruleArgument959 = new BitSet(new long[]{0x0000020000000040L});
     public static final BitSet FOLLOW_ruleEscapableId_in_ruleArgument980 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_21_in_ruleArgument993 = new BitSet(new long[]{0x0000090040000030L});
+    public static final BitSet FOLLOW_21_in_ruleArgument993 = new BitSet(new long[]{0x0000088040000030L});
     public static final BitSet FOLLOW_ruleValue_in_ruleArgument1014 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleReturnTypeLink_in_entryRuleReturnTypeLink1052 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleReturnTypeLink1062 = new BitSet(new long[]{0x0000000000000002L});
@@ -6697,7 +6697,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_22_in_ruleVoidTypeLink1223 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleTypeDef_in_entryRuleTypeDef1271 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleTypeDef1281 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_ruleTypeDef1327 = new BitSet(new long[]{0x000000E001800000L});
+    public static final BitSet FOLLOW_ruleAnnotation_in_ruleTypeDef1327 = new BitSet(new long[]{0x0000046001800000L});
     public static final BitSet FOLLOW_ruleType_in_ruleTypeDef1349 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleType_in_entryRuleType1385 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleType1395 = new BitSet(new long[]{0x0000000000000002L});
@@ -6707,25 +6707,25 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleErrorType_in_ruleType1523 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleErrorType_in_entryRuleErrorType1558 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleErrorType1568 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_ruleErrorType1605 = new BitSet(new long[]{0x0000040000000040L});
+    public static final BitSet FOLLOW_23_in_ruleErrorType1605 = new BitSet(new long[]{0x0000020000000040L});
     public static final BitSet FOLLOW_ruleEscapableId_in_ruleErrorType1626 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleErrorType1638 = new BitSet(new long[]{0x000004FFE7C08040L});
-    public static final BitSet FOLLOW_ruleField_in_ruleErrorType1659 = new BitSet(new long[]{0x000004FFE7C08040L});
+    public static final BitSet FOLLOW_14_in_ruleErrorType1638 = new BitSet(new long[]{0x0000067FE7C08040L});
+    public static final BitSet FOLLOW_ruleField_in_ruleErrorType1659 = new BitSet(new long[]{0x0000067FE7C08040L});
     public static final BitSet FOLLOW_15_in_ruleErrorType1672 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleRecordType_in_entryRuleRecordType1708 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleRecordType1718 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_ruleRecordType1755 = new BitSet(new long[]{0x0000040000000040L});
+    public static final BitSet FOLLOW_24_in_ruleRecordType1755 = new BitSet(new long[]{0x0000020000000040L});
     public static final BitSet FOLLOW_ruleEscapableId_in_ruleRecordType1776 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleRecordType1788 = new BitSet(new long[]{0x000004FFE7C08040L});
-    public static final BitSet FOLLOW_ruleField_in_ruleRecordType1809 = new BitSet(new long[]{0x000004FFE7C08040L});
+    public static final BitSet FOLLOW_14_in_ruleRecordType1788 = new BitSet(new long[]{0x0000067FE7C08040L});
+    public static final BitSet FOLLOW_ruleField_in_ruleRecordType1809 = new BitSet(new long[]{0x0000067FE7C08040L});
     public static final BitSet FOLLOW_15_in_ruleRecordType1822 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleField_in_entryRuleField1858 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleField1868 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_ruleField1914 = new BitSet(new long[]{0x000004FFE7C00040L});
-    public static final BitSet FOLLOW_ruleFieldType_in_ruleField1936 = new BitSet(new long[]{0x0000048000000040L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_ruleField1957 = new BitSet(new long[]{0x0000048000000040L});
+    public static final BitSet FOLLOW_ruleAnnotation_in_ruleField1914 = new BitSet(new long[]{0x0000067FE7C00040L});
+    public static final BitSet FOLLOW_ruleFieldType_in_ruleField1936 = new BitSet(new long[]{0x0000060000000040L});
+    public static final BitSet FOLLOW_ruleAnnotation_in_ruleField1957 = new BitSet(new long[]{0x0000060000000040L});
     public static final BitSet FOLLOW_ruleEscapableId_in_ruleField1979 = new BitSet(new long[]{0x0000000000201000L});
-    public static final BitSet FOLLOW_21_in_ruleField1992 = new BitSet(new long[]{0x0000090040000030L});
+    public static final BitSet FOLLOW_21_in_ruleField1992 = new BitSet(new long[]{0x0000088040000030L});
     public static final BitSet FOLLOW_ruleValue_in_ruleField2013 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_12_in_ruleField2027 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleFieldType_in_entryRuleFieldType2063 = new BitSet(new long[]{0x0000000000000000L});
@@ -6740,23 +6740,23 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleUnionFieldType_in_entryRuleUnionFieldType2326 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleUnionFieldType2336 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_25_in_ruleUnionFieldType2373 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleUnionFieldType2385 = new BitSet(new long[]{0x000004FFC1C00040L});
+    public static final BitSet FOLLOW_14_in_ruleUnionFieldType2385 = new BitSet(new long[]{0x0000067FC1C00040L});
     public static final BitSet FOLLOW_ruleTypeLink_in_ruleUnionFieldType2406 = new BitSet(new long[]{0x0000000000028000L});
-    public static final BitSet FOLLOW_17_in_ruleUnionFieldType2419 = new BitSet(new long[]{0x000004FFC1C00040L});
+    public static final BitSet FOLLOW_17_in_ruleUnionFieldType2419 = new BitSet(new long[]{0x0000067FC1C00040L});
     public static final BitSet FOLLOW_ruleTypeLink_in_ruleUnionFieldType2440 = new BitSet(new long[]{0x0000000000028000L});
     public static final BitSet FOLLOW_15_in_ruleUnionFieldType2454 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleArrayFieldType_in_entryRuleArrayFieldType2490 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleArrayFieldType2500 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_26_in_ruleArrayFieldType2537 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleArrayFieldType2549 = new BitSet(new long[]{0x000004FFC1C00040L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_ruleArrayFieldType2570 = new BitSet(new long[]{0x000004FFC1C00040L});
+    public static final BitSet FOLLOW_27_in_ruleArrayFieldType2549 = new BitSet(new long[]{0x0000067FC1C00040L});
+    public static final BitSet FOLLOW_ruleAnnotation_in_ruleArrayFieldType2570 = new BitSet(new long[]{0x0000067FC1C00040L});
     public static final BitSet FOLLOW_ruleTypeLink_in_ruleArrayFieldType2592 = new BitSet(new long[]{0x0000000010000000L});
     public static final BitSet FOLLOW_28_in_ruleArrayFieldType2604 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleMapFieldType_in_entryRuleMapFieldType2640 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleMapFieldType2650 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_29_in_ruleMapFieldType2687 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleMapFieldType2699 = new BitSet(new long[]{0x000004FFC1C00040L});
-    public static final BitSet FOLLOW_ruleAnnotation_in_ruleMapFieldType2720 = new BitSet(new long[]{0x000004FFC1C00040L});
+    public static final BitSet FOLLOW_27_in_ruleMapFieldType2699 = new BitSet(new long[]{0x0000067FC1C00040L});
+    public static final BitSet FOLLOW_ruleAnnotation_in_ruleMapFieldType2720 = new BitSet(new long[]{0x0000067FC1C00040L});
     public static final BitSet FOLLOW_ruleTypeLink_in_ruleMapFieldType2742 = new BitSet(new long[]{0x0000000010000000L});
     public static final BitSet FOLLOW_28_in_ruleMapFieldType2754 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleTypeLink_in_entryRuleTypeLink2790 = new BitSet(new long[]{0x0000000000000000L});
@@ -6777,7 +6777,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleEscapableId_in_ruleCustomTypeLink3245 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleFixedType_in_entryRuleFixedType3280 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleFixedType3290 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_ruleFixedType3327 = new BitSet(new long[]{0x0000040000000040L});
+    public static final BitSet FOLLOW_37_in_ruleFixedType3327 = new BitSet(new long[]{0x0000020000000040L});
     public static final BitSet FOLLOW_ruleEscapableId_in_ruleFixedType3348 = new BitSet(new long[]{0x0000000000010000L});
     public static final BitSet FOLLOW_16_in_ruleFixedType3360 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_RULE_INT_in_ruleFixedType3377 = new BitSet(new long[]{0x0000000000040000L});
@@ -6785,7 +6785,7 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_12_in_ruleFixedType3406 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleEnumType_in_entryRuleEnumType3442 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleEnumType3452 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_ruleEnumType3489 = new BitSet(new long[]{0x0000040000000040L});
+    public static final BitSet FOLLOW_38_in_ruleEnumType3489 = new BitSet(new long[]{0x0000020000000040L});
     public static final BitSet FOLLOW_ruleEscapableId_in_ruleEnumType3510 = new BitSet(new long[]{0x0000000000004000L});
     public static final BitSet FOLLOW_14_in_ruleEnumType3522 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleEnumType3539 = new BitSet(new long[]{0x0000000000028000L});
@@ -6794,70 +6794,70 @@ public class InternalAvdlParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_15_in_ruleEnumType3593 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAnnotation_in_entryRuleAnnotation3629 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleAnnotation3639 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_ruleAnnotation3676 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleAN_in_ruleAnnotation3697 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_16_in_ruleAnnotation3710 = new BitSet(new long[]{0x0000090040040030L});
-    public static final BitSet FOLLOW_ruleValues_in_ruleAnnotation3731 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleAnnotation3743 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValues_in_entryRuleValues3781 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleValues3791 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArray_in_ruleValues3854 = new BitSet(new long[]{0x0000090040000032L});
-    public static final BitSet FOLLOW_ruleValue_in_ruleValues3882 = new BitSet(new long[]{0x0000090040020032L});
-    public static final BitSet FOLLOW_17_in_ruleValues3895 = new BitSet(new long[]{0x0000090040000030L});
-    public static final BitSet FOLLOW_ruleValue_in_ruleValues3916 = new BitSet(new long[]{0x0000090040020032L});
-    public static final BitSet FOLLOW_ruleArray_in_entryRuleArray3957 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleArray3967 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleArray4012 = new BitSet(new long[]{0x00000B0040000030L});
-    public static final BitSet FOLLOW_ruleValues_in_ruleArray4034 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_41_in_ruleArray4046 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_entryRuleValue4082 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleValue4092 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStringValue_in_ruleValue4139 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArray_in_ruleValue4174 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIntValue_in_ruleValue4202 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNull_in_ruleValue4229 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNull_in_entryRuleNull4264 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNull4274 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_ruleNull4316 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStringValue_in_entryRuleStringValue4364 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStringValue4374 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleStringValue4415 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIntValue_in_entryRuleIntValue4455 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleIntValue4465 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleIntValue4508 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNegativeInt_in_ruleIntValue4532 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEscapableId_in_entryRuleEscapableId4571 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEscapableId4582 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleEscapableId4622 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_ruleEscapableId4647 = new BitSet(new long[]{0x0000006027982800L});
-    public static final BitSet FOLLOW_ruleReservedKeyWords_in_ruleEscapableId4669 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_42_in_ruleEscapableId4687 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleReservedKeyWords_in_entryRuleReservedKeyWords4729 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleReservedKeyWords4740 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_ruleReservedKeyWords4778 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_ruleReservedKeyWords4797 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_ruleReservedKeyWords4816 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleReservedKeyWords4835 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_ruleReservedKeyWords4854 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_ruleReservedKeyWords4873 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_ruleReservedKeyWords4892 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_ruleReservedKeyWords4911 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_ruleReservedKeyWords4930 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_ruleReservedKeyWords4949 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_ruleReservedKeyWords4968 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAN_in_entryRuleAN5009 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAN5020 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleAN5060 = new BitSet(new long[]{0x0000080000000002L});
-    public static final BitSet FOLLOW_43_in_ruleAN5079 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleAN5094 = new BitSet(new long[]{0x0000080000000002L});
-    public static final BitSet FOLLOW_ruleNegativeInt_in_entryRuleNegativeInt5142 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNegativeInt5153 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_ruleNegativeInt5191 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleNegativeInt5206 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_ruleImportType5265 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_ruleImportType5282 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_ruleImportType5299 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_synpred1_InternalAvdl3838 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_synpred3_InternalAvdl4156 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAN_in_ruleAnnotation3685 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_16_in_ruleAnnotation3698 = new BitSet(new long[]{0x0000088040040030L});
+    public static final BitSet FOLLOW_ruleValues_in_ruleAnnotation3719 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_ruleAnnotation3731 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValues_in_entryRuleValues3769 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleValues3779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArray_in_ruleValues3842 = new BitSet(new long[]{0x0000088040000032L});
+    public static final BitSet FOLLOW_ruleValue_in_ruleValues3870 = new BitSet(new long[]{0x0000088040020032L});
+    public static final BitSet FOLLOW_17_in_ruleValues3883 = new BitSet(new long[]{0x0000088040000030L});
+    public static final BitSet FOLLOW_ruleValue_in_ruleValues3904 = new BitSet(new long[]{0x0000088040020032L});
+    public static final BitSet FOLLOW_ruleArray_in_entryRuleArray3945 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleArray3955 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_ruleArray4000 = new BitSet(new long[]{0x0000098040000030L});
+    public static final BitSet FOLLOW_ruleValues_in_ruleArray4022 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_ruleArray4034 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_entryRuleValue4070 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleValue4080 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStringValue_in_ruleValue4127 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArray_in_ruleValue4162 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIntValue_in_ruleValue4190 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNull_in_ruleValue4217 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNull_in_entryRuleNull4252 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNull4262 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_ruleNull4304 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStringValue_in_entryRuleStringValue4352 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStringValue4362 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleStringValue4403 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIntValue_in_entryRuleIntValue4443 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleIntValue4453 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleIntValue4496 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNegativeInt_in_ruleIntValue4520 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEscapableId_in_entryRuleEscapableId4559 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEscapableId4570 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleEscapableId4610 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_ruleEscapableId4635 = new BitSet(new long[]{0x0000006027982800L});
+    public static final BitSet FOLLOW_ruleReservedKeyWords_in_ruleEscapableId4657 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_41_in_ruleEscapableId4675 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleReservedKeyWords_in_entryRuleReservedKeyWords4717 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleReservedKeyWords4728 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_ruleReservedKeyWords4766 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_ruleReservedKeyWords4785 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_ruleReservedKeyWords4804 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_ruleReservedKeyWords4823 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_ruleReservedKeyWords4842 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_ruleReservedKeyWords4861 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_ruleReservedKeyWords4880 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_ruleReservedKeyWords4899 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_ruleReservedKeyWords4918 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_ruleReservedKeyWords4937 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_ruleReservedKeyWords4956 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAN_in_entryRuleAN4997 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAN5008 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_ruleAN5046 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleAN5061 = new BitSet(new long[]{0x0000080000000002L});
+    public static final BitSet FOLLOW_43_in_ruleAN5080 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleAN5095 = new BitSet(new long[]{0x0000080000000002L});
+    public static final BitSet FOLLOW_ruleNegativeInt_in_entryRuleNegativeInt5143 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNegativeInt5154 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_ruleNegativeInt5192 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleNegativeInt5207 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_ruleImportType5266 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_ruleImportType5283 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_ruleImportType5300 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_synpred1_InternalAvdl3826 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_synpred3_InternalAvdl4144 = new BitSet(new long[]{0x0000000000000002L});
 
 }
