@@ -16,5 +16,5 @@ public class AvroIDLRuntimeModule extends avroclipse.AbstractAvroIDLRuntimeModul
 	public Class<? extends NamesAreUniqueValidationHelper> bindNamesAreUniqueValidationHelper() {
 		return AvroIDLNamesAreUniqueValidationHelper.class;
 	}
-
+	
 }

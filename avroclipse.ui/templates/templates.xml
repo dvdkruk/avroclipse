@@ -1,7 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<templates>
-	<template name="protocol" description="protocol" context="Avro IDL" enabled="true">protocol ${name} {
-		${cursor}
-	}
-	</template> 
+<?xml version="1.0" encoding="UTF-8"?><templates>
+<template id="1" autoinsert="true" context="avroclipse.AvroIDL.Element" deleted="false" description="enum" enabled="true" name="enum">enum ${name} {
+	${LITERAL}
+}</template>
+<template id="2" autoinsert="true" context="avroclipse.AvroIDL.Element" deleted="false" description="error" enabled="true" name="error">error ${name} {
+	${cursor}
+}</template>
+<template id="3" autoinsert="true" context="avroclipse.AvroIDL.Field" deleted="false" description="field" enabled="true" name="field">${target:CrossReference(CustomTypeLink.target)} ${name};</template>
+<template id="4" autoinsert="true" context="avroclipse.AvroIDL.Element" deleted="false" description="fixed type" enabled="true" name="fixed_type">fixed ${name}(${size});</template>
+<template id="5" autoinsert="true" context="avroclipse.AvroIDL.AvroIDLFile" deleted="false" description="protocol" enabled="true" name="protocol">protocol ${name} {
+	${cursor}
+}</template>
+<template id="6" autoinsert="true" context="avroclipse.AvroIDL.Element" deleted="false" description="record" enabled="true" name="record">record ${name} {
+	${cursor}
+}</template>
+<template id="7" autoinsert="true" context="avroclipse.AvroIDL.Element" deleted="false" description="RPC message" enabled="true" name="rpc_message">${return_type} ${name}(${cursor});</template>
+<template id="8" autoinsert="true" context="avroclipse.AvroIDL.Element" deleted="false" description="RPC message oneway" enabled="true" name="rpc_message_oneway">${return_type} ${name}(${cursor}) oneway;</template>
 </templates>
