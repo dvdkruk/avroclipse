@@ -19,13 +19,13 @@ Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: avroclipse,
  avroclipse.services,
- avroclipse.avdl,
- avroclipse.avdl.impl,
- avroclipse.avdl.util,
  avroclipse.serializer,
  avroclipse.parser.antlr,
  avroclipse.parser.antlr.internal,
  avroclipse.validation,
  avroclipse.scoping,
  avroclipse.generator,
- avroclipse.formatting
+ avroclipse.formatting,
+ avroclipse.avroIDL,
+ avroclipse.avroIDL.impl,
+ avroclipse.avroIDL.util

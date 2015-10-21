@@ -1,0 +1,69 @@
+//Example taken from http://avro.apache.org/docs/current/idl.html
+
+import idl "http.avdl";
+
+@namespace("mynamespace")
+protocol MyProtocol {
+	
+	enum Suit {
+  		SPADES, DIAMONDS, CLUBS, HEARTS
+	}
+	
+	fixed MD5(16);
+	
+	record Employee {
+  		string name;
+  		boolean active = true;
+  		long salary;
+	}
+	
+	error Kaboom {
+	  string explanation;
+	  int result_code = -1;
+	}
+	
+	record Card {
+  		Suit suit; // refers to the enum Card defined above
+  		int number;
+	}
+	
+	record RecordWithUnion {
+  		union { null, string } optionalString;
+	}
+	
+	int add(int foo, int bar = 0);
+	void logMessage(string message);
+	void goKaboom() throws Kaboom;
+	void fireAndForget(string message) oneway;
+	
+	/* comment */
+	
+	void `error`();
+	
+	record MyRecord {
+ 		string @order("ascending") myAscendingSortField;
+  		string @order("descending")  myDescendingField;
+  		string @order("ignore") myIgnoredField;
+	}
+	
+	record MyRecord2 {
+  		@java-class("java.util.ArrayList") array<string> myStrings;
+	}
+	
+	record MyRecord3 {
+  		@java-class("java.math.BigDecimal") string value;
+  		@java-key-class("java.io.File") map<string> fileStates;
+  		array<@java-class("java.math.BigDecimal") string> weights;
+	}
+	
+	@namespace("org.apache.avro.someOtherNamespace")
+  	record Foo {}
+
+  	record Bar {}
+  	
+  	@aliases(["org.old.OldRecord", "org.ancient.AncientRecord"])
+	record MyRecord {
+  		string @aliases(["oldField", "ancientField"]) myNewField;
+	}
+}
+

@@ -6,48 +6,48 @@
     <extension
             point="org.eclipse.ui.editors">
         <editor
-            class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
+            class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
             contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
             default="true"
             extensions="avdl"
-            id="avroclipse.Avdl"
-            name="Avdl Editor">
+            id="avroclipse.AvroIDL"
+            name="AvroIDL Editor">
         </editor>
     </extension>
     <extension
         point="org.eclipse.ui.handlers">
         <handler
-            class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
+            class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
             commandId="org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclaration">
             <activeWhen>
                 <reference
-                    definitionId="avroclipse.Avdl.Editor.opened">
+                    definitionId="avroclipse.AvroIDL.Editor.opened">
                 </reference>
             </activeWhen>
         </handler>
         <handler
-            class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
-            commandId="avroclipse.Avdl.validate">
+            class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
+            commandId="avroclipse.AvroIDL.validate">
          <activeWhen>
             <reference
-                    definitionId="avroclipse.Avdl.Editor.opened">
+                    definitionId="avroclipse.AvroIDL.Editor.opened">
             </reference>
          </activeWhen>
       	</handler>
       	<!-- copy qualified name -->
         <handler
-            class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedNameHandler"
+            class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedNameHandler"
             commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName">
             <activeWhen>
-				<reference definitionId="avroclipse.Avdl.Editor.opened" />
+				<reference definitionId="avroclipse.AvroIDL.Editor.opened" />
             </activeWhen>
         </handler>
         <handler
-            class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedNameHandler"
+            class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedNameHandler"
             commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedName">
             <activeWhen>
             	<and>
-            		<reference definitionId="avroclipse.Avdl.XtextEditor.opened" />
+            		<reference definitionId="avroclipse.AvroIDL.XtextEditor.opened" />
 	                <iterate>
 						<adapt type="org.eclipse.xtext.ui.editor.outline.IOutlineNode" />
 					</iterate>
@@ -56,22 +56,22 @@
         </handler>
     </extension>
     <extension point="org.eclipse.core.expressions.definitions">
-        <definition id="avroclipse.Avdl.Editor.opened">
+        <definition id="avroclipse.AvroIDL.Editor.opened">
             <and>
                 <reference definitionId="isActiveEditorAnInstanceOfXtextEditor"/>
                 <with variable="activeEditor">
                     <test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName" 
-                        value="avroclipse.Avdl" 
+                        value="avroclipse.AvroIDL" 
                         forcePluginActivation="true"/>
                 </with>        
             </and>
         </definition>
-        <definition id="avroclipse.Avdl.XtextEditor.opened">
+        <definition id="avroclipse.AvroIDL.XtextEditor.opened">
             <and>
                 <reference definitionId="isXtextEditorActive"/>
                 <with variable="activeEditor">
                     <test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName" 
-                        value="avroclipse.Avdl" 
+                        value="avroclipse.AvroIDL" 
                         forcePluginActivation="true"/>
                 </with>        
             </and>
@@ -80,33 +80,33 @@
     <extension
             point="org.eclipse.ui.preferencePages">
         <page
-            class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
-            id="avroclipse.Avdl"
-            name="Avdl">
-            <keywordReference id="avroclipse.ui.keyword_Avdl"/>
+            class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+            id="avroclipse.AvroIDL"
+            name="AvroIDL">
+            <keywordReference id="avroclipse.ui.keyword_AvroIDL"/>
         </page>
         <page
-            category="avroclipse.Avdl"
-            class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
-            id="avroclipse.Avdl.coloring"
+            category="avroclipse.AvroIDL"
+            class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
+            id="avroclipse.AvroIDL.coloring"
             name="Syntax Coloring">
-            <keywordReference id="avroclipse.ui.keyword_Avdl"/>
+            <keywordReference id="avroclipse.ui.keyword_AvroIDL"/>
         </page>
         <page
-            category="avroclipse.Avdl"
-            class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
-            id="avroclipse.Avdl.templates"
+            category="avroclipse.AvroIDL"
+            class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
+            id="avroclipse.AvroIDL.templates"
             name="Templates">
-            <keywordReference id="avroclipse.ui.keyword_Avdl"/>
+            <keywordReference id="avroclipse.ui.keyword_AvroIDL"/>
         </page>
     </extension>
     <extension
             point="org.eclipse.ui.propertyPages">
         <page
-            class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
-            id="avroclipse.Avdl"
-            name="Avdl">
-            <keywordReference id="avroclipse.ui.keyword_Avdl"/>
+            class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+            id="avroclipse.AvroIDL"
+            name="AvroIDL">
+            <keywordReference id="avroclipse.ui.keyword_AvroIDL"/>
             <enabledWhen>
 	            <adapt type="org.eclipse.core.resources.IProject"/>
 			</enabledWhen>
@@ -116,14 +116,14 @@
     <extension
         point="org.eclipse.ui.keywords">
         <keyword
-            id="avroclipse.ui.keyword_Avdl"
-            label="Avdl"/>
+            id="avroclipse.ui.keyword_AvroIDL"
+            label="AvroIDL"/>
     </extension>
     <extension
          point="org.eclipse.ui.commands">
       <command
             description="Trigger expensive validation"
-            id="avroclipse.Avdl.validate"
+            id="avroclipse.AvroIDL.validate"
             name="Validate">
       </command>
       <!-- copy qualified name -->
@@ -144,12 +144,12 @@
         <menuContribution
             locationURI="popup:#TextEditorContext?after=group.edit">
              <command
-                 commandId="avroclipse.Avdl.validate"
+                 commandId="avroclipse.AvroIDL.validate"
                  style="push"
                  tooltip="Trigger expensive validation">
             <visibleWhen checkEnabled="false">
                 <reference
-                    definitionId="avroclipse.Avdl.Editor.opened">
+                    definitionId="avroclipse.AvroIDL.Editor.opened">
                 </reference>
             </visibleWhen>
          </command>  
@@ -159,7 +159,7 @@
          	<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName" 
          		style="push" tooltip="Copy Qualified Name">
             	<visibleWhen checkEnabled="false">
-                	<reference definitionId="avroclipse.Avdl.Editor.opened" />
+                	<reference definitionId="avroclipse.AvroIDL.Editor.opened" />
             	</visibleWhen>
          	</command>  
          </menuContribution>
@@ -167,7 +167,7 @@
          	<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName"
             	style="push" tooltip="Copy Qualified Name">
             	<visibleWhen checkEnabled="false">
-                	<reference definitionId="avroclipse.Avdl.Editor.opened" />
+                	<reference definitionId="avroclipse.AvroIDL.Editor.opened" />
             	</visibleWhen>
          	</command>  
          </menuContribution>
@@ -176,7 +176,7 @@
 				style="push" tooltip="Copy Qualified Name">
          		<visibleWhen checkEnabled="false">
 	            	<and>
-	            		<reference definitionId="avroclipse.Avdl.XtextEditor.opened" />
+	            		<reference definitionId="avroclipse.AvroIDL.XtextEditor.opened" />
 						<iterate>
 							<adapt type="org.eclipse.xtext.ui.editor.outline.IOutlineNode" />
 						</iterate>
@@ -189,7 +189,7 @@
 		<menuContribution locationURI="popup:#TextEditorContext?endof=group.find">
 			<command commandId="org.eclipse.xtext.ui.editor.FindReferences">
 				<visibleWhen checkEnabled="false">
-                	<reference definitionId="avroclipse.Avdl.Editor.opened">
+                	<reference definitionId="avroclipse.AvroIDL.Editor.opened">
                 	</reference>
             	</visibleWhen>
 			</command>
@@ -197,11 +197,11 @@
 	</extension>
 	<extension point="org.eclipse.ui.handlers">
 	    <handler
-            class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
+            class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
             commandId="org.eclipse.xtext.ui.editor.FindReferences">
             <activeWhen>
                 <reference
-                    definitionId="avroclipse.Avdl.Editor.opened">
+                    definitionId="avroclipse.AvroIDL.Editor.opened">
                 </reference>
             </activeWhen>
         </handler>
@@ -212,36 +212,36 @@
 	<extension
 		point="org.eclipse.emf.ecore.extension_parser">
 		<parser
-			class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
+			class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
 			type="avdl">
 		</parser>
 	</extension>
 	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
         <resourceServiceProvider
-            class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
+            class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
             uriExtension="avdl">
         </resourceServiceProvider>
     </extension>
 
 
-	<!-- marker definitions for avroclipse.Avdl -->
+	<!-- marker definitions for avroclipse.AvroIDL -->
 	<extension
-	        id="avdl.check.fast"
-	        name="Avdl Problem"
+	        id="avroidl.check.fast"
+	        name="AvroIDL Problem"
 	        point="org.eclipse.core.resources.markers">
 	    <super type="org.eclipse.xtext.ui.check.fast"/>
 	    <persistent value="true"/>
 	</extension>
 	<extension
-	        id="avdl.check.normal"
-	        name="Avdl Problem"
+	        id="avroidl.check.normal"
+	        name="AvroIDL Problem"
 	        point="org.eclipse.core.resources.markers">
 	    <super type="org.eclipse.xtext.ui.check.normal"/>
 	    <persistent value="true"/>
 	</extension>
 	<extension
-	        id="avdl.check.expensive"
-	        name="Avdl Problem"
+	        id="avroidl.check.expensive"
+	        name="AvroIDL Problem"
 	        point="org.eclipse.core.resources.markers">
 	    <super type="org.eclipse.xtext.ui.check.expensive"/>
 	    <persistent value="true"/>
@@ -250,7 +250,7 @@
    <extension
          point="org.eclipse.xtext.builder.participant">
       <participant
-            class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
+            class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
             fileExtensions="avdl"
             >
       </participant>
@@ -258,21 +258,21 @@
    <extension
             point="org.eclipse.ui.preferencePages">
         <page
-            category="avroclipse.Avdl"
-            class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
-            id="avroclipse.Avdl.compiler.preferencePage"
+            category="avroclipse.AvroIDL"
+            class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+            id="avroclipse.AvroIDL.compiler.preferencePage"
             name="Compiler">
-            <keywordReference id="avroclipse.ui.keyword_Avdl"/>
+            <keywordReference id="avroclipse.ui.keyword_AvroIDL"/>
         </page>
     </extension>
     <extension
             point="org.eclipse.ui.propertyPages">
         <page
-            category="avroclipse.Avdl"
-            class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
-            id="avroclipse.Avdl.compiler.propertyPage"
+            category="avroclipse.AvroIDL"
+            class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+            id="avroclipse.AvroIDL.compiler.propertyPage"
             name="Compiler">
-            <keywordReference id="avroclipse.ui.keyword_Avdl"/>
+            <keywordReference id="avroclipse.ui.keyword_AvroIDL"/>
             <enabledWhen>
 	            <adapt type="org.eclipse.core.resources.IProject"/>
 			</enabledWhen>
@@ -283,20 +283,20 @@
 		<menuContribution locationURI="popup:#TextEditorContext?after=xtext.ui.openDeclaration">
 			<command
 				commandId="org.eclipse.xtext.ui.OpenGeneratedFileCommand"
-				id="avroclipse.Avdl.OpenGeneratedCode"
+				id="avroclipse.AvroIDL.OpenGeneratedCode"
 				style="push">
 					<visibleWhen checkEnabled="false">
-						<reference definitionId="avroclipse.Avdl.Editor.opened" />
+						<reference definitionId="avroclipse.AvroIDL.Editor.opened" />
 					</visibleWhen>
 			</command>
 		</menuContribution>
 	</extension>
 	<extension point="org.eclipse.ui.handlers">
 		<handler
-			class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.ui.generator.trace.OpenGeneratedFileHandler"
+			class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.generator.trace.OpenGeneratedFileHandler"
 			commandId="org.eclipse.xtext.ui.OpenGeneratedFileCommand">
 				<activeWhen>
-					<reference definitionId="avroclipse.Avdl.Editor.opened" />
+					<reference definitionId="avroclipse.AvroIDL.Editor.opened" />
 				</activeWhen>
 		</handler>
 	</extension>
@@ -305,11 +305,11 @@
 	<extension
 		point="org.eclipse.ui.handlers">
 		<handler 
-			class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
+			class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
 			commandId="org.eclipse.xtext.ui.editor.outline.QuickOutline">
 			<activeWhen>
 				<reference
-					definitionId="avroclipse.Avdl.Editor.opened">
+					definitionId="avroclipse.AvroIDL.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -329,33 +329,33 @@
 				style="push"
 				tooltip="Open Quick Outline">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="avroclipse.Avdl.Editor.opened"/>
+					<reference definitionId="avroclipse.AvroIDL.Editor.opened"/>
 				</visibleWhen>
 			</command>
 		</menuContribution>
 	</extension>
-    <!-- quickfix marker resolution generator for avroclipse.Avdl -->
+    <!-- quickfix marker resolution generator for avroclipse.AvroIDL -->
     <extension
             point="org.eclipse.ui.ide.markerResolution">
         <markerResolutionGenerator
-            class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-            markerType="avroclipse.ui.avdl.check.fast">
+            class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+            markerType="avroclipse.ui.avroidl.check.fast">
             <attribute
                 name="FIXABLE_KEY"
                 value="true">
             </attribute>
         </markerResolutionGenerator>
         <markerResolutionGenerator
-            class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-            markerType="avroclipse.ui.avdl.check.normal">
+            class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+            markerType="avroclipse.ui.avroidl.check.normal">
             <attribute
                 name="FIXABLE_KEY"
                 value="true">
             </attribute>
         </markerResolutionGenerator>
         <markerResolutionGenerator
-            class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-            markerType="avroclipse.ui.avdl.check.expensive">
+            class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+            markerType="avroclipse.ui.avroidl.check.expensive">
             <attribute
                 name="FIXABLE_KEY"
                 value="true">
@@ -365,11 +365,11 @@
    	<!-- Rename Refactoring -->
 	<extension point="org.eclipse.ui.handlers">
 		<handler 
-			class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.DefaultRenameElementHandler"
+			class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.DefaultRenameElementHandler"
 			commandId="org.eclipse.xtext.ui.refactoring.RenameElement">
 			<activeWhen>
 				<reference
-					definitionId="avroclipse.Avdl.Editor.opened">
+					definitionId="avroclipse.AvroIDL.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -381,7 +381,7 @@
                style="push">
             <visibleWhen checkEnabled="false">
                <reference
-                     definitionId="avroclipse.Avdl.Editor.opened">
+                     definitionId="avroclipse.AvroIDL.Editor.opened">
                </reference>
             </visibleWhen>
          </command>
@@ -389,29 +389,29 @@
    </extension>
    <extension point="org.eclipse.ui.preferencePages">
 	    <page
-	        category="avroclipse.Avdl"
-	        class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferencePage"
-	        id="avroclipse.Avdl.refactoring"
+	        category="avroclipse.AvroIDL"
+	        class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferencePage"
+	        id="avroclipse.AvroIDL.refactoring"
 	        name="Refactoring">
-	        <keywordReference id="avroclipse.ui.keyword_Avdl"/>
+	        <keywordReference id="avroclipse.ui.keyword_AvroIDL"/>
 	    </page>
 	</extension>
 
   <extension point="org.eclipse.compare.contentViewers">
-    <viewer id="avroclipse.Avdl.compare.contentViewers"
-            class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+    <viewer id="avroclipse.AvroIDL.compare.contentViewers"
+            class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
             extensions="avdl">
     </viewer>
   </extension>
   <extension point="org.eclipse.compare.contentMergeViewers">
-    <viewer id="avroclipse.Avdl.compare.contentMergeViewers"
-            class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-            extensions="avdl" label="Avdl Compare">
+    <viewer id="avroclipse.AvroIDL.compare.contentMergeViewers"
+            class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+            extensions="avdl" label="AvroIDL Compare">
      </viewer>
   </extension>
   <extension point="org.eclipse.ui.editors.documentProviders">
-    <provider id="avroclipse.Avdl.editors.documentProviders"
-            class="avroclipse.ui.AvdlExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
+    <provider id="avroclipse.AvroIDL.editors.documentProviders"
+            class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
             extensions="avdl">
     </provider>
   </extension>

@@ -24,4 +24,4 @@ Export-Package: avroclipse.ui.quickfix,
  avroclipse.ui.contentassist,
  avroclipse.ui.internal,
  avroclipse.ui.contentassist.antlr
-Bundle-Activator: avroclipse.ui.internal.AvdlActivator
+Bundle-Activator: avroclipse.ui.internal.AvroIDLActivator
