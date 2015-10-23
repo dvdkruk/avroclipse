@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/avroclipse.sdk_0.0.0.jar" id="avroclipse.sdk" version="0.0.0">
+      <category name="avroclipse"/>
+   </feature>
+   <category-def name="avroclipse" label="Avroclipse"/>
+</site>

@@ -1,6 +1,6 @@
 //Example taken from http://avro.apache.org/docs/current/idl.html
 
-import idl "http.avdl";
+import idl "other.avdl";
 
 @namespace("mynamespace")
 protocol MyProtocol {
@@ -66,4 +66,3 @@ protocol MyProtocol {
   		string @aliases(["oldField", "ancientField"]) myNewField;
 	}
 }
-

@@ -3,11 +3,11 @@
  */
 package avroclipse.ui.contentassist
 
+import avroclipse.ui.contentassist.AbstractAvroIDLProposalProvider
+
 /**
  * See https://www.eclipse.org/Xtext/documentation/304_ide_concepts.html#content-assist
  * on how to customize the content assistant.
- * 
- * @author Damiaan van der Kruk
  */
 class AvroIDLProposalProvider extends AbstractAvroIDLProposalProvider {
 }
