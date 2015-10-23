@@ -11,7 +11,7 @@
             default="true"
             extensions="avdl"
             id="avroclipse.AvroIDL"
-            name="AvroIDL Editor">
+            name="Avro IDL Editor">
         </editor>
     </extension>
     <extension
@@ -82,7 +82,7 @@
         <page
             class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
             id="avroclipse.AvroIDL"
-            name="AvroIDL">
+            name="Avro IDL">
             <keywordReference id="avroclipse.ui.keyword_AvroIDL"/>
         </page>
         <page
@@ -105,7 +105,7 @@
         <page
             class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
             id="avroclipse.AvroIDL"
-            name="AvroIDL">
+            name="Avro IDL">
             <keywordReference id="avroclipse.ui.keyword_AvroIDL"/>
             <enabledWhen>
 	            <adapt type="org.eclipse.core.resources.IProject"/>
@@ -117,7 +117,7 @@
         point="org.eclipse.ui.keywords">
         <keyword
             id="avroclipse.ui.keyword_AvroIDL"
-            label="AvroIDL"/>
+            label="Avro IDL"/>
     </extension>
     <extension
          point="org.eclipse.ui.commands">
@@ -227,21 +227,21 @@
 	<!-- marker definitions for avroclipse.AvroIDL -->
 	<extension
 	        id="avroidl.check.fast"
-	        name="AvroIDL Problem"
+	        name="Avro IDL Problem"
 	        point="org.eclipse.core.resources.markers">
 	    <super type="org.eclipse.xtext.ui.check.fast"/>
 	    <persistent value="true"/>
 	</extension>
 	<extension
 	        id="avroidl.check.normal"
-	        name="AvroIDL Problem"
+	        name="Avro IDL Problem"
 	        point="org.eclipse.core.resources.markers">
 	    <super type="org.eclipse.xtext.ui.check.normal"/>
 	    <persistent value="true"/>
 	</extension>
 	<extension
 	        id="avroidl.check.expensive"
-	        name="AvroIDL Problem"
+	        name="Avro IDL Problem"
 	        point="org.eclipse.core.resources.markers">
 	    <super type="org.eclipse.xtext.ui.check.expensive"/>
 	    <persistent value="true"/>
@@ -406,7 +406,7 @@
   <extension point="org.eclipse.compare.contentMergeViewers">
     <viewer id="avroclipse.AvroIDL.compare.contentMergeViewers"
             class="avroclipse.ui.AvroIDLExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-            extensions="avdl" label="AvroIDL Compare">
+            extensions="avdl" label="Avro IDL Compare">
      </viewer>
   </extension>
   <extension point="org.eclipse.ui.editors.documentProviders">
@@ -420,6 +420,20 @@
             extension="avdl"
             type="text">
     </fileTypes>
+  </extension>
+  <extension
+        point="org.eclipse.ui.newWizards">
+     <category
+           id="avroclipse.ui"
+           name="Avro IDL">
+     </category>
+     <wizard
+           category="avroclipse.ui"
+           class="avroclipse.ui.wizards.NewAvroIDLFileWizard"
+           icon="icons/sample.gif"
+           id="avroclipse.ui.wizards.NewAvroIDLFileWizard"
+           name="Avro IDL File">
+     </wizard>
   </extension>
 
 </plugin>
