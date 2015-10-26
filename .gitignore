@@ -19,6 +19,7 @@ hs_err_pid*
 # Xtext/Xtend
 *._trace
 *.xtendbin
+*.xml_gen
 xtend-gen/
 generated/
 
