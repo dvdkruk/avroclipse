@@ -1,9 +1,7 @@
 # Avroclipse [![Build Status](https://travis-ci.org/dvdkruk/avroclipse.svg)](https://travis-ci.org/dvdkruk/avroclipse)
 An Eclipse editor plugin for defining [Apache Avro IDL](https://avro.apache.org/docs/1.7.7/idl.html) files.
 
-Current version: 0.0.1
-
-Development version: 0.0.2
+Current version: [0.0.1](https://github.com/dvdkruk/avroclipse/releases/tag/0.0.1) (0.0.2 in dev)
 
 Used techniques/tools:
 - [Eclipse 4.5.1 (Mars)](http://www.eclipse.org/home/index.php)
@@ -26,6 +24,8 @@ To add the Avroclipse update site:
 4. Select the Avoclipse checkbox and click **Finish**.
 5. After installation and restarting Eclipse, Avroclipse is ready to use.
 
+Another way to install Avroclipse is to use the Avroclipse updatesite zip file. [Click here](https://github.com/dvdkruk/avroclipse/releases) how to do this.
+
 ## Getting Started (Development)
 1. Download and install [Eclipse IDE for Java and DSL Developers](http://www.eclipse.org/downloads/packages/eclipse-ide-java-and-dsl-developers/marsr) for your OS.
 2. Clone this repository.
@@ -34,6 +34,8 @@ To add the Avroclipse update site:
 5. [Import existing  projects into your workspace](http://help.eclipse.org/juno/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Ftasks%2Ftasks-importproject.htm).
 6. The six projects of Avroclipse should now be in your workspace ready to be edited.
 7. To launch an Eclipse instance with Avroclipse; right click on the **avroclipse.ui** project and select **Run As > Eclipse Application**.
+
+Note: Tycho Project Configurators 0.8.0.201409231215 plugin is needed to use the maven pom.xml file correctly in Eclipse.
 
 ### Alternatives/links
 * [eclipse-avro](https://github.com/LangleyStudios/eclipse-avro)
