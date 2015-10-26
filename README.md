@@ -27,7 +27,7 @@ To add the Avroclipse update site:
 Another way to install Avroclipse is to use the Avroclipse updatesite zip file. [Click here](https://github.com/dvdkruk/avroclipse/releases) how to do this.
 
 ## Features
-Here are some features of Avrcolipse shown.
+Here are some features of Avroclipse shown.
 ### Syntax Highlighting
 ![Syntax Highlighting](https://github.com/dvdkruk/avroclipse/blob/master/avroclipse.releng/syntax_highlighting.gif)
 ### Error Highlighting
