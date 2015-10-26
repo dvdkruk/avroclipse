@@ -2,6 +2,7 @@ package avroclipse.tests.parser
 
 import avroclipse.AvroIDLInjectorProvider
 import com.google.inject.Inject
+import java.io.FileNotFoundException
 import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.resource.ResourceSet
 import org.eclipse.xtext.junit4.InjectWith
@@ -9,6 +10,8 @@ import org.eclipse.xtext.junit4.XtextRunner
 import org.eclipse.xtext.junit4.validation.ValidationTestHelper
 import org.junit.Test
 import org.junit.runner.RunWith
+
+import static extension org.junit.Assert.*
 
 /**
  * @author Damiaan van der Kruk
@@ -25,17 +28,11 @@ class IdlTest {
 	
 	@Test
 	def testNoErrors() {
-		res.assertNoErrors
+		res.assertNoErrors //throws an error its oke
 	}
 	
 	def getRes() {
-		try {
-			createResource(URI.createURI("other.avdl")) //needed for reference
-		} catch (Exception e) {
-			
-		}
-		
-		
+		createResource(URI.createURI("other.avdl")) //needed for reference
 		getResource(URI.createURI(PATH_BASE + FILE_NAME), true)
 	}
 }
