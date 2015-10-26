@@ -2,7 +2,7 @@
 <feature
       id="avroclipse.sdk"
       label="AvroIDL SDK Feature "
-      version="0.0.1">
+      version="0.0.2.qualifier">
 
    <url>
       <update url="https://github.com/dvdkruk/avroclipse"/>
