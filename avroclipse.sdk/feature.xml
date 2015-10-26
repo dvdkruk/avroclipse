@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature id="avroclipse.sdk"
 	label="AvroIDL SDK Feature "
-	version="0.0.1.qualifier">
+	version="0.0.1">
 	<plugin
 			id="avroclipse"
 			download-size="0"
