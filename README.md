@@ -22,7 +22,7 @@ To add the Avroclipse update site:
 2. In the "Work with" section, click the **Add...** button. The "Add Repository" dialog box appears.
 3. Fill the update site link shown above, in the location field and click **OK**.
 4. Select the Avoclipse checkbox and click **Finish**.
-5. After installation and restarting Eclipse, Avroclipse is ready to use.
+5. After installation and restarting Eclipse, Avroclipse is ready to use. Avroclipse editor will automatically be shown when creating or opening a file with the *".avdl"* extension.
 
 Another way to install Avroclipse is to use the Avroclipse updatesite zip file. [Click here](https://github.com/dvdkruk/avroclipse/releases) how to do this.
 
