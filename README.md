@@ -26,6 +26,15 @@ To add the Avroclipse update site:
 
 Another way to install Avroclipse is to use the Avroclipse updatesite zip file. [Click here](https://github.com/dvdkruk/avroclipse/releases) how to do this.
 
+## Features
+Here are some features of Avrcolipse shown.
+### Syntax Highlighting
+![Syntax Highlighting](https://github.com/dvdkruk/avroclipse/blob/master/avroclipse.releng/syntax_highlighting.gif)
+### Error Highlighting
+![Error Highlighting](https://github.com/dvdkruk/avroclipse/blob/master/avroclipse.releng/error_highlighting.gif)
+### Code Completion 
+![Code Completion](https://github.com/dvdkruk/avroclipse/blob/master/avroclipse.releng/code_completion.gif)
+
 ## Getting Started (Development)
 1. Download and install [Eclipse IDE for Java and DSL Developers](http://www.eclipse.org/downloads/packages/eclipse-ide-java-and-dsl-developers/marsr) for your OS.
 2. Clone this repository.
