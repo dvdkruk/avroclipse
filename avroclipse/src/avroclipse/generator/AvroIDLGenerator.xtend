@@ -4,6 +4,7 @@
 package avroclipse.generator
 
 import avroclipse.Helper
+import avroclipse.Registry
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
@@ -20,10 +21,14 @@ class AvroIDLGenerator implements IGenerator {
 	}
 
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-//		fsa.generateFile('greetings.txt', 'People to greet: ' + 
-//			resource.allContents
-//				.filter(typeof(Greeting))
-//				.map[name]
-//				.join(', '))
+		Registry.INSTANCE.generators.forEach[doGenerate(it, resource, fsa)]
+	}
+
+	def void doGenerate(IGenerator generator, Resource resource, IFileSystemAccess fsa) {
+		try {
+			generator.doGenerate(resource, fsa)
+		} catch (Throwable t) {
+			t.printStackTrace
+		}
 	}
 }

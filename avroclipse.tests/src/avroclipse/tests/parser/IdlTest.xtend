@@ -2,7 +2,6 @@ package avroclipse.tests.parser
 
 import avroclipse.AvroIDLInjectorProvider
 import com.google.inject.Inject
-import java.io.FileNotFoundException
 import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.resource.ResourceSet
 import org.eclipse.xtext.junit4.InjectWith
@@ -10,8 +9,6 @@ import org.eclipse.xtext.junit4.XtextRunner
 import org.eclipse.xtext.junit4.validation.ValidationTestHelper
 import org.junit.Test
 import org.junit.runner.RunWith
-
-import static extension org.junit.Assert.*
 
 /**
  * @author Damiaan van der Kruk

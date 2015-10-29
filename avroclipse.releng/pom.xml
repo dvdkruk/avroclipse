@@ -11,6 +11,7 @@
 	<modules>
 		<module>../avroclipse</module>
 		<module>../avroclipse.ui</module>
+		<module>../avroclipse.generator.java</module>
 		<module>../avroclipse.tests</module>
 		<module>../avroclipse.sdk</module>
 		<module>../avroclipse.updatesite</module>
@@ -115,4 +116,18 @@
 			</plugin>
 		</plugins>
 	</build>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.apache.avro</groupId>
+				<artifactId>avro-tools</artifactId>
+				<version>1.7.7</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.avro</groupId>
+				<artifactId>avro</artifactId>
+				<version>1.7.7</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>

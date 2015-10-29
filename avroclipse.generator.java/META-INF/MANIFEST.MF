@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: avroclipse.generator.java
+Bundle-SymbolicName: avroclipse.generator.java;singleton:=true
+Bundle-Version: 0.0.2.qualifier
+Export-Package: avroclipse.generator.java
+Require-Bundle: avroclipse;bundle-version="0.0.2",
+ com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtend.lib,
+ org.eclipse.xtend.lib.macro
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: Avroclipse
+Bundle-ClassPath: .,
+ libs/avro-1.7.7.jar,
+ libs/avro-tools-1.7.7.jar
+

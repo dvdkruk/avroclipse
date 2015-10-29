@@ -2,7 +2,8 @@
 <feature
       id="avroclipse.sdk"
       label="AvroIDL SDK Feature "
-      version="0.0.2.qualifier">
+      version="0.0.2.qualifier"
+      provider-name="Avroclipse">
 
    <url>
       <update url="https://github.com/dvdkruk/avroclipse"/>
@@ -21,6 +22,13 @@
 
    <plugin
          id="avroclipse.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="avroclipse.generator.java"
          download-size="0"
          install-size="0"
          version="0.0.0"
