@@ -13,6 +13,8 @@ import avroclipse.validation.AvroIDLNamesAreUniqueValidationHelper;
  */
 public class AvroIDLRuntimeModule extends avroclipse.AbstractAvroIDLRuntimeModule {
 
+	public static final String GENERATORS_POINT_ID = "";
+	
 	public Class<? extends NamesAreUniqueValidationHelper> bindNamesAreUniqueValidationHelper() {
 		return AvroIDLNamesAreUniqueValidationHelper.class;
 	}

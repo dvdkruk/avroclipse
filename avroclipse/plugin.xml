@@ -2,6 +2,7 @@
 <?eclipse version="3.0"?>
 
 <plugin>
+   <extension-point id="generator" name="Register generators for compiling target files" schema="schema/generator.exsd"/>
 
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
