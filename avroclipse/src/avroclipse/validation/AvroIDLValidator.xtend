@@ -3,14 +3,108 @@
  */
 package avroclipse.validation
 
-//import org.eclipse.xtext.validation.Check
+import avroclipse.avroIDL.Annotation
+import avroclipse.avroIDL.AvroIDLFile
+import avroclipse.avroIDL.Protocol
+import avroclipse.avroIDL.Type
+import com.google.inject.Inject
+import org.eclipse.emf.common.util.URI
+import org.eclipse.emf.ecore.EClass
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.ecore.EStructuralFeature
+import org.eclipse.emf.ecore.resource.Resource
+import org.eclipse.xtext.resource.XtextResourceSet
+import org.eclipse.xtext.validation.Check
 
+import static extension org.eclipse.xtext.EcoreUtil2.*
+
+//import org.eclipse.xtext.validation.Check
 /**
  * This class contains custom validation rules. 
- *
+ * 
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#validation
  */
 class AvroIDLValidator extends AbstractAvroIDLValidator {
+
+	@Inject XtextResourceSet _rs;
+
+	public static val DUPLICATED_NAME = 'duplicatedName'
+
+	static val SKIP_DUPLICATED_NAME_CHECK_CLASSES = newArrayList(Annotation)
+
+	static val INCLUDE_EXTERNAL_DUPLICATE_NAME_CHECK_CLASSES = newArrayList(Type)
+
+	@Check
+	def checkDuplicatedInnerCheck(EObject object) {
+		if (SKIP_DUPLICATED_NAME_CHECK_CLASSES.findFirst[it.isInstance(object)] != null) {
+			return; // skip
+		}
+
+		val nameFeature = object.eClass.getEStructuralFeature("name")
+
+		if (object.eContainer != null && nameFeature != null) {
+			if (isDuplicated(object, nameFeature)) {
+				error(getDuplicateMessage(object, nameFeature), nameFeature, DUPLICATED_NAME)
+			}
+		}
+	}
+
+	def getDuplicateMessage(EObject object, EStructuralFeature feature) {
+		return "Duplicated " + object.eClass.superType.name + " '" + object.eGet(feature) + "'"
+	}
+
+	def isDuplicated(EObject object, EStructuralFeature nameFeature) {
+		val name = object.eGet(nameFeature) as String;
+		val internallyDuplicated = isInternallyDuplicated(object, nameFeature, name)
+		if (!internallyDuplicated) {
+			if (INCLUDE_EXTERNAL_DUPLICATE_NAME_CHECK_CLASSES.findFirst[it.isInstance(object)] != null) {
+				return isExternallyDuplicated(object, nameFeature, name) // check for external import name duplications	
+			}
+		}
+		return internallyDuplicated;
+	}
+
+	def isExternallyDuplicated(EObject object, EStructuralFeature nameFeature, String name) {
+		val protocol = object.getContainerOfType(Protocol);
+		if (protocol != null) {
+			var Resource res
+			var URI uri
+			var AvroIDLFile IdlFile;
+
+			for (import : protocol.imports) {
+				uri = URI.createURI(import.importURI)
+				res = _rs.getResource(uri, true);
+				if (object.isValidUri(uri)) {
+					if (res != null && res.contents.size > 0) {
+						IdlFile = res.contents.get(0) as AvroIDLFile
+						if (IdlFile != null) {
+							if (IdlFile.eAllContents.findFirst [
+								it.eClass.superType == object.eClass.superType && it.eGet(nameFeature).equals(name)
+							] != null) {
+								return true;
+							}
+						}
+					}
+				}
+			}
+		}
+		return false
+	}
+
+	def isInternallyDuplicated(EObject object, EStructuralFeature nameFeature, String name) {
+		object.eContainer.eAllContents.findFirst [
+			it.eClass.superType == object.eClass.superType && it.eGet(nameFeature).equals(name) && it != object
+		] != null
+	}
+
+	public static def getSuperType(EClass eClass) {
+		val superTypes = eClass.ESuperTypes
+		if (superTypes.isEmpty) {
+			return eClass
+		} else {
+			return superTypes.get(0)
+		}
+	}
 
 //  public static val INVALID_NAME = 'invalidName'
 //

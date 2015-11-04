@@ -3,7 +3,7 @@
 @namespace("mynamespace")
 protocol MyProtocol {
 
-	import idl "other.avdl";
+	import idl "examples/foo.avdl";
 	
 	enum Suit {
   		SPADES, DIAMONDS, CLUBS, HEARTS

@@ -29,7 +29,7 @@ class IdlTest {
 	}
 	
 	def getRes() {
-		createResource(URI.createURI("other.avdl")) //needed for reference
+		getResource(URI.createURI(PATH_BASE + "foo.avdl"), true) //needed for reference
 		getResource(URI.createURI(PATH_BASE + FILE_NAME), true)
 	}
 }
