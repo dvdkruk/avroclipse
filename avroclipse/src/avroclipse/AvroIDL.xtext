@@ -12,15 +12,12 @@ Protocol:
 	annotations+=Annotation*
 	'protocol' name=EscapableId '{'
 		imports+=Import* 
-		elements+=Element*
+		(types+=TypeDef | messages+=RPCMessage)*
 	'}';
 	
 Import:
 	'import' type=ImportType importURI=STRING ';';
 	
-Element:
-	TypeDef | RPCMessage;
-
 RPCMessage:
 	returnType=ReturnTypeLink name=EscapableId '(' (arguments+=Argument (',' arguments+=Argument)*)* ')' ('throws'
 	error=[ErrorType|QN])? (oneway?='oneway')? ';';
