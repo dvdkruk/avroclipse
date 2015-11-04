@@ -1,4 +1,4 @@
- package avroclipse.generator.java;
+ package avroclipse.generator.avpr;
 
 import avroclipse.AvroIDLStandaloneSetup;
 import avroclipse.Registry;

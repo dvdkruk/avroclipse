@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: avroclipse.generator.java
-Bundle-SymbolicName: avroclipse.generator.java;singleton:=true
+Bundle-Name: Avroclipse Generator for Avpr
+Bundle-SymbolicName: avroclipse.generator.avpr;singleton:=true
 Bundle-Version: 0.0.2.qualifier
-Export-Package: avroclipse.generator.java
-Require-Bundle: avroclipse;bundle-version="0.0.2",
+Export-Package: avroclipse.generator.avpr
+Require-Bundle: avroclipse,
  com.google.guava,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.xtend.lib,
@@ -14,4 +14,5 @@ Bundle-Vendor: Avroclipse
 Bundle-ClassPath: .,
  libs/avro-1.7.7.jar,
  libs/avro-tools-1.7.7.jar
+Import-Package: org.eclipse.core.runtime;version="3.5.0"
 

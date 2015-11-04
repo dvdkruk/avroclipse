@@ -11,7 +11,7 @@
 	<modules>
 		<module>../avroclipse</module>
 		<module>../avroclipse.ui</module>
-		<module>../avroclipse.generator.java</module>
+		<module>../avroclipse.generator.avpr</module>
 		<module>../avroclipse.tests</module>
 		<module>../avroclipse.sdk</module>
 		<module>../avroclipse.updatesite</module>

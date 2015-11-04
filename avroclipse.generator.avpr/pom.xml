@@ -9,22 +9,13 @@
 		<version>0.0.2-SNAPSHOT</version>
 	</parent>
   
-  <artifactId>avroclipse.generator.java</artifactId>
+  <artifactId>avroclipse.generator.avpr</artifactId>
   <packaging>eclipse-plugin</packaging>
 
-  <name>Avroclipse Generator Java</name>
+  <name>Avroclipse Generator Avpr</name>
 
   <build>
-		<sourceDirectory>src</sourceDirectory>
 		<plugins>
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.3</version>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-			</plugin>
 			<plugin>
 				<groupId>org.eclipse.xtend</groupId>
 				<artifactId>xtend-maven-plugin</artifactId>
