@@ -5,25 +5,25 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 generate avroIDL "http://avroclipse/AvroIDL"
 
 AvroIDLFile:
-	(imports+=Import)* 
+	{AvroIDLFile}
 	protocols+=Protocol?;
 
-Import:
-	'import' type=ImportType importURI=STRING ';';
-
 Protocol:
+	imports+=Import* 
 	annotations+=Annotation*
 	'protocol' name=EscapableId '{'
 		elements+=Element*
 	'}';
 	
+Import:
+	'import' type=ImportType importURI=STRING ';';
+	
 Element:
-	TypeDef | RPCMessage
-;
+	TypeDef | RPCMessage;
 
 RPCMessage:
 	returnType=ReturnTypeLink name=EscapableId '(' (arguments+=Argument (',' arguments+=Argument)*)* ')' ('throws'
-	error=[ErrorType|EscapableId])? (oneway?='oneway')? ';';
+	error=[ErrorType|QN])? (oneway?='oneway')? ';';
 
 Argument:
 	type=TypeLink name=EscapableId ('=' default=Value)?;
@@ -75,7 +75,7 @@ PrimativeTypeLink:
 	target=('int' | 'long' | 'string' | 'boolean' | 'float' | 'double' | 'null' | 'bytes');
 
 CustomTypeLink:
-	target=[Type|EscapableId];
+	target=[Type|QN];
 
 FixedType:
 	'fixed' name=EscapableId '(' size=INT ')' ';';
@@ -109,6 +109,9 @@ StringValue:
 
 IntValue:
 	val=(INT|NegativeInt);
+	
+QN:
+	EscapableId ('.' EscapableId)*;
 
 EscapableId:
 	ID | '`' ReservedKeyWords '`'
