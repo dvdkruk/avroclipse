@@ -9,9 +9,9 @@ AvroIDLFile:
 	protocols+=Protocol?;
 
 Protocol:
-	imports+=Import* 
 	annotations+=Annotation*
 	'protocol' name=EscapableId '{'
+		imports+=Import* 
 		elements+=Element*
 	'}';
 	

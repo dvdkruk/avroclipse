@@ -1,9 +1,9 @@
 //Example taken from http://avro.apache.org/docs/current/idl.html
 
-import idl "other.avdl";
-
 @namespace("mynamespace")
 protocol MyProtocol {
+
+	import idl "other.avdl";
 	
 	enum Suit {
   		SPADES, DIAMONDS, CLUBS, HEARTS
