@@ -6,7 +6,7 @@ generate avroIDL "http://avroclipse/AvroIDL"
 
 AvroIDLFile:
 	{AvroIDLFile}
-	protocols+=Protocol?;
+	protocol=Protocol?;
 
 Protocol:
 	annotations+=Annotation*
@@ -26,7 +26,7 @@ Argument:
 	type=TypeLink name=EscapableId ('=' default=Value)?;
 
 ReturnTypeLink:
-	VoidTypeLink | TypeLink;
+	VoidTypeLink | TypeLink | ArrayFieldType | MapFieldType;
 
 VoidTypeLink:
 	target='void';
