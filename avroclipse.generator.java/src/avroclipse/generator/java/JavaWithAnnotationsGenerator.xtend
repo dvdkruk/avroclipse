@@ -54,7 +54,6 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 	}
 
 	def compile(Set<String> imports) '''
-		
 		«FOR imprt : imports»
 			import «imprt»
 		«ENDFOR»
@@ -92,16 +91,23 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 	}
 	
 	def getNameAndRegisterImport(Type type) {
-		var compeleteClassName = type.namespace
-		if(compeleteClassName.isNullOrEmpty) {
-			compeleteClassName = type.name;
-		} else {
-			compeleteClassName += '.' + type.name
-		}
-		
-		importNamespaces.add(compeleteClassName)
+		importNamespaces.addImportFor(type)
 		
 		return type.name
+	}
+	
+	def addImportFor(Set<String> strings, Type type) {
+		val otherIdlFile = type.idlFile
+		
+		if(otherIdlFile != idlFile) {
+			importNamespaces.add(otherIdlFile.name + "." + type.name)
+		}
+	}
+	
+	def static getIdlFile(EObject object) {
+		if(object instanceof AvroIDLFile) return object as AvroIDLFile
+		
+		return object.getContainerOfType(AvroIDLFile)
 	}
 
 	/**
@@ -133,8 +139,7 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 	}
 
 	def static getNamespace(EObject object) {
-		if(object instanceof AvroIDLFile) return null
-		return object.getContainerOfType(AvroIDLFile).name
+		return object.idlFile.name
 	}
 
 	def static getNamespacePath(EObject object) {

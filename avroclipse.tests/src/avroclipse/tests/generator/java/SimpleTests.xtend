@@ -102,8 +102,6 @@ class SimpleTests {
 		assertTrue("File '" + targetFilePathCoordinates + "' is not generated", !contentCoordinates.nullOrEmpty)
 		assertTrue("File '" + targetFilePathPOI + "' is not generated", !contentPOI.nullOrEmpty)
 		
-		assertThat(contentPOI, containsString("import Coordinates"))
-		
 		println(contentCoordinates)
 		println(contentPOI)
 	}
