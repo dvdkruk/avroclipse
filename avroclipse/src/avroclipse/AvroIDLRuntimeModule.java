@@ -19,7 +19,7 @@ public class AvroIDLRuntimeModule extends avroclipse.AbstractAvroIDLRuntimeModul
 		return AvroIDLNamesAreUniqueValidationHelper.class;
 	}
 
-	/*public Class<? extends org.eclipse.xtext.scoping.IScopeProvider> bindIScopeProvider() {
+	public Class<? extends org.eclipse.xtext.scoping.IScopeProvider> bindIScopeProvider() {
 		return avroclipse.scoping.AvroIDLScopeProvider.class;
 	}
 
@@ -36,6 +36,6 @@ public class AvroIDLRuntimeModule extends avroclipse.AbstractAvroIDLRuntimeModul
 
 	public void configureIgnoreCaseLinking(com.google.inject.Binder binder) {
 		binder.bindConstant().annotatedWith(org.eclipse.xtext.scoping.IgnoreCaseLinking.class).to(false);
-	}*/
+	}
 
 }

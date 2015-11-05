@@ -6,14 +6,14 @@ generate avroIDL "http://avroclipse/AvroIDL"
 
 AvroIDLFile:
 	{AvroIDLFile}
-	protocol=Protocol?;
-
-Protocol:
-	annotations+=Annotation*
-	'protocol' name=EscapableId '{'
-		imports+=Import* 
+	(
+		(=> '@namespace' '(' name=STRING ')')? &
+		(annotations+=Annotation)*
+	)
+	('protocol' protocolName=EscapableId '{'
+		imports+=Import*
 		(types+=TypeDef | messages+=RPCMessage)*
-	'}';
+	'}')?;
 	
 Import:
 	'import' type=ImportType importURI=STRING ';';

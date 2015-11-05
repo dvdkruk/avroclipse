@@ -1,18 +1,16 @@
- package avroclipse.generator.avpr;
+package avroclipse.generator.java;
 
 import avroclipse.AvroIDLStandaloneSetup;
 import avroclipse.Registry;
 
 public class Standalone {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		//TODO:
 	}
-
+	
 	public Standalone() {
 		AvroIDLStandaloneSetup.doSetup();
 		
-		Registry.INSTANCE.getGenerators().add(new GeneratorExtension());
+		Registry.INSTANCE.getGenerators().add(new JavaWithAnnotationsGenerator());
 	}
-
 }

@@ -5,7 +5,6 @@ package avroclipse.validation
 
 import avroclipse.avroIDL.Annotation
 import avroclipse.avroIDL.AvroIDLFile
-import avroclipse.avroIDL.Protocol
 import avroclipse.avroIDL.Type
 import com.google.inject.Inject
 import org.eclipse.emf.common.util.URI
@@ -34,7 +33,7 @@ class AvroIDLValidator extends AbstractAvroIDLValidator {
 
 	static val INCLUDE_EXTERNAL_DUPLICATE_NAME_CHECK_CLASSES = newArrayList(Type)
 
-	@Check
+	/* @Check
 	def checkDuplicatedInnerCheck(EObject object) {
 		if (SKIP_DUPLICATED_NAME_CHECK_CLASSES.findFirst[it.isInstance(object)] != null) {
 			return; // skip
@@ -47,7 +46,7 @@ class AvroIDLValidator extends AbstractAvroIDLValidator {
 				error(getDuplicateMessage(object, nameFeature), nameFeature, DUPLICATED_NAME)
 			}
 		}
-	}
+	}*/
 
 	def getDuplicateMessage(EObject object, EStructuralFeature feature) {
 		return "Duplicated " + object.eClass.superType.name + " '" + object.eGet(feature) + "'"
@@ -65,13 +64,13 @@ class AvroIDLValidator extends AbstractAvroIDLValidator {
 	}
 
 	def isExternallyDuplicated(EObject object, EStructuralFeature nameFeature, String name) {
-		val protocol = object.getContainerOfType(Protocol);
-		if (protocol != null) {
+		val idlFile = object.getContainerOfType(AvroIDLFile);
+		if (idlFile != null) {
 			var Resource res
 			var URI uri
 			var AvroIDLFile IdlFile;
 
-			for (import : protocol.imports) {
+			for (import : idlFile.imports) {
 				uri = URI.createURI(import.importURI)
 				res = _rs.getResource(uri, true);
 				if (object.isValidUri(uri)) {
