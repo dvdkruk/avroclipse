@@ -180,7 +180,7 @@ class IdlToJavaTests {
 
 	// println(content)
 	}
-	
+
 	@Test
 	def void testEnumType() {
 		val targetFilePath = 'org/example/enums/Colors.java'
@@ -207,7 +207,7 @@ class IdlToJavaTests {
 
 		println(content)
 	}
-	
+
 	@Test
 	def void testFixedType() {
 		val targetFilePath = 'org/example/fixed/MD5.java'
@@ -227,12 +227,12 @@ class IdlToJavaTests {
 		val content = fsa.getContentOfFile(targetFilePath)
 
 		assertTrue("File '" + targetFilePath + "' is not generated", !content.nullOrEmpty)
-		
+
 		assertThat(content, containsString("@FixedSize(16)"))
 
 		assertThat(content, containsString("import org.apache.avro.specific.SpecificFixed;"))
 		assertThat(content, containsString("org.apache.avro.specific.FixedSize;"))
-		
+
 		assertThat(content, containsString("public class MD5 extends SpecificFixed {"))
 
 		println(content)
@@ -268,14 +268,13 @@ class IdlToJavaTests {
 		assertThat(content, containsString("import java.util.List;"))
 		assertThat(content, containsString("List<Integer> ids;"))
 		assertThat(content, containsString("List<Value> values;"))
-		
+
 		assertThat(content, containsString("public List<Integer> getIds() {"))
 		assertThat(content, containsString("public void setValues(List<Value> values) {"))
 
 	// println(content)
 	}
-	
-	
+
 	@Test
 	def void testRecordWithMap() {
 		val targetFilePath = 'org/example/map/Record.java'
@@ -304,16 +303,68 @@ class IdlToJavaTests {
 		assertTrue("File '" + targetFilePath + "' is not generated", !content.nullOrEmpty)
 
 		assertThat(content, containsString("import java.util.Map;"))
-		
+
 		assertThat(content, containsString("Map<String, Integer> ids;"))
 		assertThat(content, containsString("Map<String, Value> values;"))
-		
+
 		assertThat(content, containsString("public Map<String, Integer> getIds() {"))
 		assertThat(content, containsString("public void setValues(Map<String, Value> values) {"))
 
-	 println(content)
+	// println(content)
+	}
+
+	@Test
+	def void testErrorType() {
+		val targetFilePath = 'ExampleException.java'
+
+		val idlFile = '''
+			protocol TestProtocol {
+				error ExampleException {
+					
+				}
+			}
+		'''.parse
+		idlFile.eResource.assertNoErrors
+		val fsa = new InMemoryFileSystemAccess()
+
+		idlFile.eResource.doGenerate(fsa)
+
+		val content = fsa.getContentOfFile(targetFilePath)
+
+		assertTrue("File '" + targetFilePath + "' is not generated", !content.nullOrEmpty)
+
+		assertThat(content, containsString("public class ExampleException extends Exception {"))
+
+		println(content)
 	}
 	
+	@Test
+	def void testUnionNullFieldType() {
+		val targetFilePath = 'NullUnion.java'
+
+		val idlFile = '''
+			protocol TestProtocol {
+				record NullUnion {
+					union{null, int} nullableInt;
+				}
+			}
+		'''.parse
+		idlFile.eResource.assertNoErrors
+		val fsa = new InMemoryFileSystemAccess()
+
+		idlFile.eResource.doGenerate(fsa)
+
+		val content = fsa.getContentOfFile(targetFilePath)
+
+		assertTrue("File '" + targetFilePath + "' is not generated", !content.nullOrEmpty)
+
+		assertThat(content, containsString("import org.apache.avro.reflect.Nullable;"))
+		assertThat(content, containsString("@Nullable"))
+		assertThat(content, containsString("Integer nullableInt;"))
+
+		println(content)
+	}
+
 	def static getContentOfFile(InMemoryFileSystemAccess fsa, String relativeFilePath) {
 		if (fsa.allFiles.containsKey(IFileSystemAccess::DEFAULT_OUTPUT + relativeFilePath)) {
 			return fsa.textFiles.get(IFileSystemAccess::DEFAULT_OUTPUT + relativeFilePath).toString

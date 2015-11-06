@@ -1,14 +1,20 @@
 package avroclipse.generator.java
 
+import avroclipse.avroIDL.ArrayFieldType
 import avroclipse.avroIDL.AvroIDLFile
 import avroclipse.avroIDL.CustomTypeLink
+import avroclipse.avroIDL.EnumType
+import avroclipse.avroIDL.ErrorType
 import avroclipse.avroIDL.FieldType
+import avroclipse.avroIDL.FixedType
+import avroclipse.avroIDL.MapFieldType
 import avroclipse.avroIDL.PrimativeTypeLink
 import avroclipse.avroIDL.RecordType
 import avroclipse.avroIDL.SimpleFieldType
 import avroclipse.avroIDL.Type
 import avroclipse.avroIDL.TypeDef
 import avroclipse.avroIDL.TypeLink
+import avroclipse.avroIDL.UnionFieldType
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Set
@@ -19,10 +25,6 @@ import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
 
 import static extension org.eclipse.xtext.EcoreUtil2.*
-import avroclipse.avroIDL.EnumType
-import avroclipse.avroIDL.FixedType
-import avroclipse.avroIDL.ArrayFieldType
-import avroclipse.avroIDL.MapFieldType
 
 class JavaWithAnnotationsGenerator implements IGenerator {
 
@@ -55,7 +57,7 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 				«FOR imprt : importNamespaces»
 					import «imprt»;
 				«ENDFOR»
-					
+				
 			«ENDIF»
 			@AvroGenerated //«currentDateTime» (Avroclipse)
 			«javaClass»
@@ -67,8 +69,15 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 			RecordType: type.compile
 			EnumType: type.compile
 			FixedType: type.compile
+			ErrorType: type.compile
 		}
 	}
+
+	def compile(ErrorType type) '''
+		public class «type.name» extends Exception {
+			
+		}
+	''' // TODO: class/exception body
 
 	def compile(FixedType type) {
 		importNamespaces.add("org.apache.avro.specific.SpecificFixed")
@@ -99,6 +108,10 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 	def compile(RecordType type) '''
 		public class «type.name» {
 			«FOR field : type.fields»
+				«IF field.type.isNullableAndRegisterImport»
+					
+					@Nullable
+				«ENDIF»
 				«field.type.nameAndRegisterImport» «field.name»;
 			«ENDFOR»
 			«FOR field : type.fields»
@@ -113,27 +126,37 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 			«ENDFOR»
 		}
 	'''
+	
+	def getIsNullableAndRegisterImport(FieldType type) {
+		if(type instanceof UnionFieldType) {
+			val unionFieldType = type as UnionFieldType 
+			if(unionFieldType.types.filter(PrimativeTypeLink).findFirst[target.equals("null")] != null) {
+				importNamespaces.add("org.apache.avro.reflect.Nullable")
+				return true;
+			}
+		}
+		return false;
+	}
 
 	def getNameAndRegisterImport(FieldType type) {
 		switch (type) {
 			SimpleFieldType: type.type.getNameAndRegisterImport
 			ArrayFieldType: type.getJavaListAndRegisterImport
 			MapFieldType: type.getJavaMapAndRegisterImport
-		}
+			UnionFieldType: type.types.findFirst[!(it instanceof PrimativeTypeLink && (it as PrimativeTypeLink).target.equals("null"))].nameAndRegisterImport
+		} //TODO: union field now support only two types. It should support many types.
 	}
-	
+
 	def getGetJavaMapAndRegisterImport(MapFieldType type) {
 		importNamespaces.add("java.util.Map");
-		
-		return'''
-		Map<String, «type.type.getNameAndRegisterImport»>'''
+
+		return '''Map<String, «type.type.getNameAndRegisterImport»>'''
 	}
-	
+
 	def getJavaListAndRegisterImport(ArrayFieldType type) {
 		importNamespaces.add("java.util.List");
-		
-		return '''
-			List<«type.type.getNameAndRegisterImport»>'''
+
+		return '''List<«type.type.getNameAndRegisterImport»>'''
 	}
 
 	def getNameAndRegisterImport(TypeLink link) {
