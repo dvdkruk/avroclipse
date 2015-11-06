@@ -5,27 +5,31 @@ import avroclipse.Registry
 import avroclipse.avroIDL.AvroIDLFile
 import avroclipse.generator.java.JavaWithAnnotationsGenerator
 import com.google.inject.Inject
+import org.eclipse.emf.ecore.resource.ResourceSet
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
 import org.eclipse.xtext.generator.InMemoryFileSystemAccess
 import org.eclipse.xtext.junit4.InjectWith
 import org.eclipse.xtext.junit4.XtextRunner
 import org.eclipse.xtext.junit4.util.ParseHelper
+import org.eclipse.xtext.junit4.validation.ValidationTestHelper
 import org.junit.BeforeClass
 import org.junit.Test
 import org.junit.runner.RunWith
 
 import static org.hamcrest.CoreMatchers.*
 import static org.junit.Assert.*
-import org.eclipse.xtext.junit4.validation.ValidationTestHelper
+import org.eclipse.emf.common.util.URI
+import org.eclipse.emf.ecore.util.EcoreUtil
 
 @InjectWith(AvroIDLInjectorProvider)
 @RunWith(XtextRunner)
 class SimpleTests {
 
-	@Inject extension IGenerator underTest
-	@Inject extension ParseHelper<AvroIDLFile> parseHelper
+	@Inject extension IGenerator
+	@Inject extension ParseHelper<AvroIDLFile>
 	@Inject extension ValidationTestHelper
+	@Inject extension ResourceSet
 
 	@BeforeClass
 	def static void setup() {
@@ -49,17 +53,17 @@ class SimpleTests {
 				}
 			}
 		'''.parse
-		
+
 		idlFile.eResource.assertNoErrors
 		val fsa = new InMemoryFileSystemAccess()
-		
+
 		idlFile.eResource.doGenerate(fsa)
-		
+
 		val content = fsa.getContentOfFile(targetFilePath)
 		assertTrue("File '" + targetFilePath + "' is not generated", !content.nullOrEmpty)
 		assertThat(content, containsString("class TestRecord"))
-		
-		//Test private fields of different types
+
+		// Test private fields of different types
 		assertThat(content, containsString("private String name;"))
 		assertThat(content, containsString("private Integer integer;"))
 		assertThat(content, containsString("private Long l;"))
@@ -67,18 +71,18 @@ class SimpleTests {
 		assertThat(content, containsString("private byte[] b;"))
 		assertThat(content, containsString("private Float f;"))
 		assertThat(content, containsString("private Double d;"))
-		
-		//println(content)
+
+	// println(content)
 	}
-	
+
 	@Test
 	def void testTwoRecordsWithReferences() {
-		val targetFilePathCoordinates = 'Coordinates.java'
+		val targetFilePathCoordinate = 'Coordinate.java'
 		val targetFilePathPOI = 'POI.java'
-		
+
 		val idlFile = '''
 			protocol TestProtocol {
-				record Coordinates {
+				record Coordinate {
 					double x;
 					double y;
 					double z;
@@ -86,31 +90,97 @@ class SimpleTests {
 				
 				record POI {
 					string name;
-					Coordinates cordinates;
+					Coordinate coordinate;
 				}
 			}
 		'''.parse
-		
+
 		idlFile.eResource.assertNoErrors
 		val fsa = new InMemoryFileSystemAccess()
-		
+
 		idlFile.eResource.doGenerate(fsa)
-		
-		val contentCoordinates = fsa.getContentOfFile(targetFilePathCoordinates)
+
+		val contentCoordinate = fsa.getContentOfFile(targetFilePathCoordinate)
 		val contentPOI = fsa.getContentOfFile(targetFilePathPOI)
-		
-		assertTrue("File '" + targetFilePathCoordinates + "' is not generated", !contentCoordinates.nullOrEmpty)
+
+		assertTrue("File '" + targetFilePathCoordinate + "' is not generated", !contentCoordinate.nullOrEmpty)
 		assertTrue("File '" + targetFilePathPOI + "' is not generated", !contentPOI.nullOrEmpty)
-		
-		println(contentCoordinates)
-		println(contentPOI)
+
+		assertThat(contentPOI, containsString("private Coordinate coordinate;"))
+
+	// println(contentCoordinate)
+	// println(contentPOI)
 	}
-	
+
+	@Test
+	def void testOneRecordWithNamespace() {
+		val targetFilePath = 'org/example/tests/Record0.java'
+
+		val idlFile = '''
+			@namespace("org.example.tests")
+			protocol TestProtocol {
+				record Record0 {
+					int id;
+				}
+			}
+		'''.parse
+
+		idlFile.eResource.assertNoErrors
+		val fsa = new InMemoryFileSystemAccess()
+
+		idlFile.eResource.doGenerate(fsa)
+
+		val content = fsa.getContentOfFile(targetFilePath)
+
+		assertTrue("File '" + targetFilePath + "' is not generated", !content.nullOrEmpty)
+
+		assertThat(content, containsString("package org.example.tests"))
+
+	// println(content)
+	}
+
+	@Test
+	def void testTwoRecordsWithDifferentNamespaceReferences() {
+		getResource(URI.createURI("examples/echo.avdl"), true)
+		
+		val targetFilePath = 'org/example/tests/PingPong.java'
+
+		val idlFile0 = '''
+			@namespace("org.example.tests")
+			protocol PingPong {
+				
+				import idl "examples/echo.avdl";
+				
+				record PingPong {
+					org.apache.avro.echo.Ping ping;
+					org.apache.avro.echo.Pong pong;
+				}
+			}
+		'''.parse
+
+		idlFile0.eResource.assertNoErrors
+
+		val fsa = new InMemoryFileSystemAccess()
+
+		idlFile0.eResource.doGenerate(fsa)
+
+		val content = fsa.getContentOfFile(targetFilePath)
+
+		assertTrue("File '" + targetFilePath + "' is not generated", !content.nullOrEmpty)
+
+		assertThat(content, containsString("import org.apache.avro.echo.Ping;"))
+		assertThat(content, containsString("import org.apache.avro.echo.Pong;"))
+		assertThat(content, containsString("private Ping ping;"))
+		assertThat(content, containsString("private Pong pong;"))
+		
+		println(content)
+	}
+
 	def static getContentOfFile(InMemoryFileSystemAccess fsa, String relativeFilePath) {
-		if(fsa.allFiles.containsKey(IFileSystemAccess::DEFAULT_OUTPUT + relativeFilePath)) {
+		if (fsa.allFiles.containsKey(IFileSystemAccess::DEFAULT_OUTPUT + relativeFilePath)) {
 			return fsa.textFiles.get(IFileSystemAccess::DEFAULT_OUTPUT + relativeFilePath).toString
 		}
 		return null
 	}
-	
+
 }
