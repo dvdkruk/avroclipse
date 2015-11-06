@@ -210,14 +210,12 @@ class IdlToJavaTests {
 	
 	@Test
 	def void testFixedType() {
-		val targetFilePath = 'org/example/enums/Colors.java'
+		val targetFilePath = 'org/example/fixed/MD5.java'
 
 		val idlFile = '''
-			@namespace("org.example.enums")
-			protocol EnumTypes {
-				enum Colors {
-					RED, BLUE, GREEN
-				}
+			@namespace("org.example.fixed")
+			protocol FixedTypes {
+				fixed MD5(16);
 			}
 		'''.parse
 
@@ -229,8 +227,13 @@ class IdlToJavaTests {
 		val content = fsa.getContentOfFile(targetFilePath)
 
 		assertTrue("File '" + targetFilePath + "' is not generated", !content.nullOrEmpty)
+		
+		assertThat(content, containsString("@FixedSize(16)"))
 
-		assertThat(content, containsString("public enum Colors {"))
+		assertThat(content, containsString("import org.apache.avro.specific.SpecificFixed;"))
+		assertThat(content, containsString("org.apache.avro.specific.FixedSize;"))
+		
+		assertThat(content, containsString("public class MD5 extends SpecificFixed {"))
 
 		println(content)
 	}

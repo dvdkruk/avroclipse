@@ -20,6 +20,7 @@ import org.eclipse.xtext.generator.IGenerator
 
 import static extension org.eclipse.xtext.EcoreUtil2.*
 import avroclipse.avroIDL.EnumType
+import avroclipse.avroIDL.FixedType
 
 class JavaWithAnnotationsGenerator implements IGenerator {
 
@@ -45,13 +46,15 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 		val javaClass = typeDef.type.compile
 		return '''
 			«IF !namespace.isNullOrEmpty»
-			package «namespace»;
-				
+				package «namespace»;
+					
 			«ENDIF»
-			«FOR imprt : importNamespaces»
-			import «imprt»;
-				
-			«ENDFOR»
+			«IF !importNamespaces.empty»
+				«FOR imprt : importNamespaces»
+					import «imprt»;
+				«ENDFOR»
+					
+			«ENDIF»
 			@AvroGenerated //«currentDateTime» (Avroclipse)
 			«javaClass»
 		'''
@@ -61,13 +64,32 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 		switch (type) {
 			RecordType: type.compile
 			EnumType: type.compile
+			FixedType: type.compile
 		}
 	}
-	
+
+	def compile(FixedType type) {
+		importNamespaces.add("org.apache.avro.specific.SpecificFixed")
+		importNamespaces.add("org.apache.avro.specific.FixedSize")
+
+		return '''
+			@FixedSize(«type.size»)
+			public class «type.name» extends SpecificFixed {
+				public «type.name»() {
+					super();
+				}
+				
+				public «type.name»(byte[] bytes) {
+					super(bytes);
+				}
+			}
+		'''
+	}
+
 	def compile(EnumType type) '''
 		public enum «type.name» {
 			«FOR literal : type.literals»
-			«literal»,
+				«literal»,
 			«ENDFOR»	
 		}
 	'''
@@ -89,7 +111,7 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 			«ENDFOR»
 		}
 	'''
-	
+
 	def getNameAndRegisterImport(FieldType type) {
 		switch (type) {
 			SimpleFieldType: type.type.nameAndRegisterImport
@@ -102,24 +124,24 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 			CustomTypeLink: link.target.nameAndRegisterImport
 		}
 	}
-	
+
 	def getNameAndRegisterImport(Type type) {
 		importNamespaces.addImportFor(type)
-		
+
 		return type.name
 	}
-	
+
 	def addImportFor(Set<String> strings, Type type) {
 		val otherIdlFile = type.idlFile
-		
-		if(otherIdlFile != idlFile && !otherIdlFile.name.equals(idlFile.name)) {
+
+		if (otherIdlFile != idlFile && !otherIdlFile.name.equals(idlFile.name)) {
 			importNamespaces.add(otherIdlFile.name + "." + type.name)
 		}
 	}
-	
+
 	def static getIdlFile(EObject object) {
 		if(object instanceof AvroIDLFile) return object as AvroIDLFile
-		
+
 		return object.getContainerOfType(AvroIDLFile)
 	}
 
@@ -161,15 +183,15 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 		if(namespace.isNullOrEmpty) return null
 		return namespace.replace('.', '/')
 	}
-	
+
 	def static currentDateTime() {
 		val dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		val date = new Date();
 		dateFormat.format(date)
 	}
-	
+
 	def static String capitalize(String line) {
-   		Character.toUpperCase(line.charAt(0)) + line.substring(1);
+		Character.toUpperCase(line.charAt(0)) + line.substring(1);
 	}
 
 }
