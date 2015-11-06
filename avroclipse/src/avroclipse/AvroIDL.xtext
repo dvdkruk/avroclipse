@@ -7,7 +7,7 @@ generate avroIDL "http://avroclipse/AvroIDL"
 AvroIDLFile:
 	{AvroIDLFile}
 	(
-		(=> '@namespace' '(' name=STRING ')')? &
+		(=> '@namespace' '(' name=STRING ')')? & //TODO: must be in QN format (validation) '-' '_' and ' ' are not allowed
 		(annotations+=Annotation)*
 	)
 	('protocol' protocolName=EscapableId '{'
@@ -111,8 +111,7 @@ QN:
 	EscapableId ('.' EscapableId)*;
 
 EscapableId:
-	ID | '`' ReservedKeyWords '`'
-;
+	ID | '`' ReservedKeyWords '`';
 
 ReservedKeyWords:
 	'record' | 'fixed' | 'enum' | 'map' | 'array' | 'union' | 'error' | 'protocol' | 'oneway' | 'import' | 'throws';

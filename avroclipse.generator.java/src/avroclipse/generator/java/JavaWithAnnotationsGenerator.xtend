@@ -21,6 +21,7 @@ import org.eclipse.xtext.generator.IGenerator
 import static extension org.eclipse.xtext.EcoreUtil2.*
 import avroclipse.avroIDL.EnumType
 import avroclipse.avroIDL.FixedType
+import avroclipse.avroIDL.ArrayFieldType
 
 class JavaWithAnnotationsGenerator implements IGenerator {
 
@@ -114,8 +115,15 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 
 	def getNameAndRegisterImport(FieldType type) {
 		switch (type) {
-			SimpleFieldType: type.type.nameAndRegisterImport
+			SimpleFieldType: type.type.getNameAndRegisterImport
+			ArrayFieldType: type.getJavaListAndRegisterImport
 		}
+	}
+	
+	def getJavaListAndRegisterImport(ArrayFieldType type) {
+		importNamespaces.add("java.util.List");
+		return '''
+			List<«type.type.getNameAndRegisterImport»>'''
 	}
 
 	def getNameAndRegisterImport(TypeLink link) {

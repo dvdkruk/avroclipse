@@ -238,6 +238,43 @@ class IdlToJavaTests {
 		println(content)
 	}
 
+	@Test
+	def void testRecordWithArray() {
+		val targetFilePath = 'org/example/array/Record.java'
+
+		val idlFile = '''
+			@namespace("org.example.array")
+			protocol TestProtocol {
+				record Record {
+					array<int> ids;
+					array<Value> values;
+				}
+				
+				record Value {
+					string val;
+				}
+			}
+		'''.parse
+
+		idlFile.eResource.assertNoErrors
+		val fsa = new InMemoryFileSystemAccess()
+
+		idlFile.eResource.doGenerate(fsa)
+
+		val content = fsa.getContentOfFile(targetFilePath)
+
+		assertTrue("File '" + targetFilePath + "' is not generated", !content.nullOrEmpty)
+
+		assertThat(content, containsString("import java.util.List;"))
+		assertThat(content, containsString("List<Integer> ids;"))
+		assertThat(content, containsString("List<Value> values;"))
+		
+		assertThat(content, containsString("public List<Integer> getIds() {"))
+		assertThat(content, containsString("public void setValues(List<Value> values) {"))
+
+	// println(content)
+	}
+	
 	def static getContentOfFile(InMemoryFileSystemAccess fsa, String relativeFilePath) {
 		if (fsa.allFiles.containsKey(IFileSystemAccess::DEFAULT_OUTPUT + relativeFilePath)) {
 			return fsa.textFiles.get(IFileSystemAccess::DEFAULT_OUTPUT + relativeFilePath).toString
