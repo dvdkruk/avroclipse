@@ -19,6 +19,7 @@ import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
 
 import static extension org.eclipse.xtext.EcoreUtil2.*
+import avroclipse.avroIDL.EnumType
 
 class JavaWithAnnotationsGenerator implements IGenerator {
 
@@ -59,8 +60,17 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 	def compile(Type type) {
 		switch (type) {
 			RecordType: type.compile
+			EnumType: type.compile
 		}
 	}
+	
+	def compile(EnumType type) '''
+		public enum «type.name» {
+			«FOR literal : type.literals»
+			«literal»,
+			«ENDFOR»	
+		}
+	'''
 
 	def compile(RecordType type) '''
 		public class «type.name» {

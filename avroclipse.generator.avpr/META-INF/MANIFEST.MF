@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Avroclipse Generator for Avpr
+Bundle-Name: Avroclipse Generator Avpr
 Bundle-SymbolicName: avroclipse.generator.avpr;singleton:=true
 Bundle-Version: 0.0.2.qualifier
 Export-Package: avroclipse.generator.avpr

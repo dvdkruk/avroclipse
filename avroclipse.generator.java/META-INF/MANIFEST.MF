@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Java
+Bundle-Name: Avroclipse Generator Java
 Bundle-SymbolicName: avroclipse.generator.java;singleton:=true
 Bundle-Version: 0.0.2.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
@@ -10,4 +10,5 @@ Require-Bundle: avroclipse;bundle-version="0.0.2",
  org.eclipse.xtend.lib,
  org.eclipse.xtend.lib.macro
 Export-Package: avroclipse.generator.java
+Bundle-Vendor: Avroclipse
 

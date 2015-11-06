@@ -23,7 +23,7 @@ import static org.junit.Assert.*
 
 @InjectWith(AvroIDLInjectorProvider)
 @RunWith(XtextRunner)
-class SimpleTests {
+class IdlToJavaTests {
 
 	@Inject extension IGenerator
 	@Inject extension ParseHelper<AvroIDLFile>
@@ -31,7 +31,7 @@ class SimpleTests {
 	@Inject extension ResourceSet
 
 	@BeforeClass
-	def static void setup() {
+	def static void setUp() {
 		Registry.INSTANCE.generators.add(new JavaWithAnnotationsGenerator())
 	}
 
@@ -70,10 +70,10 @@ class SimpleTests {
 		assertThat(content, containsString("byte[] b;"))
 		assertThat(content, containsString("Float f;"))
 		assertThat(content, containsString("Double d;"))
-		
+
 		assertThat(content, containsString("public String getName() {"))
 		assertThat(content, containsString("public void setName(String name) {"))
-		
+
 		assertThat(content, containsString("public Double getD() {"))
 		assertThat(content, containsString("public void setD(Double d) {"))
 
@@ -147,7 +147,7 @@ class SimpleTests {
 	@Test
 	def void testTwoRecordsWithDifferentNamespaceReferences() {
 		getResource(URI.createURI("examples/echo.avdl"), true)
-		
+
 		val targetFilePath = 'org/example/tests/PingPong.java'
 
 		val idlFile0 = '''
@@ -177,8 +177,62 @@ class SimpleTests {
 		assertThat(content, containsString("import org.apache.avro.echo.Pong;"))
 		assertThat(content, containsString("Ping ping;"))
 		assertThat(content, containsString("Pong pong;"))
-		
-		//println(content)
+
+	// println(content)
+	}
+	
+	@Test
+	def void testEnumType() {
+		val targetFilePath = 'org/example/enums/Colors.java'
+
+		val idlFile = '''
+			@namespace("org.example.enums")
+			protocol EnumTypes {
+				enum Colors {
+					RED, BLUE, GREEN
+				}
+			}
+		'''.parse
+
+		idlFile.eResource.assertNoErrors
+		val fsa = new InMemoryFileSystemAccess()
+
+		idlFile.eResource.doGenerate(fsa)
+
+		val content = fsa.getContentOfFile(targetFilePath)
+
+		assertTrue("File '" + targetFilePath + "' is not generated", !content.nullOrEmpty)
+
+		assertThat(content, containsString("public enum Colors {"))
+
+		println(content)
+	}
+	
+	@Test
+	def void testFixedType() {
+		val targetFilePath = 'org/example/enums/Colors.java'
+
+		val idlFile = '''
+			@namespace("org.example.enums")
+			protocol EnumTypes {
+				enum Colors {
+					RED, BLUE, GREEN
+				}
+			}
+		'''.parse
+
+		idlFile.eResource.assertNoErrors
+		val fsa = new InMemoryFileSystemAccess()
+
+		idlFile.eResource.doGenerate(fsa)
+
+		val content = fsa.getContentOfFile(targetFilePath)
+
+		assertTrue("File '" + targetFilePath + "' is not generated", !content.nullOrEmpty)
+
+		assertThat(content, containsString("public enum Colors {"))
+
+		println(content)
 	}
 
 	def static getContentOfFile(InMemoryFileSystemAccess fsa, String relativeFilePath) {
