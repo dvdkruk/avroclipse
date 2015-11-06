@@ -111,7 +111,7 @@ class SimpleTests {
 		assertTrue("File '" + targetFilePathCoordinate + "' is not generated", !contentCoordinate.nullOrEmpty)
 		assertTrue("File '" + targetFilePathPOI + "' is not generated", !contentPOI.nullOrEmpty)
 
-		assertThat(contentPOI, containsString("private Coordinate coordinate;"))
+		assertThat(contentPOI, containsString("Coordinate coordinate;"))
 
 	// println(contentCoordinate)
 	// println(contentPOI)
@@ -175,8 +175,8 @@ class SimpleTests {
 
 		assertThat(content, containsString("import org.apache.avro.echo.Ping;"))
 		assertThat(content, containsString("import org.apache.avro.echo.Pong;"))
-		assertThat(content, containsString("private Ping ping;"))
-		assertThat(content, containsString("private Pong pong;"))
+		assertThat(content, containsString("Ping ping;"))
+		assertThat(content, containsString("Pong pong;"))
 		
 		//println(content)
 	}
