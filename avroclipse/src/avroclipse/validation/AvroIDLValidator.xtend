@@ -3,7 +3,6 @@
  */
 package avroclipse.validation
 
-import avroclipse.avroIDL.Annotation
 import avroclipse.avroIDL.AvroIDLFile
 import avroclipse.avroIDL.Type
 import com.google.inject.Inject
@@ -13,7 +12,6 @@ import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EStructuralFeature
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.resource.XtextResourceSet
-import org.eclipse.xtext.validation.Check
 
 import static extension org.eclipse.xtext.EcoreUtil2.*
 
@@ -29,7 +27,7 @@ class AvroIDLValidator extends AbstractAvroIDLValidator {
 
 	public static val DUPLICATED_NAME = 'duplicatedName'
 
-	static val SKIP_DUPLICATED_NAME_CHECK_CLASSES = newArrayList(Annotation)
+	//static val SKIP_DUPLICATED_NAME_CHECK_CLASSES = newArrayList(Annotation)
 
 	static val INCLUDE_EXTERNAL_DUPLICATE_NAME_CHECK_CLASSES = newArrayList(Type)
 

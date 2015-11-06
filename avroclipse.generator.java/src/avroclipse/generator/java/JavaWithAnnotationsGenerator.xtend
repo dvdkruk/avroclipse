@@ -2,7 +2,6 @@ package avroclipse.generator.java
 
 import avroclipse.avroIDL.AvroIDLFile
 import avroclipse.avroIDL.CustomTypeLink
-import avroclipse.avroIDL.Field
 import avroclipse.avroIDL.FieldType
 import avroclipse.avroIDL.PrimativeTypeLink
 import avroclipse.avroIDL.RecordType
@@ -48,20 +47,14 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 			package «namespace»;
 				
 			«ENDIF»
-			«IF !importNamespaces.empty»
-			«importNamespaces.compile»
+			«FOR imprt : importNamespaces»
+			import «imprt»;
 				
-			«ENDIF»
+			«ENDFOR»
 			@AvroGenerated //«currentDateTime» (Avroclipse)
 			«javaClass»
 		'''
 	}
-
-	def compile(Set<String> imports) '''
-		«FOR imprt : imports»
-			import «imprt»;
-		«ENDFOR»
-	'''
 
 	def compile(Type type) {
 		switch (type) {
@@ -72,22 +65,28 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 	def compile(RecordType type) '''
 		public class «type.name» {
 			«FOR field : type.fields»
-				«field.compile»
+				«field.type.nameAndRegisterImport» «field.name»;
+			«ENDFOR»
+			«FOR field : type.fields»
+				
+				public «field.type.nameAndRegisterImport» get«field.name.capitalize»() {
+					return this.«field.name»;
+				}
+				
+				public void set«field.name.capitalize»(«field.type.nameAndRegisterImport» «field.name») {
+					this.«field.name» = «field.name»;
+				}
 			«ENDFOR»
 		}
 	'''
-
-	def compile(Field field) '''
-		private «field.type.name» «field.name»;
-	'''
-
-	def getName(FieldType type) {
+	
+	def getNameAndRegisterImport(FieldType type) {
 		switch (type) {
-			SimpleFieldType: type.type.name
+			SimpleFieldType: type.type.nameAndRegisterImport
 		}
 	}
 
-	def getName(TypeLink link) {
+	def getNameAndRegisterImport(TypeLink link) {
 		switch (link) {
 			PrimativeTypeLink: link.javaType
 			CustomTypeLink: link.target.nameAndRegisterImport
@@ -117,7 +116,7 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 	/**
 	 * Mapped as in @see https://avro.apache.org/docs/1.7.6/api/java/org/apache/avro/reflect/package-summary.html
 	 */
-	def getJavaType(PrimativeTypeLink link) {
+	def static getJavaType(PrimativeTypeLink link) {
 		val javaType = switch (link.target) {
 			case "string": "String"
 			case "int": "Integer"
@@ -131,7 +130,7 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 		return javaType
 	}
 
-	def String getTargetFilePath(TypeDef typeDef) {
+	def static String getTargetFilePath(TypeDef typeDef) {
 		var path = typeDef.namespacePath
 
 		if (path.nullOrEmpty) {
@@ -157,6 +156,10 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 		val dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		val date = new Date();
 		dateFormat.format(date)
+	}
+	
+	def static String capitalize(String line) {
+   		Character.toUpperCase(line.charAt(0)) + line.substring(1);
 	}
 
 }

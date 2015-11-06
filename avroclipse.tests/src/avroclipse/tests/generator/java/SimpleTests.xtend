@@ -5,6 +5,7 @@ import avroclipse.Registry
 import avroclipse.avroIDL.AvroIDLFile
 import avroclipse.generator.java.JavaWithAnnotationsGenerator
 import com.google.inject.Inject
+import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.resource.ResourceSet
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
@@ -19,8 +20,6 @@ import org.junit.runner.RunWith
 
 import static org.hamcrest.CoreMatchers.*
 import static org.junit.Assert.*
-import org.eclipse.emf.common.util.URI
-import org.eclipse.emf.ecore.util.EcoreUtil
 
 @InjectWith(AvroIDLInjectorProvider)
 @RunWith(XtextRunner)
@@ -64,13 +63,19 @@ class SimpleTests {
 		assertThat(content, containsString("class TestRecord"))
 
 		// Test private fields of different types
-		assertThat(content, containsString("private String name;"))
-		assertThat(content, containsString("private Integer integer;"))
-		assertThat(content, containsString("private Long l;"))
-		assertThat(content, containsString("private Boolean bool;"))
-		assertThat(content, containsString("private byte[] b;"))
-		assertThat(content, containsString("private Float f;"))
-		assertThat(content, containsString("private Double d;"))
+		assertThat(content, containsString("String name;"))
+		assertThat(content, containsString("Integer integer;"))
+		assertThat(content, containsString("Long l;"))
+		assertThat(content, containsString("Boolean bool;"))
+		assertThat(content, containsString("byte[] b;"))
+		assertThat(content, containsString("Float f;"))
+		assertThat(content, containsString("Double d;"))
+		
+		assertThat(content, containsString("public String getName() {"))
+		assertThat(content, containsString("public void setName(String name) {"))
+		
+		assertThat(content, containsString("public Double getD() {"))
+		assertThat(content, containsString("public void setD(Double d) {"))
 
 	// println(content)
 	}
@@ -173,7 +178,7 @@ class SimpleTests {
 		assertThat(content, containsString("private Ping ping;"))
 		assertThat(content, containsString("private Pong pong;"))
 		
-		println(content)
+		//println(content)
 	}
 
 	def static getContentOfFile(InMemoryFileSystemAccess fsa, String relativeFilePath) {
