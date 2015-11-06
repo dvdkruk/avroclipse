@@ -214,6 +214,7 @@
    </license>
 
    <url>
+      <update label="Avroclipse GitHub" url="http://dvdkruk.github.io/avroclipse/updatesite/latest"/>
       <discovery label="Apache Avro" url="https://avro.apache.org/"/>
    </url>
 

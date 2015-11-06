@@ -205,7 +205,7 @@ class IdlToJavaTests {
 
 		assertThat(content, containsString("public enum Colors {"))
 
-		println(content)
+		//println(content)
 	}
 
 	@Test
@@ -235,7 +235,7 @@ class IdlToJavaTests {
 
 		assertThat(content, containsString("public class MD5 extends SpecificFixed {"))
 
-		println(content)
+		//println(content)
 	}
 
 	@Test
@@ -335,7 +335,7 @@ class IdlToJavaTests {
 
 		assertThat(content, containsString("public class ExampleException extends Exception {"))
 
-		println(content)
+		//println(content)
 	}
 	
 	@Test
@@ -362,7 +362,35 @@ class IdlToJavaTests {
 		assertThat(content, containsString("@Nullable"))
 		assertThat(content, containsString("Integer nullableInt;"))
 
-		println(content)
+		//println(content)
+	}
+	
+	@Test
+	def void testMessages() {
+		val targetFilePath = 'TestProtocol.java'
+
+		val idlFile = '''
+			protocol TestProtocol {
+				int getCount();
+				void setCount(int i);
+				int add(int a, int b);
+			}
+		'''.parse
+		idlFile.eResource.assertNoErrors
+		val fsa = new InMemoryFileSystemAccess()
+
+		idlFile.eResource.doGenerate(fsa)
+		
+		val content = fsa.getContentOfFile(targetFilePath)
+
+		assertTrue("File '" + targetFilePath + "' is not generated", !content.nullOrEmpty)
+
+		assertThat(content, containsString("public interface TestProtocol {"))
+		assertThat(content, containsString("Integer getCount();"))
+		assertThat(content, containsString("void setCount(Integer i);"))
+		assertThat(content, containsString("Integer add(Integer a, Integer b);"))
+
+		//println(content)
 	}
 
 	def static getContentOfFile(InMemoryFileSystemAccess fsa, String relativeFilePath) {

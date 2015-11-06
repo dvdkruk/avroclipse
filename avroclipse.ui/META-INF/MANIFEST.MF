@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: avroclipse.ui
-Bundle-Vendor: My Company
+Bundle-Name: Avroclipse UI
+Bundle-Vendor: Avroclipse
 Bundle-Version: 0.0.2.qualifier
 Bundle-SymbolicName: avroclipse.ui; singleton:=true
 Bundle-ActivationPolicy: lazy

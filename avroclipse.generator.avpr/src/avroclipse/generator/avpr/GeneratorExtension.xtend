@@ -1,20 +1,19 @@
 package avroclipse.generator.avpr
 
-import avroclipse.avroIDL.AvroIDLFile
+import avroclipse.Helper
+import java.io.File
+import org.apache.avro.compiler.idl.Idl
+import org.eclipse.core.runtime.Platform
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
-import org.eclipse.core.runtime.Platform
-import avroclipse.Helper
-import org.apache.avro.compiler.idl.Idl
-import java.io.File
 
 class GeneratorExtension implements IGenerator {
 
 	override doGenerate(Resource input, IFileSystemAccess fsa) {
 		if (input != null && input.contents.size > 0) {
-			val avroIdl = input.contents.get(0) as AvroIDLFile
-			println(avroIdl)
+			//val avroIdl = input.contents.get(0) as AvroIDLFile
+			//println(avroIdl)
 			
 			
 			var filePath = input.getURI.toPlatformString(true);

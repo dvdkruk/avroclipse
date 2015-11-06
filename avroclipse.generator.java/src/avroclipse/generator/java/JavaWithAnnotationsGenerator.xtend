@@ -9,14 +9,18 @@ import avroclipse.avroIDL.FieldType
 import avroclipse.avroIDL.FixedType
 import avroclipse.avroIDL.MapFieldType
 import avroclipse.avroIDL.PrimativeTypeLink
+import avroclipse.avroIDL.RPCMessage
 import avroclipse.avroIDL.RecordType
+import avroclipse.avroIDL.ReturnTypeLink
 import avroclipse.avroIDL.SimpleFieldType
 import avroclipse.avroIDL.Type
 import avroclipse.avroIDL.TypeDef
 import avroclipse.avroIDL.TypeLink
 import avroclipse.avroIDL.UnionFieldType
+import avroclipse.avroIDL.VoidTypeLink
 import java.text.SimpleDateFormat
 import java.util.Date
+import java.util.List
 import java.util.Set
 import java.util.TreeSet
 import org.eclipse.emf.ecore.EObject
@@ -25,6 +29,8 @@ import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
 
 import static extension org.eclipse.xtext.EcoreUtil2.*
+import org.eclipse.emf.common.util.EList
+import avroclipse.avroIDL.Argument
 
 class JavaWithAnnotationsGenerator implements IGenerator {
 
@@ -35,11 +41,71 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 		idlFile = input.contents.get(0) as AvroIDLFile
 
 		var String targetFilePath
-		for (typeDef : idlFile.types) {
+		for (typeDef : idlFile.types) { //generate classes
 			targetFilePath = typeDef.targetFilePath
 
-			val content = typeDef.compile
-			fsa.generateFile(targetFilePath, content)
+			fsa.generateFile(targetFilePath, typeDef.compile)
+		}
+		if(!idlFile.messages.empty) { //generate interface
+			targetFilePath = idlFile.namespacePath
+			val targetFileName = idlFile.protocolName + ".java"
+			if(targetFilePath.isNullOrEmpty) {
+				targetFilePath = targetFileName
+			} else {
+				targetFilePath += "/" + targetFileName
+			}
+			
+			fsa.generateFile(targetFilePath, idlFile.messages.compile)
+		}
+	}
+	
+	def compile(List<RPCMessage> messages) {
+		importNamespaces = new TreeSet<String>
+		importNamespaces.add("org.apache.avro.specific.AvroGenerated")
+		
+		val idlFile = messages.get(0).idlFile
+		val namespace = idlFile.name
+		val javaInterface = generateJavaInterface(idlFile.protocolName, messages)
+		
+		return '''
+			«IF !namespace.isNullOrEmpty»
+				package «idlFile.name»;
+					
+			«ENDIF»
+			«IF !importNamespaces.empty»
+				«FOR imprt : importNamespaces»
+					import «imprt»;
+				«ENDFOR»
+				
+			«ENDIF»
+			@AvroGenerated //«currentDateTime» (Avroclipse)
+			«javaInterface»
+		'''
+	}
+	
+	def generateJavaInterface(String name, List<RPCMessage> messages) '''
+		public interface «name» {
+			«FOR message : messages»
+				«message.returnType.compileToJavaType» «message.name»(«message.arguments.compileToArguments»);
+			«ENDFOR»
+		}
+	'''
+	
+	def compileToArguments(EList<Argument> args) {
+		if(args.nullOrEmpty) return null
+		
+		val firstArg = args.get(0);
+		val restArgs = args.filter[it != firstArg]
+		
+		return '''«firstArg.type.nameAndRegisterImport» «firstArg.name»«FOR arg : restArgs», «arg.type.nameAndRegisterImport» «arg.name»«ENDFOR»'''
+	}
+	
+	def compileToJavaType(ReturnTypeLink link) {
+		switch (link) {
+			VoidTypeLink: "void"
+			TypeLink: link.getNameAndRegisterImport
+			ArrayFieldType: link.javaListAndRegisterImport
+			MapFieldType: link.getJavaMapAndRegisterImport
 		}
 	}
 
