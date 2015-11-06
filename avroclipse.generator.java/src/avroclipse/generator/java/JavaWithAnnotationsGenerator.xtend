@@ -22,6 +22,7 @@ import static extension org.eclipse.xtext.EcoreUtil2.*
 import avroclipse.avroIDL.EnumType
 import avroclipse.avroIDL.FixedType
 import avroclipse.avroIDL.ArrayFieldType
+import avroclipse.avroIDL.MapFieldType
 
 class JavaWithAnnotationsGenerator implements IGenerator {
 
@@ -117,11 +118,20 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 		switch (type) {
 			SimpleFieldType: type.type.getNameAndRegisterImport
 			ArrayFieldType: type.getJavaListAndRegisterImport
+			MapFieldType: type.getJavaMapAndRegisterImport
 		}
+	}
+	
+	def getGetJavaMapAndRegisterImport(MapFieldType type) {
+		importNamespaces.add("java.util.Map");
+		
+		return'''
+		Map<String, «type.type.getNameAndRegisterImport»>'''
 	}
 	
 	def getJavaListAndRegisterImport(ArrayFieldType type) {
 		importNamespaces.add("java.util.List");
+		
 		return '''
 			List<«type.type.getNameAndRegisterImport»>'''
 	}

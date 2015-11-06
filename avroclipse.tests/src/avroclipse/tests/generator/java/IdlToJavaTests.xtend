@@ -275,6 +275,45 @@ class IdlToJavaTests {
 	// println(content)
 	}
 	
+	
+	@Test
+	def void testRecordWithMap() {
+		val targetFilePath = 'org/example/map/Record.java'
+
+		val idlFile = '''
+			@namespace("org.example.map")
+			protocol TestProtocol {
+				record Record {
+					map<int> ids;
+					map<Value> values;
+				}
+				
+				record Value {
+					string val;
+				}
+			}
+		'''.parse
+
+		idlFile.eResource.assertNoErrors
+		val fsa = new InMemoryFileSystemAccess()
+
+		idlFile.eResource.doGenerate(fsa)
+
+		val content = fsa.getContentOfFile(targetFilePath)
+
+		assertTrue("File '" + targetFilePath + "' is not generated", !content.nullOrEmpty)
+
+		assertThat(content, containsString("import java.util.Map;"))
+		
+		assertThat(content, containsString("Map<String, Integer> ids;"))
+		assertThat(content, containsString("Map<String, Value> values;"))
+		
+		assertThat(content, containsString("public Map<String, Integer> getIds() {"))
+		assertThat(content, containsString("public void setValues(Map<String, Value> values) {"))
+
+	 println(content)
+	}
+	
 	def static getContentOfFile(InMemoryFileSystemAccess fsa, String relativeFilePath) {
 		if (fsa.allFiles.containsKey(IFileSystemAccess::DEFAULT_OUTPUT + relativeFilePath)) {
 			return fsa.textFiles.get(IFileSystemAccess::DEFAULT_OUTPUT + relativeFilePath).toString
