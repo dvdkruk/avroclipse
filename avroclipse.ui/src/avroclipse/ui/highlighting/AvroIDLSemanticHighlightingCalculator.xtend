@@ -44,12 +44,12 @@ class AvroIDLSemanticHighlightingCalculator implements ISemanticHighlightingCalc
 			this.acceptor = acceptor;
 		}
 
-		override Void caseAnnotation(Annotation object) {
-			val node = getFirstFeatureNode(object, AvroIDLPackage.eINSTANCE.annotation_Name);
-			highlightNode(node, AvroIDLHighlightingConfiguration.ANNOTATION_ID);
+		override Void caseAnnotation(Annotation annotation) {
+			val node = getFirstFeatureNode(annotation, AvroIDLPackage.eINSTANCE.annotation_Name);
+			highlightNode(node, AvroIDLHighlightingConfiguration.ANNOTATION);
 			return null;
 		}
-
+		
 		def highlightNode(INode node, String id) {
 			if (node == null)
 				return;

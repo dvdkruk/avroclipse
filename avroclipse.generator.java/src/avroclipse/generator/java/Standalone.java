@@ -5,7 +5,7 @@ import avroclipse.Registry;
 
 public class Standalone {
 	public static void main(String[] args) {
-		//TODO:
+		new Standalone();
 	}
 	
 	public Standalone() {

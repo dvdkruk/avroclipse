@@ -9,11 +9,11 @@ import org.eclipse.xtext.ui.editor.utils.TextStyle
  * @author Damiaan van der Kruk
  */
 class AvroIDLHighlightingConfiguration extends DefaultHighlightingConfiguration {
-	public static val ANNOTATION_ID = 'Annotation';
+	public static val ANNOTATION = 'Annotation';
 
 	override configure(IHighlightingConfigurationAcceptor acceptor) {
 
-		acceptor.acceptDefaultHighlighting(ANNOTATION_ID, ANNOTATION_ID, Annotation());
+		acceptor.acceptDefaultHighlighting(ANNOTATION, ANNOTATION, Annotation);
 
 		super.configure(acceptor);
 	}

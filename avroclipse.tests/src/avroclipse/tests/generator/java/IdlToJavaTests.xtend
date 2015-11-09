@@ -139,7 +139,7 @@ class IdlToJavaTests {
 
 		assertTrue("File '" + targetFilePath + "' is not generated", !content.nullOrEmpty)
 
-		assertThat(content, containsString("package org.example.tests"))
+		assertThat(content, startsWith("package org.example.tests"))
 
 	// println(content)
 	}
@@ -389,7 +389,7 @@ class IdlToJavaTests {
 		assertThat(content, containsString("Integer getCount();"))
 		assertThat(content, containsString("void setCount(Integer i);"))
 		assertThat(content, containsString("Integer add(Integer a, Integer b);"))
-
+		
 		//println(content)
 	}
 
