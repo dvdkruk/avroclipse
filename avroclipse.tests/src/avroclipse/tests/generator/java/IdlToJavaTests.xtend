@@ -392,6 +392,57 @@ class IdlToJavaTests {
 		
 		//println(content)
 	}
+	
+	@Test
+	def void testMessageWithThrows() {
+		val targetFilePath = 'TestProtocol.java'
+
+		val idlFile = '''
+			protocol TestProtocol {
+				
+				error NoError {}
+				
+				void exception() throws NoError;
+			}
+		'''.parse
+		idlFile.eResource.assertNoErrors
+		val fsa = new InMemoryFileSystemAccess()
+
+		idlFile.eResource.doGenerate(fsa)
+		
+		val content = fsa.getContentOfFile(targetFilePath)
+
+		assertTrue("File '" + targetFilePath + "' is not generated", !content.nullOrEmpty)
+
+		assertThat(content, containsString("void exception() throws NoError;"))
+		
+		//println(content)
+	}
+	
+	@Test
+	def void testMessageNullables() {
+		val targetFilePath = 'TestProtocol.java'
+
+		val idlFile = '''
+			protocol TestProtocol {
+				union{null, string} nullableSomething(union{null, int} nullableInt);
+			}
+		'''.parse
+		idlFile.eResource.assertNoErrors
+		val fsa = new InMemoryFileSystemAccess()
+
+		idlFile.eResource.doGenerate(fsa)
+		
+		val content = fsa.getContentOfFile(targetFilePath)
+
+		assertTrue("File '" + targetFilePath + "' is not generated", !content.nullOrEmpty)
+
+		assertThat(content, containsString("import org.apache.avro.reflect.Union;"))
+		assertThat(content, containsString("@Union({ Void.class, String.class })"))
+		assertThat(content, containsString("String nullableSomething(@Union({ Void.class, Integer.class }) Integer nullableInt);"))
+		
+		//println(content)
+	}
 
 	def static getContentOfFile(InMemoryFileSystemAccess fsa, String relativeFilePath) {
 		if (fsa.allFiles.containsKey(IFileSystemAccess::DEFAULT_OUTPUT + relativeFilePath)) {

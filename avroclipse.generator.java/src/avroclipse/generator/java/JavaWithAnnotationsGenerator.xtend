@@ -1,5 +1,6 @@
 package avroclipse.generator.java
 
+import avroclipse.avroIDL.Argument
 import avroclipse.avroIDL.ArrayFieldType
 import avroclipse.avroIDL.AvroIDLFile
 import avroclipse.avroIDL.CustomTypeLink
@@ -12,7 +13,6 @@ import avroclipse.avroIDL.PrimativeTypeLink
 import avroclipse.avroIDL.RPCMessage
 import avroclipse.avroIDL.RecordType
 import avroclipse.avroIDL.ReturnTypeLink
-import avroclipse.avroIDL.SimpleFieldType
 import avroclipse.avroIDL.Type
 import avroclipse.avroIDL.TypeDef
 import avroclipse.avroIDL.TypeLink
@@ -23,14 +23,13 @@ import java.util.Date
 import java.util.List
 import java.util.Set
 import java.util.TreeSet
+import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
 
 import static extension org.eclipse.xtext.EcoreUtil2.*
-import org.eclipse.emf.common.util.EList
-import avroclipse.avroIDL.Argument
 
 class JavaWithAnnotationsGenerator implements IGenerator {
 
@@ -40,32 +39,32 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 	override doGenerate(Resource input, IFileSystemAccess fsa) {
 		idlFile = input.contents.get(0) as AvroIDLFile
 
-		for (typeDef : idlFile.types) { //generate classes
+		for (typeDef : idlFile.types) { // generate classes
 			fsa.generateFile(typeDef.targetFilePath, typeDef.compile)
 		}
-		if(!idlFile.messages.empty) { //generate interface
+		if (!idlFile.messages.empty) { // generate interface
 			fsa.generateFile(idlFile.targetProtocolFilePath, idlFile.messages.compile)
 		}
 	}
-	
+
 	def String getTargetProtocolFilePath(AvroIDLFile idlFile) {
 		var targetFileName = idlFile.protocolName + ".java"
-		
-		if(!idlFile.name.isNullOrEmpty) {
+
+		if (!idlFile.name.isNullOrEmpty) {
 			targetFileName = idlFile.namespacePath + "/" + targetFileName
 		}
-		
+
 		return targetFileName
 	}
-	
+
 	def compile(List<RPCMessage> messages) {
 		importNamespaces = new TreeSet<String>
 		importNamespaces.add("org.apache.avro.specific.AvroGenerated")
-		
+
 		val idlFile = messages.get(0).idlFile
 		val namespace = idlFile.name
 		val javaInterface = generateJavaInterface(idlFile.protocolName, messages)
-		
+
 		return '''
 			«IF !namespace.isNullOrEmpty»
 				package «idlFile.name»;
@@ -77,35 +76,82 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 				«ENDFOR»
 				
 			«ENDIF»
-			@AvroGenerated //«currentDateTime» (Avroclipse)
+			@AvroGenerated // «currentDateTime» (Avroclipse)
 			«javaInterface»
 		'''
 	}
-	
+
 	def generateJavaInterface(String name, List<RPCMessage> messages) '''
 		public interface «name» {
 			«FOR message : messages»
-				«message.returnType.compileToJavaType» «message.name»(«message.arguments.compileToArguments»);
+				«message.returnType.compileToJavaType(true)» «message.name»(«message.arguments.compileToArguments»)«IF message.error != null» throws «message.error.nameAndRegisterImport»«ENDIF»;
+				
 			«ENDFOR»
 		}
 	'''
-	
+
 	def compileToArguments(EList<Argument> args) {
 		if(args.nullOrEmpty) return null
-		
-		val firstArg = args.get(0);
-		val restArgs = args.filter[it != firstArg]
-		
-		return '''«firstArg.type.nameAndRegisterImport» «firstArg.name»«FOR arg : restArgs», «arg.type.nameAndRegisterImport» «arg.name»«ENDFOR»'''
+
+		val firstArg = args.get(0)
+		val restArgs = args.subList(1, args.size)
+
+		return '''«firstArg.type.compileToJavaType» «firstArg.name»«FOR arg : restArgs», «arg.type.compileToJavaType» «arg.name»«ENDFOR»'''
+	}
+
+	def compileToJavaType(ReturnTypeLink link) {
+		compileToJavaType(link, false)
 	}
 	
-	def compileToJavaType(ReturnTypeLink link) {
+	def compileToJavaType(ReturnTypeLink link, boolean isMessage) {
 		switch (link) {
 			VoidTypeLink: "void"
 			TypeLink: link.getNameAndRegisterImport
 			ArrayFieldType: link.javaListAndRegisterImport
 			MapFieldType: link.getJavaMapAndRegisterImport
+			UnionFieldType: link.getJavaUnionAndRegisterImport(isMessage)
 		}
+	}
+	
+	def getJavaUnionAndRegisterImport(UnionFieldType union) {
+		getJavaUnionAndRegisterImport(union, false)
+	}
+
+	def getJavaUnionAndRegisterImport(UnionFieldType union, boolean isMessage) {
+		importNamespaces.add("org.apache.avro.reflect.Union")
+
+		val firstType = union.types.get(0)
+		val otherTypes = union.types.subList(1, union.types.size)
+		var javaType = "Object"
+		
+		if(union.types.size == 2 && union.isNullable) {
+			if(firstType instanceof PrimativeTypeLink && (firstType as PrimativeTypeLink).target.equals("null")) {
+				javaType = otherTypes.get(0).nameAndRegisterImport
+			} else {
+				javaType = firstType.nameAndRegisterImport
+			}
+		}
+		
+		val unionAnnotation = '''@Union({ «firstType.messageUnionTypeName».class«FOR type : otherTypes», «type.messageUnionTypeName».class«ENDFOR» })'''
+		
+		if(isMessage) {
+			return '''
+			«unionAnnotation»
+			«javaType»'''
+		} else {
+			return '''«unionAnnotation» «javaType»'''
+		}
+	}
+	
+	def getMessageUnionTypeName(TypeLink link) {
+		val pLink = link as PrimativeTypeLink
+		if(pLink != null && pLink.target.equals("null")) return "Void";
+		return link.nameAndRegisterImport
+	}
+
+	def getIsNullable(UnionFieldType union) {
+		union.types.findFirst[it instanceof PrimativeTypeLink && (it as PrimativeTypeLink).target.equals("null")] !=
+			null
 	}
 
 	def compile(TypeDef typeDef) {
@@ -124,7 +170,7 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 				«ENDFOR»
 				
 			«ENDIF»
-			@AvroGenerated //«currentDateTime» (Avroclipse)
+			@AvroGenerated // «currentDateTime» (Avroclipse)
 			«javaClass»
 		'''
 	}
@@ -191,11 +237,11 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 			«ENDFOR»
 		}
 	'''
-	
+
 	def getIsNullableAndRegisterImport(FieldType type) {
-		if(type instanceof UnionFieldType) {
-			val unionFieldType = type as UnionFieldType 
-			if(unionFieldType.types.filter(PrimativeTypeLink).findFirst[target.equals("null")] != null) {
+		if (type instanceof UnionFieldType) {
+			val unionFieldType = type as UnionFieldType
+			if (unionFieldType.types.filter(PrimativeTypeLink).findFirst[target.equals("null")] != null) {
 				importNamespaces.add("org.apache.avro.reflect.Nullable")
 				return true;
 			}
@@ -205,11 +251,13 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 
 	def getNameAndRegisterImport(FieldType type) {
 		switch (type) {
-			SimpleFieldType: type.type.getNameAndRegisterImport
+			TypeLink: type.nameAndRegisterImport
 			ArrayFieldType: type.getJavaListAndRegisterImport
 			MapFieldType: type.getJavaMapAndRegisterImport
-			UnionFieldType: type.types.findFirst[!(it instanceof PrimativeTypeLink && (it as PrimativeTypeLink).target.equals("null"))].nameAndRegisterImport
-		} //TODO: union field now support only two types. It should support many types.
+			UnionFieldType: type.types.findFirst [
+				!(it instanceof PrimativeTypeLink && (it as PrimativeTypeLink).target.equals("null"))
+			].nameAndRegisterImport
+		} // TODO: union field now support only two types. It should support many types.
 	}
 
 	def getGetJavaMapAndRegisterImport(MapFieldType type) {

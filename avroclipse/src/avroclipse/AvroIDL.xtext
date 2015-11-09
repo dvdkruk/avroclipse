@@ -19,15 +19,15 @@ Import:
 	'import' type=ImportType importURI=STRING ';';
 	
 RPCMessage:
-	returnType=ReturnTypeLink name=EscapableId '(' (arguments+=Argument (',' arguments+=Argument)*)* ')' ('throws'
-	error=[ErrorType|QN])? (oneway?='oneway')? ';';
+	returnType=ReturnTypeLink name=EscapableId '(' (arguments+=Argument (',' arguments+=Argument)*)? ')' (oneway?='oneway'|'throws'
+	error=[ErrorType|QN])? ';';
 
 Argument:
-	type=TypeLink name=EscapableId ('=' default=Value)?;
+	type=FieldType name=EscapableId ('=' default=Value)?;
 
 ReturnTypeLink:
-	VoidTypeLink | TypeLink | ArrayFieldType | MapFieldType;
-
+	VoidTypeLink | FieldType;
+	
 VoidTypeLink:
 	target='void';
 
@@ -51,10 +51,7 @@ Field:
 	annotations+=Annotation* type=FieldType nameAnnotations+=Annotation* name=EscapableId ('=' default=Value)? ';';
 
 FieldType:
-	SimpleFieldType | UnionFieldType | ArrayFieldType | MapFieldType;
-
-SimpleFieldType:
-	type=TypeLink;
+	 UnionFieldType | ArrayFieldType | MapFieldType | TypeLink;
 	
 UnionFieldType:
 	'union' '{' types+=TypeLink (',' types+=TypeLink)* '}';
