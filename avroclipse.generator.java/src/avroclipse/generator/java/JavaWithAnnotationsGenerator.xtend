@@ -40,23 +40,22 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 	override doGenerate(Resource input, IFileSystemAccess fsa) {
 		idlFile = input.contents.get(0) as AvroIDLFile
 
-		var String targetFilePath
 		for (typeDef : idlFile.types) { //generate classes
-			targetFilePath = typeDef.targetFilePath
-
-			fsa.generateFile(targetFilePath, typeDef.compile)
+			fsa.generateFile(typeDef.targetFilePath, typeDef.compile)
 		}
 		if(!idlFile.messages.empty) { //generate interface
-			targetFilePath = idlFile.namespacePath
-			val targetFileName = idlFile.protocolName + ".java"
-			if(targetFilePath.isNullOrEmpty) {
-				targetFilePath = targetFileName
-			} else {
-				targetFilePath += "/" + targetFileName
-			}
-			
-			fsa.generateFile(targetFilePath, idlFile.messages.compile)
+			fsa.generateFile(idlFile.targetProtocolFilePath, idlFile.messages.compile)
 		}
+	}
+	
+	def String getTargetProtocolFilePath(AvroIDLFile idlFile) {
+		var targetFileName = idlFile.protocolName + ".java"
+		
+		if(!idlFile.name.isNullOrEmpty) {
+			targetFileName = idlFile.namespacePath + "/" + targetFileName
+		}
+		
+		return targetFileName
 	}
 	
 	def compile(List<RPCMessage> messages) {
