@@ -1,6 +1,0 @@
-@namespace("org.example.tests")
-protocol TestProtocol {
-	record Record0 {
-		int id;
-	}
-}

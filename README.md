@@ -1,7 +1,7 @@
 # Avroclipse [![Build Status](https://travis-ci.org/dvdkruk/avroclipse.svg)](https://travis-ci.org/dvdkruk/avroclipse)
 An Eclipse editor plugin for defining [Apache Avro IDL](https://avro.apache.org/docs/1.7.7/idl.html) files.
 
-Current version: [0.0.1](https://github.com/dvdkruk/avroclipse/releases/tag/0.0.1) (0.0.2 in dev)
+Current version: [0.0.2](https://github.com/dvdkruk/avroclipse/releases/tag/0.0.2) (0.0.3 in dev)
 
 Used techniques/tools:
 - [Eclipse 4.5.1 (Mars)](http://www.eclipse.org/home/index.php)
@@ -14,7 +14,7 @@ License: [Apache License, Version 2.0](https://github.com/dvdkruk/avroclipse/blo
 ## Install Avroclipse
 The easiest way to install Avroclipse is to use the update site:
 ````
-http://dvdkruk.github.io/avroclipse/updatesite/latest/
+http://dvdkruk.github.io/avroclipse/updatesite/latest
 ````
 To add the Avroclipse update site:
 

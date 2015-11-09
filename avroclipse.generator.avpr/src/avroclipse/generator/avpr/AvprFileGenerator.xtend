@@ -16,7 +16,7 @@ class AvprFileGenerator implements IGenerator {
 	override doGenerate(Resource input, IFileSystemAccess fsa) {
 		if (input != null && input.contents.size > 0) {
 			
-			var filePath = getOSURI(input)
+			var filePath = input.toOSURI
 			val parser = new Idl(new File(filePath))
 			val p = parser.CompilationUnit
 			
@@ -24,7 +24,7 @@ class AvprFileGenerator implements IGenerator {
 		}
 	}
 	
-	def static getOSURI(Resource input) {
+	def static toOSURI(Resource input) {
 		var filePath = input.getURI.toPlatformString(true)
 		
 		if(Helper.isEclipseRunning) {
