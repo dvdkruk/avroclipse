@@ -6,13 +6,14 @@ import avroclipse.Registry;
 public class Standalone {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		new Standalone();
+		
 	}
 
 	public Standalone() {
 		AvroIDLStandaloneSetup.doSetup();
 		
-		Registry.INSTANCE.getGenerators().add(new GeneratorExtension());
+		Registry.INSTANCE.getGenerators().add(new AvprFileGenerator());
 	}
 
 }

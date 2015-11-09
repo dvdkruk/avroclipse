@@ -4,7 +4,7 @@
    <extension
          point="avroclipse.generator">
       <generator
-            class="avroclipse.generator.avpr.GeneratorExtension">
+            class="avroclipse.generator.avpr.AvprFileGenerator">
       </generator>
    </extension>
 
