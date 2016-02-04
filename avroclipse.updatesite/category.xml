@@ -3,10 +3,10 @@
    <feature url="features/avroclipse.sdk_0.0.0.jar" id="avroclipse.sdk" version="0.0.0">
       <category name="avroclipse"/>
    </feature>
-   <bundle id="avroclipse.generator.avpr" version="0.0.3.qualifier">
+   <bundle id="avroclipse.generator.avpr" version="0.0.3">
       <category name="avroclipse"/>
    </bundle>
-   <bundle id="avroclipse.generator.java" version="0.0.3.qualifier">
+   <bundle id="avroclipse.generator.java" version="0.0.3">
       <category name="avroclipse"/>
    </bundle>
    <category-def name="avroclipse" label="Avroclipse"/>

@@ -7,7 +7,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <relativePath>../avroclipse.releng/pom.xml</relativePath>
     <groupId>avroclipse</groupId>
     <artifactId>parent</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.3</version>
   </parent>
 
   <artifactId>avroclipse.sdk</artifactId>
