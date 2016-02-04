@@ -9,7 +9,7 @@ Require-Bundle: avroclipse,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.xtend.lib,
  org.eclipse.xtend.lib.macro
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-Vendor: Avroclipse
 Bundle-ClassPath: .,
  libs/avro-tools-1.7.7.jar

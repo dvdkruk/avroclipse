@@ -48,7 +48,7 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 	}
 
 	def String getTargetProtocolFilePath(AvroIDLFile idlFile) {
-		var targetFileName = idlFile.protocolName + ".java"
+		var targetFileName = idlFile.protocol.name + ".java"
 
 		if (!idlFile.name.isNullOrEmpty) {
 			targetFileName = idlFile.namespacePath + "/" + targetFileName
@@ -63,7 +63,7 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 
 		val idlFile = messages.get(0).idlFile
 		val namespace = idlFile.name
-		val javaInterface = generateJavaInterface(idlFile.protocolName, messages)
+		val javaInterface = generateJavaInterface(idlFile.protocol.name, messages)
 
 		return '''
 			«IF !namespace.isNullOrEmpty»

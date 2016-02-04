@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Avroclipse Generator Java
 Bundle-SymbolicName: avroclipse.generator.java;singleton:=true
 Bundle-Version: 0.0.3.qualifier
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Require-Bundle: avroclipse;bundle-version="0.0.2",
  com.google.guava,
  org.eclipse.xtext.xbase.lib,

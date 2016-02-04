@@ -10,10 +10,13 @@ AvroIDLFile:
 		(=> '@namespace' '(' name=STRING ')')? & //TODO: must be in QN format (validation) '-' '_' and ' ' are not allowed
 		(annotations+=Annotation)*
 	)
-	('protocol' protocolName=EscapableId '{'
+	('protocol' protocol=Protocol '{'
 		imports+=Import*
 		(types+=TypeDef | messages+=RPCMessage)*
 	'}')?;
+
+Protocol:
+	name=EscapableId;
 	
 Import:
 	'import' type=ImportType importURI=STRING ';';
