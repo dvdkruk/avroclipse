@@ -9,6 +9,7 @@ import org.eclipse.xtext.junit4.XtextRunner
 import org.eclipse.xtext.junit4.validation.ValidationTestHelper
 import org.junit.Test
 import org.junit.runner.RunWith
+import java.io.File
 
 /**
  * @author Damiaan van der Kruk
@@ -30,7 +31,7 @@ class IdlTest {
 	}
 	
 	def getRes() {
-		getResource(URI.createURI(PATH_BASE + "foo.avdl"), true) //needed for reference
-		getResource(URI.createURI(PATH_BASE + FILE_NAME), true)
+		getResource(URI.createURI(new File(PATH_BASE + "foo.avdl").toURI().toString()), true) //needed for reference
+		getResource(URI.createURI(new File(PATH_BASE + FILE_NAME).toURI().toString()), true)
 	}
 }
