@@ -4,10 +4,10 @@
     <properties size='0'>
     </properties>
     <children size='5'>
-        <child location='0.0.1'/>
-        <child location='0.0.2'/>
-        <child location='0.0.3'/>
-        <child location='0.0.4'/>
-        <child location='0.0.5'/>
+        <child location='../releases/0.0.1'/>
+        <child location='../releases/0.0.2'/>
+        <child location='../releases/0.0.3'/>
+        <child location='../releases/0.0.4'/>
+        <child location='../releases/0.0.5'/>
     </children>
 </repository>
