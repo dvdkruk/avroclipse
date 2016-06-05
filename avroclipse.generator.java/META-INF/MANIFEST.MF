@@ -6,9 +6,12 @@ Bundle-Version: 0.0.5.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Require-Bundle: avroclipse;bundle-version="0.0.2",
  com.google.guava,
- org.eclipse.xtext.xbase.lib,
  org.eclipse.xtend.lib,
- org.eclipse.xtend.lib.macro
+ org.eclipse.xtend.lib.macro,
+ org.eclipse.emf.common,
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext,
+ org.eclipse.xtext.generator
 Export-Package: avroclipse.generator.java
 Bundle-Vendor: Avroclipse
 
