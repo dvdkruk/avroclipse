@@ -18,7 +18,7 @@ Drag this [![Drag to your running Eclipse workspace to install Avroclipse](https
 ### Update Site
 Install Avroclipse using the folloing the update site URL:
 ````
-http://dvdkruk.github.io/avroclipse/updatesite/latest
+http://dvdkruk.github.io/avroclipse/updatesite
 ````
 To add the Avroclipse update site:
 
