@@ -1,7 +1,7 @@
 # Avroclipse [![Drag to your running Eclipse workspace to install Avroclipse](https://marketplace.eclipse.org/sites/all/themes/solstice/_themes/solstice_marketplace/public/images/btn-install.png "Drag to your running Eclipse workspace to install Avroclipse")](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=2600501) [![Build Status](https://travis-ci.org/dvdkruk/avroclipse.svg)](https://travis-ci.org/dvdkruk/avroclipse)
 An Eclipse editor plugin for defining [Apache Avro IDL](https://avro.apache.org/docs/1.7.7/idl.html) files. 
 
-Current version: [0.0.4](https://github.com/dvdkruk/avroclipse/releases/tag/0.0.4) (0.0.5 in dev)
+Current version: [0.0.5](https://github.com/dvdkruk/avroclipse/releases/tag/0.0.5)
 
 Used techniques/tools:
 - [Eclipse 4.5.1 (Mars)](http://www.eclipse.org/home/index.php)
@@ -12,9 +12,13 @@ Used techniques/tools:
 License: [Apache License, Version 2.0](https://github.com/dvdkruk/avroclipse/blob/master/LICENSE)
 
 ## Install Avroclipse
-The easiest way to install Avroclipse is to use the update site:
+### Marketplace
+Drag this [![Drag to your running Eclipse workspace to install Avroclipse](https://marketplace.eclipse.org/sites/all/themes/solstice/_themes/solstice_marketplace/public/images/btn-install.png "Drag to your running Eclipse workspace to install Avroclipse")](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=2600501) button to your running Eclipse workspace or search for *Avroclipse* in the Eclipse Marketplace.
+
+### Update Site
+Install Avroclipse using the folloing the update site URL:
 ````
-http://dvdkruk.github.io/avroclipse/updatesite/latest
+http://dvdkruk.github.io/avroclipse/updatesite/releases
 ````
 To add the Avroclipse update site:
 
@@ -24,6 +28,7 @@ To add the Avroclipse update site:
 4. Select the Avoclipse checkbox and click **Finish**.
 5. After installation and restarting Eclipse, Avroclipse is ready to use. Avroclipse editor will automatically be shown when creating or opening a file with the *".avdl"* extension.
 
+### Zip Archive (Offline)
 Another way to install Avroclipse is to use the Avroclipse updatesite zip file. [Click here](https://github.com/dvdkruk/avroclipse/releases) how to do this.
 
 ## Features
