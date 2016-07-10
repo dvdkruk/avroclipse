@@ -23,5 +23,6 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: avroclipse.ui.quickfix,
  avroclipse.ui.contentassist,
  avroclipse.ui.internal,
- avroclipse.ui.contentassist.antlr
+ avroclipse.ui.contentassist.antlr,
+ avroclipse.ui.contentassist.antlr.internal
 Bundle-Activator: avroclipse.ui.internal.AvroIDLActivator

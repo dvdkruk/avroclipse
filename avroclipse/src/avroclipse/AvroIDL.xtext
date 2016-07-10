@@ -54,7 +54,7 @@ Field:
 	annotations+=Annotation* type=FieldType nameAnnotations+=Annotation* name=EscapableId ('=' default=Value)? ';';
 
 FieldType:
-	 UnionFieldType | ArrayFieldType | MapFieldType | TypeLink;
+	 UnionFieldType | TypeLink;
 	
 UnionFieldType:
 	'union' '{' types+=TypeLink (',' types+=TypeLink)* '}';
@@ -66,7 +66,7 @@ MapFieldType:
 	'map' '<' annotation=Annotation? type=TypeLink '>';
 
 TypeLink:
-	PrimativeTypeLink | CustomTypeLink;
+	PrimativeTypeLink | ArrayFieldType | MapFieldType |CustomTypeLink ;
 
 PrimativeTypeLink:
 	target=('int' | 'long' | 'string' | 'boolean' | 'float' | 'double' | 'null' | 'bytes');

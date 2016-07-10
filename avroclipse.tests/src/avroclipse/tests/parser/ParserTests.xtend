@@ -10,6 +10,9 @@ import org.eclipse.xtext.junit4.validation.ValidationTestHelper
 import org.junit.Test
 import org.junit.runner.RunWith
 
+import static org.hamcrest.CoreMatchers.*
+import static org.junit.Assert.*
+
 /**
  * @author Damiaan van der Kruk
  */
@@ -19,6 +22,45 @@ class ParserTests {
 	
 	@Inject extension ParseHelper<AvroIDLFile>
 	@Inject extension ValidationTestHelper
+	
+	@Test
+	def testNestedUnion() {
+		val idlFile = '''
+			protocol ExampleInvalidProtocol {
+				record NestedUnion {
+					union{null, union{int, string}} nestedUnion = null;
+				}
+			}
+		'''.parse
+		
+		assertTrue(idlFile.eResource.errors.size > 0)
+	}
+	
+	@Test
+	def testUnionWithMap() {
+		val idlFile = '''
+			protocol ExampleProtocol {
+				record UnionWithArray {
+					union{null, map<string>} nullableStringMap = null;
+				}
+			}
+		'''.parse
+		
+		idlFile.assertNoErrors
+	}
+	
+	@Test
+	def testUnionWithArray() {
+		val idlFile = '''
+			protocol ExampleProtocol {
+				record UnionWithArray {
+					union{null, array<string>} nullableStringArray = null;
+				}
+			}
+		'''.parse
+		
+		idlFile.assertNoErrors
+	}
 
 	@Test
 	def testArrayArgumentType() {

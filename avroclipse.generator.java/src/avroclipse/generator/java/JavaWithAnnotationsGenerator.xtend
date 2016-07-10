@@ -65,8 +65,7 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 		val namespace = idlFile.name
 		val javaInterface = generateJavaInterface(idlFile.protocol.name, messages)
 
-		return '''
-			«IF !namespace.isNullOrEmpty»
+		'''«IF !namespace.isNullOrEmpty»
 				package «idlFile.name»;
 					
 			«ENDIF»
@@ -91,269 +90,272 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 	'''
 
 	def compileToArguments(EList<Argument> args) {
-		if(args.nullOrEmpty) return null
+		if (args.nullOrEmpty) {
+			return null
+		}
 
 		val firstArg = args.get(0)
+		val size = args.size
 		val restArgs = args.subList(1,
-			args.
-				size)
+			size)
+		return '''«firstArg.type.compileToJavaType» «firstArg.name»«FOR arg : restArgs», «arg.type.compileToJavaType» «arg.name»«ENDFOR»'''
+	}
 
-				return '''«firstArg.type.compileToJavaType» «firstArg.name»«FOR arg : restArgs», «arg.type.compileToJavaType» «arg.name»«ENDFOR»'''
-			}
+	def compileToJavaType(ReturnTypeLink link) {
+		compileToJavaType(link, false)
+	}
 
-			def compileToJavaType(ReturnTypeLink link) {
-				compileToJavaType(link, false)
-			}
-
-			def compileToJavaType(ReturnTypeLink link, boolean isMessage) {
-				switch (link) {
-					VoidTypeLink: "void"
-					TypeLink: link.getNameAndRegisterImport
-					ArrayFieldType: link.javaListAndRegisterImport
-					MapFieldType: link.getJavaMapAndRegisterImport
-					UnionFieldType: link.getJavaUnionAndRegisterImport(isMessage)
-				}
-			}
-
-			def getJavaUnionAndRegisterImport(UnionFieldType union) {
-				getJavaUnionAndRegisterImport(union, false)
-			}
-
-			def getJavaUnionAndRegisterImport(UnionFieldType union, boolean isMessage) {
-				importNamespaces.add("org.apache.avro.reflect.Union")
-
-				val firstType = union.types.get(0)
-				val otherTypes = union.types.subList(1, union.types.size)
-				var javaType = "Object"
-
-				if (union.types.size == 2 && union.isNullable) {
-					if (firstType instanceof PrimativeTypeLink &&
-						(firstType as PrimativeTypeLink).target.equals("null")) {
-						javaType = otherTypes.get(0).nameAndRegisterImport
-					} else {
-						javaType = firstType.nameAndRegisterImport
-					}
-				}
-
-				val unionAnnotation = '''@Union({ «firstType.messageUnionTypeName».class«FOR type : otherTypes», «type.messageUnionTypeName».class«ENDFOR» })'''
-
-				if (isMessage) {
-					return '''
-					«unionAnnotation»
-					«javaType»'''
-				} else {
-					return '''«unionAnnotation» «javaType»'''
-				}
-			}
-
-			def getMessageUnionTypeName(TypeLink link) {
-				val pLink = link as PrimativeTypeLink
-				if(pLink != null && pLink.target.equals("null")) return "Void";
-				return link.nameAndRegisterImport
-			}
-
-			def getIsNullable(UnionFieldType union) {
-				union.types.findFirst [
-					it instanceof PrimativeTypeLink && (it as PrimativeTypeLink).target.equals("null")
-				] != null
-			}
-
-			def compile(TypeDef typeDef) {
-				importNamespaces = new TreeSet<String>
-				importNamespaces.add("org.apache.avro.specific.AvroGenerated")
-				val namespace = typeDef.namespace
-				val javaClass = typeDef.type.compile
-				return '''
-					«IF !namespace.isNullOrEmpty»
-						package «namespace»;
-							
-					«ENDIF»
-					«IF !importNamespaces.empty»
-						«FOR imprt : importNamespaces»
-							import «imprt»;
-						«ENDFOR»
-						
-					«ENDIF»
-					@AvroGenerated // «currentDateTime» (Avroclipse)
-					«javaClass»
-				'''
-			}
-
-			def compile(Type type) {
-				switch (type) {
-					RecordType: type.compile
-					EnumType: type.compile
-					FixedType: type.compile
-					ErrorType: type.compile
-				}
-			}
-
-			def compile(ErrorType type) '''
-				public class «type.name» extends Exception {
-					
-				}
-			''' // TODO: class/exception body
-
-			def compile(FixedType type) {
-				importNamespaces.add("org.apache.avro.specific.SpecificFixed")
-				importNamespaces.add("org.apache.avro.specific.FixedSize")
-
-				return '''
-					@FixedSize(«type.size»)
-					public class «type.name» extends SpecificFixed {
-						public «type.name»() {
-							super();
-						}
-						
-						public «type.name»(byte[] bytes) {
-							super(bytes);
-						}
-					}
-				'''
-			}
-
-			def compile(EnumType type) '''
-				public enum «type.name» {
-					«FOR literal : type.literals»
-						«literal»,
-					«ENDFOR»	
-				}
-			'''
-
-			def compile(RecordType type) '''
-				public class «type.name» {
-					«FOR field : type.fields»
-						«IF field.type.isNullableAndRegisterImport»
-							
-							@Nullable
-						«ENDIF»
-						«field.type.nameAndRegisterImport» «field.name»;
-					«ENDFOR»
-					«FOR field : type.fields»
-						
-						public «field.type.nameAndRegisterImport» get«field.name.capitalize»() {
-							return this.«field.name»;
-						}
-						
-						public void set«field.name.capitalize»(«field.type.nameAndRegisterImport» «field.name») {
-							this.«field.name» = «field.name»;
-						}
-					«ENDFOR»
-				}
-			'''
-
-			def getIsNullableAndRegisterImport(FieldType type) {
-				if (type instanceof UnionFieldType) {
-					val unionFieldType = type as UnionFieldType
-					if (unionFieldType.types.filter(PrimativeTypeLink).findFirst[target.equals("null")] != null) {
-						importNamespaces.add("org.apache.avro.reflect.Nullable")
-						return true;
-					}
-				}
-				return false;
-			}
-
-			def getNameAndRegisterImport(FieldType type) {
-				switch (type) {
-					TypeLink:
-						type.nameAndRegisterImport
-					ArrayFieldType:
-						type.getJavaListAndRegisterImport
-					MapFieldType:
-						type.getJavaMapAndRegisterImport
-					UnionFieldType:
-						type.types.findFirst [
-							!(it instanceof PrimativeTypeLink && (it as PrimativeTypeLink).target.equals("null"))
-						].nameAndRegisterImport
-				} // TODO: union field now support only two types. It should support many types.
-			}
-
-			def getGetJavaMapAndRegisterImport(MapFieldType type) {
-				importNamespaces.add("java.util.Map");
-
-				return '''Map<String, «type.type.getNameAndRegisterImport»>'''
-			}
-
-			def getJavaListAndRegisterImport(ArrayFieldType type) {
-				importNamespaces.add("java.util.List");
-
-				return '''List<«type.type.getNameAndRegisterImport»>'''
-			}
-
-			def getNameAndRegisterImport(TypeLink link) {
-				switch (link) {
-					PrimativeTypeLink: link.javaType
-					CustomTypeLink: link.target.nameAndRegisterImport
-				}
-			}
-
-			def getNameAndRegisterImport(Type type) {
-				importNamespaces.addImportFor(type)
-
-				return type.name
-			}
-
-			def addImportFor(Set<String> strings, Type type) {
-				val otherIdlFile = type.idlFile
-
-				if (otherIdlFile != idlFile && !otherIdlFile.name.equals(idlFile.name)) {
-					importNamespaces.add(otherIdlFile.name + "." + type.name)
-				}
-			}
-
-			def static getIdlFile(EObject object) {
-				if(object instanceof AvroIDLFile) return object as AvroIDLFile
-
-				return object.getContainerOfType(AvroIDLFile)
-			}
-
-			/**
-			 * Mapped as in @see https://avro.apache.org/docs/1.7.6/api/java/org/apache/avro/reflect/package-summary.html
-			 */
-			def static getJavaType(PrimativeTypeLink link) {
-				val javaType = switch (link.target) {
-					case "string": "String"
-					case "int": "Integer"
-					case "long": "Long"
-					case "boolean": "Boolean"
-					case "float": "Float"
-					case "double": "Double"
-					case "bytes": "byte[]"
-				}
-
-				return javaType
-			}
-
-			def static String getTargetFilePath(TypeDef typeDef) {
-				var path = typeDef.namespacePath
-
-				if (path.nullOrEmpty) {
-					path = typeDef.type.name
-				} else {
-					path += '/' + typeDef.type.name
-				}
-				path + '.java'
-			}
-
-			def static getNamespace(EObject object) {
-				return object.idlFile.name
-			}
-
-			def static getNamespacePath(EObject object) {
-				val namespace = object.namespace
-
-				if(namespace.isNullOrEmpty) return null
-				return namespace.replace('.', '/')
-			}
-
-			def static currentDateTime() {
-				val dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-				val date = new Date();
-				dateFormat.format(date)
-			}
-
-			def static String capitalize(String line) {
-				Character.toUpperCase(line.charAt(0)) + line.substring(1);
-			}
-
+	def compileToJavaType(ReturnTypeLink link, boolean isMessage) {
+		switch (link) {
+			VoidTypeLink: "void"
+			TypeLink: link.getNameAndRegisterImport
+			// ArrayFieldType: link.javaListAndRegisterImport
+			// MapFieldType: link.getJavaMapAndRegisterImport
+			UnionFieldType: link.getJavaUnionAndRegisterImport(isMessage)
 		}
+	}
+
+	def getJavaUnionAndRegisterImport(UnionFieldType union) {
+		getJavaUnionAndRegisterImport(union, false)
+	}
+
+	def getJavaUnionAndRegisterImport(UnionFieldType union, boolean isMessage) {
+		importNamespaces.add("org.apache.avro.reflect.Union")
+
+		val firstType = union.types.get(0)
+		val otherTypes = union.types.subList(1, union.types.size)
+		var javaType = "Object"
+
+		if (union.types.size == 2 && union.isNullable) {
+			if (firstType instanceof PrimativeTypeLink && (firstType as PrimativeTypeLink).target.equals("null")) {
+				javaType = otherTypes.get(0).nameAndRegisterImport
+			} else {
+				javaType = firstType.
+					nameAndRegisterImport
+			}
+		}
+
+		val unionAnnotation = '''@Union({ «firstType.messageUnionTypeName».class«FOR type : otherTypes», «type.messageUnionTypeName».class«ENDFOR» })'''
+
+		if (isMessage) {
+			return '''
+			«unionAnnotation»
+			«javaType»'''
+		} else {
+			return '''«unionAnnotation» «javaType»'''
+		}
+	}
+
+	def getMessageUnionTypeName(TypeLink link) {
+		val pLink = link as PrimativeTypeLink
+		if(pLink != null && pLink.target.equals("null")) return "Void";
+		return link.nameAndRegisterImport
+	}
+
+	def getIsNullable(UnionFieldType union) {
+		union.types.findFirst [
+			it instanceof PrimativeTypeLink && (it as PrimativeTypeLink).target.equals("null")
+		] != null
+	}
+
+	def compile(TypeDef typeDef) {
+		importNamespaces = new TreeSet<String>
+		importNamespaces.add("org.apache.avro.specific.AvroGenerated")
+		val namespace = typeDef.namespace
+		val javaClass = typeDef.type.compile
+		'''
+			«IF !namespace.isNullOrEmpty»
+				package «namespace»;
+					
+			«ENDIF»
+			«IF !importNamespaces.empty»
+				«FOR imprt : importNamespaces»
+					import «imprt»;
+				«ENDFOR»
+				
+			«ENDIF»
+			@AvroGenerated // «currentDateTime» (Avroclipse)
+			«javaClass»
+		'''
+	}
+
+	def compile(Type type) {
+		switch (type) {
+			RecordType: type.compile
+			EnumType: type.compile
+			FixedType: type.compile
+			ErrorType: type.compile
+		}
+	}
+
+	def compile(ErrorType type) '''
+		public class «type.name» extends Exception {
+			
+		}
+	''' // TODO: class/exception body
+
+	def compile(FixedType type) {
+		importNamespaces.add("org.apache.avro.specific.SpecificFixed")
+		importNamespaces.add("org.apache.avro.specific.FixedSize")
+
+		'''
+			@FixedSize(«type.size»)
+			public class «type.name» extends SpecificFixed {
+				public «type.name»() {
+					super();
+				}
+				
+				public «type.name»(byte[] bytes) {
+					super(bytes);
+				}
+			}
+		'''
+	}
+
+	def compile(EnumType type) '''
+		public enum «type.name» {
+			«FOR literal : type.literals»
+				«literal»,
+			«ENDFOR»	
+		}
+	'''
+
+	def compile(RecordType type) '''
+		public class «type.name» {
+			«FOR field : type.fields»
+				«IF field.type.isNullableAndRegisterImport»
+					
+					@Nullable
+				«ENDIF»
+				«field.type.nameAndRegisterImport» «field.name»;
+			«ENDFOR»
+			«FOR field : type.fields»
+				
+				public «field.type.nameAndRegisterImport» get«field.name.capitalize»() {
+					return this.«field.name»;
+				}
+				
+				public void set«field.name.capitalize»(«field.type.nameAndRegisterImport» «field.name») {
+					this.«field.name» = «field.name»;
+				}
+			«ENDFOR»
+		}
+	'''
+
+	def getIsNullableAndRegisterImport(FieldType type) {
+		if (type instanceof UnionFieldType) {
+			val unionFieldType = type as UnionFieldType
+			if (unionFieldType.types.filter(PrimativeTypeLink).findFirst[target.equals("null")] != null) {
+				importNamespaces.add("org.apache.avro.reflect.Nullable")
+				return true;
+			}
+		}
+		return false;
+	}
+
+	def getNameAndRegisterImport(FieldType type) {
+		switch (type) {
+			TypeLink:
+				type.nameAndRegisterImport
+//					ArrayFieldType:
+//						type.getJavaListAndRegisterImport
+//					MapFieldType:
+//						type.getJavaMapAndRegisterImport
+			UnionFieldType:
+				type.types.findFirst [
+					!(it instanceof PrimativeTypeLink && (it as PrimativeTypeLink).target.equals("null"))
+				].nameAndRegisterImport
+		} // TODO: union field now support only two types. It should support many types.
+	}
+
+	def getJavaMapAndRegisterImport(MapFieldType type) {
+		importNamespaces.add("java.util.Map");
+
+		return '''Map<String, «type.type.getNameAndRegisterImport»>'''
+	}
+
+	def getJavaListAndRegisterImport(ArrayFieldType type) {
+		importNamespaces.add("java.util.List");
+
+		return '''List<«type.type.getNameAndRegisterImport»>'''
+	}
+
+	def getNameAndRegisterImport(TypeLink link) {
+		switch (link) {
+			PrimativeTypeLink: link.javaType
+			CustomTypeLink: link.target.nameAndRegisterImport
+			ArrayFieldType: link.javaListAndRegisterImport
+			MapFieldType: link.javaMapAndRegisterImport
+		}
+	}
+
+	def getNameAndRegisterImport(Type type) {
+		importNamespaces.addImportFor(type)
+
+		return type.name
+	}
+
+	def addImportFor(Set<String> strings, Type type) {
+		val otherIdlFile = type.idlFile
+
+		if (otherIdlFile != idlFile && !otherIdlFile.name.equals(idlFile.name)) {
+			importNamespaces.add(otherIdlFile.name + "." + type.name)
+		}
+	}
+
+	def static getIdlFile(EObject object) {
+		if(object instanceof AvroIDLFile) return object as AvroIDLFile
+
+		return object.getContainerOfType(AvroIDLFile)
+	}
+
+	/**
+	 * Mapped as in @see https://avro.apache.org/docs/1.7.6/api/java/org/apache/avro/reflect/package-summary.html
+	 */
+	def static getJavaType(PrimativeTypeLink link) {
+		val javaType = switch (link.target) {
+			case "string": "String"
+			case "int": "Integer"
+			case "long": "Long"
+			case "boolean": "Boolean"
+			case "float": "Float"
+			case "double": "Double"
+			case "bytes": "byte[]"
+		}
+
+		return javaType
+	}
+
+	def static String getTargetFilePath(TypeDef typeDef) {
+		var path = typeDef.namespacePath
+
+		if (path.nullOrEmpty) {
+			path = typeDef.type.name
+		} else {
+			path += '/' + typeDef.type.name
+		}
+		path + '.java'
+	}
+
+	def static getNamespace(EObject object) {
+		return object.idlFile.name
+	}
+
+	def static getNamespacePath(EObject object) {
+		val namespace = object.namespace
+
+		if(namespace.isNullOrEmpty) return null
+		return namespace.replace('.', '/')
+	}
+
+	def static currentDateTime() {
+		val dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		val date = new Date();
+		dateFormat.format(date)
+	}
+
+	def static String capitalize(String line) {
+		Character.toUpperCase(line.charAt(0)) + line.substring(1);
+	}
+
+}
