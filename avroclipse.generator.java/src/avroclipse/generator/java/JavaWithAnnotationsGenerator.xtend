@@ -65,26 +65,27 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 		val namespace = idlFile.name
 		val javaInterface = generateJavaInterface(idlFile.protocol.name, messages)
 
-		'''«IF !namespace.isNullOrEmpty»
+		'''
+		«IF !namespace.isNullOrEmpty»
 				package «idlFile.name»;
 					
-			«ENDIF»
-			«IF !importNamespaces.empty»
-				«FOR imprt : importNamespaces»
-					import «imprt»;
-				«ENDFOR»
-				
-			«ENDIF»
-			@AvroGenerated // «currentDateTime» (Avroclipse)
-			«javaInterface»
+		«ENDIF»
+		«IF !importNamespaces.empty»
+			«FOR imprt : importNamespaces»
+				import «imprt»;
+			«ENDFOR»	
+		«ENDIF»
+		
+		@AvroGenerated // «currentDateTime» (Avroclipse)
+		«javaInterface»
 		'''
 	}
 
 	def generateJavaInterface(String name, List<RPCMessage> messages) '''
 		public interface «name» {
 			«FOR message : messages»
-				«message.returnType.compileToJavaType(true)» «message.name»(«message.arguments.compileToArguments»)«IF message.error != null» throws «message.error.nameAndRegisterImport»«ENDIF»;
 				
+				«message.returnType.compileToJavaType(true)» «message.name»(«message.arguments.compileToArguments»)«IF message.error != null» throws «message.error.nameAndRegisterImport»«ENDIF»;	
 			«ENDFOR»
 		}
 	'''
