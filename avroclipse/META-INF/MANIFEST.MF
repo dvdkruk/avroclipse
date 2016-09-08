@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Avroclipse Core
 Bundle-Vendor: Avroclipse
-Bundle-Version: 0.0.5.qualifier
+Bundle-Version: 0.0.6.qualifier
 Bundle-SymbolicName: avroclipse; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext,
@@ -10,10 +10,10 @@ Require-Bundle: org.eclipse.xtext,
  org.eclipse.xtext.util,
  org.eclipse.emf.ecore,
  org.eclipse.emf.common,
- org.eclipse.xtext.xbase.lib,
  org.antlr.runtime,
  org.eclipse.xtext.common.types,
- org.eclipse.core.runtime
+ org.eclipse.core.runtime,
+ org.eclipse.xtext.xbase.lib
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: avroclipse,
