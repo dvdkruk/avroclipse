@@ -10,7 +10,6 @@ import org.eclipse.xtext.junit4.validation.ValidationTestHelper
 import org.junit.Test
 import org.junit.runner.RunWith
 
-import static org.hamcrest.CoreMatchers.*
 import static org.junit.Assert.*
 
 /**
@@ -19,12 +18,12 @@ import static org.junit.Assert.*
 @RunWith(typeof(XtextRunner))
 @InjectWith(typeof(AvroIDLInjectorProvider))
 class ParserTests {
-	
+
 	@Inject extension ParseHelper<AvroIDLFile>
 	@Inject extension ValidationTestHelper
-	
+
 	@Test
-	def testNestedUnion() {
+	def testInvalidNestedUnion() {
 		val idlFile = '''
 			protocol ExampleInvalidProtocol {
 				record NestedUnion {
@@ -32,10 +31,10 @@ class ParserTests {
 				}
 			}
 		'''.parse
-		
+
 		assertTrue(idlFile.eResource.errors.size > 0)
 	}
-	
+
 	@Test
 	def testUnionWithMap() {
 		val idlFile = '''
@@ -45,10 +44,10 @@ class ParserTests {
 				}
 			}
 		'''.parse
-		
+
 		idlFile.assertNoErrors
 	}
-	
+
 	@Test
 	def testUnionWithArray() {
 		val idlFile = '''
@@ -58,7 +57,7 @@ class ParserTests {
 				}
 			}
 		'''.parse
-		
+
 		idlFile.assertNoErrors
 	}
 
@@ -69,10 +68,10 @@ class ParserTests {
 				void setArrOfInts(array<int> ints);
 			}
 		'''.parse
-		
+
 		idlFile.assertNoErrors
 	}
-	
+
 	@Test
 	def testArrayReturnType() {
 		val idlFile = '''
@@ -80,8 +79,8 @@ class ParserTests {
 				array<int> returnArrOfInts();
 			}
 		'''.parse
-		
+
 		idlFile.assertNoErrors
 	}
-	
+
 }
