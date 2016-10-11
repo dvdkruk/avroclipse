@@ -41,15 +41,15 @@ Here are some features of Avroclipse shown.
 ![Code Completion](https://github.com/dvdkruk/avroclipse/blob/master/avroclipse.releng/code_completion.gif)
 
 ## Getting Started (Development)
-1. Download and install [Eclipse IDE for Java and DSL Developers](http://www.eclipse.org/downloads/packages/eclipse-ide-java-and-dsl-developers/marsr) for your OS.
+1. Download and install [Eclipse IDE for Java and DSL Developers](https://eclipse.org/downloads/eclipse-packages/) for your OS.
 2. Clone this repository.
 3. Go to the **avroclipse.relang** directory and execute the following maven command:````mvn clean install````
 4. Launch Eclipse and set the directory where you cloned the repository as workspace.
-5. [Import existing  projects into your workspace](http://help.eclipse.org/juno/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Ftasks%2Ftasks-importproject.htm).
+5. [Import existing  projects into your workspace](http://help.eclipse.org/juno/topic/org.eclipse.platform.doc.user/tasks/tasks-importproject.htm).
 6. The six projects of Avroclipse should now be in your workspace ready to be edited.
 7. To launch an Eclipse instance with Avroclipse; right click on the **avroclipse.ui** project and select **Run As > Eclipse Application**.
 
-Note: Tycho Project Configurators 0.8.0.201409231215 plugin is needed to use the maven pom.xml file correctly in Eclipse.
+Note: Tycho Project Configurators (0.8.0.201409231215) plugin is needed to use the maven pom.xml file correctly in Eclipse.
 
 ### Alternatives/links
 * [eclipse-avro](https://github.com/LangleyStudios/eclipse-avro)
