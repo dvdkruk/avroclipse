@@ -245,8 +245,7 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 
 	def getIsNullableAndRegisterImport(FieldType type) {
 		if (type instanceof UnionFieldType) {
-			val unionFieldType = type as UnionFieldType
-			if (unionFieldType.types.filter(PrimativeTypeLink).findFirst[target.equals("null")] != null) {
+			if (type.types.filter(PrimativeTypeLink).findFirst[target.equals("null")] != null) {
 				importNamespaces.add("org.apache.avro.reflect.Nullable")
 				return true;
 			}
@@ -305,8 +304,9 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 	}
 
 	def static getIdlFile(EObject object) {
-		if(object instanceof AvroIDLFile) return object as AvroIDLFile
-
+		if(object instanceof AvroIDLFile) {
+			return object
+		}
 		return object.getContainerOfType(AvroIDLFile)
 	}
 
