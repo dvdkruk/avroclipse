@@ -3,11 +3,14 @@
  */
 package avroclipse.formatting
 
+import avroclipse.services.AvroIDLGrammarAccess
+import com.google.inject.Inject
+import org.eclipse.xtext.Keyword
 import org.eclipse.xtext.formatting.impl.AbstractDeclarativeFormatter
 import org.eclipse.xtext.formatting.impl.FormattingConfig
+
 // import com.google.inject.Inject;
 // import avroclipse.services.AvroIDLGrammarAccess
-
 /**
  * This class contains custom formatting declarations.
  * 
@@ -17,14 +20,49 @@ import org.eclipse.xtext.formatting.impl.FormattingConfig
  * Also see {@link org.eclipse.xtext.xtext.XtextFormattingTokenSerializer} as an example
  */
 class AvroIDLFormatter extends AbstractDeclarativeFormatter {
+	public static val OPENING_CURLY_BRACKET = "{"
+	public static val CLOSING_CURLY_BRACKET = "}"
+	public static val OPENING_ANGLED_BRACKET = "<"
+	public static val CLOSING_ANGLED_BRACKET = ">"
+	public static val COMMA = ","
+	public static val SEMICOLON = ";"
 
-//	@Inject extension AvroIDLGrammarAccess
-	
+	@Inject extension AvroIDLGrammarAccess
+
 	override protected void configureFormatting(FormattingConfig c) {
 // It's usually a good idea to activate the following three statements.
 // They will add and preserve newlines around comments
-//		c.setLinewrap(0, 1, 2).before(SL_COMMENTRule)
-//		c.setLinewrap(0, 1, 2).before(ML_COMMENTRule)
-//		c.setLinewrap(0, 1, 1).after(ML_COMMENTRule)
+		c.setLinewrap(0, 0, 2).before(SL_COMMENTRule)
+		c.setLinewrap(0, 1, 2).before(ML_COMMENTRule)
+		c.setLinewrap(0, 1, 1).after(ML_COMMENTRule)
+		
+		c.setLinewrap.after(getAvroIDLFileAccess.group_1_0)
+		c.setLinewrap.after(getAvroIDLFileAccess.getAnnotationsAnnotationParserRuleCall_1_1_0)
+		val filter = newHashSet(unionFieldTypeAccess.leftCurlyBracketKeyword_1,
+			unionFieldTypeAccess.rightCurlyBracketKeyword_4)
+		for (Keyword k : findKeywords(OPENING_CURLY_BRACKET).filter[!filter.contains(it)]) {
+			c.setIndentationIncrement().after(k);
+			c.setLinewrap(1).after(k)
+		}
+		for (Keyword k : findKeywords(CLOSING_CURLY_BRACKET).filter[!filter.contains(it)]) {
+			c.setIndentationDecrement().before(k);
+			c.setLinewrap(1, 2, 2).around(k)
+		}
+		for (Keyword k : findKeywords(AvroIDLFormatter.SEMICOLON)) {
+			c.setNoSpace.before(k)
+			c.setLinewrap.around(k)
+		}
+		for (Keyword k : findKeywords(OPENING_ANGLED_BRACKET)) {
+			c.setNoSpace.around(k)
+		}
+		for (Keyword k : findKeywords(CLOSING_ANGLED_BRACKET)) {
+			c.setNoSpace.before(k)
+		}
+		for (Keyword k : findKeywords(COMMA)) {
+			c.setNoSpace.before(k)
+		}
+		c.setLinewrap.after(enumTypeAccess.commaKeyword_4_0)
+		c.setLinewrap.after(enumTypeAccess.commaKeyword_4_0)
 	}
 }
+
