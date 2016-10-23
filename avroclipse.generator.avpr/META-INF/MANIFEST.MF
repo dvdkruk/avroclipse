@@ -4,15 +4,11 @@ Bundle-Name: Avroclipse Generator Avpr
 Bundle-SymbolicName: avroclipse.generator.avpr;singleton:=true
 Bundle-Version: 0.0.6.qualifier
 Export-Package: avroclipse.generator.avpr
-Require-Bundle: avroclipse,
- com.google.guava,
- org.eclipse.xtend.lib,
- org.eclipse.xtend.lib.macro,
- org.eclipse.emf.ecore,
- org.eclipse.xtext.generator,
- org.eclipse.core.runtime
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-Vendor: Avroclipse
 Bundle-ClassPath: .,
  libs/avro-tools-1.7.7.jar
+Import-Package: org.eclipse.core.runtime;version="3.5.0"
+Require-Bundle: avroclipse;visibility:=reexport,
+ org.eclipse.xtext.xbase.lib
 

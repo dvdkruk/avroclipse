@@ -5,16 +5,8 @@ Bundle-Vendor: Avroclipse
 Bundle-Version: 0.0.6.qualifier
 Bundle-SymbolicName: avroclipse; singleton:=true
 Bundle-ActivationPolicy: lazy
-Require-Bundle: org.eclipse.xtext,
- org.eclipse.equinox.common;bundle-version="3.5.0",
- org.eclipse.xtext.util,
- org.eclipse.emf.ecore,
- org.eclipse.emf.common,
- org.antlr.runtime,
- org.eclipse.xtext.common.types,
- org.eclipse.core.runtime,
- org.eclipse.xtext.xbase.lib
-Import-Package: org.apache.log4j
+Import-Package: org.apache.log4j,
+ org.eclipse.core.runtime;version="3.5.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: avroclipse,
  avroclipse.services,
@@ -28,3 +20,9 @@ Export-Package: avroclipse,
  avroclipse.scoping,
  avroclipse.generator,
  avroclipse.formatting
+Require-Bundle: org.eclipse.xtext;visibility:=reexport,
+ org.eclipse.xtext.util,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime

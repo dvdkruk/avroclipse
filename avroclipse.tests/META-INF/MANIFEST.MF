@@ -7,23 +7,19 @@ Bundle-SymbolicName: avroclipse.tests; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: avroclipse,
  avroclipse.ui,
- org.eclipse.core.runtime,
- org.eclipse.xtext.junit4,
- org.eclipse.xtext.xbase.lib,
- com.google.inject,
- org.eclipse.emf.common,
- org.eclipse.emf.ecore,
- org.eclipse.xtext.generator,
  avroclipse.generator.java,
- org.eclipse.ui.workbench;resolution:=optional
-Import-Package: org.apache.log4j,
+ avroclipse.generator.avpr,
+ org.eclipse.xtext.junit4,
+ org.eclipse.xtext.xbase.lib
+Import-Package: com.google.inject;version="1.4.0",
+ org.apache.log4j,
  org.hamcrest;core=split,
+ org.hamcrest.core,
  org.junit;version="4.5.0",
  org.junit.runner;version="4.5.0",
  org.junit.runner.manipulation;version="4.5.0",
  org.junit.runner.notification;version="4.5.0",
  org.junit.runners;version="4.5.0",
- org.junit.runners.model;version="4.5.0",
- org.hamcrest.core
+ org.junit.runners.model;version="4.5.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: avroclipse

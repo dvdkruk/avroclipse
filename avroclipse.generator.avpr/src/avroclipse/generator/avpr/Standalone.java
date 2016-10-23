@@ -13,7 +13,7 @@ public class Standalone {
 	public Standalone() {
 		AvroIDLStandaloneSetup.doSetup();
 		
-		Registry.INSTANCE.getGenerators().add(new AvprFileGenerator());
+		Registry.INSTANCE.addGenerator(new AvprFileGenerator());
 	}
 
 }

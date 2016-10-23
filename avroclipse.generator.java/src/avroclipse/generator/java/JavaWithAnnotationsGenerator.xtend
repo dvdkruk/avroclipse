@@ -281,7 +281,7 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 		return '''List<«type.type.getNameAndRegisterImport»>'''
 	}
 
-	def getNameAndRegisterImport(TypeLink link) {
+	def String getNameAndRegisterImport(TypeLink link) {
 		switch (link) {
 			PrimativeTypeLink: link.javaType
 			CustomTypeLink: link.target.nameAndRegisterImport

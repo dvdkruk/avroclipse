@@ -18,6 +18,10 @@ public class Registry {
 	public List<IGenerator> getGenerators() {
 		return _generators;
 	}
+	
+	public void addGenerator(IGenerator generator) {
+		_generators.add(generator);
+	}
 
 	private static Registry init() {
 		return new Registry();
