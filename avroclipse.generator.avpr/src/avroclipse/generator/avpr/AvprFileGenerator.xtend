@@ -1,20 +1,20 @@
 package avroclipse.generator.avpr
 
-import avroclipse.Helper
+import avroclipse.EclipseHelper
+import avroclipse.avroIDL.AvroIDLFile
 import java.io.File
 import java.net.URI
 import java.net.URL
+import java.util.logging.Level
+import java.util.logging.Logger
 import org.apache.avro.Protocol
 import org.apache.avro.compiler.idl.Idl
+import org.apache.avro.compiler.idl.ParseException
 import org.eclipse.core.runtime.FileLocator
 import org.eclipse.core.runtime.URIUtil
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
-import org.apache.avro.compiler.idl.ParseException
-import java.util.logging.Logger
-import java.util.logging.Level
-import avroclipse.avroIDL.AvroIDLFile
 
 class AvprFileGenerator implements IGenerator {
 
@@ -42,7 +42,7 @@ class AvprFileGenerator implements IGenerator {
 	}
 
 	def static getOsUri(Resource input) {
-		if (Helper.isEclipseRunning) {
+		if (EclipseHelper.isEclipseRunning) {
 			var url = new URL(input.URI.toString)
 			url = FileLocator.resolve(url)
 			URIUtil.toURI(url)

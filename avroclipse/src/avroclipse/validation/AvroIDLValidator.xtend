@@ -4,6 +4,9 @@
 package avroclipse.validation
 
 import avroclipse.avroIDL.AvroIDLFile
+import avroclipse.avroIDL.AvroIDLPackage
+import avroclipse.avroIDL.CustomTypeLink
+import avroclipse.avroIDL.ProtocolElement
 import avroclipse.avroIDL.Type
 import com.google.inject.Inject
 import org.eclipse.emf.common.util.URI
@@ -11,7 +14,9 @@ import org.eclipse.emf.ecore.EClass
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EStructuralFeature
 import org.eclipse.emf.ecore.resource.Resource
+import org.eclipse.xtext.EcoreUtil2
 import org.eclipse.xtext.resource.XtextResourceSet
+import org.eclipse.xtext.validation.Check
 
 import static extension org.eclipse.xtext.EcoreUtil2.*
 
@@ -27,25 +32,80 @@ class AvroIDLValidator extends AbstractAvroIDLValidator {
 
 	public static val DUPLICATED_NAME = 'duplicatedName'
 
-	//static val SKIP_DUPLICATED_NAME_CHECK_CLASSES = newArrayList(Annotation)
-
+	// static val SKIP_DUPLICATED_NAME_CHECK_CLASSES = newArrayList(Annotation)
 	static val INCLUDE_EXTERNAL_DUPLICATE_NAME_CHECK_CLASSES = newArrayList(Type)
 
-	/* @Check
-	def checkDuplicatedInnerCheck(EObject object) {
-		if (SKIP_DUPLICATED_NAME_CHECK_CLASSES.findFirst[it.isInstance(object)] != null) {
-			return; // skip
-		}
+	public static val TYPE_DEFINED_AFTER_REFERENCE = "typeDefiendAfterReference"
 
-		val nameFeature = object.eClass.getEStructuralFeature("name")
+	public static val INVALID_CHAR_IN_NAMESPACE = "invalidCharInNamespace"
 
-		if (object.eContainer != null && nameFeature != null) {
-			if (isDuplicated(object, nameFeature)) {
-				error(getDuplicateMessage(object, nameFeature), nameFeature, DUPLICATED_NAME)
+	static val invalidNamespaceChars = newHashSet('-', '_', ' ')
+
+	@Check
+	def emptyStringNamespace(AvroIDLFile file) {
+		if (file.name != null) {
+			if (file.name.isEmpty) {
+				error("Namespace must not be empty", AvroIDLPackage.Literals.AVRO_IDL_FILE__NAME)
 			}
 		}
-	}*/
+	}
 
+	@Check
+	def checkNamespaceName(AvroIDLFile file) {
+		if (!file.name.nullOrEmpty) {
+			for (invalidNamespaceChar : invalidNamespaceChars) {
+				if (file.name.contains(invalidNamespaceChar)) {
+					error("Characters '-', '_' & ' ' are not allowed in namespace names",
+						AvroIDLPackage.Literals.AVRO_IDL_FILE__NAME, INVALID_CHAR_IN_NAMESPACE)
+					return;
+				}
+			}
+		}
+	}
+
+	@Check
+	def typeDefinedAfterReference(CustomTypeLink link) {
+		val type = link.target
+		if (type != null) {
+			val idlFile = EcoreUtil2.getContainerOfType(type, AvroIDLFile)
+			if (elementInSameFile(idlFile, link)) {
+				val elements = idlFile.elements
+				val linkContainerElement = EcoreUtil2.getContainerOfType(type, ProtocolElement)
+				val ownContainerElement = EcoreUtil2.getContainerOfType(link, ProtocolElement)
+				val linkElementIndex = elements.indexOf(linkContainerElement)
+				val ownElementIndex = elements.indexOf(ownContainerElement)
+				if (ownElementIndex < linkElementIndex) {
+					error("Reference to type '" + link.target.name + "' is before type definition",
+						AvroIDLPackage.Literals.CUSTOM_TYPE_LINK__TARGET, TYPE_DEFINED_AFTER_REFERENCE,
+						ownElementIndex.toString, linkElementIndex.toString)
+				}
+			}
+
+		}
+	}
+
+	def elementInSameFile(AvroIDLFile file, EObject eObject) {
+		if (file != null) {
+			val objectFile = EcoreUtil2.getContainerOfType(eObject, AvroIDLFile)
+			return file == objectFile
+		}
+		return false
+	}
+
+	/* @Check
+	 * def checkDuplicatedInnerCheck(EObject object) {
+	 * 	if (SKIP_DUPLICATED_NAME_CHECK_CLASSES.findFirst[it.isInstance(object)] != null) {
+	 * 		return; // skip
+	 * 	}
+	 * 
+	 * 	val nameFeature = object.eClass.getEStructuralFeature("name")
+	 * 
+	 * 	if (object.eContainer != null && nameFeature != null) {
+	 * 		if (isDuplicated(object, nameFeature)) {
+	 * 			error(getDuplicateMessage(object, nameFeature), nameFeature, DUPLICATED_NAME)
+	 * 		}
+	 * 	}
+	 }*/
 	def getDuplicateMessage(EObject object, EStructuralFeature feature) {
 		return "Duplicated " + object.eClass.superType.name + " '" + object.eGet(feature) + "'"
 	}

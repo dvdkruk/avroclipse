@@ -245,13 +245,13 @@ class IdlToJavaTests {
 		val idlFile = '''
 			@namespace("org.example.array")
 			protocol TestProtocol {
+				record Value {
+					string val;
+				}
+				
 				record Record {
 					array<int> ids;
 					array<Value> values;
-				}
-				
-				record Value {
-					string val;
 				}
 			}
 		'''.parse
@@ -282,13 +282,12 @@ class IdlToJavaTests {
 		val idlFile = '''
 			@namespace("org.example.map")
 			protocol TestProtocol {
+				record Value {
+					string val;
+				}
 				record Record {
 					map<int> ids;
 					map<Value> values;
-				}
-				
-				record Value {
-					string val;
 				}
 			}
 		'''.parse

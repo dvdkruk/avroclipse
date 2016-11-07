@@ -12,8 +12,11 @@ AvroIDLFile:
 	)
 	('protocol' protocol=Protocol '{'
 		imports+=Import*
-		(types+=TypeDef | messages+=RPCMessage)*
+		elements+=ProtocolElement*
 	'}')?;
+
+ProtocolElement:
+	TypeDef | RPCMessage;
 
 Protocol:
 	name=EscapableId;

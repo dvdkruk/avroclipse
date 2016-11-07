@@ -3,7 +3,7 @@
  */
 package avroclipse.generator
 
-import avroclipse.Helper
+import avroclipse.EclipseHelper
 import avroclipse.Registry
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
@@ -17,7 +17,7 @@ import org.eclipse.xtext.generator.IGenerator
 class AvroIDLGenerator implements IGenerator {
 
 	new() {
-		Helper.initEclipseGeneratorExtensions();
+		EclipseHelper.initEclipseGeneratorExtensions();
 	}
 
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {

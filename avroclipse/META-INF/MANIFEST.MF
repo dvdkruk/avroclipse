@@ -9,17 +9,18 @@ Import-Package: org.apache.log4j,
  org.eclipse.core.runtime;version="3.5.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: avroclipse,
- avroclipse.services,
  avroclipse.avroIDL,
  avroclipse.avroIDL.impl,
  avroclipse.avroIDL.util,
- avroclipse.serializer,
+ avroclipse.formatting,
+ avroclipse.generator,
+ avroclipse.model.utils,
  avroclipse.parser.antlr,
  avroclipse.parser.antlr.internal,
- avroclipse.validation,
  avroclipse.scoping,
- avroclipse.generator,
- avroclipse.formatting
+ avroclipse.serializer,
+ avroclipse.services,
+ avroclipse.validation
 Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.eclipse.xtext.util,
  org.eclipse.emf.ecore,

@@ -18,18 +18,17 @@ import avroclipse.avroIDL.TypeDef
 import avroclipse.avroIDL.TypeLink
 import avroclipse.avroIDL.UnionFieldType
 import avroclipse.avroIDL.VoidTypeLink
+import avroclipse.model.utils.AvroIDLHelper
 import java.text.SimpleDateFormat
 import java.util.Date
-import java.util.List
 import java.util.Set
 import java.util.TreeSet
 import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.resource.Resource
+import org.eclipse.xtext.EcoreUtil2
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
-
-import static extension org.eclipse.xtext.EcoreUtil2.*
 
 class JavaWithAnnotationsGenerator implements IGenerator {
 
@@ -39,11 +38,12 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 	override doGenerate(Resource input, IFileSystemAccess fsa) {
 		idlFile = input.contents.get(0) as AvroIDLFile
 
-		for (typeDef : idlFile.types) { // generate classes
+		for (typeDef : AvroIDLHelper.getTypeDefs(idlFile)) { // generate classes
 			fsa.generateFile(typeDef.targetFilePath, typeDef.compile)
 		}
-		if (!idlFile.messages.empty) { // generate interface
-			fsa.generateFile(idlFile.targetProtocolFilePath, idlFile.messages.compile)
+		val messages = AvroIDLHelper.getMessages(idlFile)
+		if (!messages.isEmpty) { // generate interface
+			fsa.generateFile(idlFile.targetProtocolFilePath, messages.compile)
 		}
 	}
 
@@ -57,7 +57,7 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 		return targetFileName
 	}
 
-	def compile(List<RPCMessage> messages) {
+	def compile(Iterable<RPCMessage> messages) {
 		importNamespaces = new TreeSet<String>
 		importNamespaces.add("org.apache.avro.specific.AvroGenerated")
 
@@ -65,23 +65,23 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 		val namespace = idlFile.name
 		val javaInterface = generateJavaInterface(idlFile.protocol.name, messages)
 
-		'''
-		«IF !namespace.isNullOrEmpty»
+		return '''
+			«IF !namespace.isNullOrEmpty»
 				package «idlFile.name»;
 					
-		«ENDIF»
-		«IF !importNamespaces.empty»
-			«FOR imprt : importNamespaces»
-				import «imprt»;
-			«ENDFOR»	
-		«ENDIF»
-		
-		@AvroGenerated // «currentDateTime» (Avroclipse)
-		«javaInterface»
+			«ENDIF»
+			«IF !importNamespaces.empty»
+				«FOR imprt : importNamespaces»
+					import «imprt»;
+				«ENDFOR»	
+			«ENDIF»
+			
+			@AvroGenerated // «currentDateTime» (Avroclipse)
+			«javaInterface»
 		'''
 	}
 
-	def generateJavaInterface(String name, List<RPCMessage> messages) '''
+	def generateJavaInterface(String name, Iterable<RPCMessage> messages) '''
 		public interface «name» {
 			«FOR message : messages»
 				
@@ -98,7 +98,8 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 		val firstArg = args.get(0)
 		val size = args.size
 		val restArgs = args.subList(1,
-			size)
+			size
+		)
 		return '''«firstArg.type.compileToJavaType» «firstArg.name»«FOR arg : restArgs», «arg.type.compileToJavaType» «arg.name»«ENDFOR»'''
 	}
 
@@ -131,8 +132,7 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 			if (firstType instanceof PrimativeTypeLink && (firstType as PrimativeTypeLink).target.equals("null")) {
 				javaType = otherTypes.get(0).nameAndRegisterImport
 			} else {
-				javaType = firstType.
-					nameAndRegisterImport
+				javaType = firstType.nameAndRegisterImport
 			}
 		}
 
@@ -304,10 +304,10 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 	}
 
 	def static getIdlFile(EObject object) {
-		if(object instanceof AvroIDLFile) {
+		if (object instanceof AvroIDLFile) {
 			return object
 		}
-		return object.getContainerOfType(AvroIDLFile)
+		return EcoreUtil2.getContainerOfType(object, AvroIDLFile)
 	}
 
 	/**
