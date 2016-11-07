@@ -1,7 +1,7 @@
 # Avroclipse [![Drag to your running Eclipse workspace to install Avroclipse](https://marketplace.eclipse.org/sites/all/themes/solstice/_themes/solstice_marketplace/public/images/btn-install.png "Drag to your running Eclipse workspace to install Avroclipse")](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=2600501) [![Build Status](https://travis-ci.org/dvdkruk/avroclipse.svg)](https://travis-ci.org/dvdkruk/avroclipse)
 An Eclipse editor plugin for defining [Apache Avro IDL](https://avro.apache.org/docs/1.7.7/idl.html) files. 
 
-Current version: [0.0.5](https://github.com/dvdkruk/avroclipse/releases/tag/0.0.5)
+Current version: [0.0.6](https://github.com/dvdkruk/avroclipse/releases/tag/0.0.6)
 
 Used techniques/tools:
 - [Eclipse 4.5.1 (Mars)](http://www.eclipse.org/home/index.php)
