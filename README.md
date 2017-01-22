@@ -1,5 +1,7 @@
-# Avroclipse [![Drag to your running Eclipse workspace to install Avroclipse](https://marketplace.eclipse.org/sites/all/themes/solstice/_themes/solstice_marketplace/public/images/btn-install.png "Drag to your running Eclipse workspace to install Avroclipse")](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=2600501) [![Build Status](https://travis-ci.org/dvdkruk/avroclipse.svg)](https://travis-ci.org/dvdkruk/avroclipse)
-An Eclipse editor plugin for defining [Apache Avro IDL](https://avro.apache.org/docs/1.7.7/idl.html) files. 
+# Avroclipse [![Build Status](https://travis-ci.org/dvdkruk/avroclipse.svg)](https://travis-ci.org/dvdkruk/avroclipse)
+[![Drag to your running Eclipse workspace to install Avroclipse](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png "Drag to your running Eclipse workspace to install Avroclipse")](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=2600501) 
+
+An Eclipse editor plugin for defining [Apache Avro IDL](https://avro.apache.org/docs/1.7.7/idl.html) files.
 
 Current version: [0.0.6](https://github.com/dvdkruk/avroclipse/releases/tag/0.0.6)
 
@@ -13,7 +15,7 @@ License: [Apache License, Version 2.0](https://github.com/dvdkruk/avroclipse/blo
 
 ## Install Avroclipse
 ### Marketplace
-Drag this [![Drag to your running Eclipse workspace to install Avroclipse](https://marketplace.eclipse.org/sites/all/themes/solstice/_themes/solstice_marketplace/public/images/btn-install.png "Drag to your running Eclipse workspace to install Avroclipse")](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=2600501) button to your running Eclipse workspace or search for *Avroclipse* in the Eclipse Marketplace.
+Drag this [![Drag to your running Eclipse workspace to install Avroclipse](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png "Drag to your running Eclipse workspace to install Avroclipse")](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=2600501) button to your running Eclipse workspace or search for *Avroclipse* in the Eclipse Marketplace.
 
 ### Update Site
 Install Avroclipse using the folloing the update site URL:
