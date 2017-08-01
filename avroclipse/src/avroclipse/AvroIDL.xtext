@@ -69,10 +69,16 @@ MapFieldType:
 	'map' '<' annotation=Annotation? type=TypeLink '>';
 
 TypeLink:
-	PrimativeTypeLink | ArrayFieldType | MapFieldType |CustomTypeLink ;
+	PrimativeTypeLink | LogicalTypeLink | DecimalTypeLink | ArrayFieldType | MapFieldType | CustomTypeLink;
 
 PrimativeTypeLink:
 	target=('int' | 'long' | 'string' | 'boolean' | 'float' | 'double' | 'null' | 'bytes');
+
+LogicalTypeLink:
+	target=('date' | 'time_ms' | 'timestamp_ms');
+	
+DecimalTypeLink:
+	target='decimal' '(' precision=INT ',' scale=INT ')';
 
 CustomTypeLink:
 	target=[Type|QN];
