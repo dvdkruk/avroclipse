@@ -1,27 +1,54 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <parent>
+	<parent>
 		<relativePath>../avroclipse.releng/pom.xml</relativePath>
 		<groupId>avroclipse</groupId>
 		<artifactId>parent</artifactId>
 		<version>0.0.7-SNAPSHOT</version>
 	</parent>
-  
-  <artifactId>avroclipse.generator.avpr</artifactId>
-  <packaging>eclipse-plugin</packaging>
 
-  <name>Avroclipse Generator Avpr</name>
+	<artifactId>avroclipse.generator.avpr</artifactId>
+	<packaging>eclipse-plugin</packaging>
 
-  <build>
+	<name>Avroclipse Generator Avpr</name>
+
+	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.eclipse.xtend</groupId>
 				<artifactId>xtend-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>3.0.1</version>
+				<executions>
+					<execution>
+						<id>copy</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>org.apache.avro</groupId>
+									<artifactId>avro-tools</artifactId>
+									<version>1.8.2</version>
+									<type>jar</type>
+									<overWrite>false</overWrite>
+									<outputDirectory>${project.build.directory}/libs</outputDirectory>
+									<destFileName>avro-tools.jar</destFileName>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
-		
+
 		<pluginManagement>
 			<plugins>
 				<!--This plugin's configuration is used to store Eclipse m2e settings 

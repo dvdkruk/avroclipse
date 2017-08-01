@@ -4,6 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="src" path="src/"/>
 	<classpathentry kind="src" path="xtend-gen/"/>
-	<classpathentry exported="true" kind="lib" path="libs/avro-tools-1.7.7.jar" sourcepath="libs/avro-compiler-1.7.7-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/libs/avro-tools.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
