@@ -442,6 +442,38 @@ class IdlToJavaTests {
 		
 		//println(content)
 	}
+	
+	@Test
+	def void testLogicalTypes() {
+		val targetFilePath = 'Job.java'
+
+		val idlFile = '''
+			protocol LogicalTypes {
+				record Job {
+					string jobid;
+			  		date submitDate;
+			  		time_ms submitTime;
+			  		timestamp_ms finishTime;
+			  		decimal(9,2) finishRatio;
+				}
+			}
+		'''.parse
+		
+		idlFile.eResource.assertNoErrors
+		val fsa = new InMemoryFileSystemAccess()
+
+		idlFile.eResource.doGenerate(fsa)
+		
+		val content = fsa.getContentOfFile(targetFilePath)
+		assertTrue("File '" + targetFilePath + "' is not generated", !content.nullOrEmpty)
+		
+		assertThat(content, containsString("long submitDate"))
+		assertThat(content, containsString("long submitTime"))
+		assertThat(content, containsString("long finishTime"))
+		assertThat(content, containsString("java.math.BigDecimal finishRatio"))
+		
+		//println(content)
+	}
 
 	def static getContentOfFile(InMemoryFileSystemAccess fsa, String relativeFilePath) {
 		if (fsa.allFiles.containsKey(IFileSystemAccess::DEFAULT_OUTPUT + relativeFilePath)) {

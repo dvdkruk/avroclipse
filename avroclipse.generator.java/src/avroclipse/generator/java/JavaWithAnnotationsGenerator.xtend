@@ -29,6 +29,8 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.EcoreUtil2
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
+import avroclipse.avroIDL.LogicalTypeLink
+import avroclipse.avroIDL.DecimalTypeLink
 
 class JavaWithAnnotationsGenerator implements IGenerator {
 
@@ -283,6 +285,8 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 	def String getNameAndRegisterImport(TypeLink link) {
 		switch (link) {
 			PrimativeTypeLink: link.javaType
+			LogicalTypeLink: link.javaType
+			DecimalTypeLink: "java.math.BigDecimal"
 			CustomTypeLink: link.target.nameAndRegisterImport
 			ArrayFieldType: link.javaListAndRegisterImport
 			MapFieldType: link.javaMapAndRegisterImport
@@ -323,8 +327,16 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 			case "double": "Double"
 			case "bytes": "byte[]"
 		}
-
 		return javaType
+	}
+	
+	def static getJavaType(LogicalTypeLink link) {
+//		val javaType = switch (link.target) {
+//			case "date": "long"
+//			case "time_ms": "long"
+//			case "timestamp_ms": "long"
+//		}
+		return "long"
 	}
 
 	def static String getTargetFilePath(TypeDef typeDef) {
