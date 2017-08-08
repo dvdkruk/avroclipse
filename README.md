@@ -8,7 +8,7 @@ Used techniques/tools:
 - [Eclipse 4.5.1 (Mars)](http://www.eclipse.org/home/index.php)
 - [Xtext 2.8.4](https://eclipse.org/Xtext/)
 - Java 1.7
-- [Apache Maven 3.3.3](https://maven.apache.org/)
+- [Apache Maven 3.5.0](https://maven.apache.org/)
 
 License: [Apache License, Version 2.0](https://github.com/dvdkruk/avroclipse/blob/master/LICENSE)
 
