@@ -253,18 +253,4 @@
          version="0.0.0"
          unpack="false"/>
 
-   <plugin
-         id="avroclipse.generator.avpr"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="avroclipse.generator.java"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
 </feature>
