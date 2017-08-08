@@ -1,8 +1,8 @@
 # Avroclipse [![Build Status](https://travis-ci.org/dvdkruk/avroclipse.svg)](https://travis-ci.org/dvdkruk/avroclipse)
 
-An Eclipse editor plugin for defining [Apache Avro IDL](https://avro.apache.org/docs/1.7.7/idl.html) files.
+An Eclipse editor plugin for defining [Apache Avro IDL](http://avro.apache.org/docs/current/idl.html) files.
 
-Current version: [0.0.7](https://github.com/dvdkruk/avroclipse/releases/tag/0.0.7)
+Current version: [0.0.8](https://github.com/dvdkruk/avroclipse/releases/tag/0.0.8)
 
 Used techniques/tools:
 - [Eclipse 4.5.1 (Mars)](http://www.eclipse.org/home/index.php)
