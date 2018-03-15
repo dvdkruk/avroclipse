@@ -29,7 +29,7 @@ RPCMessage:
 	error=[ErrorType|QN])? ';';
 
 Argument:
-	type=FieldType name=EscapableId ('=' default=Value)?;
+	typeAnnotations+=Annotation* type=FieldType argumentAnnotations+=Annotation* name=EscapableId ('=' default=Value)?;
 
 ReturnTypeLink:
 	VoidTypeLink | FieldType;
@@ -102,7 +102,7 @@ Array:
 	=> '[' values=Values ']';
 
 Value:
-	StringValue | Array | IntValue | BooleanValue | Null;
+	StringValue | Array | IntValue | FloatValue | BooleanValue | Null;
 
 BooleanValue:
 	val=Boolean;
@@ -113,6 +113,9 @@ Null:
 StringValue:
 	val=STRING;
 
+FloatValue:
+	val=Real;
+	
 IntValue:
 	val=(INT|NegativeInt);
 	
@@ -132,6 +135,10 @@ NegativeInt returns ecore::EInt:
 	'-' INT;
 	
 Boolean returns ecore::EBoolean: 'true' | 'false';
+
+Real returns ecore::EFloat: '-'? INT '.' (EXT_INT | INT);
+terminal EXT_INT: INT ('e'|'E')('-'|'+') INT;
+
 
 enum ImportType:
 	IDL='idl' |
