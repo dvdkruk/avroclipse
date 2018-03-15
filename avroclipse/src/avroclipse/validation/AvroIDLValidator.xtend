@@ -39,7 +39,7 @@ class AvroIDLValidator extends AbstractAvroIDLValidator {
 
 	public static val INVALID_CHAR_IN_NAMESPACE = "invalidCharInNamespace"
 
-	static val invalidNamespaceChars = newHashSet('-', '_', ' ')
+	static val invalidNamespaceChars = newHashSet('-', ' ')
 
 	@Check
 	def emptyStringNamespace(AvroIDLFile file) {
@@ -55,7 +55,7 @@ class AvroIDLValidator extends AbstractAvroIDLValidator {
 		if (!file.name.nullOrEmpty) {
 			for (invalidNamespaceChar : invalidNamespaceChars) {
 				if (file.name.contains(invalidNamespaceChar)) {
-					error("Characters '-', '_' & ' ' are not allowed in namespace names",
+					error("Characters '-' & ' ' are not allowed in namespace names",
 						AvroIDLPackage.Literals.AVRO_IDL_FILE__NAME, INVALID_CHAR_IN_NAMESPACE)
 					return;
 				}
