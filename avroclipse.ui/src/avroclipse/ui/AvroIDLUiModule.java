@@ -27,7 +27,7 @@ public class AvroIDLUiModule extends avroclipse.ui.AbstractAvroIDLUiModule {
 	public Class<? extends ISemanticHighlightingCalculator> bindISemanticHighlightingCalculator() {
 		return AvroIDLSemanticHighlightingCalculator.class;
 	}
-	
+
 	public Class<? extends AbstractAntlrTokenToAttributeIdMapper> bindAbstractAntlrTokenToAttributeIdMapper() {
 		return AvroIDLAntlrTokenToAttributeIdMapper.class;
 	}
