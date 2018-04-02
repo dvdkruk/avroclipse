@@ -1,0 +1,8 @@
+
+protocol Intf { 
+	
+	@range([0.12, 1.0E-10, -4.343])
+	fixed rad(4);
+	
+	void arg(@ann("annotation for arg type") double @ann("annotation for argument") arg);
+}
