@@ -82,5 +82,15 @@ class ParserTests {
 
 		idlFile.assertNoErrors
 	}
+	
+	@Test
+	def namespace_withSpecialCharacters_isParsableWithoutErrors() {
+		val idlFile = '''
+			@namespace("~!@#$%^&*()_+`1234567890-={:>}?|<")
+			protocol WithSpecialCharactersInNamespace {}
+		'''.parse
+		
+		idlFile.assertNoErrors
+	}
 
 }
