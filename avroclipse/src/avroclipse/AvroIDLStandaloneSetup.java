@@ -4,13 +4,12 @@
 package avroclipse;
 
 /**
- * Initialization support for running Xtext languages 
- * without equinox extension registry
+ * Initialization support for running Xtext languages without equinox extension
+ * registry
  */
-public class AvroIDLStandaloneSetup extends AvroIDLStandaloneSetupGenerated{
+public class AvroIDLStandaloneSetup extends AvroIDLStandaloneSetupGenerated {
 
 	public static void doSetup() {
 		new AvroIDLStandaloneSetup().createInjectorAndDoEMFRegistration();
 	}
 }
-

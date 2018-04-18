@@ -20,7 +20,6 @@ import org.eclipse.xtext.validation.Check
 
 import static extension org.eclipse.xtext.EcoreUtil2.*
 
-//import org.eclipse.xtext.validation.Check
 /**
  * This class contains custom validation rules. 
  * 
@@ -32,33 +31,15 @@ class AvroIDLValidator extends AbstractAvroIDLValidator {
 
 	public static val DUPLICATED_NAME = 'duplicatedName'
 
-	// static val SKIP_DUPLICATED_NAME_CHECK_CLASSES = newArrayList(Annotation)
 	static val INCLUDE_EXTERNAL_DUPLICATE_NAME_CHECK_CLASSES = newArrayList(Type)
 
 	public static val TYPE_DEFINED_AFTER_REFERENCE = "typeDefiendAfterReference"
-
-	public static val INVALID_CHAR_IN_NAMESPACE = "invalidCharInNamespace"
-
-	static val invalidNamespaceChars = newHashSet('-', ' ')
 
 	@Check
 	def emptyStringNamespace(AvroIDLFile file) {
 		if (file.name != null) {
 			if (file.name.isEmpty) {
 				error("Namespace must not be empty", AvroIDLPackage.Literals.AVRO_IDL_FILE__NAME)
-			}
-		}
-	}
-
-	@Check
-	def checkNamespaceName(AvroIDLFile file) {
-		if (!file.name.nullOrEmpty) {
-			for (invalidNamespaceChar : invalidNamespaceChars) {
-				if (file.name.contains(invalidNamespaceChar)) {
-					error("Characters '-' & ' ' are not allowed in namespace names",
-						AvroIDLPackage.Literals.AVRO_IDL_FILE__NAME, INVALID_CHAR_IN_NAMESPACE)
-					return;
-				}
 			}
 		}
 	}
@@ -92,20 +73,6 @@ class AvroIDLValidator extends AbstractAvroIDLValidator {
 		return false
 	}
 
-	/* @Check
-	 * def checkDuplicatedInnerCheck(EObject object) {
-	 * 	if (SKIP_DUPLICATED_NAME_CHECK_CLASSES.findFirst[it.isInstance(object)] != null) {
-	 * 		return; // skip
-	 * 	}
-	 * 
-	 * 	val nameFeature = object.eClass.getEStructuralFeature("name")
-	 * 
-	 * 	if (object.eContainer != null && nameFeature != null) {
-	 * 		if (isDuplicated(object, nameFeature)) {
-	 * 			error(getDuplicateMessage(object, nameFeature), nameFeature, DUPLICATED_NAME)
-	 * 		}
-	 * 	}
-	 }*/
 	def getDuplicateMessage(EObject object, EStructuralFeature feature) {
 		return "Duplicated " + object.eClass.superType.name + " '" + object.eGet(feature) + "'"
 	}
@@ -162,15 +129,4 @@ class AvroIDLValidator extends AbstractAvroIDLValidator {
 			return superTypes.get(0)
 		}
 	}
-
-//  public static val INVALID_NAME = 'invalidName'
-//
-//	@Check
-//	def checkGreetingStartsWithCapital(Greeting greeting) {
-//		if (!Character.isUpperCase(greeting.name.charAt(0))) {
-//			warning('Name should start with a capital', 
-//					MyDslPackage.Literals.GREETING__NAME,
-//					INVALID_NAME)
-//		}
-//	}
 }
