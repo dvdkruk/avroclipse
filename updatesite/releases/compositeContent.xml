@@ -4,7 +4,8 @@
     <properties size='1'>
         <property name='p2.atomic.composite.loading' value='true'/>
     </properties>
-    <children size='8'>
+    <children size='9'>
+		<child location='0.0.9'/>
 		<child location='0.0.8'/>
 		<child location='0.0.7'/>
 		<child location='0.0.6'/>

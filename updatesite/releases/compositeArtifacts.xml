@@ -4,6 +4,7 @@
     <properties size='0'>
     </properties>
     <children size='10'>
+		<child location='0.0.9'/>
 		<child location='0.0.8'/>
 		<child location='0.0.7'/>
 		<child location='0.0.6'/>
