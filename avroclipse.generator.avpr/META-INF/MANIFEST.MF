@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Avroclipse Generator Avpr
 Bundle-SymbolicName: avroclipse.generator.avpr;singleton:=true
-Bundle-Version: 0.0.9.qualifier
+Bundle-Version: 0.0.10.qualifier
 Export-Package: avroclipse.generator.avpr
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-Vendor: Avroclipse
