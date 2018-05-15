@@ -14,11 +14,11 @@
         <child location='0.0.3'/>
         <child location='0.0.2'/>
         <child location='0.0.1'/>
-        <child location='http://download.eclipse.org/eclipse/updates/4.7'/>
-        <child location='http://download.eclipse.org/eclipse/updates/4.6'/>
-        <child location='http://download.eclipse.org/eclipse/updates/4.5'/>
-        <child location='http://download.eclipse.org/eclipse/updates/4.4'/>
-        <child location='http://download.eclipse.org/eclipse/updates/4.3'/>
-        <child location='http://download.eclipse.org/eclipse/updates/4.2'/>
+        <child location='http://download.eclipse.org/eclipse/updates/oxygen'/>
+        <child location='http://download.eclipse.org/eclipse/updates/neon'/>
+        <child location='http://download.eclipse.org/eclipse/updates/mars'/>
+        <child location='http://download.eclipse.org/eclipse/updates/luna'/>
+        <child location='http://download.eclipse.org/eclipse/updates/kepler'/>
+        <child location='http://download.eclipse.org/eclipse/updates/juno'/>
     </children>
 </repository>
