@@ -2,9 +2,10 @@
 <?compositeArtifactRepository version='1.0.0'?>
 <repository name='Avroclipse Update Site' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
     <properties size='1'>
-        <property name='p2.timestamp' value='1526393898'/>
+        <property name='p2.timestamp' value='1526393899'/>
     </properties>
-    <children size='9'>
+    <children size='10'>
+        <child location='0.0.10'/>
         <child location='0.0.9'/>
         <child location='0.0.8'/>
         <child location='0.0.7'/>
