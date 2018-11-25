@@ -2,7 +2,7 @@
 
 An Eclipse editor plugin for defining [Apache Avro IDL](http://avro.apache.org/docs/current/idl.html) files.
 
-Current version: [0.0.9](https://github.com/dvdkruk/avroclipse/releases/tag/0.0.9)
+Current version: [0.0.10](https://github.com/dvdkruk/avroclipse/releases/tag/0.0.10)
 
 Used techniques/tools:
 - [Eclipse 4.5.1 (Mars)](http://www.eclipse.org/home/index.php)
