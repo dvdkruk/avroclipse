@@ -2,7 +2,9 @@
  */
 package avroclipse.scoping
 
-import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider
+import org.eclipse.xtext.scoping.impl.ImportedNamespaceAwareLocalScopeProvider
+import org.eclipse.emf.ecore.EObject
+import avroclipse.avroIDL.AvroIDLFile
 
 /**
  * This class contains custom scoping description.
@@ -11,39 +13,19 @@ import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider
  * on how and when to use it.
  * 
  */
-class AvroIDLScopeProvider extends AbstractDeclarativeScopeProvider {
-	
-	/*@Inject XtextResourceSet _rs;
-	
-	def IScope scope_CustomTypeLink_target(CustomTypeLink complexTypeLink, EReference ref) {
-		val protocol = complexTypeLink.getContainerOfType(Protocol)
-		val allTypes = new ArrayList<Type>() 
+class AvroIDLScopeProvider extends ImportedNamespaceAwareLocalScopeProvider {
 		
-		allTypes.addAll(protocol.types.map[it.type])
-		//allTypes.addExternalTypes(protocol.imports)
-		
-		Scopes.scopeFor(allTypes)
-	}
-	
-	def List<Type> addExternalTypes(List<Type> types, List<Import> imports) {
-		var Resource res
-		var URI uri
-		var AvroIDLFile IdlFile;
-		
-		for(import : imports) {
-			uri = URI.createURI(import.importURI)
-			res = _rs.getResource(uri, true);
-			if (res.contents.size > 0) {
-				IdlFile = res.contents.get(0) as AvroIDLFile
-				if(IdlFile != null && IdlFile.protocol != null) {
-					types.addAll(IdlFile.protocol.types.map[it.type])
+		override protected getImportedNamespace(EObject object) {
+			if(object.eContainer != null) {
+				val container = object.eContainer
+				if(container instanceof AvroIDLFile) {
+					if(!container.name.nullOrEmpty) {
+						return container.name + '.*'
+					}
 				}
 			}
-			
+			return super.getImportedNamespace(object)
 		}
 		
-		return types;
-	}*/
-
 }
 
