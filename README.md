@@ -7,7 +7,7 @@ Current version: [0.0.9](https://github.com/dvdkruk/avroclipse/releases/tag/0.0.
 Used techniques/tools:
 - [Eclipse 4.5.1 (Mars)](http://www.eclipse.org/home/index.php)
 - [Xtext 2.8.4](https://eclipse.org/Xtext/)
-- Java 1.7
+- Java 1.8
 - [Apache Maven 3.5.0](https://maven.apache.org/)
 
 License: [Apache License, Version 2.0](https://github.com/dvdkruk/avroclipse/blob/master/LICENSE)
