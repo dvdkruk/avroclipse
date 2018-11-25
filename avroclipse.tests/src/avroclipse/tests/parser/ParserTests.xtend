@@ -11,6 +11,8 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 import static org.junit.Assert.*
+import org.eclipse.emf.common.util.URI
+import org.eclipse.emf.ecore.resource.ResourceSet
 
 /**
  * @author Damiaan van der Kruk
@@ -21,6 +23,7 @@ class ParserTests {
 
 	@Inject extension ParseHelper<AvroIDLFile>
 	@Inject extension ValidationTestHelper
+	@Inject ResourceSet rs
 
 	@Test
 	def testInvalidNestedUnion() {
@@ -103,5 +106,26 @@ class ParserTests {
 		}'''.parse
 			.assertNoErrors
 	}
-
+  
+  @Test
+	def customTypeLink_withImportTargetInSameNamespace_isParsableWithoutErrors() {
+		'''
+		@namespace("org.common.objects")
+		protocol Door {
+		  record Door {
+		    string brand;
+		  }
+		}'''.parse(URI.createURI("door.avdl"), rs)
+			.assertNoErrors
+			
+		'''
+		@namespace("org.common.objects")
+		protocol House {
+		  import idl "door.avdl";
+		  
+		  Door getDoorBySimpleName();
+		  org.common.objects.Door getDoorByFullyQualifiedName();
+		}'''.parse(URI.createURI("house.avdl"), rs)
+			.assertNoErrors	
+	}
 }
