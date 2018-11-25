@@ -92,5 +92,16 @@ class ParserTests {
 		
 		idlFile.assertNoErrors
 	}
+	
+	@Test
+	def union_withTypeAnnotations_isParsableWithoutErrors() {
+		'''
+		protocol Protocol {
+			record RecordWithUnion {
+			 union{ null, @java-key-class("java.net.URI") map<@java-class("String") string>} UserBank = null;
+			}
+		}'''.parse
+			.assertNoErrors
+	}
 
 }

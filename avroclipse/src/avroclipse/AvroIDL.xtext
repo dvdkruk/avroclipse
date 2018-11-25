@@ -60,7 +60,10 @@ FieldType:
 	 UnionFieldType | TypeLink;
 	
 UnionFieldType:
-	'union' '{' types+=TypeLink (',' types+=TypeLink)* '}';
+	'union' '{' types+=UnionTypeLink (',' types+=UnionTypeLink)* '}';
+	
+UnionTypeLink:
+	annotation=Annotation? type=TypeLink;
 
 ArrayFieldType:
 	'array' '<' annotation=Annotation? type=TypeLink '>';
