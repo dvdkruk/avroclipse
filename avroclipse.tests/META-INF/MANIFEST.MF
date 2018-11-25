@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: avroclipse.tests
 Bundle-Vendor: My Company
-Bundle-Version: 0.0.10
+Bundle-Version: 0.0.11.qualifier
 Bundle-SymbolicName: avroclipse.tests; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: avroclipse,
