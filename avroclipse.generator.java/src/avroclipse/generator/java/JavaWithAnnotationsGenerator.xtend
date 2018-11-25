@@ -126,19 +126,19 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 	def getJavaUnionAndRegisterImport(UnionFieldType union, boolean isMessage) {
 		importNamespaces.add("org.apache.avro.reflect.Union")
 
-		val firstType = union.types.get(0)
-		val otherTypes = union.types.subList(1, union.types.size)
+		val firstTypeLink = union.types.get(0)
+		val otherTypeLinks = union.types.subList(1, union.types.size)
 		var javaType = "Object"
 
 		if (union.types.size == 2 && union.isNullable) {
-			if (firstType instanceof PrimativeTypeLink && (firstType as PrimativeTypeLink).target.equals("null")) {
-				javaType = otherTypes.get(0).nameAndRegisterImport
+			if (firstTypeLink.type instanceof PrimativeTypeLink && (firstTypeLink.type as PrimativeTypeLink).target.equals("null")) {
+				javaType = otherTypeLinks.get(0).type.nameAndRegisterImport
 			} else {
-				javaType = firstType.nameAndRegisterImport
+				javaType = firstTypeLink.type.nameAndRegisterImport
 			}
 		}
 
-		val unionAnnotation = '''@Union({ «firstType.messageUnionTypeName».class«FOR type : otherTypes», «type.messageUnionTypeName».class«ENDFOR» })'''
+		val unionAnnotation = '''@Union({ «firstTypeLink.type.messageUnionTypeName».class«FOR typeLink : otherTypeLinks», «typeLink.type.messageUnionTypeName».class«ENDFOR» })'''
 
 		if (isMessage) {
 			return '''
@@ -156,7 +156,7 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 	}
 
 	def getIsNullable(UnionFieldType union) {
-		union.types.findFirst [
+		union.types.map[it.type].findFirst [
 			it instanceof PrimativeTypeLink && (it as PrimativeTypeLink).target.equals("null")
 		] != null
 	}
@@ -247,7 +247,7 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 
 	def getIsNullableAndRegisterImport(FieldType type) {
 		if (type instanceof UnionFieldType) {
-			if (type.types.filter(PrimativeTypeLink).findFirst[target.equals("null")] != null) {
+			if (type.types.map[it.type].filter(PrimativeTypeLink).findFirst[target.equals("null")] != null) {
 				importNamespaces.add("org.apache.avro.reflect.Nullable")
 				return true;
 			}
@@ -264,9 +264,10 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 //					MapFieldType:
 //						type.getJavaMapAndRegisterImport
 			UnionFieldType:
-				type.types.findFirst [
+				type.types.map[it.type].findFirst [
 					!(it instanceof PrimativeTypeLink && (it as PrimativeTypeLink).target.equals("null"))
 				].nameAndRegisterImport
+				
 		} // TODO: union field now support only two types. It should support many types.
 	}
 
