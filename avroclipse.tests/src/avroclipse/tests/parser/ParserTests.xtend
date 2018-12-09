@@ -97,11 +97,22 @@ class ParserTests {
 	}
 	
 	@Test
-	def union_withTypeAnnotations_isParsableWithoutErrors() {
+	def union_withSingleTypeAnnotation_isParsableWithoutErrors() {
 		'''
 		protocol Protocol {
 			record RecordWithUnion {
 			 union{ null, @java-key-class("java.net.URI") map<@java-class("String") string>} UserBank = null;
+			}
+		}'''.parse
+			.assertNoErrors
+	}
+	
+	@Test
+	def union_withMultipleTypeAnnotations_isParsableWithoutErrors() {
+		'''
+		protocol Protocol {
+			record RecordWithUnion {
+			 union{ null, @java-key-class("java.net.URI") @java-element-class("String") map<@java-class("String") string>} UserBank = null;
 			}
 		}'''.parse
 			.assertNoErrors

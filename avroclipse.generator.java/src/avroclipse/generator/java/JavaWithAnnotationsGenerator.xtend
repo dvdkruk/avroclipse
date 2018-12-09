@@ -97,12 +97,10 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 			return null
 		}
 
-		val firstArg = args.get(0)
+		val arg0 = args.get(0)
 		val size = args.size
-		val restArgs = args.subList(1,
-			size
-		)
-		return '''«firstArg.type.compileToJavaType» «firstArg.name»«FOR arg : restArgs», «arg.type.compileToJavaType» «arg.name»«ENDFOR»'''
+		val otherArgs = args.subList(1, size)
+		return '''«arg0.type.compileToJavaType» «arg0.name»«FOR arg : otherArgs», «arg.type.compileToJavaType» «arg.name»«ENDFOR»'''
 	}
 
 	def compileToJavaType(ReturnTypeLink link) {
@@ -274,13 +272,13 @@ class JavaWithAnnotationsGenerator implements IGenerator {
 	def getJavaMapAndRegisterImport(MapFieldType type) {
 		importNamespaces.add("java.util.Map");
 
-		return '''Map<String, «type.type.getNameAndRegisterImport»>'''
+		return '''Map<String, «type.type.type.getNameAndRegisterImport»>'''
 	}
 
 	def getJavaListAndRegisterImport(ArrayFieldType type) {
 		importNamespaces.add("java.util.List");
-
-		return '''List<«type.type.getNameAndRegisterImport»>'''
+		type.type.type
+		return '''List<«type.type.type.getNameAndRegisterImport»>'''
 	}
 
 	def String getNameAndRegisterImport(TypeLink link) {
