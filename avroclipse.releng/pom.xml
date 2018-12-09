@@ -27,7 +27,7 @@
 	<repositories>
 		<repository>
 			<id>neon</id>
-			<url>http://download.eclipse.org/releases/neon</url>
+			<url>http://download.eclipse.org/releases/neon/201705151400</url>
 			<layout>p2</layout>
 		</repository>
 		<repository>
