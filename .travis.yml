@@ -6,3 +6,5 @@ jdk:
 
 before_script:
   - cd avroclipse.releng
+  
+dist: trusty

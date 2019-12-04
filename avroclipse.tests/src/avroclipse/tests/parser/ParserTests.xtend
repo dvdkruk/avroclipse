@@ -118,7 +118,7 @@ class ParserTests {
 			.assertNoErrors
 	}
   
-  @Test
+  	@Test
 	def customTypeLink_withImportTargetInSameNamespace_isParsableWithoutErrors() {
 		'''
 		@namespace("org.common.objects")
@@ -139,4 +139,20 @@ class ParserTests {
 		}'''.parse(URI.createURI("house.avdl"), rs)
 			.assertNoErrors	
 	}
+	
+	@Test
+	def rpcmessage_withTypeAnnotations_isParsableWithoutErrors() {
+		'''
+		@namespace("test")
+		protocol TestInterface {
+			
+			string withoutAnnotation();
+			
+			@const("true")
+			string withAnnotation();
+		}'''
+		.parse
+		.assertNoErrors
+	}
+			
 }

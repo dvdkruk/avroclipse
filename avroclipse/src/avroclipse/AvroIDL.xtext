@@ -16,7 +16,7 @@ AvroIDLFile:
 	'}')?;
 
 ProtocolElement:
-	TypeDef | RPCMessage;
+	(=> TypeDef) | RPCMessage;
 
 Protocol:
 	name=EscapableId;
@@ -25,7 +25,7 @@ Import:
 	'import' type=ImportType importURI=STRING ';';
 	
 RPCMessage:
-	returnType=ReturnTypeLink name=EscapableId '(' (arguments+=Argument (',' arguments+=Argument)*)? ')' (oneway?='oneway'|'throws'
+	annotations+=Annotation* returnType=ReturnTypeLink name=EscapableId '(' (arguments+=Argument (',' arguments+=Argument)*)? ')' (oneway?='oneway'|'throws'
 	error=[ErrorType|QN])? ';';
 
 Argument:
