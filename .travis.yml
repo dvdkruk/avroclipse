@@ -7,4 +7,7 @@ jdk:
 before_script:
   - cd avroclipse.releng
   
-dist: trusty
+cache:
+  directories:
+  - .autoconf
+  - $HOME/.m2
