@@ -6,7 +6,7 @@
 		<relativePath>../avroclipse.releng/pom.xml</relativePath>
 		<groupId>avroclipse</groupId>
 		<artifactId>parent</artifactId>
-		<version>0.0.11</version>
+		<version>0.0.12-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>avroclipse.generator.avpr</artifactId>
