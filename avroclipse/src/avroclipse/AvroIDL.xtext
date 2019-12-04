@@ -60,16 +60,16 @@ FieldType:
 	 UnionFieldType | TypeLink;
 	
 UnionFieldType:
-	'union' '{' types+=UnionTypeLink (',' types+=UnionTypeLink)* '}';
-	
-UnionTypeLink:
-	annotation=Annotation? type=TypeLink;
+	'union' '{' types+=AnnotatedTypeLink (',' types+=AnnotatedTypeLink)* '}';
 
 ArrayFieldType:
-	'array' '<' annotation=Annotation? type=TypeLink '>';
+	'array' '<' type=AnnotatedTypeLink '>';
 
 MapFieldType:
-	'map' '<' annotation=Annotation? type=TypeLink '>';
+	'map' '<' type=AnnotatedTypeLink '>';
+	
+AnnotatedTypeLink:
+	annotations+=Annotation* type=TypeLink;
 
 TypeLink:
 	PrimativeTypeLink | LogicalTypeLink | DecimalTypeLink | ArrayFieldType | MapFieldType | CustomTypeLink;
