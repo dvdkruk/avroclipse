@@ -14,7 +14,7 @@ License: [Apache License, Version 2.0](https://github.com/dvdkruk/avroclipse/blo
 
 ## Install Avroclipse
 ### Marketplace
-Drag this [![Drag to your running Eclipse workspace to install Avroclipse](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png "Drag to your running Eclipse workspace to install Avroclipse")](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=2600501) button to your running Eclipse workspace or search for *Avroclipse* in the Eclipse Marketplace.
+Drag this[![Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.svg)](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=2600501 "Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client") button to your running Eclipse workspace or search for *Avroclipse* in the Eclipse Marketplace.
 
 ### Update Site
 Install Avroclipse using the folloing the update site URL:
